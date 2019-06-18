@@ -25,8 +25,11 @@ public class Health : MonoBehaviour
 
     void explode()
     {
-        ParticleSystem particles = Instantiate(explosion.GetComponent<ParticleSystem>(), this.transform.position, this.transform.rotation);
-        particles.Play();
-        Destroy(gameObject, particles.main.duration);
+        if(explosion != null)
+        {
+            ParticleSystem particles = Instantiate(explosion.GetComponent<ParticleSystem>(), this.transform.position, this.transform.rotation);
+            particles.Play();
+            Destroy(gameObject, particles.main.duration);
+        }      
     }
 }

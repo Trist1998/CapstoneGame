@@ -25,9 +25,16 @@ public class InteractControl
         {
             cast();
         }
-        else if(Input.GetButtonDown("Drop"))
+        if(Input.GetButtonDown("Drop"))
         {
             dropPrimary();
+        }
+
+        if(primary != null)
+        {
+            IItem item = primary.gameObject.GetComponent<IItem>();
+            if(item != null)
+               item.use(primary);
         }
     }
 

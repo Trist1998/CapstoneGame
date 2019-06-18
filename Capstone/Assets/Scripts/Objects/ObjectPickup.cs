@@ -26,10 +26,7 @@ public class ObjectPickup : MonoBehaviour, WorldObject
         {   
             transform.parent = handBone.transform;
             transform.localPosition = relPosi;
-            transform.Rotate(relRotation);
-            IItem item = this.GetComponent<IItem>();
-            if(item != null)
-                item.use(this);
+            transform.Rotate(relRotation);     
         }
     }
 
@@ -71,7 +68,7 @@ public class ObjectPickup : MonoBehaviour, WorldObject
                 this.GetComponent<Rigidbody>().velocity = dir *0;
             }
             
-            if (Input.GetButtonUp("Interact"))
+            if (Input.GetButtonUp("Interact"))//Do this in InteractControl??
             {
                 eWasUp = true;
             }
@@ -82,7 +79,6 @@ public class ObjectPickup : MonoBehaviour, WorldObject
                 player.enableInteract();
 
                 eWasUp = false;
-
             }
         }
         else
