@@ -15,8 +15,11 @@ public class CharacterControl : MonoBehaviour
 
     void Update()
     {
-        movement.control();
-        interact.control();
+        if (PauseMenu.paused == false)
+        {
+            movement.control();
+            interact.control();
+        }
     }
 
     void OnGUI()

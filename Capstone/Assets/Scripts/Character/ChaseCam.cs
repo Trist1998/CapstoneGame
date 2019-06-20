@@ -21,15 +21,18 @@ public class ChaseCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = rot;
-        Vector3 flyTo = chasePoint.transform.position;
-        Vector3 heading = flyTo - transform.position;
-        float dist = Vector3.Distance(transform.position, flyTo);
-        
-        Vector3 dir = heading / dist;
-        this.GetComponent<Rigidbody>().velocity = dir * dist * dist * speed;
+        if (PauseMenu.paused == false)
+        {
+            transform.rotation = rot;
+            Vector3 flyTo = chasePoint.transform.position;
+            Vector3 heading = flyTo - transform.position;
+            float dist = Vector3.Distance(transform.position, flyTo);
 
-        transform.LookAt(parent.transform.position, Vector3.up);
+            Vector3 dir = heading / dist;
+            this.GetComponent<Rigidbody>().velocity = dir * dist * dist * speed;
+
+            transform.LookAt(parent.transform.position, Vector3.up);
+        }
 
     }
 }
