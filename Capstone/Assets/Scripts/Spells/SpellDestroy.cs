@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Attract : Spell
+public class SpellDestroy : ISpell
 {
-    string name = "Tractio";
+    string name = "Destructio";
 
-    //This spell will attract two objects to each other
+    //This spell will devestating damage to an object
     public void effect(RaycastHit hit)
     {
 

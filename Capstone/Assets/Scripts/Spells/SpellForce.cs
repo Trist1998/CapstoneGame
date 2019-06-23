@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Force : Spell
+public class SpellForce : ISpell
 {
     string name = "Ezakio";
 

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Fire : Spell
+public class SpellTrap : ISpell
 {
-    string name = "Fyrio";
+    string name = "Trapio";
 
-    //This spell will shoot fire
+    //This spell will place a trap on the floor
     public void effect(RaycastHit hit)
     {
 

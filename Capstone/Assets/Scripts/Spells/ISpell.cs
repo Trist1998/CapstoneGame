@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Spell 
+public interface ISpell 
 {
     void effect(RaycastHit hit);
     string getName();

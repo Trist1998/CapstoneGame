@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Shrink : Spell
+public class SpellElectric : ISpell
 {
-    string name = "Minio";
+    string name = "Paratacio";
 
-    //This spell will shrink an object
+    //This spell will cast electricity
     public void effect(RaycastHit hit)
     {
-        Transform objeck = hit.transform.GetComponent<Transform>();
-        
+
     }
 
     public string getName()
     {
         return name;
     }
-
 }

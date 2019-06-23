@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Enlarge : Spell
+public class SpellAttract : ISpell
 {
-    string name = "Maxio";
+    string name = "Tractio";
 
-    //This spell will enlarge an object
+    //This spell will attract two objects to each other
     public void effect(RaycastHit hit)
     {
 
@@ -16,5 +16,4 @@ public class S_Enlarge : Spell
     {
         return name;
     }
-
 }

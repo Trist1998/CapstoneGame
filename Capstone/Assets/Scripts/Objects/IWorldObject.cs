@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface WorldObject
+public interface IWorldObject
 {
     void interact(InteractControl player);
 }

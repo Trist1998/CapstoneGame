@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Lift : Spell
+public class SpellShield : ISpell
 {
-    string name = "Asensio";
+    string name = "Reyouio";
 
-    //This spell will lift an object and allow the player to toss it
+    //This spell will create a defensive shield to protect the player. Will deflect projectiles if well timed
     public void effect(RaycastHit hit)
     {
 

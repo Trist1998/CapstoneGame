@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Shield : Spell
+public class SpellEnlarge : ISpell
 {
-    string name = "Reyouio";
+    string name = "Maxio";
 
-    //This spell will create a defensive shield to protect the player. Will deflect projectiles if well timed
+    //This spell will enlarge an object
     public void effect(RaycastHit hit)
     {
 
@@ -16,4 +16,5 @@ public class S_Shield : Spell
     {
         return name;
     }
+
 }

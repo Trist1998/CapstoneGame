@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Conjure : Spell
+public class SpellFire : ISpell
 {
-    string name = "Conjurio";
+    string name = "Fyrio";
 
-    //This spell will summon a spirit animal conjuration
+    //This spell will shoot fire
     public void effect(RaycastHit hit)
     {
 

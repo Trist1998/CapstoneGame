@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Destroy : Spell
+public class SpellConjure : ISpell
 {
-    string name = "Destructio";
+    string name = "Conjurio";
 
-    //This spell will devestating damage to an object
+    //This spell will summon a spirit animal conjuration
     public void effect(RaycastHit hit)
     {
 

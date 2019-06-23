@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_ : Spell
+public class SpellLift : ISpell
 {
-    string name = "Trapio";
+    string name = "Asensio";
 
-    //This spell will place a trap on the floor
+    //This spell will lift an object and allow the player to toss it
     public void effect(RaycastHit hit)
     {
 

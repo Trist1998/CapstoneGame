@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObjectPickup : MonoBehaviour, WorldObject
+public class ObjectPickup : MonoBehaviour, IWorldObject
 {
     public bool stuck = false;
     public bool levitate = false;
