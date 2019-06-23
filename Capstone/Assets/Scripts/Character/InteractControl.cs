@@ -44,7 +44,7 @@ public class InteractControl
         if(interactEnabled)
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
             {
-                WorldObject tar = hit.transform.GetComponent<WorldObject>();
+                IWorldObject tar = hit.transform.GetComponent<IWorldObject>();
                 if (tar != null)
                     tar.interact(this);
             }
