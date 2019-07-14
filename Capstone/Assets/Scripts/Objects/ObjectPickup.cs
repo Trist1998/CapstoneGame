@@ -134,6 +134,7 @@ public class ObjectPickup : MonoBehaviour, IWorldObject
         {
             if(equipable)
             {
+                handBone = player.getHandBone();
                 stick();
                 player.setPrimary(this);
             }  

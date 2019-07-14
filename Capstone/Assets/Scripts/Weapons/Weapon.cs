@@ -20,12 +20,9 @@ public class Weapon: MonoBehaviour, IItem
 
     public ParticleSystem muzzleFlash;
     public AudioSource sound;
-    public IWeaponEffect hitEffect;
+    [SerializeField]
+    public AbstractWeaponEffect weaponEffect;
 
-    void Start()
-    {
-        hitEffect = GetComponent<IWeaponEffect>();
-    }
     public void use(ObjectPickup pickup)//TODO Add checks for ammo and resetTime and other checks depending on the unused fields
     {
         //Debug.DrawRay(pickup.fpsCam.transform.position, pickup.fpsCam.transform.forward * range, Color.red);
@@ -47,11 +44,7 @@ public class Weapon: MonoBehaviour, IItem
             sound.Play();
         if(muzzleFlash != null)
             muzzleFlash.Play();
-
-        RaycastHit hit;   
-        if (Physics.Raycast(pickup.player.cam.transform.position, pickup.player.cam.transform.forward, out hit, range))
-        {        
-            hitEffect.processHit(this.gameObject, hit);                       
-        }
+        weaponEffect.fire(pickup);
+        
     }
 }

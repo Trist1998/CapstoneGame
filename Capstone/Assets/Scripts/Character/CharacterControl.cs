@@ -5,17 +5,10 @@ public class CharacterControl : MonoBehaviour
 {
     public MovementControl movement;
     public InteractControl interact;
-    public Camera cam;
-
-    void Start()
-    {
-        movement = new MovementControl(this.gameObject, cam);
-        interact = new InteractControl(this.gameObject, cam);
-    }
 
     void Update()
     {
-        if (PauseMenu.paused == false)
+        if (!PauseMenu.paused)
         {
             movement.control();
             interact.control();

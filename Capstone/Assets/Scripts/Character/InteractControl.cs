@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractControl
+public class InteractControl: MonoBehaviour
 {
     public float range = 1000f;
-    public GameObject gameObject;
+    //public GameObject gameObject;
     public Camera cam;
+    [SerializeField]
     private bool interactEnabled = true;
+    [SerializeField]
     private ObjectPickup primary;
     private Inventory inventory;
+    [SerializeField]
+    private GameObject handBone;
 
 
-    public InteractControl(GameObject gameObject, Camera cam)
+    public InteractControl(GameObject gameObject, GameObject handBone,Camera cam)
     {
-        this.gameObject = gameObject;
+        //this.gameObject = gameObject;
         inventory = new Inventory();
+        this.handBone = handBone;
         this.cam = cam;
     }
 
@@ -74,5 +79,10 @@ public class InteractControl
             primary = null;
             interactEnabled = true;
         }
+    }
+
+    public GameObject getHandBone()
+    {
+        return handBone;
     }
 }

@@ -7,16 +7,20 @@ public class Health : MonoBehaviour
     public float health = 1000f;
     public GameObject explosion;
 
-    public void takeDamage(float amount, Vector3 direction, float force)
+    public void takeDamage(float amount)
     {
         health -= amount;
-        GetComponent<Rigidbody>().AddForce(direction * force);
 
         if (health <= 0)
         {
             explode();
             die();
         }
+    }
+    public void takeDamage(float amount, Vector3 direction, float force)
+    {
+        takeDamage(amount);
+        GetComponent<Rigidbody>().AddForce(direction * force);
     }
     void die()
     {

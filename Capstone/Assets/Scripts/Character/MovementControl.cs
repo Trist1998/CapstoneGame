@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementControl
+public class MovementControl: MonoBehaviour
 {
     public bool stop = false;
     public float speed = 10f;
@@ -26,21 +26,23 @@ public class MovementControl
 
     CharacterController cControl;
     public Animator animator;
-    private GameObject gameObject;
 
-    public MovementControl(GameObject gameObject, Camera eyes)
+    void Start()
     {
-        this.gameObject = gameObject;        
+        if(cControl == null)
+            cControl = gameObject.GetComponent<CharacterController>();
+        if(animator == null)
+            animator = gameObject.GetComponent<Animator>();
+    }
+    public MovementControl(GameObject gameObject, Camera eyes)
+    {        
         cControl = gameObject.GetComponent<CharacterController>();
         animator = gameObject.GetComponent<Animator>();
 
         crouched = false;
         jumped = false;
         cControl.height = playerHeight;
-        Screen.lockCursor = true;
         this.eyes = eyes;
-
-
     }
 
     public void control()
