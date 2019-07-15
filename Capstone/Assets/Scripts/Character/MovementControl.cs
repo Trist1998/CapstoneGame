@@ -53,7 +53,7 @@ public class MovementControl: MonoBehaviour
         crouch();
         gravity();
 
-        if (Input.GetButtonDown("Jump"))
+        if(characterInput.getJumpInput())
         {
             jump();
         }
@@ -67,8 +67,8 @@ public class MovementControl: MonoBehaviour
             {
                 speedX += characterInput.getHorizontalInput() * speed * Time.deltaTime;
                 speedZ += characterInput.getVerticalInput() * speed * Time.deltaTime;
-                speedX = speedX * Mathf.Abs(Input.GetAxis("Horizontal"));
-                speedZ = speedZ * Mathf.Abs(Input.GetAxis("Vertical"));
+                speedX = speedX * Mathf.Abs(characterInput.getHorizontalInput());
+                speedZ = speedZ * Mathf.Abs(characterInput.getVerticalInput());
             }
         }
         else

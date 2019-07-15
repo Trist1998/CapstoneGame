@@ -15,9 +15,9 @@ public class PlayerCharacterInput : AbstractCharacterInput
         return Input.GetAxis("Vertical");
     }
 
-    public override float getJumpInput()
+    public override bool getJumpInput()
     {
-        throw new System.NotImplementedException();
+        return Input.GetButtonDown("Jump");
     }
 
     public override float getMouseX()
