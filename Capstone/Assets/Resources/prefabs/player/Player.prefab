@@ -45,9 +45,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -235,8 +236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 2913183685704053711}
   interact: {fileID: 4902252435508042053}
-  cam: {fileID: 4204322482866344403}
-  handBone: {fileID: 4204322482706083837}
 --- !u!114 &2913183685704053711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +259,7 @@ MonoBehaviour:
   jumpVelo: 0
   playerHeight: 0
   animator: {fileID: 4204322482335599540}
+  characterInput: {fileID: 11400000, guid: 52dab98cc20b65848b35e8aa4d600f19, type: 2}
 --- !u!114 &4902252435508042053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,9 +3233,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2

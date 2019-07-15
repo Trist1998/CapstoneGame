@@ -65,16 +65,16 @@ public class MovementControl: MonoBehaviour
         {
             if (!stop)
             {
-                speedX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-                speedZ += Input.GetAxis("Vertical") * speed * Time.deltaTime;
-                //speedX = speedX * Mathf.Abs(Input.GetAxis("Horizontal"));
-                //speedZ = speedZ * Mathf.Abs(Input.GetAxis("Vertical"));
+                speedX += characterInput.getHorizontalInput() * speed * Time.deltaTime;
+                speedZ += characterInput.getVerticalInput() * speed * Time.deltaTime;
+                speedX = speedX * Mathf.Abs(Input.GetAxis("Horizontal"));
+                speedZ = speedZ * Mathf.Abs(Input.GetAxis("Vertical"));
             }
         }
         else
         {
-            speedX += Input.GetAxis("Horizontal") * airSpeed;
-            speedZ += Input.GetAxis("Vertical") * airSpeed;
+            speedX += characterInput.getHorizontalInput() * airSpeed;
+            speedZ += characterInput.getVerticalInput() * airSpeed;
         }
 
 
@@ -96,8 +96,8 @@ public class MovementControl: MonoBehaviour
             speedZ = -1 * maxSpeed;
         }
 
-        rotX = Input.GetAxis("Mouse X") * sens;
-        rotY = Input.GetAxis("Mouse Y") * sens;
+        rotX = characterInput.getMouseX() * sens;
+        rotY = characterInput.getMouseY() * sens;
 
         Vector3 move = new Vector3(speedX, yVelo, speedZ);
 
