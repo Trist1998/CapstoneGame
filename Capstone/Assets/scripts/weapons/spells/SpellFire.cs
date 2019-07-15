@@ -11,11 +11,6 @@ public class SpellFire : AbstractWeaponEffect
         throw new System.NotImplementedException();
     }
 
-    public override void processEffect(GameObject toAffect)
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void processHit(ObjectPickup shooter, GameObject hit, Vector3 direction)
     {
         throw new System.NotImplementedException();

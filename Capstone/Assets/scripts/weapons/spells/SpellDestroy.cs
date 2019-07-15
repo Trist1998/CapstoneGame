@@ -22,19 +22,15 @@ public class SpellDestroy : AbstractWeaponEffect
         projectile.GetComponent<Projectile>().fire(shooter.player.transform.position, shooter.player.cam.transform.forward, force, timeout);
     }
 
-    public override void processEffect(GameObject toAffect)
-    {
-        Health health = toAffect.GetComponent<Health>();
-        if (health != null)
-            health.takeDamage(damage);
-    }
-
     public override void processHit(ObjectPickup shooter, GameObject hit, Vector3 force)
     {
-        processEffect(hit);
+        Health health = hit.GetComponent<Health>();
+        if (health != null)
+            health.takeDamage(damage);
         Rigidbody rig = hit.GetComponent<Rigidbody>();
         if (rig != null)
             rig.AddForce(force);
+
     }
    
 }

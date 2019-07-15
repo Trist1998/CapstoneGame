@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 200
   timeout: 10
-  force: 5000
+  force: 10

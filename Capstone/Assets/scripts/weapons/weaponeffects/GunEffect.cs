@@ -26,8 +26,4 @@ public class GunEffect : AbstractWeaponEffect
         return range;
     }
 
-    public override void processEffect(GameObject toAffect)
-    {
-        throw new System.NotImplementedException();
-    }
 }

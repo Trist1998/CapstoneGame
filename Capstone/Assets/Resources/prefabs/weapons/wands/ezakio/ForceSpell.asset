@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15f012198b14e842a0f491e955f49f4, type: 3}
   m_Name: ForceSpell
   m_EditorClassIdentifier: 
-  force: 1000
+  force: 10000
   range: 100

@@ -7,7 +7,6 @@ public abstract class AbstractWeaponEffect: ScriptableObject
     public readonly float DEFAULT_RANGE = 50;
 
     public abstract void processHit(ObjectPickup shooter, GameObject hit, Vector3 direction);
-    public abstract void processEffect(GameObject toAffect);
 
     public virtual void processHit(ObjectPickup shooter, GameObject hit)
     {
