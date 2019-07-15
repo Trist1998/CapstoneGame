@@ -9,7 +9,7 @@ public class SpellCaster : MonoBehaviour, IItem
     public AudioSource sound;
     public AbstractWeaponEffect spell;
 
-    public void use(ObjectPickup pickup)//TODO Add checks for resetTime and other checks depending on the unused fields
+    public void use(ObjectPickup pickup)//TODO Add checks for resetTime and other checks depending on the unused fieldss
     {
         //Debug.DrawRay(pickup.fpsCam.transform.position, pickup.fpsCam.transform.forward * range, Color.red);
         if (Input.GetAxis("Fire1") == 1)
