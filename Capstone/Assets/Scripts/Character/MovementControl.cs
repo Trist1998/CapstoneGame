@@ -27,6 +27,8 @@ public class MovementControl: MonoBehaviour
     CharacterController cControl;
     public Animator animator;
 
+    public AbstractCharacterInput characterInput;
+
     void Start()
     {
         if(cControl == null)
@@ -63,10 +65,10 @@ public class MovementControl: MonoBehaviour
         {
             if (!stop)
             {
-                speedX += Input.GetAxis("Horizontal") * speed;
-                speedZ += Input.GetAxis("Vertical") * speed;
-                speedX = speedX * Mathf.Abs(Input.GetAxis("Horizontal"));
-                speedZ = speedZ * Mathf.Abs(Input.GetAxis("Vertical"));
+                speedX += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+                speedZ += Input.GetAxis("Vertical") * speed * Time.deltaTime;
+                //speedX = speedX * Mathf.Abs(Input.GetAxis("Horizontal"));
+                //speedZ = speedZ * Mathf.Abs(Input.GetAxis("Vertical"));
             }
         }
         else
