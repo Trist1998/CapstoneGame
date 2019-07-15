@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class GunEffect : RayCastWeaponEffect
+public class GunEffect : AbstractWeaponEffect
 {
     public float damage;
     public float force;

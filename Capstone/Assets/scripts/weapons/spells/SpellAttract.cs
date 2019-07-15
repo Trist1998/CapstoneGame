@@ -11,11 +11,6 @@ public class SpellAttract : AbstractWeaponEffect
         throw new System.NotImplementedException();
     }
 
-    public string getName()
-    {
-        return name;
-    }
-
     public override void processEffect(GameObject toAffect)
     {
         throw new System.NotImplementedException();

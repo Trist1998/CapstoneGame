@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class SpellForce : RayCastWeaponEffect
+public class SpellForce : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Ezakio";
     public float force;
