@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2025983870}
   - component: {fileID: 2025983871}
   - component: {fileID: 2025983865}
-  - component: {fileID: 2025983866}
+  - component: {fileID: 6482627552897685186}
   m_Layer: 0
   m_Name: DestructioPrefab
   m_TagString: Untagged
@@ -122,10 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipable: 0
+  player: {fileID: 0}
+  handBone: {fileID: 0}
+  relativePosition: {x: 0, y: 0, z: 0}
+  relativeRotation: {x: 0, y: 0, z: 0}
   muzzleFlash: {fileID: 0}
   sound: {fileID: 0}
-  spell: {fileID: 11400000, guid: c3d0ff063c5d1f34b9191312e5c0f360, type: 2}
---- !u!114 &2025983866
+  spell: {fileID: 0}
+--- !u!114 &6482627552897685186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,17 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025983864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257248d2606262644b22405c8e5e9d2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6026e86104e3e4e42a6cf3c26727e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuck: 0
-  levitate: 0
-  equipable: 1
-  player: {fileID: 0}
-  handBone: {fileID: 0}
-  relPosi: {x: 0, y: 0, z: 0}
-  relRotation: {x: 0, y: 0, z: 0}
-  speed: 2
-  MaxSpeed: 5
-  distance: 0
-  maxDist: 0.05
+  damage: 200
+  timeout: 5
+  force: 1000

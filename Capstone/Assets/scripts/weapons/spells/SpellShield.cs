@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class SpellShield : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Reyouio";
 
-    public override void fire(ObjectPickup shooter)
+    public override void fire(Item item)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void processHit(ObjectPickup shooter, GameObject hit, Vector3 direction)
+    public override void processHit(Item item, GameObject hit, Vector3 direction)
     {
         throw new System.NotImplementedException();
     }

@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public ParticleSystem particles;
     public AbstractWeaponEffect onHitEffect;
-    public ObjectPickup shooter;
+    public Item item;
     private GenericTimer timer;
     void Start()
     {
@@ -29,9 +29,9 @@ public class Projectile : MonoBehaviour
         particles.gameObject.transform.parent = gameObject.transform;
     }
 
-    public void setShooter(ObjectPickup shooter)
+    public void setShooter(Item item)
     {
-        this.shooter = shooter;
+        this.item = item;
     }
 
     public void setWeaponEffect(AbstractWeaponEffect effect)
@@ -51,9 +51,9 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject != shooter.gameObject)
+        if(other.gameObject != item.gameObject)
         {
-            onHitEffect.processHit(shooter, other.gameObject);
+            onHitEffect.processHit(item, other.gameObject);
             Destroy(gameObject);
         }
         

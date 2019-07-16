@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbstractWeaponEffect: ScriptableObject
+public abstract class AbstractWeaponEffect: MonoBehaviour
 {
     public readonly float DEFAULT_RANGE = 50;
 
-    public abstract void processHit(ObjectPickup shooter, GameObject hit, Vector3 direction);
+    public abstract void processHit(Item item, GameObject hit, Vector3 direction);
 
-    public virtual void processHit(ObjectPickup shooter, GameObject hit)
+    public virtual void processHit(Item item, GameObject hit)
     {
-        processHit(shooter, hit, new Vector3());
+        processHit(item, hit, new Vector3());
     }
 
-    public virtual void fire(ObjectPickup shooter)
+    public virtual void fire(Item item)
     {
         RaycastHit hit;
-        Vector3 origin = shooter.player.cam.transform.position;
-        Vector3 direction = shooter.player.cam.transform.forward;
+        Vector3 origin = item.player.cam.transform.position;
+        Vector3 direction = item.player.cam.transform.forward;
 
         if (Physics.Raycast(origin, direction, out hit, getRange()))
         {
-            processHit(shooter, hit.collider.gameObject, direction);
+            processHit(item, hit.collider.gameObject, direction);
         }
     }
 

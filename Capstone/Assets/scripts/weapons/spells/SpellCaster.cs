@@ -2,36 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellCaster : MonoBehaviour, IItem
+public class SpellCaster : Item
 {
     private bool fired = false;
     public ParticleSystem muzzleFlash;
     public AudioSource sound;
     public AbstractWeaponEffect spell;
 
-
-    public void use(ObjectPickup pickup)//TODO Add checks for resetTime and other checks depending on the unused fields
+    void Start()
     {
-        //Debug.DrawRay(pickup.fpsCam.transform.position, pickup.fpsCam.transform.forward * range, Color.red);
-        if (Input.GetAxis("Fire1") == 1)
-        {
-            if (!fired)
-                fire(pickup);
-            fired = true;
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            fired = false;
-        }
+        spell = GetComponent<AbstractWeaponEffect>();
     }
 
-    public void fire(ObjectPickup pickup)
+    public override void usePrimaryActionDown()//TODO Add checks for resetTime and other checks depending on the unused fields
+    {
+        if (!fired)
+            fire();
+        fired = true;
+    }
+
+    public override void usePrimaryActionUp()
+    {
+        fired = false;
+    }
+
+    public void fire()
     {
         if (sound != null)
             sound.Play();
         if (muzzleFlash != null)
             muzzleFlash.Play();
 
-        spell.fire(pickup);
+        spell.fire(this);
     }
 }

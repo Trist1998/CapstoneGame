@@ -5,27 +5,37 @@ using UnityEngine;
 public class InteractControl: MonoBehaviour
 {
     public float range = 1000f;
-    //public GameObject gameObject;
     public Camera cam;
     [SerializeField]
     private bool interactEnabled = true;
-    [SerializeField]
-    private ObjectPickup primary;
+    private Item primary;
     private Inventory inventory;
     [SerializeField]
     private GameObject handBone;
 
-
-    public InteractControl(GameObject gameObject, GameObject handBone,Camera cam)
-    {
-        //this.gameObject = gameObject;
-        inventory = new Inventory();
-        this.handBone = handBone;
-        this.cam = cam;
-    }
-
     public void control()
     {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if(primary != null)
+                primary.usePrimaryActionDown();
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            if (primary != null)
+                primary.usePrimaryActionUp();
+        }
+        else if(Input.GetButtonDown("Fire2"))
+        {
+            if (primary != null)
+                primary.useSecondaryActionDown();
+        }
+        else if (Input.GetButtonUp("Fire2"))
+        {
+            if (primary != null)
+                primary.useSecondaryActionUp();
+        }
+
         if (Input.GetButtonDown("Interact"))
         {
             cast();
@@ -33,13 +43,6 @@ public class InteractControl: MonoBehaviour
         if(Input.GetButtonDown("Drop"))
         {
             dropPrimary();
-        }
-
-        if(primary != null)
-        {
-            IItem item = primary.gameObject.GetComponent<IItem>();
-            if(item != null)
-               item.use(primary);
         }
     }
 
@@ -65,9 +68,9 @@ public class InteractControl: MonoBehaviour
         interactEnabled = true;
     }
 
-    public void setPrimary(ObjectPickup pickup)
+    public void setPrimary(Item item)
     {
-        primary = pickup;
+        primary = item;
         disableInteract();
     }
 
@@ -75,7 +78,7 @@ public class InteractControl: MonoBehaviour
     {
         if (primary != null)
         {
-            primary.dropAndThrow();
+            primary.release();
             primary = null;
             interactEnabled = true;
         }
@@ -84,5 +87,10 @@ public class InteractControl: MonoBehaviour
     public GameObject getHandBone()
     {
         return handBone;
+    }
+
+    public void setHandBone(GameObject handBone)
+    {
+        this.handBone = handBone;
     }
 }

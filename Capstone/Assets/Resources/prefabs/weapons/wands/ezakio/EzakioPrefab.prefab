@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1311801461}
   - component: {fileID: 1311801460}
   - component: {fileID: 1311801458}
-  - component: {fileID: 1311801462}
+  - component: {fileID: 9119058349682331016}
   m_Layer: 0
   m_Name: EzakioPrefab
   m_TagString: Untagged
@@ -122,10 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipable: 0
+  player: {fileID: 0}
+  handBone: {fileID: 0}
+  relativePosition: {x: 0, y: 0, z: 0}
+  relativeRotation: {x: 0, y: 0, z: 0}
   muzzleFlash: {fileID: 0}
   sound: {fileID: 0}
-  spell: {fileID: 11400000, guid: 442dc01d592fa83418314b925a9238ee, type: 2}
---- !u!114 &1311801462
+  spell: {fileID: 0}
+--- !u!114 &9119058349682331016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,17 +139,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311801457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257248d2606262644b22405c8e5e9d2b, type: 3}
+  m_Script: {fileID: 11500000, guid: c15f012198b14e842a0f491e955f49f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuck: 0
-  levitate: 0
-  equipable: 1
-  player: {fileID: 0}
-  handBone: {fileID: 0}
-  relPosi: {x: -0.0626, y: 0.0071, z: -0.0073}
-  relRotation: {x: 8.990001, y: 84.756, z: 85.77}
-  speed: 2
-  MaxSpeed: 5
-  distance: 0
-  maxDist: 0.05
+  force: 200
+  range: 40

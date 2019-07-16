@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class SpellForce : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Ezakio";
@@ -14,12 +13,12 @@ public class SpellForce : AbstractWeaponEffect
         return range;
     }
 
-    public override void processHit(ObjectPickup shooter, GameObject hit, Vector3 direction)
+    public override void processHit(Item item, GameObject hit, Vector3 direction)
     {
         Rigidbody rig = hit.transform.GetComponent<Rigidbody>();
         if (hit.GetComponent<Collider>().gameObject.GetComponent<Rigidbody>() != null)
         {
-            rig.AddForce((hit.GetComponent<Collider>().transform.position - shooter.transform.position).normalized * force);
+            rig.AddForce((hit.GetComponent<Collider>().transform.position - item.transform.position).normalized * force);
         }
     }
 }

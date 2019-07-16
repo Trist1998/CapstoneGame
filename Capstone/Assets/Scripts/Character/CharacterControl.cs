@@ -3,9 +3,15 @@ using System.Collections;
 
 public class CharacterControl : MonoBehaviour
 {
+    public AbstractCharacterInput characterInput;
     public MovementControl movement;
     public InteractControl interact;
 
+    void Start()
+    {
+        movement = GetComponent<MovementControl>();
+        interact = GetComponent<InteractControl>();
+    }
     void Update()
     {
         if (!PauseMenu.paused)

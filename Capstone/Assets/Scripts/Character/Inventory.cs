@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Inventory
 {
-    List<IItem> items;
+    List<Item> items;
 }
