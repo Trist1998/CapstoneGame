@@ -18,11 +18,11 @@ public class LiftObjectEffect : AttachedObjectEffect
         Vector3 flyTo = player.cam.transform.position + player.cam.transform.forward * distance;
         Vector3 heading = flyTo - transform.position;
         float dist = Vector3.Distance(transform.position, flyTo);
-        if (Input.GetAxis("Push") == 1 && Input.GetAxis("Fire1") == 1)
+        if(Input.GetAxis("Push") == 1 && Input.GetAxis("Fire1") == 1)
         {
             distance += 0.05f;
         }
-        if (Input.GetAxis("Push") == 1 && Input.GetAxis("Fire2") == 1)
+        if(Input.GetAxis("Push") == 1 && Input.GetAxis("Fire2") == 1)
         {
             distance -= 0.05f;
         }
@@ -43,7 +43,11 @@ public class LiftObjectEffect : AttachedObjectEffect
 
     public void attachEffect(Item item)
     {
-        
+        if (GetComponent<Rigidbody>() == null)
+        {
+            Destroy(this);
+            return;
+        }       
         this.item = item;
         lev((transform.position - item.transform.position).magnitude);     
     }

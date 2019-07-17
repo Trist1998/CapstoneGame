@@ -6,7 +6,7 @@ public class SpellShield : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Reyouio";
 
-    public override void fire(Item item)
+    public override void primaryFire(Item item)
     {
         throw new System.NotImplementedException();
     }

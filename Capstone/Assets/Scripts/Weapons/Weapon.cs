@@ -35,6 +35,6 @@ public class Weapon: Item
             sound.Play();
         if(muzzleFlash != null)
             muzzleFlash.Play();
-        weaponEffect.fire(this);
+        weaponEffect.primaryFire(this);
     }
 }

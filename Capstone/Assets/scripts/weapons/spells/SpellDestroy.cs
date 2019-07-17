@@ -11,14 +11,14 @@ public class SpellDestroy : AbstractWeaponEffect
     public float timeout;
     public float force;
 
-    public override void fire(Item item)
+    public override void primaryFire(Item item)
     {
         GameObject projectileGameobject = Instantiate(Resources.Load(PROJECTILE_PATH)) as GameObject;
         Projectile projectile = projectileGameobject.GetComponent<Projectile>();
         
         projectile.setShooter(item);
         projectile.setWeaponEffect(this);
-        projectile.GetComponent<Projectile>().fire(item.player.transform.position, item.player.cam.transform.forward, force, timeout);
+        projectile.GetComponent<Projectile>().fire(item.player.cam.transform.position, item.player.cam.transform.forward, force, timeout);
     }
 
     public override void processHit(Item item, GameObject hit, Vector3 force)

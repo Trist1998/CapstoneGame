@@ -6,7 +6,7 @@ public class SpellShrink : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Minio";
 
-    public override void fire(Item item)
+    public override void primaryFire(Item item)
     {
         throw new System.NotImplementedException();
     }

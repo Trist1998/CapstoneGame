@@ -26,6 +26,16 @@ public class SpellCaster : Item
         fired = false;
     }
 
+    public override void useSecondaryActionDown()
+    {
+        if (sound != null)
+            sound.Play();
+        if (muzzleFlash != null)
+            muzzleFlash.Play();
+
+        spell.secondaryFire(this);
+    }
+
     public void fire()
     {
         if (sound != null)
@@ -33,6 +43,6 @@ public class SpellCaster : Item
         if (muzzleFlash != null)
             muzzleFlash.Play();
 
-        spell.fire(this);
+        spell.primaryFire(this);
     }
 }

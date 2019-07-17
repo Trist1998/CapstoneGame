@@ -13,7 +13,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
         processHit(item, hit, new Vector3());
     }
 
-    public virtual void fire(Item item)
+    public virtual void primaryFire(Item item)
     {
         RaycastHit hit;
         Vector3 origin = item.player.cam.transform.position;
@@ -24,6 +24,9 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
             processHit(item, hit.collider.gameObject, direction);
         }
     }
+
+    public virtual void secondaryFire(Item item)
+    {}
 
     public virtual float getRange()
     {
