@@ -67,6 +67,12 @@ public class LiftObjectEffect : AttachedObjectEffect
         Destroy(this);
     }
 
+    public void shootForward(float force)
+    {
+        GetComponent<Rigidbody>().AddForce(item.player.cam.transform.forward * force);
+        endEffect();
+    }
+
     public void lev(float dist)
     {
         GetComponent<Rigidbody>().useGravity = false;

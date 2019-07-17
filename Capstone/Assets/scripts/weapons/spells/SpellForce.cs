@@ -13,7 +13,7 @@ public class SpellForce : AbstractWeaponEffect
         return range;
     }
 
-    public override void processHit(Item item, GameObject hit, Vector3 direction)
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         Rigidbody rig = hit.transform.GetComponent<Rigidbody>();
         if (hit.GetComponent<Collider>().gameObject.GetComponent<Rigidbody>() != null)

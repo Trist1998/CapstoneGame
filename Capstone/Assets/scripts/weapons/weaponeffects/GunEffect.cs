@@ -9,7 +9,7 @@ public class GunEffect : AbstractWeaponEffect
     public float range;
     public GameObject bullethole;
 
-    public override void processHit(Item item, GameObject hit, Vector3 direction)
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         Health health = hit.GetComponent<Health>();
         if (health != null)

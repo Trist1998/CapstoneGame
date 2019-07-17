@@ -53,10 +53,9 @@ public class Projectile : MonoBehaviour
     {
         if(other.gameObject != item.gameObject)
         {
-            onHitEffect.processHit(item, other.gameObject);
+            onHitEffect.processPrimaryHit(item, other.gameObject);
             Destroy(gameObject);
         }
-        
     }
 
 }

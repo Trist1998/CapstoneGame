@@ -17,7 +17,7 @@ public class AttachedObjectEffect : MonoBehaviour
 
     /**
      * Used to check the state of the object this is affecting and react accordingly.
-     * e.g. an attached fire effect will check for wet state on the object and will be destoryed
+     * e.g. an attached fire effect will check for wet state on the object and will be destroyed
      */
     public virtual void checkState()
     {}
@@ -29,8 +29,9 @@ public class AttachedObjectEffect : MonoBehaviour
 
     public virtual void attachEffect(float tickTime, float lifeTime)
     {
-        tickTimer = new GenericTimer(tickTime, true);
-        lifeTimer = new GenericTimer(tickTime, false);
+        if(tickTime > 0)
+            tickTimer = new GenericTimer(tickTime, true);
+        lifeTimer = new GenericTimer(lifeTime, false);
     }
 
     public virtual void endEffect()
@@ -61,4 +62,6 @@ public class AttachedObjectEffect : MonoBehaviour
             affectObject();
         }   
     }
+    
+    
 }

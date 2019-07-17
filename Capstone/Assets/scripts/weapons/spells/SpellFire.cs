@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SpellFire : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Fyrio";
+    public static readonly string SPELL_NAME = "Fyrio";
 
     public override void primaryFire(Item item)
     {
         throw new System.NotImplementedException();
     }
 
-    public override void processHit(Item item, GameObject hit, Vector3 direction)
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         throw new System.NotImplementedException();
     }

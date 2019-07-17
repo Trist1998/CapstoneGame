@@ -28,9 +28,9 @@ public class Item: MonoBehaviour, IWorldObject
         onHand();
     }
 
-    public void stick()
+    private void stick()
     {
-        if (!equipped && equipable)
+        if(!equipped && equipable)
         {
             transform.parent = handBone.transform;
             equipped = true;

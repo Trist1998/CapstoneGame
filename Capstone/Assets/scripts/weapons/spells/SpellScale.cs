@@ -9,14 +9,23 @@ public class SpellScale : AbstractWeaponEffect
     public float range;
     public float scalar;
 
-    public override void processHit(Item item, GameObject hit, Vector3 direction)
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        hit.transform.localScale *= scalar;
+        IWorldObject hitObject = hit.GetComponent<IWorldObject>();
+        if(hitObject != null)
+            hit.transform.localScale *= scalar;
+    }
+    
+    public override void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
+    {
+        IWorldObject hitObject = hit.GetComponent<IWorldObject>();
+        if(hitObject != null)
+            hit.transform.localScale *= 1/scalar;
     }
 
     public override float getRange()
     {
         return range;
     }
-
+    
 }

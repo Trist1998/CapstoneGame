@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="A:\trist\Documents\My Games\CapstoneGame\Capstone" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="materials" t="Include">
+            <e p="PBR Materials Lite" t="Include">
+              <e p="Info.txt" t="Include" />
+            </e>
+          </e>
+          <e p="models" t="Include">
+            <e p="bodyguards" t="Include">
+              <e p="ReadMe.txt.txt" t="Include" />
+            </e>
+            <e p="wands" t="Include">
+              <e p="Read Me.txt" t="Include" />
+            </e>
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Examples &amp; Extras" t="Include">
+              <e p="Fonts" t="Include">
+                <e p="Anton OFL.txt" t="Include" />
+                <e p="Bangers - OFL.txt" t="Include" />
+                <e p="LiberationSans - OFL.txt" t="Include" />
+                <e p="Oswald-Bold - OFL.txt" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Benchmark01.cs" t="Include" />
+                <e p="Benchmark01_UGUI.cs" t="Include" />
+                <e p="Benchmark02.cs" t="Include" />
+                <e p="Benchmark03.cs" t="Include" />
+                <e p="Benchmark04.cs" t="Include" />
+                <e p="CameraController.cs" t="Include" />
+                <e p="ChatController.cs" t="Include" />
+                <e p="EnvMapAnimator.cs" t="Include" />
+                <e p="ObjectSpin.cs" t="Include" />
+                <e p="ShaderPropAnimator.cs" t="Include" />
+                <e p="SimpleScript.cs" t="Include" />
+                <e p="SkewTextExample.cs" t="Include" />
+                <e p="TeleType.cs" t="Include" />
+                <e p="TextConsoleSimulator.cs" t="Include" />
+                <e p="TextMeshProFloatingText.cs" t="Include" />
+                <e p="TextMeshSpawner.cs" t="Include" />
+                <e p="TMP_DigitValidator.cs" t="Include" />
+                <e p="TMP_ExampleScript_01.cs" t="Include" />
+                <e p="TMP_FrameRateCounter.cs" t="Include" />
+                <e p="TMP_PhoneNumberValidator.cs" t="Include" />
+                <e p="TMP_TextEventCheck.cs" t="Include" />
+                <e p="TMP_TextEventHandler.cs" t="Include" />
+                <e p="TMP_TextInfoDebugTool.cs" t="Include" />
+                <e p="TMP_TextSelector_A.cs" t="Include" />
+                <e p="TMP_TextSelector_B.cs" t="Include" />
+                <e p="TMP_UiFrameRateCounter.cs" t="Include" />
+                <e p="TMPro_InstructionOverlay.cs" t="Include" />
+                <e p="VertexColorCycler.cs" t="Include" />
+                <e p="VertexJitter.cs" t="Include" />
+                <e p="VertexShakeA.cs" t="Include" />
+                <e p="VertexShakeB.cs" t="Include" />
+                <e p="VertexZoom.cs" t="Include" />
+                <e p="WarpTextExample.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Resources" t="Include">
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+                <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+                <e p="TMP_Bitmap.shader" t="Include" />
+                <e p="TMP_SDF Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface.shader" t="Include" />
+                <e p="TMP_SDF.shader" t="Include" />
+                <e p="TMP_Sprite.shader" t="Include" />
+                <e p="TMPro.cginc" t="Include" />
+                <e p="TMPro_Properties.cginc" t="Include" />
+                <e p="TMPro_Surface.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+          </e>
+          <e p="character" t="Include">
+            <e p="AbstractCharacterInput.cs" t="Include" />
+            <e p="CameraController.cs" t="Include" />
+            <e p="CharacterControl.cs" t="Include" />
+            <e p="ChaseCam.cs" t="Include" />
+            <e p="ChasePoint.cs" t="Include" />
+            <e p="Health.cs" t="Include" />
+            <e p="InteractControl.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="MovementControl.cs" t="Include" />
+            <e p="PlayerCharacterInput.cs" t="Include" />
+          </e>
+          <e p="menu" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
+          </e>
+          <e p="objects" t="Include">
+            <e p="AttachedObjectEffect.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="IWorldObject.cs" t="Include" />
+            <e p="WorldObject.cs" t="Include" />
+          </e>
+          <e p="Spawner.cs" t="Include" />
+          <e p="util" t="Include">
+            <e p="timer" t="Include">
+              <e p="GenericTimer.cs" t="Include" />
+            </e>
+          </e>
+          <e p="weapons" t="Include">
+            <e p="Projectile.cs" t="Include" />
+            <e p="spells" t="Include">
+              <e p="AttractObjectEffect.cs" t="Include" />
+              <e p="LiftObjectEffect.cs" t="Include" />
+              <e p="SpellAttract.cs" t="Include" />
+              <e p="SpellCaster.cs" t="Include" />
+              <e p="SpellConjure.cs" t="Include" />
+              <e p="SpellDestroy.cs" t="Include" />
+              <e p="SpellElectric.cs" t="Include" />
+              <e p="SpellFire.cs" t="Include" />
+              <e p="SpellForce.cs" t="Include" />
+              <e p="SpellLift.cs" t="Include" />
+              <e p="SpellScale.cs" t="Include" />
+              <e p="SpellShield.cs" t="Include" />
+              <e p="SpellTrap.cs" t="Include" />
+            </e>
+            <e p="Weapon.cs" t="Include" />
+            <e p="weaponeffects" t="Include">
+              <e p="AbstractWeaponEffect.cs" t="Include" />
+              <e p="GunEffect.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Capstone.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\trist\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\trist\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Capstone.1146734679.00" t="ExcludeRecursive" />
+  </component>
+</project>

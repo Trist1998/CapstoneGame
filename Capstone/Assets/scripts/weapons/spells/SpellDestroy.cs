@@ -21,7 +21,7 @@ public class SpellDestroy : AbstractWeaponEffect
         projectile.GetComponent<Projectile>().fire(item.player.cam.transform.position, item.player.cam.transform.forward, force, timeout);
     }
 
-    public override void processHit(Item item, GameObject hit, Vector3 force)
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 force)
     {
         Health health = hit.GetComponent<Health>();
         if (health != null)
