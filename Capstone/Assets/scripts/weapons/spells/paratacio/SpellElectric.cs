@@ -5,14 +5,9 @@ using UnityEngine;
 public class SpellElectric : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Paratacio";
-
-    public override void primaryFire(Item item)
-    {
-        throw new System.NotImplementedException();
-    }
-
+    public float damagePerSecond;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        throw new System.NotImplementedException();
+        hit.GetComponent<HealthControl>()?.takeDamage(damagePerSecond * Time.deltaTime);//TODO more damage if wet state and damage nearby wet objects
     }
 }

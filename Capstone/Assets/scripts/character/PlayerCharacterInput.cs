@@ -32,7 +32,7 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getPrimaryFireDown()
     {
-        return Input.GetButtonDown("Fire1");
+        return Input.GetButton("Fire1");
     }
 
     public override bool getPrimaryFireUp()
@@ -42,7 +42,7 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getSecondaryFireDown()
     {
-        return Input.GetButtonDown("Fire2");
+        return Input.GetButton("Fire2");
     }
 
     public override bool getSecondaryFireUp()

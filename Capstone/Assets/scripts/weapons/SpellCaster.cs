@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpellCaster : Item
 {
+    [SerializeField]
+    public bool automaticFire;
     private bool fired = false;
     public ParticleSystem muzzleFlash;
     public AudioSource sound;
@@ -17,9 +19,17 @@ public class SpellCaster : Item
 
     public override void usePrimaryActionDown()//TODO Add checks for resetTime and other checks depending on the unused fields
     {
-        if (!fired)
+        if (!automaticFire)
+        {
+            if (!fired)
+                fire();
+            fired = true;
+        }
+        else
+        {
             fire();
-        fired = true;
+        }
+        
     }
 
     public override void usePrimaryActionUp()

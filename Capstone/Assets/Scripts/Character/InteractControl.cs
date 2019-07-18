@@ -24,29 +24,29 @@ public class InteractControl: MonoBehaviour
         Item primary = inventory.getPrimaryItem();
         if (primary != null)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (characterInput.getPrimaryFireDown())
             {
                 primary.usePrimaryActionDown();
             }
-            else if (Input.GetButtonUp("Fire1"))
+            else if (characterInput.getPrimaryFireUp())
             {
                 primary.usePrimaryActionUp();
             }
-            else if(Input.GetButtonDown("Fire2"))
+            else if(characterInput.getSecondaryFireDown())
             {
                 primary.useSecondaryActionDown();
             }
-            else if (Input.GetButtonUp("Fire2"))
+            else if (characterInput.getSecondaryFireUp())
             {
                 primary.useSecondaryActionUp();
             }
         }
         
-        if (Input.GetButtonDown("Interact"))
+        if (characterInput.getInteract())
         {
             cast();
         }
-        if(Input.GetButtonDown("Drop"))
+        if(characterInput.getDropPrimary())
         {
             inventory.dropPrimary();
         }

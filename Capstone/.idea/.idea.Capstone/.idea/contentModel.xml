@@ -140,8 +140,10 @@
               <e p="maxio" t="Include">
                 <e p="SpellScale.cs" t="Include" />
               </e>
+              <e p="paratacio" t="Include">
+                <e p="SpellElectric.cs" t="Include" />
+              </e>
               <e p="SpellConjure.cs" t="Include" />
-              <e p="SpellElectric.cs" t="Include" />
               <e p="SpellShield.cs" t="Include" />
               <e p="SpellTrap.cs" t="Include" />
               <e p="tractio" t="Include">
