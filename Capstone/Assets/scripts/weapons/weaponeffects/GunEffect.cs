@@ -7,14 +7,14 @@ public class GunEffect : AbstractWeaponEffect
     public float damage;
     public float force;
     public float range;
-    public GameObject bullethole;
+    public GameObject bullethole;//TODO use bullethole
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        Health health = hit.GetComponent<Health>();
-        if (health != null)
+        HealthControl healthControl = hit.GetComponent<HealthControl>();
+        if (healthControl != null)
         {
-            health.takeDamage(damage, item.player.cam.transform.forward.normalized, force);
+            healthControl.takeDamage(damage, item.player.getPlayerCameraDirection().normalized, force);
         }
     }
 

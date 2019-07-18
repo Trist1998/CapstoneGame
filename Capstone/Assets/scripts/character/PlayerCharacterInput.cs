@@ -30,4 +30,33 @@ public class PlayerCharacterInput : AbstractCharacterInput
         return Input.GetAxis("Mouse Y");
     }
 
+    public override bool getPrimaryFireDown()
+    {
+        return Input.GetButtonDown("Fire1");
+    }
+
+    public override bool getPrimaryFireUp()
+    {
+        return Input.GetButtonUp("Fire1");
+    }
+
+    public override bool getSecondaryFireDown()
+    {
+        return Input.GetButtonDown("Fire2");
+    }
+
+    public override bool getSecondaryFireUp()
+    {
+        return Input.GetButtonUp("Fire2");
+    }
+
+    public override bool getInteract()
+    {
+        return Input.GetButtonDown("Interact");
+    }
+
+    public override bool getDropPrimary()
+    {
+        return Input.GetButtonDown("Drop");
+    }
 }

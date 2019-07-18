@@ -13,21 +13,21 @@ public class MovementControl: MonoBehaviour
     public float speedZ;
     public float maxSpeed = 7.5f;
 
-    float rotX;
-    float rotY;
+    private float rotX;
+    private float rotY;
 
-    public Camera eyes;
+    public Camera playerCamera;
     public float jumpVelo = 4f;
-    float yVelo;
+    private float yVelo;
 
     private bool jumped, crouched;
 
     public float playerHeight = 2f;
 
-    CharacterController cControl;
+    private CharacterController cControl;
     public Animator animator;
 
-    public AbstractCharacterInput characterInput;
+    private AbstractCharacterInput characterInput;
 
     void Start()
     {
@@ -36,7 +36,8 @@ public class MovementControl: MonoBehaviour
         if(animator == null)
             animator = gameObject.GetComponent<Animator>();
     }
-    public MovementControl(GameObject gameObject, Camera eyes)
+    
+    public MovementControl(GameObject gameObject, Camera playerCamera)
     {        
         cControl = gameObject.GetComponent<CharacterController>();
         animator = gameObject.GetComponent<Animator>();
@@ -44,7 +45,7 @@ public class MovementControl: MonoBehaviour
         crouched = false;
         jumped = false;
         cControl.height = playerHeight;
-        this.eyes = eyes;
+        this.playerCamera = playerCamera;
     }
 
     public void control()
@@ -59,7 +60,7 @@ public class MovementControl: MonoBehaviour
         }
     }
 
-    void movement()
+    private void movement()
     {
         if (cControl.isGrounded)
         {
@@ -67,8 +68,8 @@ public class MovementControl: MonoBehaviour
             {
                 speedX += characterInput.getHorizontalInput() * speed * Time.deltaTime;
                 speedZ += characterInput.getVerticalInput() * speed * Time.deltaTime;
-                speedX = speedX * Mathf.Abs(characterInput.getHorizontalInput());
-                speedZ = speedZ * Mathf.Abs(characterInput.getVerticalInput());
+                speedX *= Mathf.Abs(characterInput.getHorizontalInput());
+                speedZ *= Mathf.Abs(characterInput.getVerticalInput());
             }
         }
         else
@@ -77,24 +78,8 @@ public class MovementControl: MonoBehaviour
             speedZ += characterInput.getVerticalInput() * airSpeed;
         }
 
-
-        if (speedX > maxSpeed)
-        {
-            speedX = maxSpeed;
-        }
-        else if (speedX < -maxSpeed)
-        {
-            speedX = -1 * maxSpeed;
-        }
-
-        if (speedZ > maxSpeed)
-        {
-            speedZ = maxSpeed;
-        }
-        else if (speedZ < -1 * maxSpeed)
-        {
-            speedZ = -1 * maxSpeed;
-        }
+        speedX = Mathf.Clamp(speedX, -maxSpeed, maxSpeed);
+        speedZ = Mathf.Clamp(speedZ, -maxSpeed, maxSpeed);
 
         rotX = characterInput.getMouseX() * sens;
         rotY = characterInput.getMouseY() * sens;
@@ -102,7 +87,7 @@ public class MovementControl: MonoBehaviour
         Vector3 move = new Vector3(speedX, yVelo, speedZ);
 
         gameObject.transform.Rotate(0, rotX, 0);
-        eyes.transform.Rotate(-rotY, 0, 0);
+        playerCamera.transform.Rotate(-rotY, 0, 0);
         move = gameObject.transform.rotation * move;
 
         cControl.Move(move * Time.deltaTime);
@@ -114,7 +99,7 @@ public class MovementControl: MonoBehaviour
 
     }
 
-    void jump()
+    private void jump()
     {
         if (cControl.isGrounded && !stop)
         {
@@ -123,7 +108,7 @@ public class MovementControl: MonoBehaviour
         }
     }
 
-    void gravity()
+    private void gravity()
     {
 
         if (cControl.isGrounded && jumped)
@@ -137,7 +122,7 @@ public class MovementControl: MonoBehaviour
         }
     }
 
-    void crouch()
+    private void crouch()
     {
         if (!crouched && Input.GetButtonDown("Crouch"))
         {
@@ -149,5 +134,11 @@ public class MovementControl: MonoBehaviour
             crouched = false;
             cControl.height = playerHeight;
         }
+    }
+
+    public void setValues(Camera playerCamera, AbstractCharacterInput input)
+    {
+        this.playerCamera = playerCamera;
+        this.characterInput = input;
     }
 }

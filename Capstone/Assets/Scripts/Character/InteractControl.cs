@@ -1,61 +1,82 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractControl: MonoBehaviour
 {
     public float range = 1000f;
-    public Camera cam;
+    private Camera playerCamera;
+    private AbstractCharacterInput characterInput;
     [SerializeField]
     private bool interactEnabled = true;
-    private Item primary;
     private Inventory inventory;
     [SerializeField]
     private GameObject handBone;
 
+    void Start()
+    {
+        inventory = new Inventory();
+    }
+
     public void control()
     {
-        if (Input.GetButtonDown("Fire1"))
+        Item primary = inventory.getPrimaryItem();
+        if (primary != null)
         {
-            if(primary != null)
+            if (Input.GetButtonDown("Fire1"))
+            {
                 primary.usePrimaryActionDown();
-        }
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            if (primary != null)
+            }
+            else if (Input.GetButtonUp("Fire1"))
+            {
                 primary.usePrimaryActionUp();
-        }
-        else if(Input.GetButtonDown("Fire2"))
-        {
-            if (primary != null)
+            }
+            else if(Input.GetButtonDown("Fire2"))
+            {
                 primary.useSecondaryActionDown();
-        }
-        else if (Input.GetButtonUp("Fire2"))
-        {
-            if (primary != null)
+            }
+            else if (Input.GetButtonUp("Fire2"))
+            {
                 primary.useSecondaryActionUp();
+            }
         }
-
+        
         if (Input.GetButtonDown("Interact"))
         {
             cast();
         }
         if(Input.GetButtonDown("Drop"))
         {
-            dropPrimary();
+            inventory.dropPrimary();
         }
     }
 
-    void cast()
+    private void cast()
     {
         RaycastHit hit;
         if(interactEnabled)
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
                 IWorldObject tar = hit.transform.GetComponent<IWorldObject>();
-                if (tar != null)
-                    tar.interact(this);
+                tar?.interact(this);
             }
+    }
+
+    public void addItem(Item item)
+    {
+        inventory.addItem(item);
+        if (inventory.getPrimaryItem() == null)
+        {
+            equipItem(item);
+        }
+            
+    }
+
+    public void equipItem(Item item)
+    {
+        inventory.setPrimaryItem(item);
+        item.equip();
     }
 
     public void disableInteract()
@@ -68,22 +89,6 @@ public class InteractControl: MonoBehaviour
         interactEnabled = true;
     }
 
-    public void setPrimary(Item item)
-    {
-        primary = item;
-        disableInteract();
-    }
-
-    public void dropPrimary()
-    {
-        if (primary != null)
-        {
-            primary.release();
-            primary = null;
-            interactEnabled = true;
-        }
-    }
-
     public GameObject getHandBone()
     {
         return handBone;
@@ -93,4 +98,21 @@ public class InteractControl: MonoBehaviour
     {
         this.handBone = handBone;
     }
+    
+    public void setValues(Camera playerCamera, AbstractCharacterInput input)
+    {
+        this.playerCamera = playerCamera;
+        this.characterInput = input;
+    }
+
+    public Vector3 getPlayerCameraDirection()
+    {
+        return playerCamera.transform.forward;
+    }
+    
+    public Vector3 getPlayerCameraPosition()
+    {
+        return playerCamera.transform.position;
+    }
+    
 }

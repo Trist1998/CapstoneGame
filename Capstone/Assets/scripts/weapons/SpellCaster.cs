@@ -12,6 +12,7 @@ public class SpellCaster : Item
     void Start()
     {
         spell = GetComponent<AbstractWeaponEffect>();
+        equipable = true;
     }
 
     public override void usePrimaryActionDown()//TODO Add checks for resetTime and other checks depending on the unused fields

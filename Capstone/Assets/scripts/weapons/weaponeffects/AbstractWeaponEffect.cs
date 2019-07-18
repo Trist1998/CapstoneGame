@@ -18,24 +18,26 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void primaryFire(Item item)
     {
         RaycastHit hit;
-        Vector3 origin = item.player.cam.transform.position;
-        Vector3 direction = item.player.cam.transform.forward;
+        Vector3 origin = item.player.getPlayerCameraPosition();
+        Vector3 direction = item.player.getPlayerCameraDirection();
 
         if (Physics.Raycast(origin, direction, out hit, getRange()))
         {
-            processPrimaryHit(item, hit.collider.gameObject, hit.point, direction);
+            if(hit.transform.root != item.transform.root)
+                processPrimaryHit(item, hit.collider.gameObject, hit.point, direction);
         }
     }
 
     public virtual void secondaryFire(Item item)
     {
         RaycastHit hit;
-        Vector3 origin = item.player.cam.transform.position;
-        Vector3 direction = item.player.cam.transform.forward;
+        Vector3 origin = item.player.getPlayerCameraPosition();
+        Vector3 direction = item.player.getPlayerCameraDirection();
 
         if (Physics.Raycast(origin, direction, out hit, getRange()))
         {
-            processSecondaryHit(item, hit.collider.gameObject, hit.point, direction);
+            if(hit.transform.root != item.transform.root)
+                processSecondaryHit(item, hit.collider.gameObject, hit.point, direction);
         }
     }
 

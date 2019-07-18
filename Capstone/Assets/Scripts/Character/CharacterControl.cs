@@ -6,11 +6,14 @@ public class CharacterControl : MonoBehaviour
     public AbstractCharacterInput characterInput;
     public MovementControl movement;
     public InteractControl interact;
+    public Camera playerCamera;
 
     void Start()
     {
         movement = GetComponent<MovementControl>();
+        movement?.setValues(playerCamera, characterInput);
         interact = GetComponent<InteractControl>();
+        interact?.setValues(playerCamera, characterInput);
     }
     void Update()
     {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Item: MonoBehaviour, IWorldObject
 {
+    [SerializeField]
     private bool equipped;
     public bool equipable;
 
     public InteractControl player;
-    public GameObject handBone;
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
 
@@ -17,7 +17,7 @@ public class Item: MonoBehaviour, IWorldObject
         if (equipped)
         {
             transform.localPosition = relativePosition;
-            transform.rotation = handBone.transform.rotation;
+            transform.rotation = player.getHandBone().transform.rotation;
             transform.Rotate(relativeRotation);
         }
     }
@@ -28,35 +28,30 @@ public class Item: MonoBehaviour, IWorldObject
         onHand();
     }
 
-    private void stick()
+    public void equip()
     {
-        if(!equipped && equipable)
+        if(!equipped && equipable && player != null)
         {
-            transform.parent = handBone.transform;
+            transform.parent = player.getHandBone().transform;
             equipped = true;
         }
     }
 
     public void release()
     {
+        player = null;
         equipped = false;
         transform.parent = null;
-        player.enableInteract();
     }
 
     public void interact(InteractControl player)
     {
         float dist = Vector3.Distance(player.gameObject.transform.position, transform.position);
-        this.player = player;
 
         if (dist < 5)
         {
-            if (equipable)
-            {
-                handBone = player.getHandBone();
-                stick();
-                player.setPrimary(this);
-            }
+            this.player = player;
+            player.addItem(this);
         }
     }
 

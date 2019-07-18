@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthControl : MonoBehaviour
 {
     public float health = 1000f;
     public GameObject explosion;
@@ -22,12 +22,12 @@ public class Health : MonoBehaviour
         takeDamage(amount);
         GetComponent<Rigidbody>().AddForce(direction * force);
     }
-    void die()
+    private void die()
     {
         Destroy(gameObject);
     }
 
-    void explode()
+    private void explode()
     {
         if(explosion != null)
         {

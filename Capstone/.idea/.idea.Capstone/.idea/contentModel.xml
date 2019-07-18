@@ -98,7 +98,7 @@
             <e p="CharacterControl.cs" t="Include" />
             <e p="ChaseCam.cs" t="Include" />
             <e p="ChasePoint.cs" t="Include" />
-            <e p="Health.cs" t="Include" />
+            <e p="HealthControl.cs" t="Include" />
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
@@ -134,12 +134,14 @@
               <e p="ezakio" t="Include">
                 <e p="SpellForce.cs" t="Include" />
               </e>
+              <e p="fyro" t="Include">
+                <e p="SpellFire.cs" t="Include" />
+              </e>
               <e p="maxio" t="Include">
                 <e p="SpellScale.cs" t="Include" />
               </e>
               <e p="SpellConjure.cs" t="Include" />
               <e p="SpellElectric.cs" t="Include" />
-              <e p="SpellFire.cs" t="Include" />
               <e p="SpellShield.cs" t="Include" />
               <e p="SpellTrap.cs" t="Include" />
               <e p="tractio" t="Include">

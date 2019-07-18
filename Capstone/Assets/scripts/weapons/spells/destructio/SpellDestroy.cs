@@ -14,18 +14,18 @@ public class SpellDestroy : AbstractWeaponEffect
     public override void primaryFire(Item item)
     {
         GameObject projectileGameobject = Instantiate(Resources.Load(PROJECTILE_PATH)) as GameObject;
-        Projectile projectile = projectileGameobject.GetComponent<Projectile>();
+        Projectile projectile = projectileGameobject?.GetComponent<Projectile>();
         
-        projectile.setShooter(item);
-        projectile.setWeaponEffect(this);
-        projectile.GetComponent<Projectile>().fire(item.player.cam.transform.position, item.player.cam.transform.forward, force, timeout);
+        projectile?.setShooter(item);
+        projectile?.setWeaponEffect(this);
+        projectile?.GetComponent<Projectile>()?.fire(item.player.getPlayerCameraPosition(), item.player.getPlayerCameraDirection(), force, timeout);
     }
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 force)
     {
-        Health health = hit.GetComponent<Health>();
-        if (health != null)
-            health.takeDamage(damage);
+        HealthControl healthControl = hit.GetComponent<HealthControl>();
+        if (healthControl != null)
+            healthControl.takeDamage(damage);
         Rigidbody rig = hit.GetComponent<Rigidbody>();
         if (rig != null)
             rig.AddForce(force);

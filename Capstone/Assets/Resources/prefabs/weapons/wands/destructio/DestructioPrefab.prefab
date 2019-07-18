@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipable: 0
+  equipped: 0
+  equipable: 1
   player: {fileID: 0}
-  handBone: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   muzzleFlash: {fileID: 0}
@@ -144,4 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 200
   timeout: 5
-  force: 1000
+  force: 500

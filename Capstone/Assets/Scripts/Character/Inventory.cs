@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Inventory
 {
@@ -20,6 +21,25 @@ public class Inventory
     {
         return getSlotItem(SLOT_PRIMARY);
     }
+    
+    public void setPrimaryItem(Item item)
+    {
+        slots[SLOT_PRIMARY] = item;
+    }
+    
+    public void dropPrimary()
+    {
+        Item primary = getPrimaryItem();
+        primary?.release();
+        items.Remove(primary);
+        setPrimaryItem(null);
+    }
+
+    public void dropItem(Item item)
+    {
+        item.release();
+        items.Remove(item);
+    }
 
     public Item getSlotItem(string slotId)
     { 
@@ -32,5 +52,12 @@ public class Inventory
     {
         items.Add(item);
     }
+
+    public List<Item> getInventoryList()
+    {
+        return items;
+    }
+
+
     
 }

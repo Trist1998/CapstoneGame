@@ -159,9 +159,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4204322482335599543}
-  - component: {fileID: 4204322482335599542}
   - component: {fileID: 4204322482335599541}
   - component: {fileID: 4204322482335599536}
+  - component: {fileID: 4204322482335599542}
   - component: {fileID: 2913183685704053711}
   - component: {fileID: 4902252435508042053}
   - component: {fileID: 4204322482335599540}
@@ -189,21 +189,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4204322482335599542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4204322482335599499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8819cadfc7c8f6c47a86c34fab1af4c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameras:
-  - {fileID: 4204322482866344403}
-  - {fileID: 4204322481622919026}
 --- !u!143 &4204322482335599541
 CharacterController:
   m_ObjectHideFlags: 0
@@ -234,8 +219,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b834597ad4c2f046b17b66c89a78332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterInput: {fileID: 0}
   movement: {fileID: 2913183685704053711}
   interact: {fileID: 4902252435508042053}
+--- !u!114 &4204322482335599542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204322482335599499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8819cadfc7c8f6c47a86c34fab1af4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 4204322482866344403}
+  - {fileID: 4204322481622919026}
 --- !u!114 &2913183685704053711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +276,6 @@ MonoBehaviour:
   range: 1000
   cam: {fileID: 4204322482866344403}
   interactEnabled: 1
-  primary: {fileID: 0}
   handBone: {fileID: 4204322482706083837}
 --- !u!95 &4204322482335599540
 Animator:

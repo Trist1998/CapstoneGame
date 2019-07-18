@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
 public abstract class AbstractCharacterInput : ScriptableObject
 {
     public abstract float getHorizontalInput();
@@ -10,4 +9,11 @@ public abstract class AbstractCharacterInput : ScriptableObject
     public abstract bool getJumpInput();
     public abstract float getMouseX();
     public abstract float getMouseY();
+    public abstract bool getPrimaryFireDown();
+    public abstract bool getPrimaryFireUp();
+    public abstract bool getSecondaryFireDown();
+    public abstract bool getSecondaryFireUp();
+    public abstract bool getInteract();
+    public abstract bool getDropPrimary();
+    
 }
