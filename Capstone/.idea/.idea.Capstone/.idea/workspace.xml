@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/scripts/character/Inventory.cs" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/SpellElectric.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/SpellElectric.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -465,12 +459,12 @@
       <updated>1563370694470</updated>
       <workItem from="1563370701528" duration="72000" />
       <workItem from="1563370793305" duration="17765000" />
-      <workItem from="1563445661882" duration="20029000" />
+      <workItem from="1563445661882" duration="20627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37866000" />
+    <option name="totallyTimeSpent" value="38464000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,7 +477,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17954183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
