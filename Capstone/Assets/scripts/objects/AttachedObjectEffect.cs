@@ -19,7 +19,7 @@ public class AttachedObjectEffect : MonoBehaviour
      * Used to check the state of the object this is affecting and react accordingly.
      * e.g. an attached fire effect will check for wet state on the object and will be destroyed
      */
-    public virtual void checkState()
+    protected virtual void checkState()
     {}
 
     public void attachEffect(float tickTime)
@@ -62,6 +62,5 @@ public class AttachedObjectEffect : MonoBehaviour
             affectObject();
         }   
     }
-    
-    
+
 }

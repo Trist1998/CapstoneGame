@@ -5,14 +5,14 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
-          <e p="materials" t="Include">
-            <e p="PBR Materials Lite" t="Include">
-              <e p="Info.txt" t="Include" />
-            </e>
-          </e>
           <e p="models" t="Include">
             <e p="bodyguards" t="Include">
               <e p="ReadMe.txt.txt" t="Include" />
+            </e>
+            <e p="materials" t="Include">
+              <e p="PBR Materials Lite" t="Include">
+                <e p="Info.txt" t="Include" />
+              </e>
             </e>
             <e p="wands" t="Include">
               <e p="Read Me.txt" t="Include" />
@@ -122,20 +122,30 @@
           </e>
           <e p="weapons" t="Include">
             <e p="Projectile.cs" t="Include" />
+            <e p="SpellCaster.cs" t="Include" />
             <e p="spells" t="Include">
-              <e p="AttractObjectEffect.cs" t="Include" />
-              <e p="LiftObjectEffect.cs" t="Include" />
-              <e p="SpellAttract.cs" t="Include" />
-              <e p="SpellCaster.cs" t="Include" />
+              <e p="asensio" t="Include">
+                <e p="LiftObjectEffect.cs" t="Include" />
+                <e p="SpellLift.cs" t="Include" />
+              </e>
+              <e p="destructio" t="Include">
+                <e p="SpellDestroy.cs" t="Include" />
+              </e>
+              <e p="ezakio" t="Include">
+                <e p="SpellForce.cs" t="Include" />
+              </e>
+              <e p="maxio" t="Include">
+                <e p="SpellScale.cs" t="Include" />
+              </e>
               <e p="SpellConjure.cs" t="Include" />
-              <e p="SpellDestroy.cs" t="Include" />
               <e p="SpellElectric.cs" t="Include" />
               <e p="SpellFire.cs" t="Include" />
-              <e p="SpellForce.cs" t="Include" />
-              <e p="SpellLift.cs" t="Include" />
-              <e p="SpellScale.cs" t="Include" />
               <e p="SpellShield.cs" t="Include" />
               <e p="SpellTrap.cs" t="Include" />
+              <e p="tractio" t="Include">
+                <e p="AttractObjectEffect.cs" t="Include" />
+                <e p="SpellAttract.cs" t="Include" />
+              </e>
             </e>
             <e p="Weapon.cs" t="Include" />
             <e p="weaponeffects" t="Include">

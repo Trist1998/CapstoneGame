@@ -52,7 +52,7 @@ public class LiftObjectEffect : AttachedObjectEffect
         lev((transform.position - item.transform.position).magnitude);     
     }
 
-    public override void checkState()
+    protected override void checkState()
     {
         if (!item.isEquipped())
         {

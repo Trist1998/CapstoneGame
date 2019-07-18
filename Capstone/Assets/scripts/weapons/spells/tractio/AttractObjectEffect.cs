@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttractObjectEffect : AttachedObjectEffect
 {
     private AttractObjectEffect attractTo;
+    [SerializeField]
     private Vector3 attractionPoint;
     private float force;
     private bool hasAttached;
@@ -22,6 +23,7 @@ public class AttractObjectEffect : AttachedObjectEffect
         this.attractionPoint = pointOfAttraction;
         attachEffect(attractTo, force, lifeTime);
     }
+    
     public override void affectObject()
     {
         if (attractTo != null)
@@ -29,21 +31,20 @@ public class AttractObjectEffect : AttachedObjectEffect
             GetComponent<Rigidbody>().AddForce(getForceDirection() * force);
         }
     }
-
+    
     public Vector3 getPosition()
     {
-        if (attractionPoint != null)
+        if(!isMovableObject())
             return attractionPoint;
         return transform.position;
 
     }
-    
     private Vector3 getForceDirection()
     {
         return (attractTo.getPosition() - transform.position).normalized;
     }
-
-    public override void checkState()
+    
+    protected override void checkState()
     {
         //if(attractTo == null)
             //endEffect();
@@ -56,4 +57,10 @@ public class AttractObjectEffect : AttachedObjectEffect
             endEffect();
         }
     }
+
+    private bool isMovableObject()
+    {
+        return GetComponent<Rigidbody>() != null && !GetComponent<Rigidbody>().isKinematic;
+    }
+    
 }

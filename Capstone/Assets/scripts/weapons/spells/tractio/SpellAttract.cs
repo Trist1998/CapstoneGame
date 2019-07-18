@@ -9,6 +9,7 @@ public class SpellAttract : AbstractWeaponEffect
     private AttractObjectEffect otherObject;
     public float effectLifeTime;
     public float force;
+    
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)//This is gross logic
     {
         if (otherObject != null && otherObject.gameObject == hit.gameObject)
