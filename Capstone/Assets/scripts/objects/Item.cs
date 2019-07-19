@@ -23,7 +23,7 @@ public class Item: MonoBehaviour, IWorldObject
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         onHand();
     }

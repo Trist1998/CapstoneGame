@@ -127,9 +127,15 @@ MonoBehaviour:
   player: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
-  muzzleFlash: {fileID: 0}
-  sound: {fileID: 0}
+  primaryAutomaticFire: 0
+  secondaryAutomaticFire: 0
+  primaryMuzzleFlash: {fileID: 0}
+  secondaryMuzzleFlash: {fileID: 0}
+  primarySound: {fileID: 0}
+  secondarySound: {fileID: 0}
   spell: {fileID: 0}
+  primaryResetTime: 0.5
+  secondaryResetTime: 0
 --- !u!114 &6482627552897685186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6026e86104e3e4e42a6cf3c26727e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
-  timeout: 5
   force: 500
+  lifeTime: 10
+  projectilePrefab: {fileID: 5237790628494967255, guid: 8f306fffaec787d42a21f12a27b44c8f,
+    type: 3}
+  throwableWeapon: 0
+  damage: 250

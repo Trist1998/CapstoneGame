@@ -17,15 +17,38 @@ public class GenericTimer
         timer = 0;
     }
 
+    public void updateTimer(float deltaTime)
+    {
+        timer += deltaTime;
+    }
+
+    public void endTimer()
+    {
+        timer = 0;
+        done = true;
+    }
+    
+    public bool isTimeout()
+    {
+        if(done && !reload)
+            return true;
+
+        if (timer >= timeout)
+        {
+            endTimer();
+            return true;
+        }
+        return false;
+    }
+    
     public bool isTimeout(float deltaTime)
     {
         if(done && !reload)
             return true;
-        timer += deltaTime;
+        updateTimer(deltaTime);
         if(timer >= timeout)
         {
-            timer = 0;
-            done = true;
+            endTimer();
             return true;
         }
         return false;

@@ -33,7 +33,7 @@ public class LiftObjectEffect : AttachedObjectEffect
             {
                 dist = 1;
             }
-            GetComponent<Rigidbody>().velocity = dir * speed * dist;
+            GetComponent<Rigidbody>().velocity = speed * dist * dir;
         }
         else
         {
@@ -43,7 +43,7 @@ public class LiftObjectEffect : AttachedObjectEffect
 
     public void attachEffect(Item item)
     {
-        if (GetComponent<Rigidbody>() == null)
+        if (!isMovableObject())
         {
             Destroy(this);
             return;

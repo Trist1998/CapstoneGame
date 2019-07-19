@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public AbstractWeaponEffect onHitEffect;
     public Item item;
     private GenericTimer timer;
+    private bool hitObject = false;
     void Start()
     {
         particles = GetComponent<ParticleSystem>();
@@ -51,10 +52,11 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject != item.gameObject)
+        if(!hitObject && item != null && other.gameObject != item.gameObject)
         {
             onHitEffect.processPrimaryHit(item, other.gameObject);
             Destroy(gameObject);
+            hitObject = true;
         }
     }
 

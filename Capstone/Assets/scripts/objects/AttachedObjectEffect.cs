@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class AttachedObjectEffect : MonoBehaviour
 {
+    private static readonly string END_EFFECT_TIME_OUT = "TIMEOUT";
 
     private GenericTimer tickTimer;//Determines the rate at which the effect is applied
     private GenericTimer lifeTimer;//Determines how long the effect lives
 
     /**
      * Affect object is called once per tick of the effect.
-     * Umimplemented affectObjects() may be used to maintain a state on the object
+     * Unimplemented affectObjects() may be used to maintain a state on the object
      */
     public virtual void affectObject()
     {}
@@ -20,27 +21,110 @@ public class AttachedObjectEffect : MonoBehaviour
      * e.g. an attached fire effect will check for wet state on the object and will be destroyed
      */
     protected virtual void checkState()
-    {}
+    {
+        AttachedObjectEffect[] effects = GetComponents<AttachedObjectEffect>();
+        foreach (var effect in effects)
+        {
+            if (effect.compareStates(this))
+            {
+                break;
+            }
+        }
+        
+    }
 
-    public void attachEffect(float tickTime)
+    /**
+     * Compares the states of the objects
+     */
+    public bool compareStates(AttachedObjectEffect effect)
+    {
+        var negationStates = getNegationStates();
+        var appliedStates = getAppliedStates();
+        foreach (var state in effect.getNegationStates())
+        {
+            
+            if (!appliedStates.ContainsKey(state.Key)) 
+                continue;
+            int stateStrength = appliedStates[state.Key];
+            if (stateStrength >= state.Value)
+            {
+                effect.endEffect(state.Key);
+                break;
+            }
+        }
+        
+        foreach (var state in effect.getAppliedStates())
+        {
+            if (!negationStates.ContainsKey(state.Key)) 
+                continue;
+            int stateStrength = negationStates[state.Key];
+            if (stateStrength <= state.Value)
+            {
+                endEffect(state.Key);
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+    
+    /**
+     * Returns a list of states that this effect applies to the object
+     */
+    public virtual Dictionary<string, int> getAppliedStates()
+    {
+        return new Dictionary<string, int>();
+    }
+    
+    /**
+     * Return a list of states that negate this effect
+     */
+    public virtual Dictionary<string, int> getNegationStates()
+    {
+        return new Dictionary<string, int>();
+    }
+    
+    /**
+     * Used to set up and start effect once attached
+     *     lifeTime determines how long(in seconds) the effect will last
+     */
+    public void startEffect(float lifeTime)
+    {
+        lifeTimer = new GenericTimer(lifeTime, true);
+        checkState();
+    }
+    /**
+     * Used to set up and start effect once attached
+     *      lifeTime determines how long(in seconds) the effect will last
+     *      tickTime determines how often affectObject() is called
+     */
+    public virtual void startEffect(float tickTime, float lifeTime)
     {
         tickTimer = new GenericTimer(tickTime, true);
-    }
-
-    public virtual void attachEffect(float tickTime, float lifeTime)
-    {
-        if(tickTime > 0)
-            tickTimer = new GenericTimer(tickTime, true);
         lifeTimer = new GenericTimer(lifeTime, false);
+        checkState();
     }
 
+    /**
+     * Used to clean up effect to remove lingering effects on the object
+     */
     public virtual void endEffect()
     {
         Destroy(this);          
     }
+    
+    /**
+     * Used to end effect in different ways
+     */
+    public virtual void endEffect(string reason)
+    {
+        endEffect();
+    }
+    
 
     /**
-     * Checks if a tick must occur. If tickTimer is null returns false.
+     * Checks if a tick must occur. If tickTimer is null returns true for continuous affect.
      */
     private bool tick()
     {
@@ -52,15 +136,19 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     void Update()
     {
-        checkState();
         if (lifeTimer != null && lifeTimer.isTimeout(Time.deltaTime))
         {
-            endEffect();
+            endEffect(END_EFFECT_TIME_OUT);
         }
         if(tick())
         {
             affectObject();
         }   
+    }
+    
+    protected bool isMovableObject()
+    {
+        return GetComponent<Rigidbody>() != null && !GetComponent<Rigidbody>().isKinematic;
     }
 
 }

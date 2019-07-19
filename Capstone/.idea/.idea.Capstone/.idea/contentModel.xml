@@ -153,6 +153,7 @@
             </e>
             <e p="Weapon.cs" t="Include" />
             <e p="weaponeffects" t="Include">
+              <e p="AbstractProjectileWeaponEffect.cs" t="Include" />
               <e p="AbstractWeaponEffect.cs" t="Include" />
               <e p="GunEffect.cs" t="Include" />
             </e>
