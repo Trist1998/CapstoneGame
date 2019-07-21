@@ -37,30 +37,30 @@ public class SpellCaster : Item
         primaryResetTimer = new GenericTimer(primaryResetTime, true);
         secondaryResetTimer = new GenericTimer(secondaryResetTime, true);
         spell = GetComponent<AbstractWeaponEffect>();
-        equipable = true;
     }
 
-    protected void Update()
+    private bool canPrimaryFire()
     {
-        base.Update();
-        primaryResetTimer?.updateTimer(Time.deltaTime);
-        secondaryResetTimer?.updateTimer(Time.deltaTime);
+        if (!primaryResetTimer.isTimeout()) return false;
+        if (!primaryAutomaticFire && fired) return false;
+        
+        fired = true;
+        return true;
     }
-
+    
+    private bool canSecondaryFire()
+    {
+        if (!secondaryResetTimer.isTimeout()) return false;
+        if (!secondaryAutomaticFire && fired) return false;
+        
+        fired = true;
+        return true;
+    }
+    
     public override void usePrimaryActionDown()//TODO Add checks for resetTime and other checks depending on the unused fields
     {
-        if (!primaryResetTimer.isTimeout()) return;
-            if (!primaryAutomaticFire)
-            {
-                if (!fired)
-                    primaryFire();
-                fired = true;
-            }
-            else
-            {
-                primaryFire();
-            }
-        
+        if (!canPrimaryFire()) return;
+            primaryFire();
     }
 
     public override void usePrimaryActionUp()
@@ -70,18 +70,13 @@ public class SpellCaster : Item
 
     public override void useSecondaryActionDown()
     {
-        if (!secondaryResetTimer.isTimeout()) return;
-            if (!secondaryAutomaticFire)
-            {
-                if (!fired)
-                    secondaryFire();
-                fired = true;
-            }
-            else
-            {
-                secondaryFire();
-            }
-        
+        if (!canSecondaryFire()) return;
+            secondaryFire();
+    }
+    
+    public override void useSecondaryActionUp()
+    {
+        fired = false;
     }
 
     public void primaryFire()

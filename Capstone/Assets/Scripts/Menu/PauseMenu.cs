@@ -7,11 +7,13 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool paused = false;
     public GameObject pauseMenuUI;
+    
     // Update is called once per frame
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+    
     void Update()
     {
         //When escape is pressed the game will become paused or unpaused

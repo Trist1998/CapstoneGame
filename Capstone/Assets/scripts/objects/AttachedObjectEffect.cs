@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class AttachedObjectEffect : MonoBehaviour
 {
-    private static readonly string END_EFFECT_TIME_OUT = "TIMEOUT";
+    public static readonly string STATE_WET = "WET";
+    public static readonly string STATE_FIRE = "FIRE";
+    
+    protected static readonly string END_EFFECT_TIME_OUT = "END_TIMEOUT";
 
     private GenericTimer tickTimer;//Determines the rate at which the effect is applied
     private GenericTimer lifeTimer;//Determines how long the effect lives
+    protected Dictionary<string, int> appliedStates = new Dictionary<string, int>();
+    protected Dictionary<string, int> negatingStates = new Dictionary<string, int>();
 
     /**
      * Affect object is called once per tick of the effect.
@@ -38,8 +43,6 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     public bool compareStates(AttachedObjectEffect effect)
     {
-        var negationStates = getNegationStates();
-        var appliedStates = getAppliedStates();
         foreach (var state in effect.getNegationStates())
         {
             
@@ -55,9 +58,9 @@ public class AttachedObjectEffect : MonoBehaviour
         
         foreach (var state in effect.getAppliedStates())
         {
-            if (!negationStates.ContainsKey(state.Key)) 
+            if (!negatingStates.ContainsKey(state.Key)) 
                 continue;
-            int stateStrength = negationStates[state.Key];
+            int stateStrength = negatingStates[state.Key];
             if (stateStrength <= state.Value)
             {
                 endEffect(state.Key);
@@ -74,7 +77,7 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     public virtual Dictionary<string, int> getAppliedStates()
     {
-        return new Dictionary<string, int>();
+        return appliedStates;
     }
     
     /**
@@ -82,14 +85,14 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     public virtual Dictionary<string, int> getNegationStates()
     {
-        return new Dictionary<string, int>();
+        return negatingStates;
     }
     
     /**
      * Used to set up and start effect once attached
      *     lifeTime determines how long(in seconds) the effect will last
      */
-    public void startEffect(float lifeTime)
+    public virtual void startEffect(float lifeTime)
     {
         lifeTimer = new GenericTimer(lifeTime, true);
         checkState();
@@ -128,7 +131,7 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     private bool tick()
     {
-        return tickTimer == null || tickTimer.isTimeout(Time.deltaTime);
+        return tickTimer == null || tickTimer.isTimeout();
     }
 
     /**
@@ -136,7 +139,7 @@ public class AttachedObjectEffect : MonoBehaviour
      */
     void Update()
     {
-        if (lifeTimer != null && lifeTimer.isTimeout(Time.deltaTime))
+        if (lifeTimer != null && lifeTimer.isTimeout())
         {
             endEffect(END_EFFECT_TIME_OUT);
         }

@@ -124,6 +124,10 @@
             <e p="Projectile.cs" t="Include" />
             <e p="SpellCaster.cs" t="Include" />
             <e p="spells" t="Include">
+              <e p="aquio" t="Include">
+                <e p="SpellWater.cs" t="Include" />
+                <e p="WetObjectEffect.cs" t="Include" />
+              </e>
               <e p="asensio" t="Include">
                 <e p="LiftObjectEffect.cs" t="Include" />
                 <e p="SpellLift.cs" t="Include" />
@@ -135,6 +139,7 @@
                 <e p="SpellForce.cs" t="Include" />
               </e>
               <e p="fyro" t="Include">
+                <e p="IgniteObjectEffect.cs" t="Include" />
                 <e p="SpellFire.cs" t="Include" />
               </e>
               <e p="maxio" t="Include">

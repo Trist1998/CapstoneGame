@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InteractControl: MonoBehaviour
 {
+    public static readonly string SLOT_PRIMARY = "primary";
+    
     public float range = 1000f;
     private Camera playerCamera;
     private AbstractCharacterInput characterInput;
@@ -14,14 +16,16 @@ public class InteractControl: MonoBehaviour
     [SerializeField]
     private GameObject handBone;
 
-    void Start()
+    private Dictionary<string, Item> slots;
+    private void Start()
     {
         inventory = new Inventory();
+        slots = new Dictionary<string, Item>();
     }
 
     public void control()
     {
-        Item primary = inventory.getPrimaryItem();
+        Item primary = getPrimaryItem();
         if (primary != null)
         {
             if (characterInput.getPrimaryFireDown())
@@ -48,7 +52,7 @@ public class InteractControl: MonoBehaviour
         }
         if(characterInput.getDropPrimary())
         {
-            inventory.dropPrimary();
+            dropPrimary();
         }
     }
 
@@ -66,17 +70,38 @@ public class InteractControl: MonoBehaviour
     public void addItem(Item item)
     {
         inventory.addItem(item);
-        if (inventory.getPrimaryItem() == null)
+        if (getPrimaryItem() == null)
         {
             equipItem(item);
         }
-            
     }
 
+    public void dropPrimary()
+    {
+        dropItem(getPrimaryItem());
+        setPrimaryItem(null);
+    }
+    
+    private void dropItem(Item item)
+    {
+        if (item == null) return;
+        
+        inventory.dropItem(item);
+        item.transform.parent = null;
+        item.GetComponent<Rigidbody>().isKinematic = false;
+    }
+    
     public void equipItem(Item item)
     {
-        inventory.setPrimaryItem(item);
-        item.equip();
+        dropPrimary();
+        setPrimaryItem(item);
+        
+        item.GetComponent<Rigidbody>().isKinematic = true;
+        var primaryTransform = item.transform;
+        primaryTransform.parent = handBone.transform;
+        primaryTransform.localPosition = item.relativePosition;
+        primaryTransform.rotation = getHandBone().transform.rotation;
+        primaryTransform.Rotate(item.relativeRotation);
     }
 
     public void disableInteract()
@@ -114,5 +139,26 @@ public class InteractControl: MonoBehaviour
     {
         return playerCamera.transform.position;
     }
+
+    public Inventory getInventory()
+    {
+        return inventory;
+    }
     
+    public void setPrimaryItem(Item item)
+    {
+        slots[SLOT_PRIMARY] = item;
+    }
+    
+    public Item getPrimaryItem()
+    {
+        return getSlotItem(SLOT_PRIMARY);
+    }
+    
+    public Item getSlotItem(string slotId)
+    { 
+        if (slots.ContainsKey(slotId))
+            return slots[slotId];
+        return null;
+    }
 }

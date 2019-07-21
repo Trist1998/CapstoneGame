@@ -9,21 +9,35 @@ public class Projectile : MonoBehaviour
     public Item item;
     private GenericTimer timer;
     private bool hitObject = false;
+    
     void Start()
     {
         particles = GetComponent<ParticleSystem>();
     }
-    public void fire(Vector3 position, Vector3 direction, float force, float timeout)
+    
+    public void fire(Vector3 position, Vector3 direction, bool useGravity, float force, float timeout)
     {
         transform.position = position + direction.normalized;
+
+        timer = new GenericTimer(timeout, false);
+        
         Rigidbody rig = GetComponent<Rigidbody>();
         if (rig != null)
+        {
+            rig.useGravity = useGravity;
             rig.AddForce(direction.normalized * force);
-        timer = new GenericTimer(timeout, false);
+        }
+
         if(particles != null)
             particles.Play();
     }
 
+    public void setEffectValues(Item item, AbstractWeaponEffect weaponEffect)
+    {
+        this.item = item;
+        onHitEffect = weaponEffect;
+    }
+    
     public void setParticleSystem(ParticleSystem particles)
     {
         this.particles = Instantiate(particles);
@@ -43,7 +57,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer != null && timer.isTimeout(Time.deltaTime))
+        if(timer != null && timer.isTimeout())
         {
             Destroy(particles);
             Destroy(gameObject);

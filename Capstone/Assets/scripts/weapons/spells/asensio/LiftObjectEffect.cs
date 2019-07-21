@@ -6,13 +6,18 @@ public class LiftObjectEffect : AttachedObjectEffect
 {
     Item item;
     public float speed = 2f;
-    public float MaxSpeed = 5;
+    public float maxSpeed = 5;
     public float distance = 0;
     public float maxDist = 0.05f;
     Quaternion rot;
 
     public override void affectObject()
     {
+        if (!item.isEquipped())
+        {
+            endEffect();
+            return;
+        }
         InteractControl player = item.player;
         transform.rotation = rot;  
         Vector3 flyTo = player.getPlayerCameraPosition() + player.getPlayerCameraDirection() * distance;
@@ -41,7 +46,7 @@ public class LiftObjectEffect : AttachedObjectEffect
         }
     }
 
-    public void attachEffect(Item item)
+    public void startEffect(Item item)
     {
         if (!isMovableObject())
         {
@@ -50,15 +55,6 @@ public class LiftObjectEffect : AttachedObjectEffect
         }       
         this.item = item;
         lev((transform.position - item.transform.position).magnitude);     
-    }
-
-    protected override void checkState()
-    {
-        if (!item.isEquipped())
-        {
-            endEffect();
-        }
-            
     }
 
     public override void endEffect()

@@ -5,43 +5,16 @@ using UnityEngine;
 public class Item: MonoBehaviour, IWorldObject
 {
     [SerializeField]
-    private bool equipped;
     public bool equipable;
-
-    public InteractControl player;
+    
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
+    public InteractControl player;
 
-    void onHand()
+    private void equip()
     {
-        if (equipped)
-        {
-            transform.localPosition = relativePosition;
-            transform.rotation = player.getHandBone().transform.rotation;
-            transform.Rotate(relativeRotation);
-        }
-    }
-
-    // Update is called once per frame
-    protected void Update()
-    {
-        onHand();
-    }
-
-    public void equip()
-    {
-        if(!equipped && equipable && player != null)
-        {
-            transform.parent = player.getHandBone().transform;
-            equipped = true;
-        }
-    }
-
-    public void release()
-    {
-        player = null;
-        equipped = false;
-        transform.parent = null;
+        if (!equipable || player == null) return;
+        transform.parent = player.getHandBone().transform;
     }
 
     public void interact(InteractControl player)
@@ -57,7 +30,7 @@ public class Item: MonoBehaviour, IWorldObject
 
     public bool isEquipped()
     {
-        return equipped;
+        return player != null && player.getPrimaryItem() == this;
     }
 
     public virtual void usePrimaryActionDown()
