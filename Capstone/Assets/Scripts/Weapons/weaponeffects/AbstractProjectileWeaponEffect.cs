@@ -20,7 +20,7 @@ public abstract class AbstractProjectileWeaponEffect : AbstractWeaponEffect
                 item.GetComponent<Rigidbody>().isKinematic = false;
             }
             projectile.setEffectValues(item, this);
-            projectile.fire(item.user.getUserAimPosition(), item.user.getUserAimDirection(), useGravity, force, lifeTime);
+            projectile.fire(item.player.getPlayerCameraPosition(), item.player.getPlayerCameraDirection(), useGravity, force, lifeTime);
             
     }
 
