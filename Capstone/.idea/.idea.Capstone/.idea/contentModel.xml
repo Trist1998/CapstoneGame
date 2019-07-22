@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="A:\trist\Documents\My Games\CapstoneGame\Capstone" t="IncludeRecursive">
+    <e p="C:\Users\trist\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\trist\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Capstone.-801781032.00" t="ExcludeRecursive" />
+    <e p="C:\Users\trist\Desktop\Projects\CapstoneGame\Capstone" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="models" t="Include">
             <e p="bodyguards" t="Include">
               <e p="ReadMe.txt.txt" t="Include" />
-            </e>
-            <e p="materials" t="Include">
-              <e p="PBR Materials Lite" t="Include">
-                <e p="Info.txt" t="Include" />
-              </e>
             </e>
             <e p="wands" t="Include">
               <e p="Read Me.txt" t="Include" />
@@ -93,6 +90,7 @@
             <e p="Sound.cs" t="Include" />
           </e>
           <e p="character" t="Include">
+            <e p="AbstractCharacterControl.cs" t="Include" />
             <e p="AbstractCharacterInput.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CharacterControl.cs" t="Include" />
@@ -101,7 +99,9 @@
             <e p="HealthControl.cs" t="Include" />
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="ItemUser.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
+            <e p="NonPlayableCharacterControl.cs" t="Include" />
             <e p="PlayerCharacterInput.cs" t="Include" />
           </e>
           <e p="menu" t="Include">
@@ -170,7 +170,5 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\trist\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\trist\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Capstone.1146734679.00" t="ExcludeRecursive" />
   </component>
 </project>

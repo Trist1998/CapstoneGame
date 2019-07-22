@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractControl: MonoBehaviour
+public class InteractControl: MonoBehaviour, ItemUser
 {
     public static readonly string SLOT_PRIMARY = "primary";
     
@@ -25,7 +25,7 @@ public class InteractControl: MonoBehaviour
 
     public void control()
     {
-        Item primary = getPrimaryItem();
+        Item primary = getEquippedItem();
         if (primary != null)
         {
             if (characterInput.getPrimaryFireDown())
@@ -70,7 +70,7 @@ public class InteractControl: MonoBehaviour
     public void addItem(Item item)
     {
         inventory.addItem(item);
-        if (getPrimaryItem() == null)
+        if (getEquippedItem() == null)
         {
             equipItem(item);
         }
@@ -78,7 +78,7 @@ public class InteractControl: MonoBehaviour
 
     public void dropPrimary()
     {
-        dropItem(getPrimaryItem());
+        dropItem(getEquippedItem());
         setPrimaryItem(null);
     }
     
@@ -130,12 +130,12 @@ public class InteractControl: MonoBehaviour
         this.characterInput = input;
     }
 
-    public Vector3 getPlayerCameraDirection()
+    public Vector3 getUserAimDirection()
     {
         return playerCamera.transform.forward;
     }
     
-    public Vector3 getPlayerCameraPosition()
+    public Vector3 getUserAimPosition()
     {
         return playerCamera.transform.position;
     }
@@ -150,7 +150,7 @@ public class InteractControl: MonoBehaviour
         slots[SLOT_PRIMARY] = item;
     }
     
-    public Item getPrimaryItem()
+    public Item getEquippedItem()
     {
         return getSlotItem(SLOT_PRIMARY);
     }
