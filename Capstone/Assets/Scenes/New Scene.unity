@@ -3444,6 +3444,8 @@ GameObject:
   - component: {fileID: 937484939}
   - component: {fileID: 937484938}
   - component: {fileID: 937484937}
+  - component: {fileID: 937484942}
+  - component: {fileID: 937484941}
   - component: {fileID: 937484936}
   m_Layer: 0
   m_Name: Player
@@ -3483,7 +3485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b834597ad4c2f046b17b66c89a78332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1681477237}
+  characterInput: {fileID: 11400000, guid: 52dab98cc20b65848b35e8aa4d600f19, type: 2}
+  movement: {fileID: 937484941}
+  interact: {fileID: 937484942}
+  playerCamera: {fileID: 1681477237}
 --- !u!143 &937484938
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3534,6 +3539,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &937484941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937484935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacefd2748d3f6746813d46f7736da1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stop: 0
+  speed: 5
+  airSpeed: 2
+  sens: 1
+  speedX: 0
+  speedZ: 0
+  maxSpeed: 10
+  playerCamera: {fileID: 0}
+  jumpVelo: 10
+  playerHeight: 5
+  animator: {fileID: 0}
+--- !u!114 &937484942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937484935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac174262dd73b54aab493a29e30908e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1000
+  interactEnabled: 1
+  handBone: {fileID: 0}
 --- !u!1001 &938510103
 PrefabInstance:
   m_ObjectHideFlags: 0
