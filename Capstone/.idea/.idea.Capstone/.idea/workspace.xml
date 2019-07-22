@@ -4,23 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/scripts/character/Inventory.cs" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/InteractControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/InteractControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/objects/AttachedObjectEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/objects/AttachedObjectEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/objects/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/objects/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/util/timer/GenericTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/util/timer/GenericTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/LiftObjectEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/LiftObjectEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/SpellLift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/SpellLift.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractProjectileWeaponEffect.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -243,6 +227,21 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/Weapon.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+              <folding>
+                <marker date="1563367974256" expanded="false" signature="6:100" ph="..." />
+                <marker date="1563367974256" expanded="true" signature="127:975" ph="{...}" />
+                <marker date="1563367974256" expanded="true" signature="707:781" ph="{...}" />
+                <marker date="1563367974256" expanded="true" signature="805:973" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -252,30 +251,6 @@
                 <marker date="1563621821568" expanded="true" signature="6:78" ph="..." />
                 <marker date="1563621821568" expanded="true" signature="136:377" ph="{...}" />
                 <marker date="1563621821568" expanded="true" signature="250:370" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-              <folding>
-                <marker date="1563476293481" expanded="false" signature="6:78" ph="..." />
-                <marker date="1563476293481" expanded="true" signature="156:1247" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="205:261" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="307:361" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="402:458" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="497:550" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="589:642" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="689:742" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="787:842" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="891:944" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="991:1046" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="1086:1146" ph="{...}" />
-                <marker date="1563476293481" expanded="true" signature="1189:1245" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -534,12 +509,12 @@
       <workItem from="1563538952781" duration="17838000" />
       <workItem from="1563619904975" duration="2685000" />
       <workItem from="1563625418213" duration="9042000" />
-      <workItem from="1563725390916" duration="9732000" />
+      <workItem from="1563725390916" duration="9908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77761000" />
+    <option name="totallyTimeSpent" value="77937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,7 +527,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18700053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -822,19 +796,6 @@
             <marker date="1563381095361" expanded="true" signature="128:469" ph="{...}" />
             <marker date="1563381095361" expanded="true" signature="231:295" ph="{...}" />
             <marker date="1563381095361" expanded="true" signature="403:467" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/Weapon.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <marker date="1563367974256" expanded="false" signature="6:100" ph="..." />
-            <marker date="1563367974256" expanded="true" signature="127:975" ph="{...}" />
-            <marker date="1563367974256" expanded="true" signature="707:781" ph="{...}" />
-            <marker date="1563367974256" expanded="true" signature="805:973" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1153,18 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <marker date="1563621821568" expanded="true" signature="6:78" ph="..." />
-            <marker date="1563621821568" expanded="true" signature="136:377" ph="{...}" />
-            <marker date="1563621821568" expanded="true" signature="250:370" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/scripts/character/InteractControl.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -1213,6 +1162,31 @@
             <marker date="1563736825286" expanded="true" signature="362:907" ph="{...}" />
             <marker date="1563736825286" expanded="true" signature="491:699" ph="{...}" />
             <marker date="1563736825286" expanded="true" signature="957:1058" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <marker date="1563621821568" expanded="true" signature="6:78" ph="..." />
+            <marker date="1563621821568" expanded="true" signature="136:377" ph="{...}" />
+            <marker date="1563621821568" expanded="true" signature="250:370" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/scripts/weapons/Weapon.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <marker date="1563367974256" expanded="false" signature="6:100" ph="..." />
+            <marker date="1563367974256" expanded="true" signature="127:975" ph="{...}" />
+            <marker date="1563367974256" expanded="true" signature="707:781" ph="{...}" />
+            <marker date="1563367974256" expanded="true" signature="805:973" ph="{...}" />
           </folding>
         </state>
       </provider>
