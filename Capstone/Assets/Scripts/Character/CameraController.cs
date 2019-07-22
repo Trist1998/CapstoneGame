@@ -5,12 +5,12 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Camera[] cameras;
-    int cameraSelected = 0;
+    private int cameraSelected = 0;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.C) && (PauseMenu.paused==false))
+        if(Input.GetKeyUp(KeyCode.C) && (!PauseMenu.paused))
         {
             cameras[cameraSelected].enabled = false;
             cameraSelected++;

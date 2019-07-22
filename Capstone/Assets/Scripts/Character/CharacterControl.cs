@@ -3,19 +3,21 @@ using System.Collections;
 
 public class CharacterControl : MonoBehaviour
 {
+    public AbstractCharacterInput characterInput;
     public MovementControl movement;
     public InteractControl interact;
-    public Camera cam;
+    public Camera playerCamera;
 
     void Start()
     {
-        movement = new MovementControl(this.gameObject, cam);
-        interact = new InteractControl(this.gameObject, cam);
+        movement = GetComponent<MovementControl>();
+        movement?.setValues(playerCamera, characterInput);
+        interact = GetComponent<InteractControl>();
+        interact?.setValues(playerCamera, characterInput);
     }
-
     void Update()
     {
-        if (PauseMenu.paused == false)
+        if (!PauseMenu.paused)
         {
             movement.control();
             interact.control();

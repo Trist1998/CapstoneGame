@@ -7,7 +7,7 @@ public class ChasePoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseMenu.paused == false)
+        if (!PauseMenu.paused)
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {

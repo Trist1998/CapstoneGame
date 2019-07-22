@@ -1,53 +1,107 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractControl
+public class InteractControl: MonoBehaviour
 {
+    public static readonly string SLOT_PRIMARY = "primary";
+    
     public float range = 1000f;
-    public GameObject gameObject;
-    public Camera cam;
+    private Camera playerCamera;
+    private AbstractCharacterInput characterInput;
+    [SerializeField]
     private bool interactEnabled = true;
-    private ObjectPickup primary;
     private Inventory inventory;
+    [SerializeField]
+    private GameObject handBone;
 
-
-    public InteractControl(GameObject gameObject, Camera cam)
+    private Dictionary<string, Item> slots;
+    private void Start()
     {
-        this.gameObject = gameObject;
         inventory = new Inventory();
-        this.cam = cam;
+        slots = new Dictionary<string, Item>();
     }
 
     public void control()
     {
-        if (Input.GetButtonDown("Interact"))
+        Item primary = getPrimaryItem();
+        if (primary != null)
+        {
+            if (characterInput.getPrimaryFireDown())
+            {
+                primary.usePrimaryActionDown();
+            }
+            else if (characterInput.getPrimaryFireUp())
+            {
+                primary.usePrimaryActionUp();
+            }
+            else if(characterInput.getSecondaryFireDown())
+            {
+                primary.useSecondaryActionDown();
+            }
+            else if (characterInput.getSecondaryFireUp())
+            {
+                primary.useSecondaryActionUp();
+            }
+        }
+        
+        if (characterInput.getInteract())
         {
             cast();
         }
-        if(Input.GetButtonDown("Drop"))
+        if(characterInput.getDropPrimary())
         {
             dropPrimary();
         }
-
-        if(primary != null)
-        {
-            IItem item = primary.gameObject.GetComponent<IItem>();
-            if(item != null)
-               item.use(primary);
-        }
     }
 
-    void cast()
+    private void cast()
     {
         RaycastHit hit;
         if(interactEnabled)
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
                 IWorldObject tar = hit.transform.GetComponent<IWorldObject>();
-                if (tar != null)
-                    tar.interact(this);
+                tar?.interact(this);
             }
+    }
+
+    public void addItem(Item item)
+    {
+        inventory.addItem(item);
+        if (getPrimaryItem() == null)
+        {
+            equipItem(item);
+        }
+    }
+
+    public void dropPrimary()
+    {
+        dropItem(getPrimaryItem());
+        setPrimaryItem(null);
+    }
+    
+    private void dropItem(Item item)
+    {
+        if (item == null) return;
+        
+        inventory.dropItem(item);
+        item.transform.parent = null;
+        item.GetComponent<Rigidbody>().isKinematic = false;
+    }
+    
+    public void equipItem(Item item)
+    {
+        dropPrimary();
+        setPrimaryItem(item);
+        
+        item.GetComponent<Rigidbody>().isKinematic = true;
+        var primaryTransform = item.transform;
+        primaryTransform.parent = handBone.transform;
+        primaryTransform.localPosition = item.relativePosition;
+        primaryTransform.rotation = getHandBone().transform.rotation;
+        primaryTransform.Rotate(item.relativeRotation);
     }
 
     public void disableInteract()
@@ -60,19 +114,51 @@ public class InteractControl
         interactEnabled = true;
     }
 
-    public void setPrimary(ObjectPickup pickup)
+    public GameObject getHandBone()
     {
-        primary = pickup;
-        disableInteract();
+        return handBone;
     }
 
-    public void dropPrimary()
+    public void setHandBone(GameObject handBone)
     {
-        if (primary != null)
-        {
-            primary.dropAndThrow();
-            primary = null;
-            interactEnabled = true;
-        }
+        this.handBone = handBone;
+    }
+    
+    public void setValues(Camera playerCamera, AbstractCharacterInput input)
+    {
+        this.playerCamera = playerCamera;
+        this.characterInput = input;
+    }
+
+    public Vector3 getPlayerCameraDirection()
+    {
+        return playerCamera.transform.forward;
+    }
+    
+    public Vector3 getPlayerCameraPosition()
+    {
+        return playerCamera.transform.position;
+    }
+
+    public Inventory getInventory()
+    {
+        return inventory;
+    }
+    
+    public void setPrimaryItem(Item item)
+    {
+        slots[SLOT_PRIMARY] = item;
+    }
+    
+    public Item getPrimaryItem()
+    {
+        return getSlotItem(SLOT_PRIMARY);
+    }
+    
+    public Item getSlotItem(string slotId)
+    { 
+        if (slots.ContainsKey(slotId))
+            return slots[slotId];
+        return null;
     }
 }
