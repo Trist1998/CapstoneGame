@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterControl : MonoBehaviour
+public class CharacterControl : AbstractCharacterControl
 {
     public AbstractCharacterInput characterInput;
     public MovementControl movement;

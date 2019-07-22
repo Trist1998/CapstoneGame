@@ -14,7 +14,7 @@ public class GunEffect : AbstractWeaponEffect
         HealthControl healthControl = hit.GetComponent<HealthControl>();
         if (healthControl != null)
         {
-            healthControl.takeDamage(damage, item.player.getPlayerCameraDirection().normalized, force);
+            healthControl.takeDamage(damage, item.player.getItemAimDirection().normalized, force);
         }
     }
 

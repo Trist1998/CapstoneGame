@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Objects;
 using UnityEngine;
 
 public class Item: MonoBehaviour, IWorldObject
@@ -9,7 +10,7 @@ public class Item: MonoBehaviour, IWorldObject
     
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
-    public InteractControl player;
+    public IItemUser player;
 
     private void equip()
     {
@@ -30,7 +31,7 @@ public class Item: MonoBehaviour, IWorldObject
 
     public bool isEquipped()
     {
-        return player != null && player.getPrimaryItem() == this;
+        return player != null && player.getEquippedItem() == this;
     }
 
     public virtual void usePrimaryActionDown()
