@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWorldObject
 {
-    void interact(InteractControl player);
+    void interact(IItemUser player);
 }

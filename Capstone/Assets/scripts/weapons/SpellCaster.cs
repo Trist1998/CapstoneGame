@@ -83,18 +83,24 @@ public class SpellCaster : Item
     {
         if (primarySound != null)
             primarySound.Play();
-        if (primaryMuzzleFlash != null)
-            primaryMuzzleFlash.Play();
+        playParticleEffect(primaryMuzzleFlash);
 
         spell.primaryFire(this);
     }
+
+    private void playParticleEffect(ParticleSystem particles)
+    {
+        if (particles == null) return;
+        ParticleSystem instance = Instantiate(particles, gameObject.transform);
+        instance.Play();
+    }
+    
 
     public void secondaryFire()
     {
         if (secondarySound != null)
             secondarySound.Play();
-        if (secondaryMuzzleFlash != null)
-            secondaryMuzzleFlash.Play();
+        playParticleEffect(secondaryMuzzleFlash);
 
         spell.secondaryFire(this);
     }

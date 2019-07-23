@@ -6,9 +6,17 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
 {
     public const float DEFAULT_RANGE = 50;
 
-    public abstract void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction);
+    public ParticleSystem primaryOnHitEffect;
+    public ParticleSystem secondaryOnHitEffect;
+    public virtual void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
+    {
+        playPrimaryOnHitEffect(hit, hitPoint);
+    }
+
     public virtual void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
-    {}
+    {
+        playPrimaryOnHitEffect(hit, hitPoint);
+    }
     
     public virtual void processPrimaryHit(Item item, GameObject hit)
     {
@@ -41,6 +49,22 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
         }
     }
 
+    protected virtual void playPrimaryOnHitEffect(GameObject hit, Vector3 hitPoint)
+    {
+        if(primaryOnHitEffect == null) return;
+            ParticleSystem effect = Instantiate(primaryOnHitEffect, hit.transform);
+            effect.transform.position = hitPoint;
+            effect.Play();
+    }
+    
+    protected virtual void playSecondaryOnHitEffect(GameObject hit,Vector3 hitPoint)
+    {
+        if (secondaryOnHitEffect == null) return;
+            ParticleSystem effect = Instantiate(secondaryOnHitEffect, hit.transform);
+            effect.transform.position = hitPoint;
+            effect.Play();
+    }
+    
     public virtual float getRange()
     {
         return DEFAULT_RANGE;
