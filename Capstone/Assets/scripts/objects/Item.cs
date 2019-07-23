@@ -9,12 +9,12 @@ public class Item: MonoBehaviour, IWorldObject
     
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
-    public IItemUser player;
+    public IItemUser user;
 
     private void equip()
     {
-        if (!equipable || player == null) return;
-        transform.parent = player.getHandBone().transform;
+        if (!equipable || user == null) return;
+        transform.parent = user.getHandBone().transform;
     }
 
     public void interact(InteractControl player)
@@ -23,14 +23,14 @@ public class Item: MonoBehaviour, IWorldObject
 
         if (dist < 5)
         {
-            this.player = player;
+            this.user = player;
             player.addItem(this);
         }
     }
 
     public bool isEquipped()
     {
-        return player != null && player.getEquippedItem() == this;
+        return user != null && user.getEquippedItem() == this;
     }
 
     public virtual void usePrimaryActionDown()
