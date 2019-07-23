@@ -49,7 +49,7 @@ public class AttractObjectEffect : AttachedObjectEffect
     {
         if(attractTo == null || other.gameObject == attractTo.gameObject)
         {
-            endEffect();
+            //endEffect();
         }
     }
     

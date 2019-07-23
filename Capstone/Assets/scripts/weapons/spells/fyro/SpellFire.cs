@@ -13,5 +13,6 @@ public class SpellFire : AbstractProjectileWeaponEffect
         HealthControl healthControl = hit.GetComponent<HealthControl>();
         if (healthControl != null)
             healthControl.takeDamage(damage);//TODO ignite object(applies continuous damage) if in fuel state and no damage if in wet state
+        playPrimaryOnHitEffect(hit, hitPoint);
     }
 }

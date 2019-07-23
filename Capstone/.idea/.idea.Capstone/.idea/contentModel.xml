@@ -4,7 +4,9 @@
     <e p="A:\trist\Documents\My Games\CapstoneGame\Capstone" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EvilCube.cs" t="Include" />
         <e p="Resources" t="Include">
+          <e p="MissingModelFile.txt" t="Include" />
           <e p="models" t="Include">
             <e p="bodyguards" t="Include">
               <e p="ReadMe.txt.txt" t="Include" />
@@ -12,6 +14,33 @@
             <e p="materials" t="Include">
               <e p="PBR Materials Lite" t="Include">
                 <e p="Info.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Particles" t="Include">
+              <e p="ErbGameArt" t="Include">
+                <e p="Procedural fire" t="Include">
+                  <e p="Shaders" t="Include">
+                    <e p="FireSphere.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Magic Effects" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="Ice.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Misc Effects" t="Include">
+                <e p="Prefabs" t="Include">
+                  <e p="Readme_Dissolve_Respawn_.txt" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="SpawnEffect.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="Dissolve.shader" t="Include" />
+                  <e p="FireFly.shader" t="Include" />
+                  <e p="Respawn.shader" t="Include" />
+                </e>
               </e>
             </e>
             <e p="wands" t="Include">

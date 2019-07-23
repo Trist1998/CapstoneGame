@@ -94,13 +94,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipable: 1
-  player: {fileID: 0}
-  handBone: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
-  muzzleFlash: {fileID: 0}
-  sound: {fileID: 0}
+  primaryAutomaticFire: 0
+  secondaryAutomaticFire: 0
+  primaryMuzzleFlash: {fileID: 0}
+  secondaryMuzzleFlash: {fileID: 0}
+  primarySound: {fileID: 0}
+  secondarySound: {fileID: 0}
   spell: {fileID: 0}
+  primaryResetTime: 0
+  secondaryResetTime: 0
 --- !u!114 &2781263884110752984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15f012198b14e842a0f491e955f49f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primaryOnHitEffect: {fileID: 198856239026640498, guid: a6e6141c46adb614385627b5f95e44c7,
+    type: 3}
+  secondaryOnHitEffect: {fileID: 0}
   force: 2500
   range: 50
+  blastRadius: 7
 --- !u!65 &-3557585552956680258
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class ChaseCam : MonoBehaviour
             float dist = Vector3.Distance(transform.position, flyTo);
 
             Vector3 dir = heading / dist;
-            this.GetComponent<Rigidbody>().velocity = dir * dist * dist * speed;
+            GetComponent<Rigidbody>().velocity = dist * dist * speed * dir;
 
             transform.LookAt(parent.transform.position, Vector3.up);
         }
