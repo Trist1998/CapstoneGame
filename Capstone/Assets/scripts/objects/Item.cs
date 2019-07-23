@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Objects;
 using UnityEngine;
 
 public class Item: MonoBehaviour, IWorldObject
@@ -9,7 +10,13 @@ public class Item: MonoBehaviour, IWorldObject
     
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
-    public ItemUser user;
+    public IItemUser player;
+
+    private void equip()
+    {
+        if (!equipable || player == null) return;
+        transform.parent = player.getHandBone().transform;
+    }
 
     public void interact(InteractControl player)
     {
@@ -17,14 +24,14 @@ public class Item: MonoBehaviour, IWorldObject
 
         if (dist < 5)
         {
-            this.user = player;
+            this.player = player;
             player.addItem(this);
         }
     }
 
     public bool isEquipped()
     {
-        return user != null && user.getEquippedItem() == this;
+        return player != null && player.getEquippedItem() == this;
     }
 
     public virtual void usePrimaryActionDown()

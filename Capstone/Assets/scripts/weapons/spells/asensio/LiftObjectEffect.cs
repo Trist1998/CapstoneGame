@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Objects;
 using UnityEngine;
 
 public class LiftObjectEffect : AttachedObjectEffect
@@ -18,9 +19,9 @@ public class LiftObjectEffect : AttachedObjectEffect
             endEffect();
             return;
         }
-        ItemUser player = item.user;
+        IItemUser player = item.player;
         transform.rotation = rot;  
-        Vector3 flyTo = player.getUserAimPosition() + player.getUserAimDirection() * distance;
+        Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
         Vector3 heading = flyTo - transform.position;
         float dist = Vector3.Distance(transform.position, flyTo);
         if(Input.GetAxis("Push") == 1 && Input.GetAxis("Fire1") == 1)
@@ -65,7 +66,7 @@ public class LiftObjectEffect : AttachedObjectEffect
 
     public void shootForward(float force)
     {
-        GetComponent<Rigidbody>().AddForce(item.user.getUserAimDirection() * force);
+        GetComponent<Rigidbody>().AddForce(item.player.getItemAimDirection() * force);
         endEffect();
     }
 

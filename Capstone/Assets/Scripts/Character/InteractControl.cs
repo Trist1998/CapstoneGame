@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Objects;
 using UnityEngine;
 
-public class InteractControl: MonoBehaviour, ItemUser
+public class InteractControl: MonoBehaviour, IItemUser
 {
     public static readonly string SLOT_PRIMARY = "primary";
     
@@ -130,12 +131,12 @@ public class InteractControl: MonoBehaviour, ItemUser
         this.characterInput = input;
     }
 
-    public Vector3 getUserAimDirection()
+    public Vector3 getItemAimDirection()
     {
         return playerCamera.transform.forward;
     }
     
-    public Vector3 getUserAimPosition()
+    public Vector3 getItemAimPosition()
     {
         return playerCamera.transform.position;
     }
