@@ -20,7 +20,7 @@ public class NonPlayableCharacterControl : AbstractCharacterControl, ItemUser
     {
         if(true)
             primaryWeapon.usePrimaryActionDown();
-    }
+    } 
 
     public Vector3 getUserAimDirection()
     {
