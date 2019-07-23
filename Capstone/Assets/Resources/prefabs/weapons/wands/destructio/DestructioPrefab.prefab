@@ -122,9 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipped: 0
   equipable: 1
-  player: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   primaryAutomaticFire: 0
@@ -148,9 +146,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6026e86104e3e4e42a6cf3c26727e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primaryOnHitEffect: {fileID: 198656289721292014, guid: 7db7545785ad3ce498e7c66d67421c43,
+    type: 3}
+  secondaryOnHitEffect: {fileID: 0}
   force: 500
   lifeTime: 10
   projectilePrefab: {fileID: 5237790628494967255, guid: 8f306fffaec787d42a21f12a27b44c8f,
     type: 3}
   throwableWeapon: 0
+  useGravity: 0
   damage: 250

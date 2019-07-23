@@ -16,6 +16,7 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
         Rigidbody rig = hit.GetComponent<Rigidbody>();
         if (rig != null)
             rig.AddForce(force);
+        playPrimaryOnHitEffect(hit, hitPoint);
     }
    
 }

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class WorldObject : MonoBehaviour, IWorldObject
 {
-    public void interact(InteractControl player)
+    public void interact(IItemUser user)
     {}
 }

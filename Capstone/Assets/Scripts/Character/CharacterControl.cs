@@ -20,6 +20,13 @@ public class CharacterControl : AbstractCharacterControl
         if (!PauseMenu.paused)
         {
             movement.control();
+        }
+    }
+    
+    void FixedUpdate()
+    {
+        if (!PauseMenu.paused)
+        {
             interact.control();
         }
     }

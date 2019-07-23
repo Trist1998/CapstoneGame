@@ -7,6 +7,7 @@ public class SpellForce : AbstractWeaponEffect
     public readonly string SPELL_NAME = "Ezakio";
     public float force;
     public float range;
+    public float blastRadius;
 
     public override float getRange()
     {
@@ -20,6 +21,19 @@ public class SpellForce : AbstractWeaponEffect
         {
             rig.AddForce((hit.GetComponent<Collider>().transform.position - item.transform.position).normalized * force);
         }
+
+        Collider[] objects = Physics.OverlapSphere(hitPoint, blastRadius);
+        foreach (var colliderObject in objects)
+        {
+            Rigidbody rigid = colliderObject.gameObject.GetComponent<Rigidbody>();
+            if (rigid != null)
+            {
+                Vector3 displacment = colliderObject.transform.position - hitPoint;
+                rigid.AddForce(force * Mathf.Pow(Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1), 2) * displacment.normalized);
+            }
+        }
+        playPrimaryOnHitEffect(hit, hitPoint);
+        
     }
 }
 

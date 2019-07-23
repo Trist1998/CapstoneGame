@@ -17,14 +17,14 @@ public class Item: MonoBehaviour, IWorldObject
         transform.parent = user.getHandBone().transform;
     }
 
-    public void interact(InteractControl player)
+    public void interact(IItemUser user)
     {
-        float dist = Vector3.Distance(player.gameObject.transform.position, transform.position);
+        float dist = Vector3.Distance(user.getHandBone().transform.position, transform.position);
 
         if (dist < 5)
         {
-            this.user = player;
-            player.addItem(this);
+            this.user = user;
+            user.addItem(this);
         }
     }
 
