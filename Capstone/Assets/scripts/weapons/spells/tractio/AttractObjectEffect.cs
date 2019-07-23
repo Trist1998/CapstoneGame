@@ -10,6 +10,7 @@ public class AttractObjectEffect : AttachedObjectEffect
     private Vector3 attractionPoint;
     private float force;
     private bool hasAttached;
+    private ParticleSystem particles;
     
     public void attachEffect(AttractObjectEffect attractTo, float force, float lifeTime)
     {
@@ -19,8 +20,11 @@ public class AttractObjectEffect : AttachedObjectEffect
         startEffect(lifeTime);
     }
     
-    public void attachEffect(AttractObjectEffect attractTo, Vector3 pointOfAttraction, float force, float lifeTime)
+    public void attachEffect(AttractObjectEffect attractTo, Vector3 pointOfAttraction, ParticleSystem effect, float force, float lifeTime)
     {
+        particles = Instantiate(effect, gameObject.transform);
+        particles.transform.position = pointOfAttraction;
+        particles.Play();
         this.attractionPoint = pointOfAttraction;
         attachEffect(attractTo, force, lifeTime);
     }
@@ -52,5 +56,11 @@ public class AttractObjectEffect : AttachedObjectEffect
             //endEffect();
         }
     }
-    
+
+    public override void endEffect()
+    {
+        if(particles != null) particles.Stop();
+        Destroy(particles);
+        base.endEffect();
+    }
 }

@@ -103,7 +103,7 @@ MonoBehaviour:
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
-  primaryResetTime: 0
+  primaryResetTime: 0.2
   secondaryResetTime: 0
 --- !u!114 &2781263884110752984
 MonoBehaviour:
