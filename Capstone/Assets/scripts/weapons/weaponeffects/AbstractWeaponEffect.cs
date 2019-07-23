@@ -18,8 +18,8 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void primaryFire(Item item)
     {
         RaycastHit hit;
-        Vector3 origin = item.player.getItemAimPosition();
-        Vector3 direction = item.player.getItemAimDirection();
+        Vector3 origin = item.user.getItemAimPosition();
+        Vector3 direction = item.user.getItemAimDirection();
 
         if (Physics.Raycast(origin, direction, out hit, getRange()))
         {
@@ -31,8 +31,8 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void secondaryFire(Item item)
     {
         RaycastHit hit;
-        Vector3 origin = item.player.getItemAimPosition();
-        Vector3 direction = item.player.getItemAimDirection();
+        Vector3 origin = item.user.getItemAimPosition();
+        Vector3 direction = item.user.getItemAimDirection();
 
         if (Physics.Raycast(origin, direction, out hit, getRange()))
         {
