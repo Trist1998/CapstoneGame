@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterControl : MonoBehaviour
+public class CharacterControl : AbstractCharacterControl
 {
     public AbstractCharacterInput characterInput;
     public MovementControl movement;
     public InteractControl interact;
     public Camera playerCamera;
-    
-    public int characterType;
-    public int[] enemyTypeIds;
 
     void Start()
     {
@@ -18,7 +15,6 @@ public class CharacterControl : MonoBehaviour
         interact = GetComponent<InteractControl>();
         interact?.setValues(playerCamera, characterInput);
     }
-    
     void Update()
     {
         if (!PauseMenu.paused)

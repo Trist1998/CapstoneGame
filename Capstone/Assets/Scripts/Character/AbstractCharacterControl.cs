@@ -1,31 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
-public class AbstractCharacterControl : MonoBehaviour
+public class AbstractCharacterControl: MonoBehaviour
 {
-    public static readonly int WIZARD = 1;
-    public static readonly int HUMAN = 2;
-    [SerializeField]
-    private int characterTypeId;
-    [SerializeField]
-    private List<int> enemyTypeIds;
+    public int characterTypeId;
+    public int[] enemyTypeId;
 
-    public bool isEnemy(int typeId)
+    public bool isCharacterEnemy(int typeId)
     {
-        return enemyTypeIds.Contains(typeId);
-    }
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return enemyTypeId.Contains(typeId);
     }
 }
