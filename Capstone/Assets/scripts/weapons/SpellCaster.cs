@@ -57,7 +57,7 @@ public class SpellCaster : Item
         return true;
     }
     
-    public override void usePrimaryActionDown()//TODO Add checks for resetTime and other checks depending on the unused fields
+    public override void usePrimaryActionDown()
     {
         if (!canPrimaryFire()) return;
             primaryFire();

@@ -17,7 +17,7 @@ public class SpellAttract : AbstractWeaponEffect
         
         AttractObjectEffect thisObject = hit.AddComponent<AttractObjectEffect>();
         
-        thisObject.attachEffect(otherObject, hitPoint, force, effectLifeTime);
+        thisObject.attachEffect(otherObject, hitPoint, otherObject == null?primaryOnHitEffect:secondaryOnHitEffect, force, effectLifeTime);
 
         if (otherObject != null)
         {
