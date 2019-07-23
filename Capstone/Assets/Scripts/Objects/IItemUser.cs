@@ -1,12 +1,9 @@
 using UnityEngine;
 
-namespace Objects
+public interface IItemUser
 {
-    public interface IItemUser
-    {
-        Vector3 getItemAimDirection();
-        Vector3 getItemAimPosition();
-        Item getEquippedItem();
-        GameObject getHandBone();
-    }
+    Vector3 getItemAimDirection();
+    Vector3 getItemAimPosition();
+    Item getEquippedItem();
+    GameObject getHandBone();
 }
