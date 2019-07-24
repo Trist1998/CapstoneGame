@@ -9,6 +9,7 @@ public class SpellWater : AbstractProjectileWeaponEffect
     {
         WetObjectEffect effect = hit.AddComponent<WetObjectEffect>();
         effect.startEffect(lifeTime);
+        playPrimaryOnHitEffect(hit, hitPoint);
     }
     
 }

@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal.Profiling.Memory.Experimental;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
 public class Inventory
 {
