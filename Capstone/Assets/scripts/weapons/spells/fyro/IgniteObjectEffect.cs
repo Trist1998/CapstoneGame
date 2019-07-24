@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IgniteObjectEffect : MonoBehaviour
+public class IgniteObjectEffect : AttachedObjectEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    private float damagePerSecond;
+    private ParticleSystem particles;
+    
+    public void startEffect(ParticleSystem effect, float damagePerSecond, float lifeTime)
     {
-        
+        particles = Instantiate(effect, gameObject.transform);
+        particles.transform.position = transform.position;
+        particles.Play();
+        this.damagePerSecond = damagePerSecond;
+        appliedStates[STATE_FIRE] = 5;
+        negatingStates[STATE_WET] = 5;
+        base.startEffect(lifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void affectObject()
     {
-        
+        base.affectObject();
+        GetComponent<HealthControl>()?.takeDamage(damagePerSecond * Time.deltaTime);
+    }
+
+    public override void endEffect()
+    {
+        particles.Stop();
+        Destroy(particles);
+        base.endEffect();
     }
 }

@@ -146,9 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4423eb546a053924cb5636ee71dcc15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryOnHitEffect: {fileID: 0}
-  secondaryOnHitEffect: {fileID: 0}
-  force: 2500
+  primaryOnHitEffect: {fileID: 198175801688348628, guid: 9e732d3209fbc3e4291602843fc49bdf,
+    type: 3}
+  secondaryOnHitEffect: {fileID: 198714429152696258, guid: 945e605d40627c24a93501626f4826aa,
+    type: 3}
+  force: 25
   lifeTime: 10
   projectilePrefab: {fileID: 5237790628494967255, guid: e5917847c37ad7741a05407e864bd3cd,
     type: 3}

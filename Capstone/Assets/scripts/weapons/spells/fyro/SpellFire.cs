@@ -10,9 +10,8 @@ public class SpellFire : AbstractProjectileWeaponEffect
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        HealthControl healthControl = hit.GetComponent<HealthControl>();
-        if (healthControl != null)
-            healthControl.takeDamage(damage);//TODO ignite object(applies continuous damage) if in fuel state and no damage if in wet state
+        IgniteObjectEffect ignite = hit.AddComponent<IgniteObjectEffect>();//TODO ignite object(applies continuous damage) if in fuel state and no damage if in wet state
+        ignite.startEffect(secondaryOnHitEffect, damage, lifeTime);
         playPrimaryOnHitEffect(hit, hitPoint);
     }
 }
