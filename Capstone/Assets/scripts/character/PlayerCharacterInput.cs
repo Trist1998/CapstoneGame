@@ -59,4 +59,9 @@ public class PlayerCharacterInput : AbstractCharacterInput
     {
         return Input.GetButtonDown("Drop");
     }
+    
+    public override bool getSwapPrimary()
+    {
+        return Input.GetButtonDown("Swap");
+    }
 }

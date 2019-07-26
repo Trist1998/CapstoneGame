@@ -32,7 +32,7 @@ public class SpellForce : AbstractWeaponEffect
                 rigid.AddForce(force * Mathf.Pow(Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1), 2) * displacment.normalized);
             }
         }
-        playPrimaryOnHitEffect(hit, hitPoint);
+        playPrimaryOnHitEffect(null, hitPoint);
         
     }
 }

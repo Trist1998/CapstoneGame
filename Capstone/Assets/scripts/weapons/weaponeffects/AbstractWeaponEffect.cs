@@ -52,7 +52,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     protected virtual void playPrimaryOnHitEffect(GameObject hit, Vector3 hitPoint)
     {
         if(primaryOnHitEffect == null) return;
-            ParticleSystem effect = Instantiate(primaryOnHitEffect, hit.transform);
+            ParticleSystem effect = hit!=null?Instantiate(primaryOnHitEffect, hit.transform):Instantiate(primaryOnHitEffect);
             effect.transform.position = hitPoint;
             effect.Play();
     }

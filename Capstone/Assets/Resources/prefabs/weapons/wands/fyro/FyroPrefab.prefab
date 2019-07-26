@@ -156,4 +156,4 @@ MonoBehaviour:
     type: 3}
   throwableWeapon: 0
   useGravity: 0
-  damage: 20
+  damage: 5
