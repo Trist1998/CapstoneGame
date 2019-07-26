@@ -23,7 +23,7 @@ public class InteractControl: MonoBehaviour, IItemUser
 
     public void control()
     {
-        Item primary = inventory.getEquippedItem();
+        Item primary = getEquippedItem();
         if (primary != null)
         {
             if (characterInput.getPrimaryFireDown())
@@ -48,10 +48,16 @@ public class InteractControl: MonoBehaviour, IItemUser
         {
             cast();
         }
-        if(characterInput.getDropPrimary())
+        
+        if(characterInput.getSwapPrimary())
+        {
+            inventory.swapPrimaryWeapon();
+        }
+        else if(characterInput.getDropPrimary())
         {
             inventory.dropPrimary();
         }
+        
     }
 
     private void cast()
@@ -78,7 +84,7 @@ public class InteractControl: MonoBehaviour, IItemUser
 
     public Item getEquippedItem()
     {
-        return inventory.getEquippedItem();
+        return inventory.getPrimaryItem();
     }
 
     public void addItem(Item item)
