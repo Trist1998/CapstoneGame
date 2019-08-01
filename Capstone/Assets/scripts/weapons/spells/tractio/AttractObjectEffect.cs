@@ -11,12 +11,23 @@ public class AttractObjectEffect : AttachedObjectEffect
     private float force;
     private bool hasAttached;
     private ParticleSystem particles;
+    private Rigidbody rig;
     
     public void attachEffect(AttractObjectEffect attractTo, float force, float lifeTime)
     {
-        if(GetComponent<Rigidbody>() != null)
+        rig = GetComponent<Rigidbody>();
+        if (rig != null)
+        {
             this.attractTo = attractTo;
+            
+            if(attractTo != null)
+                rig.AddForce(force * getForceDirection());
+        }
+
+        
+            
         this.force = force;
+        
         startEffect(lifeTime);
     }
     
@@ -25,7 +36,7 @@ public class AttractObjectEffect : AttachedObjectEffect
         particles = Instantiate(effect, gameObject.transform);
         particles.transform.position = pointOfAttraction;
         particles.Play();
-        this.attractionPoint = pointOfAttraction;
+        attractionPoint = pointOfAttraction;
         attachEffect(attractTo, force, lifeTime);
     }
     
@@ -33,15 +44,22 @@ public class AttractObjectEffect : AttachedObjectEffect
     {
         if (attractTo != null)
         {
-            GetComponent<Rigidbody>().AddForce(getForceDirection() * force);
+            Rigidbody rig = GetComponent<Rigidbody>();
+            rig.AddForce(getForce() * getForceDirection());
         }
     }
-    
+
     public Vector3 getPosition()
     {
         if(!isMovableObject())
             return attractionPoint;
         return transform.position;
+    }
+    
+    public float getForce()
+    {
+        Rigidbody rig = GetComponent<Rigidbody>();
+        return force * (Mathf.Max(rig.mass, 1) * Mathf.Max(attractTo.GetComponent<Rigidbody>().mass, 1))/Mathf.Max(Mathf.Pow((attractTo.getPosition() - transform.position).magnitude, 2), 5);
     }
     
     private Vector3 getForceDirection()

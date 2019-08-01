@@ -21,7 +21,7 @@ public class InteractControl: MonoBehaviour, IItemUser
         inventory = new Inventory(this);
     }
 
-    public void control()
+    private void Update()
     {
         Item primary = getEquippedItem();
         if (primary != null)

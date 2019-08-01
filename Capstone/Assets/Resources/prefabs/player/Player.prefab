@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 4204322482335599541}
   - component: {fileID: 4204322482335599536}
   - component: {fileID: 4204322482335599542}
+  - component: {fileID: 388380476195225648}
   - component: {fileID: 2913183685704053711}
   - component: {fileID: 4902252435508042053}
   - component: {fileID: 4204322482335599540}
@@ -219,9 +220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b834597ad4c2f046b17b66c89a78332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterTypeId: 0
+  enemyTypeId: 
   characterInput: {fileID: 0}
   movement: {fileID: 2913183685704053711}
   interact: {fileID: 4902252435508042053}
+  playerCamera: {fileID: 0}
 --- !u!114 &4204322482335599542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +241,21 @@ MonoBehaviour:
   cameras:
   - {fileID: 4204322482866344403}
   - {fileID: 4204322481622919026}
+--- !u!114 &388380476195225648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204322482335599499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173669d6eba3fef41a5f17510bcfc88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  explosion: {fileID: 0}
+  impulseThreshold: 30
 --- !u!114 &2913183685704053711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,11 +275,10 @@ MonoBehaviour:
   speedX: 0
   speedZ: 0
   maxSpeed: 0
-  eyes: {fileID: 4204322482866344403}
+  playerCamera: {fileID: 0}
   jumpVelo: 0
   playerHeight: 0
   animator: {fileID: 4204322482335599540}
-  characterInput: {fileID: 11400000, guid: 52dab98cc20b65848b35e8aa4d600f19, type: 2}
 --- !u!114 &4902252435508042053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1000
-  cam: {fileID: 4204322482866344403}
   interactEnabled: 1
   handBone: {fileID: 4204322482706083837}
 --- !u!95 &4204322482335599540
