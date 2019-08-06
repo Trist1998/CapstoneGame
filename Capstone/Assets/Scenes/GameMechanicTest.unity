@@ -506,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427616, guid: a672d883412876f44995d03608c806db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.085
+      value: 11.681
       objectReference: {fileID: 0}
     - target: {fileID: 427616, guid: a672d883412876f44995d03608c806db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1905,7 +1905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 453360, guid: f860e21d40912044096cc8d6b2501579, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.034
+      value: 11.612
       objectReference: {fileID: 0}
     - target: {fileID: 453360, guid: f860e21d40912044096cc8d6b2501579, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1962,7 +1962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 428636, guid: e9035ef32e00e094fa30b792f7375a57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.249
+      value: 11.762
       objectReference: {fileID: 0}
     - target: {fileID: 428636, guid: e9035ef32e00e094fa30b792f7375a57, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2597,6 +2597,36 @@ PrefabInstance:
       propertyPath: headbobSideMovement
       value: 0.94
       objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: landSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b129e694a0fa16f498b497481befe169, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: footStepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a3eb761c67da86e4d95a714d5040e215, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: footStepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f556827165c098547be10e15323aa490, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: footStepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+    - target: {fileID: 82712217391461128, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a9e804a8165699a49bceb84d083a34a6, type: 3}
     - target: {fileID: 38466449676002412, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
         type: 3}
       propertyPath: handBone
