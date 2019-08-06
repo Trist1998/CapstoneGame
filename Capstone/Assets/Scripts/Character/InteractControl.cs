@@ -69,7 +69,6 @@ public class InteractControl : MonoBehaviour, IItemUser
             }
     }
 
-
     public void disableInteract()
     {
         interactEnabled = false;

@@ -8,7 +8,6 @@ public class CombustioObjectEffect : AttachedObjectEffect
     {
         IgniteObjectEffect ignite = gameObject.GetComponent<IgniteObjectEffect>();
         if (ignite == null) return;
-        print("Attaching");
         ignite.getLifeTimer().setLifeTime(10);
         endEffect();
     }
