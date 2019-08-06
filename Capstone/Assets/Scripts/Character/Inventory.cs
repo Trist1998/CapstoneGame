@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Inventory
@@ -27,7 +28,7 @@ public class Inventory
     {
         items.Add(item);
         item.GetComponent<Rigidbody>().isKinematic = true;
-        
+        item.GetComponent<Rigidbody>().detectCollisions = false;
         var primaryTransform = item.transform;
         primaryTransform.parent = user.getHandBone().transform;
         primaryTransform.localPosition = item.relativePosition;
@@ -68,6 +69,7 @@ public class Inventory
         item.gameObject.SetActive(true);
         item.transform.parent = null;
         item.GetComponent<Rigidbody>().isKinematic = false;
+        item.GetComponent<Rigidbody>().detectCollisions = true;
         items.Remove(item);
     }
 

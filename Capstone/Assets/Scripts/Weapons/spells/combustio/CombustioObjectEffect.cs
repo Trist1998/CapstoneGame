@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class CombustioObjectEffect : AttachedObjectEffect
 {
+    public override void affectObject()
+    {
+        IgniteObjectEffect ignite = gameObject.GetComponent<IgniteObjectEffect>();
+        if (ignite == null) return;
+        print("Attaching");
+        ignite.getLifeTimer().setLifeTime(10);
+        endEffect();
+    }
+
     public override void startEffect(float lifeTime)
     {
         appliedStates[STATE_FUEL] = 5;

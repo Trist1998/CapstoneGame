@@ -59,7 +59,7 @@ public class AttractObjectEffect : AttachedObjectEffect
     public float getForce()
     {
         Rigidbody rig = GetComponent<Rigidbody>();
-        return force * (Mathf.Max(rig.mass, 1) * Mathf.Max(attractTo.GetComponent<Rigidbody>().mass, 1))/Mathf.Max(Mathf.Pow((attractTo.getPosition() - transform.position).magnitude, 2), 5);
+        return force;// * (Mathf.Max(rig.mass, 1) * Mathf.Max(attractTo.GetComponent<Rigidbody>().mass, 1))/Mathf.Max(Mathf.Pow((attractTo.getPosition() - transform.position).magnitude, 2), 5);
     }
     
     private Vector3 getForceDirection()

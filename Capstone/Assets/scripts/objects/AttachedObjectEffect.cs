@@ -155,4 +155,11 @@ public class AttachedObjectEffect : MonoBehaviour
         return GetComponent<Rigidbody>() != null && !GetComponent<Rigidbody>().isKinematic;
     }
 
+    public GenericTimer getLifeTimer()
+    {
+        return lifeTimer;
+    }
+    
+    
+
 }

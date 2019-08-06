@@ -15,9 +15,5 @@ public class CharacterControl : AbstractCharacterControl
         interact = GetComponent<InteractControl>();
         interact?.setValues(playerCamera, characterInput);
     }
-
-    void OnGUI()
-    {
-        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 10, 10), "");
-    }
+    
 }

@@ -3,19 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractControl: MonoBehaviour, IItemUser
+public class InteractControl : MonoBehaviour, IItemUser
 {
 
     public float range = 1000f;
     private Camera playerCamera;
     private AbstractCharacterInput characterInput;
-    [SerializeField]
-    private bool interactEnabled = true;
+    [SerializeField] private bool interactEnabled = true;
     private Inventory inventory;
-    [SerializeField]
-    private GameObject handBone;
+    [SerializeField] private GameObject handBone;
 
-    
+
     private void Start()
     {
         inventory = new Inventory(this);
@@ -34,7 +32,7 @@ public class InteractControl: MonoBehaviour, IItemUser
             {
                 primary.usePrimaryActionUp();
             }
-            else if(characterInput.getSecondaryFireDown())
+            else if (characterInput.getSecondaryFireDown())
             {
                 primary.useSecondaryActionDown();
             }
@@ -43,34 +41,34 @@ public class InteractControl: MonoBehaviour, IItemUser
                 primary.useSecondaryActionUp();
             }
         }
-        
+
         if (characterInput.getInteract())
         {
             cast();
         }
-        
-        if(characterInput.getSwapPrimary())
+
+        if (characterInput.getSwapPrimary())
         {
             inventory.swapPrimaryWeapon();
         }
-        else if(characterInput.getDropPrimary())
+        else if (characterInput.getDropPrimary())
         {
             inventory.dropPrimary();
         }
-        
+
     }
 
     private void cast()
     {
         RaycastHit hit;
-        if(interactEnabled)
+        if (interactEnabled)
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
                 IWorldObject tar = hit.transform.GetComponent<IWorldObject>();
                 tar?.interact(this);
             }
     }
-    
+
 
     public void disableInteract()
     {
@@ -101,7 +99,7 @@ public class InteractControl: MonoBehaviour, IItemUser
     {
         this.handBone = handBone;
     }
-    
+
     public void setValues(Camera playerCamera, AbstractCharacterInput input)
     {
         this.playerCamera = playerCamera;
@@ -112,7 +110,7 @@ public class InteractControl: MonoBehaviour, IItemUser
     {
         return playerCamera.transform.forward;
     }
-    
+
     public Vector3 getItemAimPosition()
     {
         return playerCamera.transform.position;
@@ -122,6 +120,4 @@ public class InteractControl: MonoBehaviour, IItemUser
     {
         return inventory;
     }
-    
-    
 }

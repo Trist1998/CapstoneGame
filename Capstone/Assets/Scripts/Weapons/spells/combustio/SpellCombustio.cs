@@ -8,5 +8,6 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
     {
         CombustioObjectEffect effect = hit.AddComponent<CombustioObjectEffect>();
         effect.startEffect(lifeTime);
+        playPrimaryOnHitEffect(hit, hitPoint);
     }
 }
