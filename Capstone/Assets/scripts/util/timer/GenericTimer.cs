@@ -31,4 +31,19 @@ public class GenericTimer
         return false;
     }
 
+    public float getLifeTime()
+    {
+        return timeout;
+    }
+
+    public void setLifeTime(float lifeTime)
+    {
+        timeout = lifeTime;
+    }
+
+    public void addLifeTime(float lifeTime)
+    {
+        timeout += lifeTime;
+    }
+    
 }

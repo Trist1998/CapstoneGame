@@ -6,7 +6,9 @@ public abstract class AbstractCharacterInput : ScriptableObject
 {
     public abstract float getHorizontalInput();
     public abstract float getVerticalInput();
-    public abstract bool getJumpInput();
+    public abstract bool getJump();
+    public abstract bool getJumpDown();
+    public abstract float getCrouchAxis();
     public abstract float getMouseX();
     public abstract float getMouseY();
     public abstract bool getPrimaryFireDown();
@@ -16,5 +18,6 @@ public abstract class AbstractCharacterInput : ScriptableObject
     public abstract bool getInteract();
     public abstract bool getDropPrimary();
     public abstract bool getSwapPrimary();
+    public abstract bool getSprintDown();
 
 }

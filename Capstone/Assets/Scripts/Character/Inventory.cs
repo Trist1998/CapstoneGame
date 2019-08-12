@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Inventory
@@ -27,7 +26,7 @@ public class Inventory
     {
         items.Add(item);
         item.GetComponent<Rigidbody>().isKinematic = true;
-        
+        item.GetComponent<Rigidbody>().detectCollisions = false;
         var primaryTransform = item.transform;
         primaryTransform.parent = user.getHandBone().transform;
         primaryTransform.localPosition = item.relativePosition;
@@ -35,7 +34,7 @@ public class Inventory
         primaryTransform.Rotate(item.relativeRotation);
         
         item.gameObject.SetActive(false);
-        if(getPrimaryItem() != null) 
+        if(getPrimaryItem() != null)
             setSecondaryItem(getPrimaryItem());
         setPrimaryItem(item);
     }
@@ -53,10 +52,16 @@ public class Inventory
      */
     public void dropPrimary()
     {
-        dropItem(getPrimaryItem());
-        setPrimaryItem(getSecondaryItem());
+        Item primary = getPrimaryItem();
+        dropItem(primary);
+        Item secondary = getSecondaryItem();
+        setPrimaryItem(secondary);
         if(items.Count() >= 2)
-            setSecondaryItem(items[0] == getPrimaryItem()?items[1]:items[0]);
+                setSecondaryItem(items[0] == getPrimaryItem()?items[1]:items[0]);
+        else
+        {
+            setSecondaryItem(null);
+        }
     }
     
     /**
@@ -68,6 +73,7 @@ public class Inventory
         item.gameObject.SetActive(true);
         item.transform.parent = null;
         item.GetComponent<Rigidbody>().isKinematic = false;
+        item.GetComponent<Rigidbody>().detectCollisions = true;
         items.Remove(item);
     }
 
@@ -86,9 +92,15 @@ public class Inventory
      */
     public void setPrimaryItem(Item item)
     {
-        slots[SLOT_PRIMARY] = item;
-        if(item != null)
+        if (item != null)
+        {
+            slots[SLOT_PRIMARY] = item;
             item.gameObject.SetActive(true);
+        }
+        else
+        {
+            slots.Remove(SLOT_PRIMARY);
+        }
     }
 
     /**
@@ -106,11 +118,14 @@ public class Inventory
      */
     public void setSecondaryItem(Item item)
     {
-        
-        slots[SLOT_SECONDARY] = item;
         if (item != null)
         {
+            slots[SLOT_SECONDARY] = item;
             item.gameObject.SetActive(false);
+        }
+        else
+        {
+            slots.Remove(SLOT_SECONDARY);
         }
     }
 

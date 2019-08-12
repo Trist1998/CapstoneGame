@@ -29,7 +29,7 @@ public class SpellForce : AbstractWeaponEffect
             if (rigid != null)
             {
                 Vector3 displacment = colliderObject.transform.position - hitPoint;
-                rigid.AddForce(force * Mathf.Pow(Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1), 2) * displacment.normalized);
+                rigid.AddForce(force * Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1) * displacment.normalized);
             }
         }
         playPrimaryOnHitEffect(null, hitPoint);
