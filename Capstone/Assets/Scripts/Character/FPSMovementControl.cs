@@ -317,17 +317,8 @@ public class BETA_SETTINGS{
         #region BETA_SETTINGS - Update
 
         #endregion
-    }
-
-    private void FixedUpdate()
-    {
-        #region Look Settings - FixedUpdate
-
-        #endregion
-
-        #region Movement Settings - FixedUpdate
         
-        bool wasWalking = !isSprinting;
+         bool wasWalking = !isSprinting;
         if(useStamina) 
         {
             if (staminaInternal > 0)
@@ -516,6 +507,17 @@ public class BETA_SETTINGS{
                 jumpPowerInternal = jumpPower;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        #region Look Settings - FixedUpdate
+
+        #endregion
+
+        #region Movement Settings - FixedUpdate
+        
+       
 
         #endregion
 

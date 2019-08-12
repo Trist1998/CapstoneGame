@@ -24,7 +24,7 @@ public class HealthControl : MonoBehaviour
         takeDamage(amount);
         GetComponent<Rigidbody>().AddForce(direction * force);
     }
-    private void die()
+    protected virtual void die()
     {
         Destroy(gameObject);
     }
