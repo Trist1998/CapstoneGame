@@ -1,4 +1,4 @@
-﻿using Objects;
+﻿//using Objects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +13,7 @@ public class NonPlayableCharacterControl : AbstractCharacterControl, IItemUser
     void Start()
     {
         health = GetComponent<HealthControl>();
-        primaryWeapon.player = this;
+        primaryWeapon.user = this;
     }
 
     // Update is called once per frame
@@ -36,6 +36,12 @@ public class NonPlayableCharacterControl : AbstractCharacterControl, IItemUser
     public Item getEquippedItem()
     {
         return primaryWeapon;
+    }
+
+    public void addItem(Item item)
+    {
+        //TODO
+        throw new System.NotImplementedException();
     }
 
     public Vector3 getItemAimDirection()
