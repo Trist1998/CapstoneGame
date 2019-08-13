@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Objects;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NonPlayableCharacterControl : AbstractCharacterControl, ItemUser
+public class NonPlayableCharacterControl : AbstractCharacterControl, IItemUser
 {
     private HealthControl health;
 
@@ -12,7 +13,7 @@ public class NonPlayableCharacterControl : AbstractCharacterControl, ItemUser
     void Start()
     {
         health = GetComponent<HealthControl>();
-        primaryWeapon.user = this;
+        primaryWeapon.player = this;
     }
 
     // Update is called once per frame
@@ -35,5 +36,20 @@ public class NonPlayableCharacterControl : AbstractCharacterControl, ItemUser
     public Item getEquippedItem()
     {
         return primaryWeapon;
+    }
+
+    public Vector3 getItemAimDirection()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Vector3 getItemAimPosition()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public GameObject getHandBone()
+    {
+        throw new System.NotImplementedException();
     }
 }
