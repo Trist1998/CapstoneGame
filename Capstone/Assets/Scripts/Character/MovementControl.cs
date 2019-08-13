@@ -54,7 +54,7 @@ public class MovementControl: MonoBehaviour
         crouch();
         gravity();
 
-        if(characterInput.getJumpInput())
+        if(characterInput.getJump())
         {
             jump();
         }

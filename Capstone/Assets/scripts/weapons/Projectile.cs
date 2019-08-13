@@ -12,7 +12,8 @@ public class Projectile : MonoBehaviour
     
     void Start()
     {
-        particles = GetComponent<ParticleSystem>();
+        if(particles == null)
+            particles = GetComponent<ParticleSystem>();
     }
     
     public void fire(Vector3 position, Vector3 direction, bool useGravity, float force, float timeout)
@@ -28,8 +29,14 @@ public class Projectile : MonoBehaviour
             rig.AddForce(direction.normalized * force);
         }
 
-        if(particles != null)
-            particles.Play();
+        if (particles != null)
+        {
+            ParticleSystem effect = Instantiate(particles, gameObject.transform);
+            effect.transform.position = transform.position;
+            effect.Play();
+        }
+        
+            
     }
 
     public void setEffectValues(Item item, AbstractWeaponEffect weaponEffect)
@@ -59,7 +66,6 @@ public class Projectile : MonoBehaviour
     {
         if(timer != null && timer.isTimeout())
         {
-            Destroy(particles);
             Destroy(gameObject);
         }
     }
@@ -68,7 +74,7 @@ public class Projectile : MonoBehaviour
     {
         if(!hitObject && item != null && other.gameObject != item.gameObject)
         {
-            onHitEffect.processPrimaryHit(item, other.gameObject);
+            onHitEffect.processPrimaryHit(item, other.gameObject,other.GetContact(0).point, GetComponent<Rigidbody>().velocity.normalized);
             Destroy(gameObject);
             hitObject = true;
         }

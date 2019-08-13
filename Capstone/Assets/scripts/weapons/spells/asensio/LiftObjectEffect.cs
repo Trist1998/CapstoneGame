@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Objects;
 using UnityEngine;
 
 public class LiftObjectEffect : AttachedObjectEffect
@@ -19,7 +18,7 @@ public class LiftObjectEffect : AttachedObjectEffect
             endEffect();
             return;
         }
-        IItemUser player = item.player;
+        IItemUser player = item.user;
         transform.rotation = rot;  
         Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
         Vector3 heading = flyTo - transform.position;
@@ -55,7 +54,7 @@ public class LiftObjectEffect : AttachedObjectEffect
             return;
         }       
         this.item = item;
-        lev((transform.position - item.transform.position).magnitude);     
+        lev((transform.position - item.user.getItemAimPosition()).magnitude);     
     }
 
     public override void endEffect()
@@ -66,7 +65,7 @@ public class LiftObjectEffect : AttachedObjectEffect
 
     public void shootForward(float force)
     {
-        GetComponent<Rigidbody>().AddForce(item.player.getItemAimDirection() * force);
+        GetComponent<Rigidbody>().AddForce(item.user.getItemAimDirection() * force);
         endEffect();
     }
 

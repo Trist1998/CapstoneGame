@@ -15,14 +15,25 @@ public class PlayerCharacterInput : AbstractCharacterInput
         return Input.GetAxis("Vertical");
     }
 
-    public override bool getJumpInput()
+    public override bool getJump()
+    {
+        return Input.GetButton("Jump");
+    }
+    
+    public override bool getJumpDown()
     {
         return Input.GetButtonDown("Jump");
+    }
+
+    public override float getCrouchAxis()
+    {
+        return Input.GetAxis("Crouch");
     }
 
     public override float getMouseX()
     {
         return Input.GetAxis("Mouse X");
+        
     }
 
     public override float getMouseY()
@@ -58,5 +69,15 @@ public class PlayerCharacterInput : AbstractCharacterInput
     public override bool getDropPrimary()
     {
         return Input.GetButtonDown("Drop");
+    }
+    
+    public override bool getSwapPrimary()
+    {
+        return Input.GetButtonDown("Swap");
+    }
+
+    public override bool getSprintDown()
+    {
+        return Input.GetKey(KeyCode.LeftShift);
     }
 }

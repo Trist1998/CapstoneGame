@@ -6,6 +6,7 @@ public class AttachedObjectEffect : MonoBehaviour
 {
     public static readonly string STATE_WET = "WET";
     public static readonly string STATE_FIRE = "FIRE";
+    public static readonly string STATE_FUEL = "FUEL";
     
     protected static readonly string END_EFFECT_TIME_OUT = "END_TIMEOUT";
 
@@ -153,5 +154,12 @@ public class AttachedObjectEffect : MonoBehaviour
     {
         return GetComponent<Rigidbody>() != null && !GetComponent<Rigidbody>().isKinematic;
     }
+
+    public GenericTimer getLifeTimer()
+    {
+        return lifeTimer;
+    }
+    
+    
 
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class HealthControl : MonoBehaviour
 {
     public float health = 1000f;
     public GameObject explosion;
+    public float impulseThreshold;
 
     public void takeDamage(float amount)
     {
@@ -22,7 +24,7 @@ public class HealthControl : MonoBehaviour
         takeDamage(amount);
         GetComponent<Rigidbody>().AddForce(direction * force);
     }
-    private void die()
+    protected virtual void die()
     {
         Destroy(gameObject);
     }
@@ -31,9 +33,19 @@ public class HealthControl : MonoBehaviour
     {
         if(explosion != null)
         {
-            ParticleSystem particles = Instantiate(explosion.GetComponent<ParticleSystem>(), this.transform.position, this.transform.rotation);
+            ParticleSystem particles = Instantiate(explosion.GetComponent<ParticleSystem>(), transform.position, transform.rotation);
             particles.Play();
             Destroy(gameObject, particles.main.duration);
         }      
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.impulse.magnitude > impulseThreshold)
+        {
+            takeDamage(collision.impulse.magnitude);
+            print(collision.impulse.magnitude + " impulse");
+        }
+
     }
 }

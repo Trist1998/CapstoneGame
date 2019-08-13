@@ -1,30 +1,25 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Objects;
 using UnityEngine;
 
-public class InteractControl: MonoBehaviour, IItemUser
+public class InteractControl : MonoBehaviour, IItemUser
 {
-    public static readonly string SLOT_PRIMARY = "primary";
-    
+
     public float range = 1000f;
     private Camera playerCamera;
     private AbstractCharacterInput characterInput;
-    [SerializeField]
-    private bool interactEnabled = true;
+    [SerializeField] private bool interactEnabled = true;
     private Inventory inventory;
-    [SerializeField]
-    private GameObject handBone;
+    [SerializeField] private GameObject handBone;
 
-    private Dictionary<string, Item> slots;
+
     private void Start()
     {
-        inventory = new Inventory();
-        slots = new Dictionary<string, Item>();
+        inventory = new Inventory(this);
     }
 
-    public void control()
+    private void Update()
     {
         Item primary = getEquippedItem();
         if (primary != null)
@@ -37,7 +32,7 @@ public class InteractControl: MonoBehaviour, IItemUser
             {
                 primary.usePrimaryActionUp();
             }
-            else if(characterInput.getSecondaryFireDown())
+            else if (characterInput.getSecondaryFireDown())
             {
                 primary.useSecondaryActionDown();
             }
@@ -46,63 +41,32 @@ public class InteractControl: MonoBehaviour, IItemUser
                 primary.useSecondaryActionUp();
             }
         }
-        
+
         if (characterInput.getInteract())
         {
             cast();
         }
-        if(characterInput.getDropPrimary())
+
+        if (characterInput.getSwapPrimary())
         {
-            dropPrimary();
+            inventory.swapPrimaryWeapon();
         }
+        else if (characterInput.getDropPrimary())
+        {
+            inventory.dropPrimary();
+        }
+
     }
 
     private void cast()
     {
         RaycastHit hit;
-        if(interactEnabled)
+        if (interactEnabled)
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
             {
                 IWorldObject tar = hit.transform.GetComponent<IWorldObject>();
                 tar?.interact(this);
             }
-    }
-
-    public void addItem(Item item)
-    {
-        inventory.addItem(item);
-        if (getEquippedItem() == null)
-        {
-            equipItem(item);
-        }
-    }
-
-    public void dropPrimary()
-    {
-        dropItem(getEquippedItem());
-        setPrimaryItem(null);
-    }
-    
-    private void dropItem(Item item)
-    {
-        if (item == null) return;
-        
-        inventory.dropItem(item);
-        item.transform.parent = null;
-        item.GetComponent<Rigidbody>().isKinematic = false;
-    }
-    
-    public void equipItem(Item item)
-    {
-        dropPrimary();
-        setPrimaryItem(item);
-        
-        item.GetComponent<Rigidbody>().isKinematic = true;
-        var primaryTransform = item.transform;
-        primaryTransform.parent = handBone.transform;
-        primaryTransform.localPosition = item.relativePosition;
-        primaryTransform.rotation = getHandBone().transform.rotation;
-        primaryTransform.Rotate(item.relativeRotation);
     }
 
     public void disableInteract()
@@ -115,6 +79,16 @@ public class InteractControl: MonoBehaviour, IItemUser
         interactEnabled = true;
     }
 
+    public Item getEquippedItem()
+    {
+        return inventory.getPrimaryItem();
+    }
+
+    public void addItem(Item item)
+    {
+        inventory.addItem(item);
+    }
+
     public GameObject getHandBone()
     {
         return handBone;
@@ -124,7 +98,7 @@ public class InteractControl: MonoBehaviour, IItemUser
     {
         this.handBone = handBone;
     }
-    
+
     public void setValues(Camera playerCamera, AbstractCharacterInput input)
     {
         this.playerCamera = playerCamera;
@@ -135,7 +109,7 @@ public class InteractControl: MonoBehaviour, IItemUser
     {
         return playerCamera.transform.forward;
     }
-    
+
     public Vector3 getItemAimPosition()
     {
         return playerCamera.transform.position;
@@ -144,22 +118,5 @@ public class InteractControl: MonoBehaviour, IItemUser
     public Inventory getInventory()
     {
         return inventory;
-    }
-    
-    public void setPrimaryItem(Item item)
-    {
-        slots[SLOT_PRIMARY] = item;
-    }
-    
-    public Item getEquippedItem()
-    {
-        return getSlotItem(SLOT_PRIMARY);
-    }
-    
-    public Item getSlotItem(string slotId)
-    { 
-        if (slots.ContainsKey(slotId))
-            return slots[slotId];
-        return null;
     }
 }
