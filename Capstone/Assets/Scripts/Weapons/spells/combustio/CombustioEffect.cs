@@ -14,7 +14,7 @@ public class CombustioEffect : AttachedEffect
 
     public void startEffect(float lifeTime)
     {
-        startEffect(this.gameObject, lifeTime);
+        startEffect(lifeTime);
     }
     
 }

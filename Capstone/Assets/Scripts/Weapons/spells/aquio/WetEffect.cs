@@ -9,6 +9,6 @@ public class WetEffect: AttachedEffect
     {
         appliedStates[AttachedEffectManager.STATE_WET] = 5;
         negatingStates[AttachedEffectManager.STATE_FIRE] = 5;
-        base.startEffect(gameObject, lifeTime);
+        base.startEffect(lifeTime);
     }
 }
