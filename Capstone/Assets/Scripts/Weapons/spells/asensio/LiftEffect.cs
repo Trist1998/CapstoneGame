@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LiftObjectEffect : AttachedObjectEffect
+public class LiftEffect : AttachedEffect
 {
     Item item;
     public float speed = 2f;

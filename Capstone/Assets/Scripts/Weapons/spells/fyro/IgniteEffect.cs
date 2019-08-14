@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IgniteObjectEffect : AttachedObjectEffect
+public class IgniteEffect : AttachedEffect
 {
     private float damagePerSecond;
     private ParticleSystem particles;
@@ -13,8 +13,8 @@ public class IgniteObjectEffect : AttachedObjectEffect
         particles.transform.position = transform.position;
         particles.Play();
         this.damagePerSecond = damagePerSecond;
-        appliedStates[STATE_FIRE] = 5;
-        negatingStates[STATE_WET] = 5;
+        appliedStates[AttachedEffectManager.STATE_FIRE] = 5;
+        negatingStates[AttachedEffectManager.STATE_WET] = 5;
         base.startEffect(lifeTime);
     }
 

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttractObjectEffect : AttachedObjectEffect
+public class AttractEffect : AttachedEffect
 {
     [SerializeField]
-    private AttractObjectEffect attractTo;
+    private AttractEffect attractTo;
     [SerializeField]
     private Vector3 attractionPoint;
     private float force;
@@ -13,7 +13,7 @@ public class AttractObjectEffect : AttachedObjectEffect
     private ParticleSystem particles;
     private Rigidbody rig;
     
-    public void attachEffect(AttractObjectEffect attractTo, float force, float lifeTime)
+    public void attachEffect(AttractEffect attractTo, float force, float lifeTime)
     {
         rig = GetComponent<Rigidbody>();
         if (rig != null)
@@ -31,7 +31,7 @@ public class AttractObjectEffect : AttachedObjectEffect
         startEffect(lifeTime);
     }
     
-    public void attachEffect(AttractObjectEffect attractTo, Vector3 pointOfAttraction, ParticleSystem effect, float force, float lifeTime)
+    public void attachEffect(AttractEffect attractTo, Vector3 pointOfAttraction, ParticleSystem effect, float force, float lifeTime)
     {
         particles = Instantiate(effect, gameObject.transform);
         particles.transform.position = pointOfAttraction;

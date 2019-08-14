@@ -7,7 +7,7 @@ public class SpellWater : AbstractProjectileWeaponEffect
     
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        WetObjectEffect effect = hit.AddComponent<WetObjectEffect>();
+        WetEffect effect = hit.AddComponent<WetEffect>();
         effect.startEffect(lifeTime);
         playPrimaryOnHitEffect(hit, hitPoint);
     }

@@ -6,27 +6,27 @@ public class SpellAttract : AbstractWeaponEffect
 {
     public readonly string SPELL_NAME = "Tractio";
     
-    private AttractObjectEffect otherObject;
+    private AttractEffect other;
     public float effectLifeTime;
     public float force;
     
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)//This is gross logic
     {
-        if (otherObject != null && otherObject.gameObject == hit.gameObject)
+        if (other != null && other.gameObject == hit.gameObject)
             return;
         
-        AttractObjectEffect thisObject = hit.AddComponent<AttractObjectEffect>();
+        AttractEffect @this = hit.AddComponent<AttractEffect>();
         
-        thisObject.attachEffect(otherObject, hitPoint, otherObject == null?primaryOnHitEffect:secondaryOnHitEffect, force, effectLifeTime);
+        @this.attachEffect(other, hitPoint, other == null?primaryOnHitEffect:secondaryOnHitEffect, force, effectLifeTime);
 
-        if (otherObject != null)
+        if (other != null)
         {
-            otherObject.attachEffect(thisObject, force, effectLifeTime);
-            otherObject = null;
+            other.attachEffect(@this, force, effectLifeTime);
+            other = null;
         }
         else
         {
-            otherObject = thisObject;
+            other = @this;
         }
     }
 }
