@@ -39,4 +39,14 @@ public class AttachedEffectManager : MonoBehaviour
 
         return stateValue > state2Value; //Because ties negate everything;
     }
+
+    public void removeEffect(AttachedEffect attachedEffect)
+    {
+        foreach (var state in attachedEffect.getAppliedStates())
+        {
+            if(!attachedEffectStates.ContainsKey(state.Key) || attachedEffectStates[state.Key] == null)
+                continue;
+            attachedEffectStates[state.Key].Remove(attachedEffect);
+        }
+    }
 }

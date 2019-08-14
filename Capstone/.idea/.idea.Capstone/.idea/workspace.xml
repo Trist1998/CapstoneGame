@@ -5,62 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueueNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueueNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IFixedSizePriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IFixedSizePriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IPriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IPriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/Priority Queue.csproj.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/Priority Queue.nuspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/Priority Queue.nuspec.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/SimplePriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/SimplePriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueueNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueueNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/packages.config.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioObjectEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/objects/AttachedObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/objects/AttachedObjectEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/LiftObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/LiftObjectEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/SpellLift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/SpellLift.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/IgniteObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/IgniteObjectEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/SpellFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/SpellFire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/AttractObjectEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/AttractObjectEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/SpellAttract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/SpellAttract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/paratacio/SpellElectric.cs" />
-        <option value="$PROJECT_DIR$/Assets/ThrowableWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/weapons/ThrowableWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/SpellFire.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/AttractObjectEffect.cs" />
@@ -196,6 +142,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/PriorityQueue.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedObjectEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
       </list>
@@ -288,7 +236,7 @@
       <workItem from="1565611674844" duration="70000" />
       <workItem from="1565611801441" duration="7712000" />
       <workItem from="1565697759982" duration="5477000" />
-      <workItem from="1565791632593" duration="9982000" />
+      <workItem from="1565791632593" duration="11030000" />
     </task>
     <servers />
   </component>

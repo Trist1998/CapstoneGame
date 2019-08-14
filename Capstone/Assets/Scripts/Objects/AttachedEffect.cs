@@ -18,11 +18,16 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void affectObject()
     {}
-    
-    private void applyStates(GameObject obj)
+
+    private AttachedEffectManager getManager()
     {
-        AttachedEffectManager manager = obj.transform.root.GetComponent<AttachedEffectManager>();
-        if (manager == null) manager = obj.transform.root.gameObject.AddComponent<AttachedEffectManager>();
+        AttachedEffectManager manager = transform.root.GetComponent<AttachedEffectManager>();
+        return manager == null ? transform.root.gameObject.AddComponent<AttachedEffectManager>() : manager;
+    }
+    
+    private void applyStates()
+    {
+        AttachedEffectManager manager = getManager();
         var attachedStates = manager.getAttachedStates();
         bool end = false;
         foreach (var state in getNegationStates())
@@ -114,14 +119,7 @@ public class AttachedEffect : MonoBehaviour
         return negatingStates;
     }
     
-    /**
-     * Used to set up and start effect once attached
-     *     lifeTime determines how long(in seconds) the effect will last
-     */
-    public virtual void startEffect(float lifeTime)
-    {
-        startEffect(gameObject, lifeTime);
-    }
+    
 
     /**
      * Used to set up and start effect once attached
@@ -131,13 +129,17 @@ public class AttachedEffect : MonoBehaviour
     public virtual void startEffect(GameObject obj, float tickTime, float lifeTime)
     {
         tickTimer = new GenericTimer(tickTime, true);
-        startEffect(obj, lifeTime);
+        startEffect(lifeTime);
     }
     
-    public virtual void startEffect(GameObject obj, float lifeTime)
+    /**
+     * Used to set up and start effect once attached
+     *     lifeTime determines how long(in seconds) the effect will last
+     */
+    public virtual void startEffect(float lifeTime)
     {
         lifeTimer = new GenericTimer(lifeTime, true);
-        applyStates(obj);
+        applyStates();
         checkState();
     }
 
@@ -146,6 +148,7 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void endEffect()
     {
+        getManager().removeEffect(this);
         Destroy(this);          
     }
     
