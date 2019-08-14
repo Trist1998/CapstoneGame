@@ -6,7 +6,7 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
 {
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        CombustioObjectEffect effect = hit.AddComponent<CombustioObjectEffect>();
+        CombustioEffect effect = hit.AddComponent<CombustioEffect>();
         effect.startEffect(lifeTime);
         playPrimaryOnHitEffect(hit, hitPoint);
     }
