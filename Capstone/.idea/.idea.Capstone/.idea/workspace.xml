@@ -5,31 +5,488 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/enemy.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ChaseCam.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ChaseCam.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ChasePoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/ChasePoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemy.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemy/BasicEnemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemy/BasicEnemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractWeaponEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractWeaponEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Animations/Door_open.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Animations/Door_open.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Animations/Doors.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Animations/Doors.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/MiscScripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/MiscScripts/Doors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/MiscScripts/Doors.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/CeilingLight.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/CeilingLight.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Chair.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Chair.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Computer.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Computer.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Desk.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Desk.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Doors.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Doors.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/FireExtinguisher.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/FireExtinguisher.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Meeting Table.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Meeting Table.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/MiniVan.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/MiniVan.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/OfficeRoom.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/OfficeRoom.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/ParkBench.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/ParkBench.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/PottedPlant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/PottedPlant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Rock1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Rock1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Rock2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Rock2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/RoundTable.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/RoundTable.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/SoadMachine.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/SoadMachine.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/StreetLight.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/StreetLight.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/Tree_3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/VendingMachine.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Prefabs/VendingMachine.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Scene/Demo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Scene/Demo.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-08.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-08.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-09.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-09.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-10.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-10.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-11.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-11.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-08.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-08.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-09.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-09.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-10.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-10.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-11.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-11.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_02.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_02.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_05.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_05.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_08.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_08.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_09.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_09.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_10.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_10.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_11.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_11.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Asphalt.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Asphalt.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Bumped Glass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Bumped Glass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Carpet.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Carpet.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/DaySky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/DaySky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Drywall.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Drywall.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/GlassBumpedDistort.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/GlassBumpedDistort.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/MicroProps.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/MicroProps.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/NightSky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/NightSky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Carpet.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Carpet.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Concrete.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Concrete.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Grass.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Grass.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Gravel.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Gravel.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/MaxFriction.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/MaxFriction.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Wood.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Wood.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/ZeroFriction.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/ZeroFriction.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Shadeless Black.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Shadeless Black.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/SideWalk.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/SideWalk.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Tile.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/Tile.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/WindowLining.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Materials/WindowLining.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Carpet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Concrete.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Back.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Bottom.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Front.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/DaySky/Top.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Sliding Door Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Doors/Sliding Door Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Glass.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Glass/GlassFrosted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Glass/GlassFrosted.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Glass/glassNormal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Glass/glassNormal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Back.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Bottom.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Front.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Front.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/NightSky/Top.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Emission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Emission.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_matallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_matallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Reticle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Reticle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/Documentation.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/Documentation.rtf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/FirstPersonAIO.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/FirstPersonAIO/FirstPerson-AIO.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/FirstPersonAIO/FirstPerson-AIO.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/README.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Animations/Door_open.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Animations/Door_open.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Animations/Doors.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Animations/Doors.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/MiscScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/MiscScripts/Doors.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/MiscScripts/Doors.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/CeilingLight.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/CeilingLight.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Chair.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Chair.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Computer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Computer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Desk.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Desk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Doors.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Doors.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/FireExtinguisher.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/FireExtinguisher.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Meeting Table.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Meeting Table.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/MiniVan.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/MiniVan.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/OfficeRoom.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/OfficeRoom.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/ParkBench.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/ParkBench.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/PottedPlant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/PottedPlant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Rock1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Rock1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Rock2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Rock2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/RoundTable.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/RoundTable.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/SoadMachine.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/SoadMachine.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/StreetLight.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/StreetLight.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/Tree_3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/VendingMachine.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Prefabs/VendingMachine.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Scene/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Scene/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-01.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-02.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-03.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-05.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-06.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-07.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-08.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-09.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-10.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Carpet/Carpet-11.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-01.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-02.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-03.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-05.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-06.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-07.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-08.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-09.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-10.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Concrete/Concrete-11.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_01.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_02.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_03.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_05.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_06.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_07.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_08.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_09.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_10.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Sounds/sfx/Footsteps/Grass/Grass_11.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Asphalt.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Asphalt.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Bumped Glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Bumped Glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Carpet.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Carpet.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/DaySky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/DaySky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Drywall.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Drywall.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/GlassBumpedDistort.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/GlassBumpedDistort.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/MicroProps.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/MicroProps.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/NightSky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/NightSky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Carpet.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Carpet.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Concrete.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Concrete.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Grass.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Grass.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Gravel.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Gravel.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/MaxFriction.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/MaxFriction.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Wood.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/Wood.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/ZeroFriction.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/PhysicsMats/ZeroFriction.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Shadeless Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Shadeless Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/SideWalk.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/SideWalk.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Tile.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/Tile.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/WindowLining.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Materials/WindowLining.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Carpet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Carpet/Carpet_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Concrete.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Concrete/Concrete_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Bottom.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Front.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Left.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Right.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/DaySky/Top.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture Metallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture Metallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Hinge Door Texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Sliding Door Texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Doors/Sliding Door Texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Glass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Glass/GlassFrosted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Glass/GlassFrosted.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Glass/glassNormal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Glass/glassNormal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Bottom.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Front.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Left.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Right.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/NightSky/Top.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Emission.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Emission.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_matallic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Props/MicroPropTex_matallic.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Reticle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Reticle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/DemoScene/Working Textures/Tile/Tile_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/Documentation.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/Documentation.rtf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/FirstPersonAIO.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/FirstPersonAIO/FirstPerson-AIO.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/FirstPersonAIO/FirstPerson-AIO.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FPS All-In-One/README.txt.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
