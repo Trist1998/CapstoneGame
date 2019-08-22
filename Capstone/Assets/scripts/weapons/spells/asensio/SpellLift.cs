@@ -8,10 +8,10 @@ public class SpellLift : AbstractWeaponEffect
 
     public float shootForwardForce;
 
-    private LiftObjectEffect attached;
+    private LiftEffect attached;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        attached = hit.AddComponent(typeof(LiftObjectEffect)) as LiftObjectEffect;
+        attached = hit.AddComponent(typeof(LiftEffect)) as LiftEffect;
         attached.startEffect(item);
     }
 

@@ -154,7 +154,8 @@
             <e p="PauseMenu.cs" t="Include" />
           </e>
           <e p="objects" t="Include">
-            <e p="AttachedObjectEffect.cs" t="Include" />
+            <e p="AttachedEffect.cs" t="Include" />
+            <e p="AttachedEffectManager.cs" t="Include" />
             <e p="IItemUser.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="IWorldObject.cs" t="Include" />
@@ -162,6 +163,17 @@
           </e>
           <e p="Spawner.cs" t="Include" />
           <e p="util" t="Include">
+            <e p="priorityqueue" t="Include">
+              <e p="FastPriorityQueue.cs" t="Include" />
+              <e p="FastPriorityQueueNode.cs" t="Include" />
+              <e p="GenericPriorityQueue.cs" t="Include" />
+              <e p="GenericPriorityQueueNode.cs" t="Include" />
+              <e p="IFixedSizePriorityQueue.cs" t="Include" />
+              <e p="IPriorityQueue.cs" t="Include" />
+              <e p="SimplePriorityQueue.cs" t="Include" />
+              <e p="StablePriorityQueue.cs" t="Include" />
+              <e p="StablePriorityQueueNode.cs" t="Include" />
+            </e>
             <e p="timer" t="Include">
               <e p="GenericTimer.cs" t="Include" />
             </e>
@@ -172,14 +184,14 @@
             <e p="spells" t="Include">
               <e p="aquio" t="Include">
                 <e p="SpellWater.cs" t="Include" />
-                <e p="WetObjectEffect.cs" t="Include" />
+                <e p="WetEffect.cs" t="Include" />
               </e>
               <e p="asensio" t="Include">
-                <e p="LiftObjectEffect.cs" t="Include" />
+                <e p="LiftEffect.cs" t="Include" />
                 <e p="SpellLift.cs" t="Include" />
               </e>
               <e p="combustio" t="Include">
-                <e p="CombustioObjectEffect.cs" t="Include" />
+                <e p="CombustioEffect.cs" t="Include" />
                 <e p="SpellCombustio.cs" t="Include" />
               </e>
               <e p="destructio" t="Include">
@@ -189,7 +201,7 @@
                 <e p="SpellForce.cs" t="Include" />
               </e>
               <e p="fyro" t="Include">
-                <e p="IgniteObjectEffect.cs" t="Include" />
+                <e p="IgniteEffect.cs" t="Include" />
                 <e p="SpellFire.cs" t="Include" />
               </e>
               <e p="maxio" t="Include">
@@ -202,7 +214,7 @@
               <e p="SpellShield.cs" t="Include" />
               <e p="SpellTrap.cs" t="Include" />
               <e p="tractio" t="Include">
-                <e p="AttractObjectEffect.cs" t="Include" />
+                <e p="AttractEffect.cs" t="Include" />
                 <e p="SpellAttract.cs" t="Include" />
               </e>
             </e>
