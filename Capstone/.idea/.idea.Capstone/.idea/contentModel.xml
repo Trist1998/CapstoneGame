@@ -128,6 +128,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ai" t="Include">
+            <e p="AIBehaviour.cs" t="Include" />
+            <e p="AICharacter.cs" t="Include" />
+            <e p="FollowBehaviour.cs" t="Include" />
+          </e>
           <e p="audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Sound.cs" t="Include" />
@@ -137,17 +142,12 @@
             <e p="AbstractCharacterInput.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CharacterControl.cs" t="Include" />
-            <e p="ChaseCam.cs" t="Include" />
-            <e p="ChasePoint.cs" t="Include" />
             <e p="FPSMovementControl.cs" t="Include" />
             <e p="HealthControl.cs" t="Include" />
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
             <e p="PlayerCharacterInput.cs" t="Include" />
-          </e>
-          <e p="enemy" t="Include">
-            <e p="Enemy.cs" t="Include" />
           </e>
           <e p="menu" t="Include">
             <e p="MainMenu.cs" t="Include" />
