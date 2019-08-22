@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : HealthControl, IItemUser
+public class AICharacter : HealthControl, IItemUser
 {
-    public GameObject target;
+    private bool aiEnabled;
     public GameObject head;
     public GameObject handbone;
     public Item weapon;
+    public AIBehaviour currentBehaviour;
+
+    public GameObject target;
+    public Vector3 targetLastKnownPos;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        currentBehaviour = new FollowBehaviour();
         unragdoll();
         weapon.user = this;
     }
@@ -21,16 +26,20 @@ public class Enemy : HealthControl, IItemUser
     // Update is called once per frame
     void Update()
     {
-        if(GetComponent<NavMeshAgent>().enabled)
-            if((target.transform.position - transform.position).magnitude > 5)
-                GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
+        if(aiEnabled)
+            if(currentBehaviour.checkCondition(this))
+                currentBehaviour.update(this);
             else
             {
                 GetComponent<NavMeshAgent>().SetDestination(transform.position);
-                gameObject.transform.LookAt(target.transform);
+                head.transform.LookAt(target.transform);
                 weapon.usePrimaryActionDown();
                 weapon.usePrimaryActionUp();
             }
+        if (Mathf.Abs(GetComponent<Rigidbody>().velocity.magnitude) < 0.05f)
+            GetComponent<Animator>().SetInteger("Condition", 0);
+        else
+            GetComponent<Animator>().SetInteger("Condition", 2);
     }
 
     protected override void die()
@@ -65,6 +74,7 @@ public class Enemy : HealthControl, IItemUser
 
     void unragdoll()
     {
+        aiEnabled = true;
         GetComponent<NavMeshAgent>().enabled = true;
         GetComponent<Animator>().enabled = true;
         setRigidbodyState(true);
@@ -73,6 +83,7 @@ public class Enemy : HealthControl, IItemUser
 
     void ragdoll()
     {
+        aiEnabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<Animator>().enabled = false;
         setRigidbodyState(false);
