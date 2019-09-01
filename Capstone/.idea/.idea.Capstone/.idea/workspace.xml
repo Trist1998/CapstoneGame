@@ -4,36 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/scripts/character/Inventory.cs" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee/baton.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee/baton/Expandable Baton_Expanded.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee/baton/Expandable Baton_Expanded.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee/baton/Pistol sound effect.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/melee/baton/Pistol sound effect.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics/NavMesh.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics/NavMesh.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractWeaponEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractWeaponEffect.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +243,7 @@
       <workItem from="1567164312608" duration="4736000" />
       <workItem from="1567170027957" duration="3665000" />
       <workItem from="1567252401713" duration="3574000" />
-      <workItem from="1567335320730" duration="4303000" />
+      <workItem from="1567335320730" duration="4581000" />
     </task>
     <servers />
   </component>
