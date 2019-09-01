@@ -81,6 +81,7 @@ public class SpellCaster : Item
 
     public void primaryFire()
     {
+        print("fire");
         if (primarySound != null)
             primarySound.Play();
         playParticleEffect(primaryMuzzleFlash);

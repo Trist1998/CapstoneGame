@@ -1,18 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class FollowBehaviour : AIBehaviour
 {
-    public override bool checkCondition(AICharacter character)
+    private bool follow = false;
+    private float range;
+    
+    public override bool checkConditionAndUpdate()
     {
-        return (character.target.transform.position - character.transform.position).magnitude > 5;
+        if (character.beliefs.target == null) return false;
+        float distance = (character.beliefs.target.transform.position - character.transform.position).magnitude;
+        follow = (distance > range && follow) || (distance > range + 2 && !follow);
+
+        if (follow)
+        {
+            update(character);
+            character.GetComponent<Animator>().SetInteger("Condition", 2);
+        }
+        else
+        {
+            character.GetComponent<Animator>().SetInteger("Condition", 0);
+        }
+        return follow;
 
     }
 
-    public override void update(AICharacter character)
+    protected override void update(AICharacter character)
     {
-        character.GetComponent<NavMeshAgent>().SetDestination(character.target.transform.position);
+        character.GetComponent<NavMeshAgent>().SetDestination(character.beliefs.target.transform.position);
+    }
+
+    public FollowBehaviour(AICharacter character, float range) : base(character)
+    {
+        this.range = range;
     }
 }

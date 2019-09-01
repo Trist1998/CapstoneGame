@@ -3,43 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AICharacter : HealthControl, IItemUser
+public class AICharacter : AbstractCharacterControl, IItemUser
 {
     private bool aiEnabled;
     public GameObject head;
     public GameObject handbone;
     public Item weapon;
-    public AIBehaviour currentBehaviour;
+    public AIBehaviour[] behaviours;
+    public AIBeliefs beliefs;
+    public float range;
+    
 
-    public GameObject target;
-    public Vector3 targetLastKnownPos;
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        currentBehaviour = new FollowBehaviour();
+        behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
+        beliefs = new AIBeliefs(this);
         unragdoll();
         weapon.user = this;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(aiEnabled)
-            if(currentBehaviour.checkCondition(this))
-                currentBehaviour.update(this);
-            else
-            {
-                GetComponent<NavMeshAgent>().SetDestination(transform.position);
-                head.transform.LookAt(target.transform);
-                weapon.usePrimaryActionDown();
-                weapon.usePrimaryActionUp();
-            }
-        if (Mathf.Abs(GetComponent<Rigidbody>().velocity.magnitude) < 0.05f)
-            GetComponent<Animator>().SetInteger("Condition", 0);
-        else
-            GetComponent<Animator>().SetInteger("Condition", 2);
+        if (!aiEnabled) return;
+        beliefs.updateBeliefs();
+        foreach (var behaviour in behaviours)
+        {
+            behaviour.checkConditionAndUpdate();
+        }
+            
     }
 
     protected override void die()
