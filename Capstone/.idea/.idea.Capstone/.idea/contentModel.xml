@@ -5,17 +5,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="EvilCube.cs" t="Include" />
-        <e p="FPS All-In-One" t="Include">
-          <e p="DemoScene" t="Include">
-            <e p="MiscScripts" t="Include">
-              <e p="Doors.cs" t="Include" />
-            </e>
-            <e p="Working Materials" t="Include">
-              <e p="GlassBumpedDistort.shader" t="Include" />
-            </e>
-          </e>
-          <e p="README.txt" t="Include" />
-        </e>
         <e p="Resources" t="Include">
           <e p="MissingModelFile.txt" t="Include" />
           <e p="models" t="Include">
@@ -130,8 +119,10 @@
         <e p="Scripts" t="Include">
           <e p="ai" t="Include">
             <e p="AIBehaviour.cs" t="Include" />
+            <e p="AIBeliefs.cs" t="Include" />
             <e p="AICharacter.cs" t="Include" />
             <e p="FollowBehaviour.cs" t="Include" />
+            <e p="ShootBehaviour.cs" t="Include" />
           </e>
           <e p="audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -163,6 +154,17 @@
           </e>
           <e p="Spawner.cs" t="Include" />
           <e p="util" t="Include">
+            <e p="FPS All-In-One" t="Include">
+              <e p="DemoScene" t="Include">
+                <e p="MiscScripts" t="Include">
+                  <e p="Doors.cs" t="Include" />
+                </e>
+                <e p="Working Materials" t="Include">
+                  <e p="GlassBumpedDistort.shader" t="Include" />
+                </e>
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
             <e p="priorityqueue" t="Include">
               <e p="FastPriorityQueue.cs" t="Include" />
               <e p="FastPriorityQueueNode.cs" t="Include" />
@@ -226,6 +228,7 @@
             </e>
           </e>
         </e>
+        <e p="WeaponEffectBaton.cs" t="Include" />
       </e>
       <e p="Capstone.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

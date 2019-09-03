@@ -4,6 +4,13 @@ using UnityEngine;
 
 public abstract class AIBehaviour
 {
-    public abstract bool checkCondition(AICharacter character);
-    public abstract void update(AICharacter character);
+    protected AICharacter character;
+
+    public AIBehaviour(AICharacter character)
+    {
+        this.character = character;
+    }
+    
+    public abstract bool checkConditionAndUpdate();
+    protected abstract void update(AICharacter character);
 }

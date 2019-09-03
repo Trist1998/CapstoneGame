@@ -30,7 +30,6 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
      */
     public virtual void primaryFire(Item item)
     {
-        print("fire");
         RaycastHit hit;
         Vector3 origin = item.user.getItemAimPosition();
         Vector3 direction = item.user.getItemAimDirection();
@@ -47,7 +46,6 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
      */
     public virtual void secondaryFire(Item item)
     {
-        print("fire2");
         RaycastHit hit;
         Vector3 origin = item.user.getItemAimPosition();
         Vector3 direction = item.user.getItemAimDirection();

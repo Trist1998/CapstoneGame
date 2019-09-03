@@ -1,6 +1,6 @@
 using System.Linq;
 using UnityEngine;
-public class AbstractCharacterControl: MonoBehaviour
+public class AbstractCharacterControl: HealthControl
 {
     public int characterTypeId;
     public int[] enemyTypeId;
