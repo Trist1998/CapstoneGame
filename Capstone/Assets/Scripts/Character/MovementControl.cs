@@ -92,10 +92,7 @@ public class MovementControl: MonoBehaviour
 
         cControl.Move(move * Time.deltaTime);
 
-        if (Mathf.Abs(cControl.velocity.magnitude) < 0.05f)
-            animator.SetInteger("Condition", 0);
-        else
-            animator.SetInteger("Condition", 2);
+        
 
     }
 

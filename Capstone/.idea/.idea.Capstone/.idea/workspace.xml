@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/scripts/character/Inventory.cs" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +31,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellConjure.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/enemy/BasicEnemy.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/SpellWater.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,13 +47,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/paratacio/SpellElectric.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/destructio/SpellDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvilCube.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/GunEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ChasePoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ChaseCam.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/HealthControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,7 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueueNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/GenericPriorityQueueNode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/InteractControl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,29 +76,23 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/IItemUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/IWorldObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellShield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellTrap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/ThrowableWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/fyro/SpellFire.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/tractio/AttractObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/destructio/SpellDestroy.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/WetObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/weapons/spells/asensio/LiftObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/menu/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/util/timer/GenericTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/objects/AttachedObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/weapons/Projectile.cs" />
@@ -112,17 +102,14 @@
         <option value="$PROJECT_DIR$/Assets/scripts/character/InteractControl.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AICharacterInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AimObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/ItemUser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/NonPlayableCharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/SpellAttract.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/SpellWater.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ezakio/SpellForce.cs" />
         <option value="$PROJECT_DIR$/Assets/FPS All-In-One/FirstPersonAIO/FirstPersonAIO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterInput.cs" />
@@ -134,7 +121,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HealthControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractObjectEffect.cs" />
@@ -143,9 +129,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/enemy/AIBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
       </list>
     </option>
   </component>
@@ -236,7 +234,16 @@
       <workItem from="1565611674844" duration="70000" />
       <workItem from="1565611801441" duration="7712000" />
       <workItem from="1565697759982" duration="5477000" />
-      <workItem from="1565791632593" duration="11030000" />
+      <workItem from="1565791632593" duration="11861000" />
+      <workItem from="1566471128539" duration="28000" />
+      <workItem from="1566474083739" duration="9866000" />
+      <workItem from="1566818561902" duration="7276000" />
+      <workItem from="1566989974052" duration="6319000" />
+      <workItem from="1567082900288" duration="3716000" />
+      <workItem from="1567164312608" duration="4736000" />
+      <workItem from="1567170027957" duration="3665000" />
+      <workItem from="1567252401713" duration="3574000" />
+      <workItem from="1567335320730" duration="4581000" />
     </task>
     <servers />
   </component>
@@ -261,6 +268,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="794" y="235" key="RiderGenerateDialog" />
+    <state x="794" y="235" key="RiderGenerateDialog/1920.1080/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
