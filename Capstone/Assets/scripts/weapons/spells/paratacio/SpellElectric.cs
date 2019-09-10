@@ -8,7 +8,7 @@ public class SpellElectric : AbstractWeaponEffect
     public float damagePerSecond;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        hit.GetComponent<HealthControl>()?.takeDamage(damagePerSecond * Time.deltaTime);//TODO more damage if wet state and damage nearby wet objects
+        hit.GetComponent<WorldObject>()?.takeDamage(damagePerSecond * Time.deltaTime);//TODO more damage if wet state and damage nearby wet objects
         playPrimaryOnHitEffect(hit, hitPoint);
     }
 }

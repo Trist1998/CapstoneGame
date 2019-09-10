@@ -5,7 +5,7 @@ using UnityEngine;
 public class LiftEffect : AttachedEffect
 {
     Item item;
-    public float speed = 2f;
+    public float speed = 6f;
     public float maxSpeed = 5;
     public float distance = 0;
     public float maxDist = 0.05f;

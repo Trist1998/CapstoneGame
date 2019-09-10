@@ -11,10 +11,10 @@ public class GunEffect : AbstractWeaponEffect
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        HealthControl healthControl = hit.GetComponent<HealthControl>();
-        if (healthControl != null)
+        WorldObject health = hit.GetComponent<WorldObject>();
+        if (health != null)
         {
-            healthControl.takeDamage(damage, item.user.getItemAimDirection().normalized, force);
+            health.takeDamage(damage, item.user.getItemAimDirection().normalized, force);
         }
     }
 
