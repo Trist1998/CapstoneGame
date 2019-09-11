@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellDestroy : AbstractProjectileWeaponEffect
 {
-    public readonly string SPELL_NAME = "Destructio";
+    public readonly string SPELL_NAME = "Destructio (The Destruction Charm)";
 
     public float damage;
 
@@ -18,5 +18,9 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
             rig.AddForce(force);
         playPrimaryOnHitEffect(hit, hitPoint);
     }
-   
+
+    public override string getName()
+    {
+        return SPELL_NAME;
+    }
 }

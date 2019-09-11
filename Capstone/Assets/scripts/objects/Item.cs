@@ -44,4 +44,9 @@ public class Item: MonoBehaviour, IWorldObject
 
     public virtual void useSecondaryActionUp()
     {}
+
+    public virtual string getItemName()
+    {
+        return "";
+    }
 }
