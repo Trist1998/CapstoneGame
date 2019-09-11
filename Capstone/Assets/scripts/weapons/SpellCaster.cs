@@ -104,4 +104,9 @@ public class SpellCaster : Item
 
         spell.secondaryFire(this);
     }
+
+    public override string getItemName()
+    {
+        return spell.getName();
+    }
 }

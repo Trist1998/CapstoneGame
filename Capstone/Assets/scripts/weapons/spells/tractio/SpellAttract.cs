@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellAttract : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Tractio";
+    public readonly string SPELL_NAME = "Tractio (The Attraction Charm)";
     
     private AttractEffect other;
     public float effectLifeTime;
@@ -28,5 +28,10 @@ public class SpellAttract : AbstractWeaponEffect
         {
             other = @this;
         }
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }

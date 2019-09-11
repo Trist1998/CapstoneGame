@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellScale : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Maxio";
+    public readonly string SPELL_NAME = "Maxio (The Scaling Charm)";
 
     public float range;
     public float scalar;
@@ -27,5 +27,10 @@ public class SpellScale : AbstractWeaponEffect
     {
         return range;
     }
-    
+
+    public override string getName()
+    {
+        return SPELL_NAME;
+    }
+
 }

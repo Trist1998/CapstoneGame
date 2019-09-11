@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellFire : AbstractProjectileWeaponEffect
 {
-    public static readonly string SPELL_NAME = "Fyro";
+    public static readonly string SPELL_NAME = "Fyro (The Fire Charm)";
 
     public float damage;
 
@@ -13,5 +13,10 @@ public class SpellFire : AbstractProjectileWeaponEffect
         IgniteEffect ignite = hit.AddComponent<IgniteEffect>();//TODO ignite object(applies continuous damage) if in fuel state and no damage if in wet state
         ignite.startEffect(secondaryOnHitEffect, damage, lifeTime);
         playPrimaryOnHitEffect(hit, hitPoint);
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }

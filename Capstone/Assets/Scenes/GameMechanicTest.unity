@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -892,11 +892,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FyroPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 9119058349682331016, guid: fe349d8f118fd284a974e0456ccca7f8,
-        type: 3}
-      propertyPath: force
-      value: 2000
-      objectReference: {fileID: 0}
     - target: {fileID: 1311801464, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.08957394
@@ -953,9 +948,9 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1311801462, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
-      propertyPath: handBone
-      value: 
+    - target: {fileID: 1311801461, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1311801458, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
       propertyPath: equipable
@@ -986,9 +981,14 @@ PrefabInstance:
       propertyPath: force
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1311801461, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
+    - target: {fileID: 9119058349682331016, guid: fe349d8f118fd284a974e0456ccca7f8,
+        type: 3}
+      propertyPath: force
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311801462, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
+      propertyPath: handBone
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2495,15 +2495,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2781263884110752984, guid: 7a5e9211d3bb5834a96822b8b7b48a1f,
-        type: 3}
-      propertyPath: range
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 2781263884110752987, guid: 7a5e9211d3bb5834a96822b8b7b48a1f,
         type: 3}
       propertyPath: primaryResetTime
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781263884110752984, guid: 7a5e9211d3bb5834a96822b8b7b48a1f,
+        type: 3}
+      propertyPath: range
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a5e9211d3bb5834a96822b8b7b48a1f, type: 3}

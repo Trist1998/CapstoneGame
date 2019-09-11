@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellTrap : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Trapio";
+    public readonly string SPELL_NAME = "Trapio (The Trapping Charm)";
 
     public override void primaryFire(Item item)
     {
@@ -14,5 +14,10 @@ public class SpellTrap : AbstractWeaponEffect
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         throw new System.NotImplementedException();
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }
