@@ -66,7 +66,6 @@ public class WorldObject : MonoBehaviour, IWorldObject
     
     protected virtual void die()
     {
-        print("Die");
         GetComponent<WorldObject>().destroyObject();
         Destroy(this);
     }
