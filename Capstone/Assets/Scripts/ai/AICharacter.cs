@@ -12,7 +12,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public AIBehaviour[] behaviours;
     public AIBeliefs beliefs;
     public float range;
-    
+    public float sightRange;
 
 
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         beliefs = new AIBeliefs(this);
         unragdoll();
         weapon.user = this;
+        base.Start();
     }
 
     // Update is called once per frame
@@ -36,9 +37,10 @@ public class AICharacter : AbstractCharacterControl, IItemUser
             
     }
 
-    protected override void die()
+    public override void destroyObject()
     {
         ragdoll();
+        base.destroyObject();
     }
 
     public Vector3 getItemAimDirection()
@@ -110,6 +112,14 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         }
 
         GetComponent<Collider>().enabled = !state;
-
     }
+
+    public AIBeliefs getBeliefs()
+    {
+        if (beliefs == null)
+            beliefs = new AIBeliefs(this);
+        return beliefs;
+        
+    }
+    
 }

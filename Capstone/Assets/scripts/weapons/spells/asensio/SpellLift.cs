@@ -9,6 +9,7 @@ public class SpellLift : AbstractWeaponEffect
     public float shootForwardForce;
 
     private LiftEffect attached;
+    private bool fireable = false;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         attached = hit.AddComponent(typeof(LiftEffect)) as LiftEffect;
@@ -18,14 +19,28 @@ public class SpellLift : AbstractWeaponEffect
     public override void primaryFire(Item item)
     {
         if (attached != null)
+        {
             attached.endEffect();
+            fireable = false;
+        }
         else
             base.primaryFire(item);
     }
 
     public override void secondaryFire(Item item)
     {
-        if(attached != null)
+        if (attached == null) return;
+        if(!fireable)
+        {
+            attached.distance = 2;
+            fireable = true;
+        }
+        else
+        {
             attached.shootForward(shootForwardForce);
+            fireable = false;
+        }
+        
+            
     }
 }

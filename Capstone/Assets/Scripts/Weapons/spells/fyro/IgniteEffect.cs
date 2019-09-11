@@ -21,7 +21,7 @@ public class IgniteEffect : AttachedEffect
     public override void affectObject()
     {
         base.affectObject();
-        GetComponent<HealthControl>()?.takeDamage(damagePerSecond * Time.deltaTime);
+        GetComponent<WorldObject>()?.takeDamage(damagePerSecond * Time.deltaTime);
     }
 
     public override void endEffect()

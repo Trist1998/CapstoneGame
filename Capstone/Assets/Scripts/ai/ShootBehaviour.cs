@@ -17,7 +17,6 @@ public class ShootBehaviour : AIBehaviour
     protected override void update(AICharacter character)
     {
         
-        character.GetComponent<NavMeshAgent>().SetDestination(character.transform.position);
         character.head.transform.LookAt(character.beliefs.target.transform);
         character.weapon.usePrimaryActionDown();
         character.weapon.usePrimaryActionUp();
