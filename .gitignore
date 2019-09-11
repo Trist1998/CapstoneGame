@@ -35,5 +35,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Models/
+Environment/
 *.zip*
 Capstone/.idea/.idea.Capstone/.idea/workspace.xml
