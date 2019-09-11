@@ -36,6 +36,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-
+Models/
+Environment/
 *.zip*
 *workspace.xml
