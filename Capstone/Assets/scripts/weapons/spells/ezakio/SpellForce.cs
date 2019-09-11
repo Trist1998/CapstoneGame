@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellForce : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Ezakio";
+    public readonly string SPELL_NAME = "Ezakio (The Force Charm)";
     public float force;
     public float range;
     public float blastRadius;

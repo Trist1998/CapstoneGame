@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellLift : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Asensio";
+    public readonly string SPELL_NAME = "Asensio (The Lifting Charm)";
 
     public float shootForwardForce;
 
@@ -42,5 +42,10 @@ public class SpellLift : AbstractWeaponEffect
         }
         
             
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }

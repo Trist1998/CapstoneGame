@@ -86,6 +86,11 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     {
         return DEFAULT_RANGE;
     }
+
+    public virtual string getName()
+    {
+        return "";
+    }
 }
 
 
