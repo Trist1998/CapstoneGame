@@ -13,7 +13,6 @@ public class WeaponEffectBaton : AbstractWeaponEffect
         if(health != null)
             health.takeDamage(damage,direction, force);
         base.processPrimaryHit(item, hit, hitPoint, direction);
-        Item.print("Hit");
     }
 
     public override float getRange()

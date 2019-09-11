@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
 
     public void spawnObject()
     {
-        print("Spawning");
         GameObject obj = Instantiate(objects[Random.Range(0, objects.Length)], transform.position + new Vector3(Random.Range(0, 3.0f),0, Random.Range(0, 3.0f)), transform.rotation);
         WorldObject wObj = obj.GetComponent<WorldObject>();
         if (wObj != null)

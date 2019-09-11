@@ -20,8 +20,17 @@ public class SpellLift : AbstractWeaponEffect
     {
         if (attached != null)
         {
-            attached.endEffect();
-            fireable = false;
+            if(!fireable)
+            {
+                attached.distance = 4;
+                fireable = true;
+            }
+            else
+            {
+                attached.shootForward(shootForwardForce);
+                fireable = false;
+            }
+
         }
         else
             base.primaryFire(item);
@@ -30,16 +39,9 @@ public class SpellLift : AbstractWeaponEffect
     public override void secondaryFire(Item item)
     {
         if (attached == null) return;
-        if(!fireable)
-        {
-            attached.distance = 2;
-            fireable = true;
-        }
-        else
-        {
-            attached.shootForward(shootForwardForce);
-            fireable = false;
-        }
+        
+        attached.endEffect();
+        fireable = false;
         
             
     }
