@@ -1,54 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Assets/scripts/character/Inventory.cs" line="37" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Character.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/FreeCharacter_01.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/FreeCharacter_01.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Free_Character_01.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Free_Character_01.rar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Materials/Body_01.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Materials/Body_01.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Cube_01.cubemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Cube_01.cubemap.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Diffuse_01.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Diffuse_01.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Normal_01.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Character/FreeCharacter/Textures/Body_Normal_01.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberBody_Emissive.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberBody_Emissive.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Diff.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Diff.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Normal.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Normal.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Spec.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Spec.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials/CyberMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials/CyberMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_01.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_02.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_03.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/SkelMesh_Bodyguard_04.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Robot Kyle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Robot Kyle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/world.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/world/Spawner.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/world/Spawner.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/util/KillTimer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Standard Assets/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidCrouch.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidCrouch.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Documentation.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Examples &amp; Extras/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Examples &amp; Extras/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Examples &amp; Extras/Fonts/LiberationSans.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Examples &amp; Extras/Fonts/LiberationSans.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/maps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/SkelMesh_Bodyguard_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/fyro/TinyFlames 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/fyro/TinyFlames 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/maxio/MaxioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/maxio/MaxioPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/Magic fire pro blue 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/Magic fire pro blue 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Zubair.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Zubair.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hud/SpellDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/SpellDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/SpellCaster.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +122,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/SpellWater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,6 +135,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/paratacio/SpellElectric.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LightingSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/destructio/SpellDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EvilCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,6 +154,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hud/SpellDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,24 +178,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/IItemUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/IWorldObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/KillTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/prefabs/enemy/BasicEnemy.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellShield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellTrap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/NonPlayableCharacterControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/SpellAttract.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/SpellWater.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ezakio/SpellForce.cs" />
         <option value="$PROJECT_DIR$/Assets/FPS All-In-One/FirstPersonAIO/FirstPersonAIO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterInput.cs" />
@@ -167,19 +210,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/AIBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" />
         <option value="$PROJECT_DIR$/Assets/WhaleProjectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/WhaleWeaponEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/HealthControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
@@ -187,14 +227,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/paratacio/SpellElectric.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/GunEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Follow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/WeaponEffectBaton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/SpellLift.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hud/SpellDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/util/KillTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/SpellScale.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs" />
       </list>
     </option>
   </component>
@@ -298,7 +346,8 @@
       <workItem from="1567964017875" duration="6283000" />
       <workItem from="1568033093886" duration="12630000" />
       <workItem from="1568115787742" duration="10756000" />
-      <workItem from="1568205533356" duration="2197000" />
+      <workItem from="1568205533356" duration="3976000" />
+      <workItem from="1568365000078" duration="13275000" />
     </task>
     <servers />
   </component>

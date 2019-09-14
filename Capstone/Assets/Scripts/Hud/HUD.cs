@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    WorldObject obj;
+    public WorldObject obj;
     [SerializeField]
     private Image health;
     [SerializeField]
@@ -13,17 +13,10 @@ public class HUD : MonoBehaviour
     [SerializeField]
     private Image star;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        obj = GetComponent<WorldObject>();
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
-       // health.fillAmount; must be between 0 and 1
+        health.fillAmount = obj.hitPoints/obj.maxHitPoints;
     }
 
    

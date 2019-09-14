@@ -47,7 +47,7 @@ public class WorldObject : MonoBehaviour, IWorldObject
 
     public void takeDamage(float amount)
     {
-        if (isDead()) return;
+        if (isDead() || !destructable) return;
         hitPoints -= amount;
 
         if (isDead())

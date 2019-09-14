@@ -68,7 +68,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         return handbone;
     }
 
-    void unragdoll()
+    public void unragdoll()
     {
         aiEnabled = true;
         GetComponent<NavMeshAgent>().enabled = true;
@@ -77,7 +77,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         setColliderState(false);
     }
 
-    void ragdoll()
+    public void ragdoll()
     {
         aiEnabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
@@ -85,6 +85,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         setRigidbodyState(false);
         setColliderState(true);
     }
+    
     
     void setRigidbodyState(bool state)
     {
