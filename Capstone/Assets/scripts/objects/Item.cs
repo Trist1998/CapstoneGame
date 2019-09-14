@@ -49,4 +49,9 @@ public class Item: MonoBehaviour, IWorldObject
     {
         return "";
     }
+
+    public virtual float getAmmoPercentage()
+    {
+        return 0;
+    }
 }

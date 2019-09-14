@@ -4810,31 +4810,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8411345330505296218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2616094837793433686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 173669d6eba3fef41a5f17510bcfc88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &1296082291
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2616094837793434054}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.13049948
-  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!82 &1530591796
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5044,6 +5019,19 @@ MonoBehaviour:
   spell: {fileID: 0}
   primaryResetTime: 0.1
   secondaryResetTime: 0
+--- !u!135 &1296082291
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616094837793434054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13049948
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &1274586041177532237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5284,12 +5272,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3890548384690411221, guid: 7af4e617dc8bae0449d2f696695258de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7af4e617dc8bae0449d2f696695258de, type: 3}
---- !u!1 &2616094837793433686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3890548385134399259, guid: 7af4e617dc8bae0449d2f696695258de,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274586041177532237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2616094837793434054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3890548385134399115, guid: 7af4e617dc8bae0449d2f696695258de,

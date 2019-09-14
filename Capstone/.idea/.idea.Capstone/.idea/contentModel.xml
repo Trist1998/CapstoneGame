@@ -364,7 +364,6 @@
             <e p="CameraController.cs" t="Include" />
             <e p="CharacterControl.cs" t="Include" />
             <e p="FPSMovementControl.cs" t="Include" />
-            <e p="HealthControl.cs" t="Include" />
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
@@ -464,6 +463,7 @@
             </e>
           </e>
           <e p="world" t="Include">
+            <e p="GameManager.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
           </e>
         </e>

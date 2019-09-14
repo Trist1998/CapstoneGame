@@ -11,14 +11,14 @@ public class SpellScale : AbstractWeaponEffect
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        InflateEffect hitObject = hit.GetComponent<InflateEffect>();
+        InflateEffect hitObject = hit.transform.root.GetComponent<InflateEffect>();
         if (hitObject != null)
         {
             hitObject.repeatHit();
         }
-        else if(hit.GetComponent<IWorldObject>() != null)
+        else if(hit.transform.root.GetComponent<IWorldObject>() != null)
         {
-            hitObject = hit.AddComponent<InflateEffect>();
+            hitObject = hit.transform.root.gameObject.AddComponent<InflateEffect>();
             hitObject.startEffect();
         }
     }
