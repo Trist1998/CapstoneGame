@@ -111,4 +111,9 @@ public class SpellCaster : Item
         return spell.getName();
         return "";
     }
+    
+    public override float getAmmoPercentage()
+    {
+        return primaryResetTimer.getDisplayResetPercent();
+    }
 }
