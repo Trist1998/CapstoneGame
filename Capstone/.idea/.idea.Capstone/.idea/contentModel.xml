@@ -371,6 +371,10 @@
             <e p="PlayerCharacterInput.cs" t="Include" />
           </e>
           <e p="Follow.cs" t="Include" />
+          <e p="Hud" t="Include">
+            <e p="HUD.cs" t="Include" />
+            <e p="SpellDisplay.cs" t="Include" />
+          </e>
           <e p="menu" t="Include">
             <e p="MainMenu.cs" t="Include" />
             <e p="PauseMenu.cs" t="Include" />
@@ -395,6 +399,7 @@
               </e>
               <e p="README.txt" t="Include" />
             </e>
+            <e p="KillTimer.cs" t="Include" />
             <e p="priorityqueue" t="Include">
               <e p="FastPriorityQueue.cs" t="Include" />
               <e p="FastPriorityQueueNode.cs" t="Include" />
@@ -437,6 +442,7 @@
                 <e p="SpellFire.cs" t="Include" />
               </e>
               <e p="maxio" t="Include">
+                <e p="InflateEffect.cs" t="Include" />
                 <e p="SpellScale.cs" t="Include" />
               </e>
               <e p="paratacio" t="Include">

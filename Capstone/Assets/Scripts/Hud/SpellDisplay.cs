@@ -6,8 +6,10 @@ using TMPro;
 public class SpellDisplay : MonoBehaviour
 {
     private TextMeshProUGUI spellDisplay;
-    [SerializeField]
     private InteractControl ic;
+    
+    [SerializeField]
+    private GameObject playerGameObject;
     private Item equippedItem;
     private Inventory inventory;
     private List<Item> items;
@@ -23,6 +25,7 @@ public class SpellDisplay : MonoBehaviour
     void Start()
     {
         spellDisplay = GetComponent<TextMeshProUGUI>();
+        ic = playerGameObject.GetComponent<InteractControl>();
     }
 
     // Update is called once per frame

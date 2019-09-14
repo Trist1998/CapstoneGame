@@ -107,6 +107,8 @@ public class SpellCaster : Item
 
     public override string getItemName()
     {
+        if(spell != null)
         return spell.getName();
+        return "";
     }
 }
