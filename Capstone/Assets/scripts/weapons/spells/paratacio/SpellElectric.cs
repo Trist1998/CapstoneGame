@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class SpellElectric : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Paratacio";
+    public readonly string SPELL_NAME = "Paratacio (The Electric Charm)";
     public float damagePerSecond;
+
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        hit.GetComponent<HealthControl>()?.takeDamage(damagePerSecond * Time.deltaTime);//TODO more damage if wet state and damage nearby wet objects
+        hit.GetComponent<WorldObject>()?.takeDamage(damagePerSecond * Time.deltaTime);//TODO more damage if wet state and damage nearby wet objects
         playPrimaryOnHitEffect(hit, hitPoint);
     }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
+    }
+
 }

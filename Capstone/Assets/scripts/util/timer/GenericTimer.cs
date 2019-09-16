@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class GenericTimer
@@ -45,5 +46,11 @@ public class GenericTimer
     {
         timeout += lifeTime;
     }
+
+    public float getDisplayResetPercent()
+    {
+        return Mathf.Min( (Time.time - referenceTime)/timeout, 1);
+    }
+    
     
 }

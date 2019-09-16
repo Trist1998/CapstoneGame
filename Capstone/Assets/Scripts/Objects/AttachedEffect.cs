@@ -138,7 +138,8 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void startEffect(float lifeTime)
     {
-        lifeTimer = new GenericTimer(lifeTime, true);
+        if(lifeTime > -1.0f)
+            lifeTimer = new GenericTimer(lifeTime, true);
         applyStates();
         checkState();
     }

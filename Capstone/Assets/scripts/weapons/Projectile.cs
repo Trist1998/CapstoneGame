@@ -9,9 +9,11 @@ public class Projectile : MonoBehaviour
     public Item item;
     private GenericTimer timer;
     private bool hitObject = false;
+    private bool primaryEffect = true;
     
     void Start()
     {
+        
         if(particles == null)
             particles = GetComponent<ParticleSystem>();
     }
@@ -70,11 +72,20 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    public void setPrimaryEffect(bool option)
+    {
+        primaryEffect = option;
+    }
+    
     void OnCollisionEnter(Collision other)
     {
         if(!hitObject && item != null && other.gameObject != item.gameObject)
         {
-            onHitEffect.processPrimaryHit(item, other.gameObject,other.GetContact(0).point, GetComponent<Rigidbody>().velocity.normalized);
+            if(primaryEffect)
+                onHitEffect.processPrimaryHit(item, other.gameObject,other.GetContact(0).point, GetComponent<Rigidbody>().velocity.normalized);
+            else
+                onHitEffect.processSecondaryHit(item, other.gameObject,other.GetContact(0).point, GetComponent<Rigidbody>().velocity.normalized);
+            
             Destroy(gameObject);
             hitObject = true;
         }

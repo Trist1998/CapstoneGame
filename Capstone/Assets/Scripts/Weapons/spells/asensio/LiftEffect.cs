@@ -5,7 +5,7 @@ using UnityEngine;
 public class LiftEffect : AttachedEffect
 {
     Item item;
-    public float speed = 2f;
+    public float speed = 6f;
     public float maxSpeed = 5;
     public float distance = 0;
     public float maxDist = 0.05f;
@@ -23,14 +23,7 @@ public class LiftEffect : AttachedEffect
         Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
         Vector3 heading = flyTo - transform.position;
         float dist = Vector3.Distance(transform.position, flyTo);
-        if(Input.GetAxis("Push") == 1 && Input.GetAxis("Fire1") == 1)
-        {
-            distance += 0.05f;
-        }
-        if(Input.GetAxis("Push") == 1 && Input.GetAxis("Fire2") == 1)
-        {
-            distance -= 0.05f;
-        }
+        float velo = (dist * dist) + dist;
         Vector3 dir = heading / dist;
         if (dist > 0.05f)
         {
@@ -38,11 +31,7 @@ public class LiftEffect : AttachedEffect
             {
                 dist = 1;
             }
-            GetComponent<Rigidbody>().velocity = speed * dist * dir;
-        }
-        else
-        {
-            GetComponent<Rigidbody>().velocity = dir * 0;
+            transform.position += Time.deltaTime * velo * heading;
         }
     }
 
@@ -52,14 +41,30 @@ public class LiftEffect : AttachedEffect
         {
             Destroy(this);
             return;
-        }       
+        }
+
+        if (GetComponent<AICharacter>() != null)
+        {
+            GetComponent<AICharacter>().ragdoll();
+            GetComponent<Collider>().enabled = true;
+            GetComponent<Rigidbody>().isKinematic = true;
+        }
+        
+           
+        
         this.item = item;
         lev((transform.position - item.user.getItemAimPosition()).magnitude);     
     }
 
     public override void endEffect()
     {
+        if (GetComponent<AICharacter>() != null)
+        {
+            GetComponent<AICharacter>().unragdoll();
+            GetComponent<Rigidbody>().isKinematic = false;
+        }
         GetComponent<Rigidbody>().useGravity = true;
+        
         Destroy(this);
     }
 

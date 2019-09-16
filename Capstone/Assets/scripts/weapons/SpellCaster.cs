@@ -81,7 +81,6 @@ public class SpellCaster : Item
 
     public void primaryFire()
     {
-        print("fire");
         if (primarySound != null)
             primarySound.Play();
         playParticleEffect(primaryMuzzleFlash);
@@ -104,5 +103,17 @@ public class SpellCaster : Item
         playParticleEffect(secondaryMuzzleFlash);
 
         spell.secondaryFire(this);
+    }
+
+    public override string getItemName()
+    {
+        if(spell != null)
+        return spell.getName();
+        return "";
+    }
+    
+    public override float getAmmoPercentage()
+    {
+        return primaryResetTimer.getDisplayResetPercent();
     }
 }
