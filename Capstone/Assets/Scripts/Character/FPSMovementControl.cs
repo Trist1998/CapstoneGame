@@ -14,6 +14,7 @@ using System.Collections;
 public class FPSMovementControl : MonoBehaviour 
 {
     private AbstractCharacterInput characterInput;
+    public bool isPlayer2 = false;
     
     #region Script Header and Cosmetics
     [Header("                       First Person", order = 0)]
@@ -43,7 +44,7 @@ public class FPSMovementControl : MonoBehaviour
     
 
     [SerializeField] [Tooltip("Automatically Create Crosshair")] private bool autoCrosshair = false;
-    public Sprite Crosshair;
+    public Texture Crosshair;
 
     [HideInInspector]
     public Vector3 targetAngles;
@@ -239,6 +240,12 @@ public class BETA_SETTINGS{
 #endregion
 
     }
+    private void OnGUI()
+    {
+        float xMin = (Screen.width / 4) - (Crosshair.width / 4) + (isPlayer2?(Screen.width/2):0);
+        float yMin = (Screen.height / 2) - (Crosshair.height / 2);
+        GUI.DrawTexture(new Rect(xMin, yMin, Crosshair.width, Crosshair.height), Crosshair);
+    }
 
     private void Start()
     {
@@ -253,7 +260,7 @@ public class BETA_SETTINGS{
             qui.AddComponent<GraphicRaycaster>();
             qui.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             GameObject quic = new GameObject("Crosshair");
-            quic.AddComponent<Image>().sprite = Crosshair;
+            //quic.AddComponent<Image>()= Crosshair;
 
             qui.transform.SetParent(this.transform);
             qui.transform.position = Vector3.zero;
