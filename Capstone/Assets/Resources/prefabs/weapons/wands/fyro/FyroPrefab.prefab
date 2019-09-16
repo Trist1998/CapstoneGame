@@ -127,7 +127,7 @@ MonoBehaviour:
   relativeRotation: {x: 9, y: 85, z: 85}
   primaryAutomaticFire: 1
   secondaryAutomaticFire: 0
-  primaryMuzzleFlash: {fileID: 0}
+  primaryMuzzleFlash: {fileID: 19800000, guid: e15f5af5b5f07bd469b5f4f98ed23c39, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
