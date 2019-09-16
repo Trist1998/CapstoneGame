@@ -127,7 +127,7 @@ MonoBehaviour:
   relativeRotation: {x: 9, y: 85, z: 85}
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
-  primaryMuzzleFlash: {fileID: 0}
+  primaryMuzzleFlash: {fileID: 19800004, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f63b27abcaa23541ab847e86a918b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primaryOnHitEffect: {fileID: 0}
+  secondaryOnHitEffect: {fileID: 0}
   shootForwardForce: 4000
