@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LightingSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LightingSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
@@ -156,6 +155,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LightingSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" />
       </list>
     </option>
@@ -263,7 +263,7 @@
       <workItem from="1568205533356" duration="3976000" />
       <workItem from="1568365000078" duration="13275000" />
       <workItem from="1568457615178" duration="14582000" />
-      <workItem from="1568635841453" duration="6308000" />
+      <workItem from="1568635841453" duration="7157000" />
     </task>
     <servers />
   </component>
