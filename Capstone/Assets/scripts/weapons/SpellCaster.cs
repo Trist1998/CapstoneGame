@@ -104,4 +104,16 @@ public class SpellCaster : Item
 
         spell.secondaryFire(this);
     }
+
+    public override string getItemName()
+    {
+        if(spell != null)
+        return spell.getName();
+        return "";
+    }
+    
+    public override float getAmmoPercentage()
+    {
+        return primaryResetTimer.getDisplayResetPercent();
+    }
 }

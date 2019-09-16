@@ -9,8 +9,6 @@ public class FollowBehaviour : AIBehaviour
     
     public override bool checkConditionAndUpdate()
     {
-        if(character.beliefs.target != null)
-        character.GetComponent<NavMeshAgent>().SetDestination(character.beliefs.target.transform.position);
         if (character.beliefs.target == null) return false;
         float distance = (character.beliefs.target.transform.position - character.transform.position).magnitude;
         follow = (distance > range + 2 && follow) || (distance > range && !follow);

@@ -5,22 +5,49 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] objects;
-    public int amount = 0;
+    public int startAmount = 0;
+    public GameManager manager;
+    public int noToSpawn;
+    public int maxSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < amount; i++)
+        manager = transform.root.GetComponent<GameManager>();
+        for(int i = 0; i < startAmount; i++)
         {
             spawnObject();
         }
         
     }
 
-    public void spawnObject()
+    public void spawnObjects(int amount)
     {
-        print("Spawning");
-        GameObject obj = Instantiate(objects[Random.Range(0, objects.Length)], transform.position + new Vector3(Random.Range(0, 3.0f),0, Random.Range(0, 3.0f)), transform.rotation);
+        for(int i = 0; i < amount; i++)
+        {
+            spawnObject();
+        }
+    }
+    
+    public void spawnObjects(int amount, GameObject[] toSpawn)
+    {
+        objects = toSpawn;
+        noToSpawn = amount;
+        for(int i = 0; i < amount%maxSpawn; i++)
+        {
+            spawnObject(objects[Random.Range(0, objects.Length)]);
+        }
+    }
+
+    private void spawnObject()
+    {
+        spawnObject(objects[Random.Range(0, objects.Length)]);
+    }
+    
+    public void spawnObject(GameObject toSpawn)
+    {
+        noToSpawn--;
+        GameObject obj = Instantiate(toSpawn, transform.position + new Vector3(Random.Range(0, 3.0f),0, Random.Range(0, 3.0f)), transform.rotation);
         WorldObject wObj = obj.GetComponent<WorldObject>();
         if (wObj != null)
             wObj.setSpawner(this);
@@ -29,6 +56,12 @@ public class Spawner : MonoBehaviour
 
     public void objectDestroyed()
     {
-        spawnObject();
+        if(manager != null)
+            manager.recordDeath();
+        if (noToSpawn > 0)
+        {
+            spawnObject();
+        }
+            
     }
 }

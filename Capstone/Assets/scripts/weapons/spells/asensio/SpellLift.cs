@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpellLift : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Asensio";
+    public readonly string SPELL_NAME = "Asensio (The Lifting Charm)";
 
     public float shootForwardForce;
 
@@ -20,8 +20,17 @@ public class SpellLift : AbstractWeaponEffect
     {
         if (attached != null)
         {
-            attached.endEffect();
-            fireable = false;
+            if(!fireable)
+            {
+                attached.distance = 4;
+                fireable = true;
+            }
+            else
+            {
+                attached.shootForward(shootForwardForce);
+                fireable = false;
+            }
+
         }
         else
             base.primaryFire(item);
@@ -30,17 +39,15 @@ public class SpellLift : AbstractWeaponEffect
     public override void secondaryFire(Item item)
     {
         if (attached == null) return;
-        if(!fireable)
-        {
-            attached.distance = 2;
-            fireable = true;
-        }
-        else
-        {
-            attached.shootForward(shootForwardForce);
-            fireable = false;
-        }
+        
+        attached.endEffect();
+        fireable = false;
         
             
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }
