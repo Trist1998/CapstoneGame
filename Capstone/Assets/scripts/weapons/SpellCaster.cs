@@ -41,6 +41,7 @@ public class SpellCaster : Item
 
     private bool canPrimaryFire()
     {
+        print(primaryResetTimer == null);
         if (!primaryResetTimer.isTimeout()) return false;
         if (!primaryAutomaticFire && fired) return false;
         
