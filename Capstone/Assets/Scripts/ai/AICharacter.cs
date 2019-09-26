@@ -13,12 +13,16 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public AIBeliefs beliefs;
     public float range;
     public float sightRange;
+    private AIBehaviour currentBehaviour;
+    private AIBehaviour root;
 
 
     // Start is called before the first frame update
     void Start()
     {
         behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
+        root = new AIBehaviour(this, behaviours);
+        
         beliefs = new AIBeliefs(this);
         unragdoll();
         weapon.user = this;
@@ -30,11 +34,11 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     {
         if (!aiEnabled) return;
         beliefs.updateBeliefs();
-        foreach (var behaviour in behaviours)
+        if (!currentBehaviour.update())
         {
-            behaviour.checkConditionAndUpdate();
+            currentBehaviour = root;
         }
-            
+        
     }
 
     public override void destroyObject()

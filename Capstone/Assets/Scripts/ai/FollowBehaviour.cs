@@ -7,7 +7,7 @@ public class FollowBehaviour : AIBehaviour
     private bool follow = false;
     private float range;
     
-    public override bool checkConditionAndUpdate()
+    public override bool executable()
     {
         if (character.beliefs.target == null) return false;
         float distance = (character.beliefs.target.transform.position - character.transform.position).magnitude;
@@ -15,7 +15,7 @@ public class FollowBehaviour : AIBehaviour
 
         if (follow)
         {
-            update(character);
+            update();
             character.GetComponent<Animator>().SetInteger("Condition", 2);
         }
         else
@@ -25,7 +25,7 @@ public class FollowBehaviour : AIBehaviour
         return follow;
     }
 
-    protected override void update(AICharacter character)
+    public override bool update()
     {
         if(character.beliefs.isTargetVisible())
         {

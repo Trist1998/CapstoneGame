@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private Camera player1;
     [SerializeField]
     private Camera player2;
+    public Texture Crosshair;
 
     private int noDeaths;
 
@@ -48,6 +49,16 @@ public class GameManager : MonoBehaviour
                 spawner.spawnObjects(numberSpawned/spawners.Length, objects);
             }
         }
+    }
+    
+    private void OnGUI()
+    {
+        float xMin = (Screen.width / (player2 != null?4:2)) - (Crosshair.width / 2);
+        float yMin = (Screen.height / 2) - (Crosshair.height / 2);
+        
+        GUI.DrawTexture(new Rect(xMin, yMin, Crosshair.width, Crosshair.height), Crosshair);
+        if(player2 != null)
+            GUI.DrawTexture(new Rect(xMin + Screen.width/2.0f, yMin, Crosshair.width, Crosshair.height), Crosshair);
     }
 
     public void recordDeath()
