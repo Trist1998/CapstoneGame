@@ -14,6 +14,11 @@ public class SpellForce : AbstractWeaponEffect
         return range;
     }
 
+    public override string getName()
+    {
+        return SPELL_NAME;
+    }
+
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         Rigidbody rig = hit.transform.GetComponent<Rigidbody>();
@@ -38,6 +43,11 @@ public class SpellForce : AbstractWeaponEffect
         }
         playPrimaryOnHitEffect(null, hitPoint);
         
+    }
+
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }
 

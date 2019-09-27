@@ -139,6 +139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &10731321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -293,6 +300,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!54 &33140624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -700,6 +714,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &135628684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1394,11 +1415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013583545340, guid: 3d86ef6ae2388d14db98526656659f68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.135193
+      value: 61.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000013583545340, guid: 3d86ef6ae2388d14db98526656659f68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1044359
+      value: 33.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013583545340, guid: 3d86ef6ae2388d14db98526656659f68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1510,6 +1531,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &308928543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4580,6 +4608,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3639900263272328371, guid: 542dadc483c98a040933367656191eaa,
+        type: 3}
+      propertyPath: primaryMuzzleFlash
+      value: 
+      objectReference: {fileID: 19800004, guid: bcf46e46336114145b09deb1db11d480,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542dadc483c98a040933367656191eaa, type: 3}
 --- !u!1 &1106610860
@@ -4697,6 +4731,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &1124160348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5499,6 +5540,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &1282390361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5534,6 +5582,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1383046083}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1321790620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3842884121170744295, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521382110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1321790621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3846048606438139997, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1521382110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321790626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321790620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1321790621}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1323391900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6553,6 +6673,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &1496679280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6761,6 +6888,86 @@ PrefabInstance:
     - target: {fileID: 3845820772820404873, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841804554488303301, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842884121170744295, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039999265684790268, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166152542039307112, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166152542039307112, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166152542039307112, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166152542039307112, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446165085517993796, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446165085517993796, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446165085517993796, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446165085517993796, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005457336977143941, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005457336977143941, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005457336977143941, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005457336977143941, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005457336977143941, guid: 7f55d7405f279c84f9fdd96f9f6a3e51,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9153,6 +9360,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7fa3831690d74c948788d88dfc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructable: 0
+  impulseThreshold: 0
+  timeToDestroy: 0
+  projectile: 0
+  maxHitPoints: 0
+  hitPoints: 1000
+  explosion: {fileID: 0}
 --- !u!65 &2051343067
 BoxCollider:
   m_ObjectHideFlags: 0
