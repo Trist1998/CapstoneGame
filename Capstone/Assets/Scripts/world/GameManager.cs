@@ -13,12 +13,23 @@ public class GameManager : MonoBehaviour
     private int numberSpawned;
     [SerializeField]
     private GameObject[] objects;
+    [SerializeField]
+    private Camera player1;
+    [SerializeField]
+    private Camera player2;
 
     private int noDeaths;
 
     private void Start()
     {
         timer = new GenericTimer(10, false);
+
+        if (player2 != null)
+        {
+            player1.rect = new Rect(0,0,0.5f,1);
+            player2.rect = new Rect(0.5f,0,0.5f,1);
+            player2.GetComponent<AudioListener>().enabled = false;
+        }
     }
 
     private void FixedUpdate()

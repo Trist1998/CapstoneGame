@@ -23,7 +23,8 @@ public class LightingSwitcher : MonoBehaviour
 
         public void DeactivateTreatment(Transform sunTransform)
         {
-            camera.SetActive(false);
+            if(camera != null)
+                camera.SetActive(false);
             lightingGameObject.SetActive(false);
             sunTransform.localEulerAngles = sunEulerAngles;
         }
