@@ -18,34 +18,60 @@ public class AIBehaviour
         this.behaviours = behaviours;
     }
 
-    protected bool isExecutable()
+    
+    /*
+     * Returns true if the behaviour is executable
+     */
+    protected virtual bool isExecutable()
     {
         return false;
     }
     
+    /**
+     * Returns the highest behaviour in the tree that is executable.
+     */
     public AIBehaviour getBehaviourToExecute()
     {
+        //MonoBehaviour.print("Finding Behaviour");
         if (isExecutable())
             return this;
+        if (behaviours == null) return null;
+        
         bool flag = false;
-        if(behaviours != null)
             foreach (var behaviour in behaviours)
             {
-                AIBehaviour b = behaviour.getBehaviourToExecute();
-                if(b != null && !b.isLeaf());
+                if (behaviour.isExecutable())
+                {
+                    return behaviour;
+                }
             }
+        foreach (var behaviour in behaviours)
+        {
+            AIBehaviour b = behaviour.getBehaviourToExecute();
+            if (b != null && !b.isLeaf())
+            {
+                return b;
+            }
+        }
+
+        return null;
     }
+    
+    /**
+     * Used to perform AI actions
+     * Returns true if still executing
+     */
 
     public virtual bool update()
     {
-        bool finished = true;
+        bool running = false;
         foreach (var b in behaviours)
         {
             if(b.isLeaf())
-                finished = finished && b.update();
+                running = running || b.update();
         }
 
-        return finished;
+        return running;
     }
 
     public bool isLeaf()

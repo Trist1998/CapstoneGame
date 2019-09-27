@@ -13,11 +13,14 @@ public class AttractEffect : AttachedEffect
     private ParticleSystem particles;
     private Rigidbody rig;
     
+
     public void attachEffect(AttractEffect attractTo, float force, float lifeTime)
     {
         rig = GetComponent<Rigidbody>();
+        
         if (rig != null)
         {
+            print(rig.isKinematic);
             this.attractTo = attractTo;
             
             if(attractTo != null)
@@ -29,6 +32,8 @@ public class AttractEffect : AttachedEffect
         this.force = force;
         
         startEffect(lifeTime);
+        ragdoll();
+        
     }
     
     public void attachEffect(AttractEffect attractTo, Vector3 pointOfAttraction, ParticleSystem effect, float force, float lifeTime)
@@ -38,7 +43,21 @@ public class AttractEffect : AttachedEffect
         particles.Play();
         attractionPoint = pointOfAttraction;
         attachEffect(attractTo, force, lifeTime);
+        ragdoll();
     }
+
+    private void ragdoll()
+    {
+        if(attractTo != null && GetComponent<AICharacter>() != null)
+            GetComponent<AICharacter>().ragdoll();
+    }
+    
+    private void unragdoll()
+    {
+        if(attractTo != null && GetComponent<AICharacter>() != null)
+            GetComponent<AICharacter>().unragdoll();
+    }
+    
     
     public override void affectObject()
     {
@@ -78,6 +97,7 @@ public class AttractEffect : AttachedEffect
     public override void endEffect()
     {
         if(particles != null) particles.Stop();
+        unragdoll();
         Destroy(particles);
         base.endEffect();
     }

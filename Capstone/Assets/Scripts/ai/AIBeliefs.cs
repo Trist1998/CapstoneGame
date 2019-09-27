@@ -52,6 +52,19 @@ public class AIBeliefs
     {
         return target != null && isVisible(target, 1000);
     }
+
+    public GameObject objectAimedAt()
+    {
+        RaycastHit hit;
+        Vector3 origin = character.getItemAimPosition();
+        Vector3 direction = character.getItemAimDirection();
+        if (Physics.Raycast(origin, direction, out hit, sightRadius))
+        {
+            return hit.collider.gameObject;
+        }
+
+        return null;
+    }
     
     public bool isVisible(GameObject obj, float radius)
     {

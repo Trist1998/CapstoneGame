@@ -8,8 +8,10 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance; //Refers to an instance of the game object
 
-    //This method adds all the sounds that was loaded onto the audio manager in the inspector into an array
-    // The if else block ensures that there aren't multiple instances of the audio manager object when a new scene is loaded
+    /*
+     * This method adds all the sounds that was loaded onto the audio manager in the inspector into an array
+     *The if else block ensures that there aren't multiple instances of the audio manager object when a new scene is loaded
+    */
     private void Awake()
     {
         if (instance == null)

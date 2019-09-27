@@ -6,23 +6,31 @@ using UnityEngine.AI;
 public class ShootBehaviour : AIBehaviour
 {
 
-    public override bool checkConditionAndUpdate()
+    protected override bool isExecutable()
     {
+        if (base.isExecutable())
+            return base.update();
         if(character.beliefs.target == null) return false;
-        if (character.beliefs.getTargetDistance() > 10) return false;
-        update(character);
+        if (character.beliefs.getTargetDistance() > character.range) return false;
+
         return true;
     }
 
-    protected override void update(AICharacter character)
+    /**
+     * Used to perform AI actions
+     * Returns true if still executing
+     */
+    public override bool update()
     {
-        
+        if (!isExecutable()) return false;
         character.head.transform.LookAt(character.beliefs.target.transform);
         character.weapon.usePrimaryActionDown();
         character.weapon.usePrimaryActionUp();
+        return true;
     }
 
     public ShootBehaviour(AICharacter character) : base(character)
     {
+        behaviours = new AIBehaviour[]{new SideStepBehaviour(character)};
     }
 }

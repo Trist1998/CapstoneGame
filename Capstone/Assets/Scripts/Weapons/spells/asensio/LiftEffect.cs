@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +11,12 @@ public class LiftEffect : AttachedEffect
     public float distance = 0;
     public float maxDist = 0.05f;
     Quaternion rot;
+    private bool shotForward = false;
+    private Rigidbody rigid;
 
     public override void affectObject()
     {
+        if (shotForward) return;
         if (!item.isEquipped())
         {
             endEffect();
@@ -23,20 +27,14 @@ public class LiftEffect : AttachedEffect
         Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
         Vector3 heading = flyTo - transform.position;
         float dist = Vector3.Distance(transform.position, flyTo);
-        float velo = (dist * dist) + dist;
-        Vector3 dir = heading / dist;
-        if (dist > 0.05f)
-        {
-            if (dist > maxDist)
-            {
-                dist = 1;
-            }
-            transform.position += Time.deltaTime * velo * heading;
-        }
+        Vector3 force = heading / Time.fixedDeltaTime * 0.03f;
+        rigid.velocity = Vector3.zero;
+        rigid.AddForce(force, ForceMode.VelocityChange);
     }
 
     public void startEffect(Item item)
     {
+        rigid = GetComponent<Rigidbody>();
         if (!isMovableObject())
         {
             Destroy(this);
@@ -71,7 +69,9 @@ public class LiftEffect : AttachedEffect
     public void shootForward(float force)
     {
         GetComponent<Rigidbody>().AddForce(item.user.getItemAimDirection() * force);
-        endEffect();
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().useGravity = true;
+        shotForward = true;
     }
 
     public void lev(float dist)
@@ -81,4 +81,27 @@ public class LiftEffect : AttachedEffect
         distance = dist;
     }
 
+    public void OnCollisionEnter(Collision other)
+    {
+        if (shotForward)
+        {
+            shotForward = false;
+            AICharacter c = other.gameObject.GetComponent<AICharacter>();
+            Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
+            if (r != null)
+            {
+                r.AddForce(other.impulse);
+            }
+            
+            if (c != null)
+            {
+                
+                c.gameObject.AddComponent<RagdollEffect>().startEffect(1);
+            }
+            
+            
+            endEffect();
+        }
+        
+    }
 }

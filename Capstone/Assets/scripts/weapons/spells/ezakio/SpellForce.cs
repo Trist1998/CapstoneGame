@@ -28,8 +28,12 @@ public class SpellForce : AbstractWeaponEffect
             Rigidbody rigid = colliderObject.gameObject.GetComponent<Rigidbody>();
             if (rigid != null)
             {
+                AICharacter c = colliderObject.GetComponent<AICharacter>();
+                if(c != null)
+                    c.gameObject.AddComponent<RagdollEffect>().startEffect(1.5f);
                 Vector3 displacment = colliderObject.transform.position - hitPoint;
                 rigid.AddForce(force * Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1) * displacment.normalized);
+                
             }
         }
         playPrimaryOnHitEffect(null, hitPoint);

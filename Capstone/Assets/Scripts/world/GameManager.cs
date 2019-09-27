@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Camera player2;
     public Texture Crosshair;
+    public Text waveText;
 
     private int noDeaths;
 
@@ -71,6 +74,7 @@ public class GameManager : MonoBehaviour
     private void endWave()
     {
         waveNo++;
+        waveText.text = "Wave: " + waveNo;
         timer = new GenericTimer(timeBetweenWaves, false);
     }
     

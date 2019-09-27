@@ -22,7 +22,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     {
         behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
         root = new AIBehaviour(this, behaviours);
-        
+        currentBehaviour = root;
         beliefs = new AIBeliefs(this);
         unragdoll();
         weapon.user = this;
@@ -36,7 +36,9 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         beliefs.updateBeliefs();
         if (!currentBehaviour.update())
         {
-            currentBehaviour = root;
+            AIBehaviour b = root.getBehaviourToExecute();
+            if(b != null)
+                currentBehaviour = b;
         }
         
     }

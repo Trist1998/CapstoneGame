@@ -10,9 +10,14 @@ public class SpellLift : AbstractWeaponEffect
 
     private LiftEffect attached;
     private bool fireable = false;
+    
+    [SerializeField]
+    private float comboPoints;
+    [SerializeField]
+    private float maxComboPoints;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        attached = hit.AddComponent(typeof(LiftEffect)) as LiftEffect;
+        attached = hit.AddComponent<LiftEffect>();
         attached.startEffect(item);
     }
 
@@ -28,6 +33,7 @@ public class SpellLift : AbstractWeaponEffect
             else
             {
                 attached.shootForward(shootForwardForce);
+                attached = null;
                 fireable = false;
             }
 
