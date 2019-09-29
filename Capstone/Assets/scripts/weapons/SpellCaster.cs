@@ -6,6 +6,27 @@ using UnityEngine;
 public class SpellCaster : Item
 {
     [SerializeField]
+    private int maxActiveAmmo;
+    [SerializeField]
+    private int activeAmmo;
+    [SerializeField]
+    private float primaryReloadTime;
+    private GenericTimer primaryReloadTimer;
+    
+    [SerializeField]
+    private int maxReserveAmmo;
+    [SerializeField]
+    private int reserveAmmo;
+    
+    [SerializeField]
+    private float primaryResetTime;
+    [SerializeField]
+    private float secondaryResetTime;
+    
+    private GenericTimer primaryResetTimer;
+    private GenericTimer secondaryResetTimer;
+    
+    [SerializeField]
     private bool primaryAutomaticFire;
     [SerializeField]
     private bool secondaryAutomaticFire;
@@ -24,13 +45,7 @@ public class SpellCaster : Item
     
     public AbstractWeaponEffect spell;
 
-    [SerializeField]
-    private float primaryResetTime;
-    [SerializeField]
-    private float secondaryResetTime;
     
-    private GenericTimer primaryResetTimer;
-    private GenericTimer secondaryResetTimer;
 
     void Start()
     {
@@ -43,8 +58,9 @@ public class SpellCaster : Item
     {
         if (!primaryResetTimer.isTimeout()) return false;
         if (!primaryAutomaticFire && fired) return false;
-        
         fired = true;
+        if (activeAmmo <= 0) return false;
+        
         return true;
     }
     
@@ -61,6 +77,7 @@ public class SpellCaster : Item
     {
         if (!canPrimaryFire()) return;
             primaryFire();
+            
     }
 
     public override void usePrimaryActionUp()
@@ -84,8 +101,10 @@ public class SpellCaster : Item
         if (primarySound != null)
             primarySound.Play();
         playParticleEffect(primaryMuzzleFlash);
-
         spell.primaryFire(this);
+        activeAmmo--;
+        if(activeAmmo <= 0)
+            primaryReloadTimer = new GenericTimer(primaryReloadTime, false);
     }
 
     private void playParticleEffect(ParticleSystem particles)
@@ -107,13 +126,26 @@ public class SpellCaster : Item
 
     public override string getItemName()
     {
-        if(spell != null)
-        return spell.getName();
-        return "";
+        return spell != null ? spell.getName() : "No Name";
     }
     
     public override float getAmmoPercentage()
     {
-        return primaryResetTimer.getDisplayResetPercent();
+        if(primaryReloadTimer != null)
+        {
+            if(primaryReloadTimer.isTimeout())
+            {
+                activeAmmo += maxActiveAmmo - activeAmmo;
+                reserveAmmo -= maxActiveAmmo - activeAmmo;
+                primaryReloadTimer = null;
+            }
+            else
+            {
+                return primaryReloadTimer.getDisplayResetPercent();
+            }
+        }
+        if (maxActiveAmmo == 0) return primaryReloadTimer?.getDisplayResetPercent() ?? 1;
+
+        return activeAmmo/(maxActiveAmmo*1.0f);
     }
 }

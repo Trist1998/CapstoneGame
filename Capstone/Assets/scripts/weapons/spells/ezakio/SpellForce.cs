@@ -34,20 +34,20 @@ public class SpellForce : AbstractWeaponEffect
             if (rigid != null)
             {
                 AICharacter c = colliderObject.GetComponent<AICharacter>();
-                if(c != null)
+                if (c != null)
+                {
                     c.gameObject.AddComponent<RagdollEffect>().startEffect(1.5f);
-                Vector3 displacment = colliderObject.transform.position - hitPoint;
-                rigid.AddForce(force * Mathf.Clamp(1 - displacment.magnitude/blastRadius, 0, 1) * displacment.normalized);
+                    rigid = c.childBody;
+                }
+                
+                    
+                Vector3 displacement = colliderObject.transform.position - hitPoint;
+                rigid.AddForce(force * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
                 
             }
         }
         playPrimaryOnHitEffect(null, hitPoint);
         
-    }
-
-    public override string getName()
-    {
-        return SPELL_NAME;
     }
 }
 

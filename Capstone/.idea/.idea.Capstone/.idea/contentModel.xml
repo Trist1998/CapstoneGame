@@ -8,6 +8,7 @@
         <e p="EvilCube.cs" t="Include" />
         <e p="move.cs" t="Include" />
         <e p="obj.cs" t="Include" />
+        <e p="PlayerControls.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Environment" t="Include">
             <e p="EffectExamples" t="Include">

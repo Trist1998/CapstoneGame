@@ -39,8 +39,10 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         if (timer == null) return;
+        waveText.text = "Next wave: " + (int)(timer.getTimeLeft());
         if (timer.isTimeout())
         {
+            waveText.text = "Wave: " + waveNo;
             noDeaths = 0;
             timer = null;
             
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
     private void endWave()
     {
         waveNo++;
-        waveText.text = "Wave: " + waveNo;
+        
         timer = new GenericTimer(timeBetweenWaves, false);
     }
     

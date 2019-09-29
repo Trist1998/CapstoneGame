@@ -34,7 +34,9 @@ public class LiftEffect : AttachedEffect
 
     public void startEffect(Item item)
     {
-        rigid = GetComponent<Rigidbody>();
+        AICharacter c = GetComponent<AICharacter>();
+        rigid = c != null ? c.childBody : GetComponent<Rigidbody>();
+        
         if (!isMovableObject())
         {
             Destroy(this);
@@ -83,25 +85,23 @@ public class LiftEffect : AttachedEffect
 
     public void OnCollisionEnter(Collision other)
     {
-        if (shotForward)
+        if (!shotForward) return;
+        shotForward = false;
+        AICharacter c = other.gameObject.GetComponent<AICharacter>();
+        Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
+        if (r != null)
         {
-            shotForward = false;
-            AICharacter c = other.gameObject.GetComponent<AICharacter>();
-            Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
-            if (r != null)
-            {
-                r.AddForce(other.impulse);
-            }
-            
-            if (c != null)
-            {
-                
-                c.gameObject.AddComponent<RagdollEffect>().startEffect(1);
-            }
-            
-            
-            endEffect();
+            r.AddForce(other.impulse);
         }
-        
+            
+        if (c != null)
+        {
+            c.takeDamage(50);
+            c.gameObject.AddComponent<RagdollEffect>().startEffect(1);
+        }
+            
+            
+        endEffect();
+
     }
 }

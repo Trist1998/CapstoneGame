@@ -15,6 +15,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public float sightRange;
     private AIBehaviour currentBehaviour;
     private AIBehaviour root;
+    public Rigidbody childBody;
 
 
     // Start is called before the first frame update

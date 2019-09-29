@@ -16,24 +16,15 @@ public class AttractEffect : AttachedEffect
 
     public void attachEffect(AttractEffect attractTo, float force, float lifeTime)
     {
-        rig = GetComponent<Rigidbody>();
+        rig = getRigidBody();
         
         if (rig != null)
-        {
-            print(rig.isKinematic);
             this.attractTo = attractTo;
-            
-            if(attractTo != null)
-                rig.AddForce(force * getForceDirection());
-        }
-
         
-            
         this.force = force;
         
         startEffect(lifeTime);
         ragdoll();
-        
     }
     
     public void attachEffect(AttractEffect attractTo, Vector3 pointOfAttraction, ParticleSystem effect, float force, float lifeTime)
@@ -48,42 +39,49 @@ public class AttractEffect : AttachedEffect
 
     private void ragdoll()
     {
-        if(attractTo != null && GetComponent<AICharacter>() != null)
+        if(isNPC())
             GetComponent<AICharacter>().ragdoll();
     }
     
     private void unragdoll()
     {
-        if(attractTo != null && GetComponent<AICharacter>() != null)
+        if(isNPC())
             GetComponent<AICharacter>().unragdoll();
     }
-    
+
+    private bool isNPC()
+    {
+        return GetComponent<AICharacter>() != null;
+    }
+
+    private Rigidbody getRigidBody()
+    {
+        if(isMovableObject())
+            return isNPC() ? GetComponent<AICharacter>().childBody : GetComponent<Rigidbody>();
+        return null;
+    }
     
     public override void affectObject()
     {
         if (attractTo != null)
         {
-            Rigidbody rig = GetComponent<Rigidbody>();
             rig.AddForce(getForce() * getForceDirection());
         }
     }
 
     public Vector3 getPosition()
     {
-        if(!isMovableObject())
-            return attractionPoint;
-        return transform.position;
+        return !isMovableObject() ? attractionPoint : rig.position;
     }
     
     public float getForce()
     {
-        Rigidbody rig = GetComponent<Rigidbody>();
         return force;// * (Mathf.Max(rig.mass, 1) * Mathf.Max(attractTo.GetComponent<Rigidbody>().mass, 1))/Mathf.Max(Mathf.Pow((attractTo.getPosition() - transform.position).magnitude, 2), 5);
     }
     
     private Vector3 getForceDirection()
     {
-        return (attractTo.getPosition() - transform.position).normalized;
+        return (attractTo.getPosition() - getPosition()).normalized;
     }
 
     void OnCollisionEnter(Collision other)

@@ -42,70 +42,12 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override float getHorizontalInput()
     {
-        if (!controller)
-        {
-             return Input.GetAxis("Horizontal");
-      /*      controls.MKB.Right.performed += ctx => right = 1;
-            controls.MKB.Right.canceled += ctx => right = 0;
-
-
-            controls.MKB.Left.performed += ctx => left = 1;
-            controls.MKB.Left.canceled += ctx => left = 0;
-
-            if (right==1)
-            {
-                return 1;
-            }
-
-            else if (left==1)
-            {
-                return -1;
-            }
-
-            else
-            {
-                return 0;
-            }*/
-        }
-
-        else
-        {
-            return controls.Gameplay.Move.ReadValue<Vector2>().x;
-        }
+        return Input.GetAxis("Horizontal");
     }
 
     public override float getVerticalInput()
     {
-        if (!controller)
-        {
-            controls.MKB.Forward.performed += ctx => forward = 1;
-            controls.MKB.Forward.canceled += ctx => forward = 0;
-
-
-            controls.MKB.Backward.performed += ctx => backward = 1;
-            controls.MKB.Backward.canceled += ctx => backward = 0;
-
-            if (forward == 1)
-            {
-                return 1;
-            }
-
-            else if (backward == 1)
-            {
-                return -1;
-            }
-
-            else
-            {
-                return 0;
-            }
-        }
-
-        else
-        {
-            return controls.Gameplay.Move.ReadValue<Vector2>().y;
-
-        }
+        return Input.GetAxis("Vertical");
     }
 
     public override bool getJump()
@@ -139,65 +81,17 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override float getCrouchAxis()
     {
-        if (!controller)
-        {
-            return Input.GetAxis("Crouch");
-            /*if(controls.MKB.Jump.triggered)
-            {
-                return 1;
-            }
-
-            else
-            {
-                return 0;
-            }*/
-        }
-
-        else
-        {
-            bool press = false;
-            controls.Gameplay.Crouch.performed += ctx => press = ctx.canceled;
-
-            if(press)
-            {
-                return 1;
-            }
-
-            else
-            {
-                return 0;
-            }
-        }
+        return Input.GetAxis("Crouch");
     }
 
     public override float getMouseX()
     {
-        if (!controller)
-        {
-            return Input.GetAxis("Mouse X");
-            //return controls.MKB.Rotate.ReadValue<Vector2>().x*Time.deltaTime;
-        }
-
-        else
-        {
-            return controls.Gameplay.Rotate.ReadValue<Vector2>().x;
-        }
+        return Input.GetAxis("Mouse X");
     }
 
     public override float getMouseY()
     {
-        if (!controller)
-        {
-            return Input.GetAxis("Mouse Y");
-            //return controls.MKB.Rotate.ReadValue<Vector2>().y*Time.deltaTime;
-        }
-
-        else
-        {
-            return controls.Gameplay.Rotate.ReadValue<Vector2>().y;
-          //  controls.Gameplay.Rotate.canceled += ctx => rotate = Vector2.zero;
-            //return rotate.y;
-        }
+        return Input.GetAxis("Mouse Y");
     }
 
     public override bool getPrimaryFireDown()
