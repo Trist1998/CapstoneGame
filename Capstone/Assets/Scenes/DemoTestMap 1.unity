@@ -7243,6 +7243,14 @@ PrefabInstance:
       propertyPath: equipable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1311801458, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
+      propertyPath: primaryReloadTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311801458, guid: fe349d8f118fd284a974e0456ccca7f8, type: 3}
+      propertyPath: activeAmmo
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6715721628352735977, guid: fe349d8f118fd284a974e0456ccca7f8,
         type: 3}
       propertyPath: damagePerSecond
