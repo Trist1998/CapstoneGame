@@ -65,7 +65,7 @@ public class AttractEffect : AttachedEffect
     {
         if (attractTo != null)
         {
-            rig.AddForce(getForce() * getForceDirection());
+            rig.AddForce(getForce() * getForceDirection(), ForceMode.VelocityChange);
         }
     }
 

@@ -72,6 +72,11 @@ public class LiftEffect : AttachedEffect
 
     public void shootForward(float force)
     {
+        if (GetComponent<AICharacter>() != null)
+        {
+            force *= 5;
+        }
+
         rigid.velocity = Vector3.zero;
         rigid.AddForce(item.user.getItemAimDirection() * force, ForceMode.VelocityChange);
         rigid.isKinematic = false;

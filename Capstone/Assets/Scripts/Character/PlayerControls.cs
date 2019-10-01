@@ -234,18 +234,18 @@ public class PlayerControls : IInputActionCollection
     ""controlSchemes"": []
 }");
         // Gameplay
-        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
-        m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
-        m_Gameplay_Rotation = m_Gameplay.FindAction("Rotation", throwIfNotFound: true);
-        m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
-        m_Gameplay_PrimaryFire = m_Gameplay.FindAction("PrimaryFire", throwIfNotFound: true);
-        m_Gameplay_Sprint = m_Gameplay.FindAction("Sprint", throwIfNotFound: true);
-        m_Gameplay_Crouch = m_Gameplay.FindAction("Crouch", throwIfNotFound: true);
-        m_Gameplay_Switch1 = m_Gameplay.FindAction("Switch1", throwIfNotFound: true);
-        m_Gameplay_Switch2 = m_Gameplay.FindAction("Switch2", throwIfNotFound: true);
-        m_Gameplay_SecondaryFire = m_Gameplay.FindAction("SecondaryFire", throwIfNotFound: true);
-        m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
-        m_Gameplay_Drop = m_Gameplay.FindAction("Drop", throwIfNotFound: true);
+        /*m_Gameplay = asset.GetActionMap("Gameplay");
+        m_Gameplay_Movement = m_Gameplay.GetAction("Movement");
+        m_Gameplay_Rotation = m_Gameplay.GetAction("Rotation");
+        m_Gameplay_Jump = m_Gameplay.GetAction("Jump");
+        m_Gameplay_PrimaryFire = m_Gameplay.GetAction("PrimaryFire");
+        m_Gameplay_Sprint = m_Gameplay.GetAction("Sprint");
+        m_Gameplay_Crouch = m_Gameplay.GetAction("Crouch");
+        m_Gameplay_Switch1 = m_Gameplay.GetAction("Switch1");
+        m_Gameplay_Switch2 = m_Gameplay.GetAction("Switch2");
+        m_Gameplay_SecondaryFire = m_Gameplay.GetAction("SecondaryFire");
+        m_Gameplay_Interact = m_Gameplay.GetAction("Interact");
+        m_Gameplay_Drop = m_Gameplay.GetAction("Drop");*/
     }
 
     ~PlayerControls()

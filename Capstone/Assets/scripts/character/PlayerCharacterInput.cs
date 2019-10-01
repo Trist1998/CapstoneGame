@@ -27,16 +27,11 @@ public class PlayerCharacterInput : AbstractCharacterInput
         left = 0;
         backward = 0;
         forward = 0;
-        if (!controls.Gameplay.Join.triggered)
+        //if (!controls.Gameplay.Join.triggered)
         {
             controller = false;
         }
 
-        else
-        {
-            controller = true;
-        }
-        
     }
 
 
@@ -96,58 +91,22 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getPrimaryFireDown()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Fire1");
-           // return controls.MKB.Primary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Primary.triggered;
-        }
+        return Input.GetButton("Fire1");
     }
 
     public override bool getPrimaryFireUp()
     {
-        if (!controller)
-        {
-            return Input.GetButtonUp("Fire1");
-            //return controls.MKB.Primary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Primary.triggered;
-        }
+        return Input.GetButtonUp("Fire1");
     }
 
     public override bool getSecondaryFireDown()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Fire2");
-            //return controls.MKB.Secondary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Secondary.triggered;
-        }
+        return Input.GetButton("Fire2");
     }
 
     public override bool getSecondaryFireUp()
     {
-        if (!controller)
-        {
-            return Input.GetButtonUp("Fire2");
-            //return controls.MKB.Secondary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Secondary.triggered;
-        }
+        return Input.GetButtonUp("Fire2");
     }
 
     public override bool getInteract()
@@ -180,16 +139,7 @@ public class PlayerCharacterInput : AbstractCharacterInput
     
     public override bool getSwapPrimary()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Swap");
-            //return controls.MKB.Swap.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Swap.triggered;
-        }
+        return Input.GetButtonDown("Swap");
     }
 
     public override bool getSprintDown()

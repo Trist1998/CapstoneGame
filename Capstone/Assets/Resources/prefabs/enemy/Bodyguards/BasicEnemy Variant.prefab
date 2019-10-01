@@ -5050,6 +5050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicEnemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3890548385134399259, guid: 7af4e617dc8bae0449d2f696695258de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3890548386157044779, guid: 7af4e617dc8bae0449d2f696695258de,
         type: 3}
       propertyPath: m_IsKinematic

@@ -14,6 +14,7 @@ public class IgniteEffect : AttachedEffect
         particles.Play();
         this.damagePerSecond = damagePerSecond;
         appliedStates[AttachedEffectManager.STATE_FIRE] = 5;
+        appliedStates[AttachedEffectManager.STATE_IGNITION] = 5;
         negatingStates[AttachedEffectManager.STATE_WET] = 5;
         base.startEffect(lifeTime);
         if(!effectEnded)
