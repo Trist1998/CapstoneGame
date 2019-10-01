@@ -55,5 +55,13 @@ public class AudioManager : MonoBehaviour
         play("Theme"); //Our main game music can be played her if applicable
     }
 
+    /*void playClip(AudioClip clip)
+    {
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.loop;
+    }*/
     
 }
