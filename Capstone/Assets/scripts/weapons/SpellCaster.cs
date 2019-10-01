@@ -41,7 +41,7 @@ public class SpellCaster : Item
     private ParticleSystem secondaryMuzzleFlash;
     
     [SerializeField]
-    private AudioSource primarySound;
+    public AudioSource primarySound;
     [SerializeField]
     private AudioSource secondarySound;
     
