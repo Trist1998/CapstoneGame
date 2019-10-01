@@ -19,7 +19,7 @@ public class SideStepBehaviour: AIBehaviour
         if (!isExecutable()) return false;
         character.transform.LookAt(character.beliefs.target.transform);
         character.GetComponent<Rigidbody>().AddForce(character.transform.right * (right?1:-1));
-
+        MonoBehaviour.print("Stepping");
         return true;
     }
 

@@ -82,6 +82,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         GetComponent<Animator>().enabled = true;
         setRigidbodyState(true);
         setColliderState(false);
+        transform.position = childBody.transform.position;
     }
 
     public void ragdoll()
@@ -119,7 +120,8 @@ public class AICharacter : AbstractCharacterControl, IItemUser
             collider.enabled = state;
         }
 
-        GetComponent<Collider>().enabled = !state;
+        if(GetComponent<Collider>() != null)
+            GetComponent<Collider>().enabled = !state;
     }
 
     public AIBeliefs getBeliefs()

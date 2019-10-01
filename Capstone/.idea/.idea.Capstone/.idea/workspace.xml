@@ -2,28 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/MediumFlames 1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/MediumFlames 1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberBody_Emissive.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberBody_Emissive.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Diff.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Diff.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Normal.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Normal.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Spec.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/CyberSoldier_Spec.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials/CyberMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyAssets/CyberSoldier/Materials/CyberMat.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/FuelGrenade.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/FuelGrenade.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/fyro/FyroPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/fyro/FyroPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/maxio/MaxioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/maxio/MaxioPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/destructio/DestructioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/destructio/DestructioPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/ParatacioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/ParatacioPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/ezakio/SpellForce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/ezakio/SpellForce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedObjectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/AIBehaviour.cs" />
@@ -160,7 +165,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
@@ -169,19 +173,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/whale/WhaleWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/NewFile1.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ezakio/SpellForce.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -292,7 +298,8 @@
       <workItem from="1569522371740" duration="7611000" />
       <workItem from="1569576991033" duration="15938000" />
       <workItem from="1569684138370" duration="7268000" />
-      <workItem from="1569753273907" duration="20924000" />
+      <workItem from="1569753273907" duration="21325000" />
+      <workItem from="1569930897114" duration="6011000" />
     </task>
     <servers />
   </component>

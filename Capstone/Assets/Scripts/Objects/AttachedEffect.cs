@@ -195,6 +195,11 @@ public class AttachedEffect : MonoBehaviour
         return lifeTimer;
     }
     
+    protected void setLifeTimer(GenericTimer timer)
+    {
+        lifeTimer = timer;
+    }
+    
     
 
 }
