@@ -5,8 +5,9 @@ using UnityEngine;
 public class SpellDestroy : AbstractProjectileWeaponEffect
 {
     public readonly string SPELL_NAME = "Destructio (The Destruction Charm)";
-
+    public float blastRadius;
     public float damage;
+    public float blastForce;
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 force)
     {
@@ -16,6 +17,20 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
         Rigidbody rig = hit.GetComponent<Rigidbody>();
         if (rig != null)
             rig.AddForce(force);
+        Collider[] objects = Physics.OverlapSphere(hitPoint, blastRadius);
+        foreach (var colliderObject in objects)
+        {
+            Rigidbody rigid = colliderObject.gameObject.GetComponent<Rigidbody>();
+            if (rigid != null)
+            {
+                Vector3 displacement = colliderObject.transform.position - hitPoint;
+                rigid.AddForce(blastForce * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
+                WorldObject obj = colliderObject.GetComponent<WorldObject>();
+                if (obj != null)
+                    obj.takeDamage(0.5f * damage * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1));
+
+            }
+        }
         playPrimaryOnHitEffect(hit, hitPoint);
     }
 

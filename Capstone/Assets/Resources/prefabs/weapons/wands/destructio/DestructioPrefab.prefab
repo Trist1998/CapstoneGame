@@ -125,15 +125,20 @@ MonoBehaviour:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
-  primaryAutomaticFire: 0
+  maxActiveAmmo: 3
+  activeAmmo: 3
+  primaryReloadTime: 5
+  maxReserveAmmo: 9
+  reserveAmmo: 0
+  primaryResetTime: 1
+  secondaryResetTime: 0
+  primaryAutomaticFire: 1
   secondaryAutomaticFire: 0
   primaryMuzzleFlash: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
-  primaryResetTime: 5
-  secondaryResetTime: 0
 --- !u!114 &6482627552897685186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,4 +160,6 @@ MonoBehaviour:
     type: 3}
   throwableWeapon: 0
   useGravity: 0
-  damage: 250
+  blastRadius: 10
+  damage: 175
+  blastForce: 1000

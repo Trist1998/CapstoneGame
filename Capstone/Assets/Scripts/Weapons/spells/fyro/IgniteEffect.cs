@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class IgniteEffect : AttachedEffect
 {
-    private float damagePerSecond;
+    public float damagePerSecond;
     private ParticleSystem particles;
-    
-    public void startEffect(ParticleSystem effect, float damagePerSecond, float lifeTime)
+
+    public void startEffect(ParticleSystem effect, float baseDamage, float damagePerSecond, float lifeTime)
     {
         particles = Instantiate(effect, gameObject.transform);
         particles.transform.position = transform.position;
@@ -16,6 +16,8 @@ public class IgniteEffect : AttachedEffect
         appliedStates[AttachedEffectManager.STATE_FIRE] = 5;
         negatingStates[AttachedEffectManager.STATE_WET] = 5;
         base.startEffect(lifeTime);
+        if(!effectEnded)
+            GetComponent<WorldObject>()?.takeDamage(baseDamage);
     }
 
     public override void affectObject()

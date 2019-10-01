@@ -7,15 +7,27 @@ public class FollowBehaviour : AIBehaviour
     private bool follow = false;
     private float range;
     
-    public override bool checkConditionAndUpdate()
+    protected override bool isExecutable()
     {
         if (character.beliefs.target == null) return false;
         float distance = (character.beliefs.target.transform.position - character.transform.position).magnitude;
-        follow = (distance > range + 2 && follow) || (distance > range && !follow);
+        if (follow)
+        {
+            if (distance < range - 2)
+                follow = false;
+        }
+        else
+        {
+            if (distance > range + 2)
+            {
+                follow = true;
+            }
+        }
+        
+        follow = distance > range;
 
         if (follow)
         {
-            update(character);
             character.GetComponent<Animator>().SetInteger("Condition", 2);
         }
         else
@@ -25,8 +37,10 @@ public class FollowBehaviour : AIBehaviour
         return follow;
     }
 
-    protected override void update(AICharacter character)
+    public override bool update()
     {
+        if (!isExecutable()) return false;
+        
         if(character.beliefs.isTargetVisible())
         {
             character.GetComponent<NavMeshAgent>().SetDestination(character.beliefs.target.transform.position);
@@ -35,6 +49,8 @@ public class FollowBehaviour : AIBehaviour
         {
             character.GetComponent<NavMeshAgent>().SetDestination(character.beliefs.targetLastKnownPos);
         }
+
+        return true;
     }
 
     public FollowBehaviour(AICharacter character, float range) : base(character)

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WorldObject : MonoBehaviour, IWorldObject
 {
+    [SerializeField]
     private Spawner spawner;
     public bool destructable;
     
