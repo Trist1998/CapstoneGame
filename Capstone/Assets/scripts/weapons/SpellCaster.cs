@@ -18,7 +18,7 @@ public class SpellCaster : Item
     private ParticleSystem secondaryMuzzleFlash;
     
     [SerializeField]
-    private AudioSource primarySound;
+    public AudioSource primarySound;
     [SerializeField]
     private AudioSource secondarySound;
     
@@ -41,7 +41,6 @@ public class SpellCaster : Item
 
     private bool canPrimaryFire()
     {
-        print(primaryResetTimer == null);
         if (!primaryResetTimer.isTimeout()) return false;
         if (!primaryAutomaticFire && fired) return false;
         
