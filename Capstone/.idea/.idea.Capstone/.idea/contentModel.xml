@@ -8,7 +8,6 @@
         <e p="EvilCube.cs" t="Include" />
         <e p="move.cs" t="Include" />
         <e p="obj.cs" t="Include" />
-        <e p="PlayerControls.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Environment" t="Include">
             <e p="EffectExamples" t="Include">
@@ -368,8 +367,10 @@
             <e p="FPSMovementControl.cs" t="Include" />
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="JoystickCharacterInput.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
             <e p="PlayerCharacterInput.cs" t="Include" />
+            <e p="PlayerControls.cs" t="Include" />
           </e>
           <e p="Follow.cs" t="Include" />
           <e p="Hud" t="Include">
