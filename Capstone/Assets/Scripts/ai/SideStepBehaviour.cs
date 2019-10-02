@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SideStepBehaviour: AIBehaviour
 {
@@ -18,7 +19,7 @@ public class SideStepBehaviour: AIBehaviour
     {
         if (!isExecutable()) return false;
         character.transform.LookAt(character.beliefs.target.transform);
-        character.GetComponent<Rigidbody>().AddForce(character.transform.right * (right?1:-1));
+        character.GetComponent<NavMeshAgent>().Warp	(character.transform.position + character.transform.right * (right?1:-1));
         MonoBehaviour.print("Stepping");
         return true;
     }

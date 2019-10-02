@@ -45,7 +45,6 @@ public class AttachedEffect : MonoBehaviour
     {
         foreach (var state in getNegationStates())
         {
-            
             if (!manager.hasState(state.Key)) continue;
             if (manager.checkState(state.Key, state.Value)) continue;
             
@@ -100,7 +99,6 @@ public class AttachedEffect : MonoBehaviour
     public virtual void startEffect()
     {
         manager = getManager();
-        print("Manager = " + manager == null);
         compareState();
         if (effectEnded) return;
         started = true;
@@ -114,7 +112,7 @@ public class AttachedEffect : MonoBehaviour
     public virtual void endEffect()
     {
         effectEnded = true;
-        getManager().removeEffect(this);
+        manager.removeEffect(this);
         Destroy(this);          
     }
     

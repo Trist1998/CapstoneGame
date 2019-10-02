@@ -21,15 +21,14 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
         foreach (var colliderObject in objects)
         {
             Rigidbody rigid = colliderObject.gameObject.GetComponent<Rigidbody>();
-            if (rigid != null)
-            {
-                Vector3 displacement = colliderObject.transform.position - hitPoint;
-                rigid.AddForce(blastForce * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
-                WorldObject obj = colliderObject.GetComponent<WorldObject>();
-                if (obj != null)
-                    obj.takeDamage(0.5f * damage * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1));
-
-            }
+            if (rigid == null) continue;
+            WorldObject obj = colliderObject.GetComponent<WorldObject>();
+            
+            if (obj == null) continue;
+            
+            Vector3 displacement = colliderObject.transform.position - hitPoint;
+            rigid.AddForce(blastForce * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
+            obj.takeDamage(0.5f * damage * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1));
         }
         playPrimaryOnHitEffect(hit, hitPoint);
     }
