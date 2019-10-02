@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int numberSpawned;
     [SerializeField]
     private GameObject[] objects;
+
     [SerializeField]
     private Camera player1;
     [SerializeField]
@@ -27,7 +28,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         timer = new GenericTimer(10, false);
-
         if (player2 != null)
         {
             player1.rect = new Rect(0,0,0.5f,1);

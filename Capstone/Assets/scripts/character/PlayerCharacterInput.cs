@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [CreateAssetMenu]
 public class PlayerCharacterInput : AbstractCharacterInput
@@ -34,7 +33,6 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     }
 
-
     public override float getHorizontalInput()
     {
         return Input.GetAxis("Horizontal");
@@ -47,31 +45,12 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getJump()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Jump");
-           // return controls.MKB.Jump.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Jump.triggered;
-        }
+        return Input.GetButton("Jump");
     }
     
     public override bool getJumpDown()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Jump");
-            //return controls.MKB.Jump.triggered;
-
-        }
-
-        else
-        {
-            return controls.Gameplay.Jump.triggered;
-        }
+        return Input.GetButtonDown("Jump");
     }
 
     public override float getCrouchAxis()
@@ -111,30 +90,12 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getInteract()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Interact");
-            //return controls.MKB.Interact.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Interact.triggered;
-        }
+        return Input.GetButtonDown("Interact");
     }
 
     public override bool getDropPrimary()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Drop");
-            //return controls.MKB.Drop.triggered; 
-        }
-
-        else
-        {
-            return controls.Gameplay.Drop.triggered;
-        }
+        return Input.GetButtonDown("Drop");
     }
     
     public override bool getSwapPrimary()
@@ -144,16 +105,6 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getSprintDown()
     {
-        if (!controller)
-        {
-            return Input.GetKey(KeyCode.LeftShift);
-            //return controls.MKB.Sprint.triggered;
-
-        }
-
-        else
-        {
-            return controls.Gameplay.Sprint.triggered;
-        }
+        return Input.GetKey(KeyCode.LeftShift);
     }
 }
