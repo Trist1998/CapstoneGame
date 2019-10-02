@@ -1,45 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [CreateAssetMenu]
 public class PlayerCharacterInput : AbstractCharacterInput
 {
-    PlayerControls controls;
-    public bool controller;
-    Vector2 move;
-    Vector2 rotate;
-    static int playerCount = 0;
-    float right;
-    float left;
-    float forward;
-    float backward;
-
-    void OnEnable()
-    {
-        controls = new PlayerControls();
-        controls.Enable();
-        move = Vector2.zero;
-        rotate = Vector2.zero;
-
-        right = 0;
-        left = 0;
-        backward = 0;
-        forward = 0;
-        if (!controls.Gameplay.Join.triggered)
-        {
-            controller = false;
-        }
-
-        else
-        {
-            controller = true;
-        }
-        
-    }
-
-
     public override float getHorizontalInput()
     {
         return Input.GetAxis("Horizontal");
@@ -52,31 +17,12 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getJump()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Jump");
-           // return controls.MKB.Jump.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Jump.triggered;
-        }
+        return Input.GetButton("Jump");
     }
     
     public override bool getJumpDown()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Jump");
-            //return controls.MKB.Jump.triggered;
-
-        }
-
-        else
-        {
-            return controls.Gameplay.Jump.triggered;
-        }
+        return Input.GetButtonDown("Jump");
     }
 
     public override float getCrouchAxis()
@@ -96,114 +42,41 @@ public class PlayerCharacterInput : AbstractCharacterInput
 
     public override bool getPrimaryFireDown()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Fire1");
-           // return controls.MKB.Primary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Primary.triggered;
-        }
+        return Input.GetButton("Fire1");
     }
 
     public override bool getPrimaryFireUp()
     {
-        if (!controller)
-        {
-            return Input.GetButtonUp("Fire1");
-            //return controls.MKB.Primary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Primary.triggered;
-        }
+        return Input.GetButtonUp("Fire1");
     }
 
     public override bool getSecondaryFireDown()
     {
-        if (!controller)
-        {
-            return Input.GetButton("Fire2");
-            //return controls.MKB.Secondary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Secondary.triggered;
-        }
+        return Input.GetButton("Fire2");
     }
 
     public override bool getSecondaryFireUp()
     {
-        if (!controller)
-        {
-            return Input.GetButtonUp("Fire2");
-            //return controls.MKB.Secondary.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Secondary.triggered;
-        }
+        return Input.GetButtonUp("Fire2");
     }
 
     public override bool getInteract()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Interact");
-            //return controls.MKB.Interact.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Interact.triggered;
-        }
+        return Input.GetButtonDown("Interact");
     }
 
     public override bool getDropPrimary()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Drop");
-            //return controls.MKB.Drop.triggered; 
-        }
-
-        else
-        {
-            return controls.Gameplay.Drop.triggered;
-        }
+        return Input.GetButtonDown("Drop");
     }
     
     public override bool getSwapPrimary()
     {
-        if (!controller)
-        {
-            return Input.GetButtonDown("Swap");
-            //return controls.MKB.Swap.triggered;
-        }
-
-        else
-        {
-            return controls.Gameplay.Swap.triggered;
-        }
+        return Input.GetButtonDown("Swap");
     }
 
     public override bool getSprintDown()
     {
-        if (!controller)
-        {
-            return Input.GetKey(KeyCode.LeftShift);
-            //return controls.MKB.Sprint.triggered;
-
-        }
-
-        else
-        {
-            return controls.Gameplay.Sprint.triggered;
-        }
+        return Input.GetKey(KeyCode.LeftShift);
     }
 }
