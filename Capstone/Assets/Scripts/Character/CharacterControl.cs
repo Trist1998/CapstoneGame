@@ -5,15 +5,15 @@ public class CharacterControl : AbstractCharacterControl
 {
     public AbstractCharacterInput characterInput;
     public FPSMovementControl movement;
-    public InteractControl interact;
+    public InteractControl interactControl;
     public Camera playerCamera;
 
     void Start()
     {
         movement = GetComponent<FPSMovementControl>();
         movement?.setValues(playerCamera, characterInput);
-        interact = GetComponent<InteractControl>();
-        interact?.setValues(playerCamera, characterInput);
+        interactControl = GetComponent<InteractControl>();
+        interactControl?.setValues(playerCamera, characterInput);
     }
     
 }

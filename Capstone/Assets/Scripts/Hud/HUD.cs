@@ -19,9 +19,9 @@ public class HUD : MonoBehaviour
     void FixedUpdate()
     {
         health.fillAmount = obj.hitPoints/obj.maxHitPoints;
-        IItemUser player = transform.root.GetComponent<IItemUser>();
-        if(player != null && player.getEquippedItem() != null)
-            energy.fillAmount = player.getEquippedItem().getAmmoPercentage();
+        IItemUser user = obj.GetComponent<IItemUser>();
+        if(user != null && user.getEquippedItem() != null)
+            energy.fillAmount = user.getEquippedItem().getAmmoPercentage();
     }
 
    

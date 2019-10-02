@@ -8,6 +8,7 @@
         <e p="EvilCube.cs" t="Include" />
         <e p="move.cs" t="Include" />
         <e p="obj.cs" t="Include" />
+        <e p="PlayerControls.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Environment" t="Include">
             <e p="EffectExamples" t="Include">
@@ -353,6 +354,7 @@
             <e p="AICharacter.cs" t="Include" />
             <e p="FollowBehaviour.cs" t="Include" />
             <e p="ShootBehaviour.cs" t="Include" />
+            <e p="SideStepBehaviour.cs" t="Include" />
           </e>
           <e p="audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -415,6 +417,7 @@
             </e>
           </e>
           <e p="weapons" t="Include">
+            <e p="NewFile1.txt" t="Include" />
             <e p="Projectile.cs" t="Include" />
             <e p="SpellCaster.cs" t="Include" />
             <e p="spells" t="Include">
@@ -447,12 +450,20 @@
               <e p="paratacio" t="Include">
                 <e p="SpellElectric.cs" t="Include" />
               </e>
+              <e p="ragdoll" t="Include">
+                <e p="RagdollEffect.cs" t="Include" />
+              </e>
               <e p="SpellConjure.cs" t="Include" />
               <e p="SpellShield.cs" t="Include" />
               <e p="SpellTrap.cs" t="Include" />
               <e p="tractio" t="Include">
                 <e p="AttractEffect.cs" t="Include" />
                 <e p="SpellAttract.cs" t="Include" />
+              </e>
+              <e p="WeaponEffectBaton.cs" t="Include" />
+              <e p="whale" t="Include">
+                <e p="WhaleProjectile.cs" t="Include" />
+                <e p="WhaleWeaponEffect.cs" t="Include" />
               </e>
             </e>
             <e p="Weapon.cs" t="Include" />
@@ -495,9 +506,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="WeaponEffectBaton.cs" t="Include" />
-        <e p="WhaleProjectile.cs" t="Include" />
-        <e p="WhaleWeaponEffect.cs" t="Include" />
       </e>
       <e p="Capstone.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

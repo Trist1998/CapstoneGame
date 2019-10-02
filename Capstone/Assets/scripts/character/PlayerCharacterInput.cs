@@ -33,7 +33,6 @@ public class PlayerCharacterInput : AbstractCharacterInput
     public override float getMouseX()
     {
         return Input.GetAxis("Mouse X");
-        
     }
 
     public override float getMouseY()

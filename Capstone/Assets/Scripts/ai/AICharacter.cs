@@ -13,12 +13,17 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public AIBeliefs beliefs;
     public float range;
     public float sightRange;
+    private AIBehaviour currentBehaviour;
+    private AIBehaviour root;
+    public Rigidbody childBody;
 
 
     // Start is called before the first frame update
     void Start()
     {
         behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
+        root = new AIBehaviour(this, behaviours);
+        currentBehaviour = root;
         beliefs = new AIBeliefs(this);
         unragdoll();
         weapon.user = this;
@@ -30,11 +35,13 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     {
         if (!aiEnabled) return;
         beliefs.updateBeliefs();
-        foreach (var behaviour in behaviours)
+        if (!currentBehaviour.update())
         {
-            behaviour.checkConditionAndUpdate();
+            AIBehaviour b = root.getBehaviourToExecute();
+            if(b != null)
+                currentBehaviour = b;
         }
-            
+        
     }
 
     public override void destroyObject()
@@ -75,6 +82,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         GetComponent<Animator>().enabled = true;
         setRigidbodyState(true);
         setColliderState(false);
+        transform.position = childBody.transform.position;
     }
 
     public void ragdoll()
@@ -112,7 +120,8 @@ public class AICharacter : AbstractCharacterControl, IItemUser
             collider.enabled = state;
         }
 
-        GetComponent<Collider>().enabled = !state;
+        if(GetComponent<Collider>() != null)
+            GetComponent<Collider>().enabled = !state;
     }
 
     public AIBeliefs getBeliefs()

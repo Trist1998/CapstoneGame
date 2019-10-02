@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class GameManager : MonoBehaviour
     private Camera player1;
     [SerializeField]
     private Camera player2;
+    public Texture Crosshair;
+    public Text waveText;
 
     private int noDeaths;
 
@@ -35,8 +39,10 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         if (timer == null) return;
+        waveText.text = "Next wave: " + (int)(timer.getTimeLeft());
         if (timer.isTimeout())
         {
+            waveText.text = "Wave: " + waveNo;
             noDeaths = 0;
             timer = null;
             
@@ -49,6 +55,16 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
+    private void OnGUI()
+    {
+        float xMin = (Screen.width / (player2 != null?4:2)) - (Crosshair.width / 2);
+        float yMin = (Screen.height / 2) - (Crosshair.height / 2);
+        
+        GUI.DrawTexture(new Rect(xMin, yMin, Crosshair.width, Crosshair.height), Crosshair);
+        if(player2 != null)
+            GUI.DrawTexture(new Rect(xMin + Screen.width/2.0f, yMin, Crosshair.width, Crosshair.height), Crosshair);
+    }
 
     public void recordDeath()
     {
@@ -60,6 +76,7 @@ public class GameManager : MonoBehaviour
     private void endWave()
     {
         waveNo++;
+        
         timer = new GenericTimer(timeBetweenWaves, false);
     }
     

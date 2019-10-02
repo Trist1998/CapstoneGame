@@ -240,12 +240,6 @@ public class BETA_SETTINGS{
 #endregion
 
     }
-    private void OnGUI()
-    {
-        float xMin = (Screen.width / 4) - (Crosshair.width / 4) + (isPlayer2?(Screen.width/2):0) - Crosshair.width/4;
-        float yMin = (Screen.height / 2) - (Crosshair.height / 2);
-        GUI.DrawTexture(new Rect(xMin, yMin, Crosshair.width, Crosshair.height), Crosshair);
-    }
 
     private void Start()
     {

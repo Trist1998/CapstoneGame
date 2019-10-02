@@ -12,6 +12,7 @@ public class AttachedEffect : MonoBehaviour
     protected Dictionary<string, int> appliedStates = new Dictionary<string, int>();
     protected Dictionary<string, int> negatingStates = new Dictionary<string, int>();
 
+    protected bool effectEnded;
     /**
      * Affect object is called once per tick of the effect.
      * Unimplemented affectObjects() may be used to maintain a state on the object
@@ -41,14 +42,12 @@ public class AttachedEffect : MonoBehaviour
 
         if (!end)
         {
+            effectEnded = false;
             foreach (var state in getAppliedStates())
             {
                 manager.addState(state.Key,this);
             }
         }
-        
-        
-
     }
 
 
@@ -149,6 +148,7 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void endEffect()
     {
+        effectEnded = true;
         getManager().removeEffect(this);
         Destroy(this);          
     }
@@ -193,6 +193,11 @@ public class AttachedEffect : MonoBehaviour
     public GenericTimer getLifeTimer()
     {
         return lifeTimer;
+    }
+    
+    protected void setLifeTimer(GenericTimer timer)
+    {
+        lifeTimer = timer;
     }
     
     

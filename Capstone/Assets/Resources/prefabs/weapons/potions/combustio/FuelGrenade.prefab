@@ -94,8 +94,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipable: 0
-  relativePosition: {x: 0, y: 0, z: 0}
+  relativePosition: {x: 0.1, y: 0.1, z: 0.1}
   relativeRotation: {x: 0, y: 0, z: 0}
+  maxActiveAmmo: 5
+  activeAmmo: 5
+  primaryReloadTime: 0
+  maxReserveAmmo: 0
+  reserveAmmo: 0
+  primaryResetTime: 0
+  secondaryResetTime: 0
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
   primaryMuzzleFlash: {fileID: 0}
@@ -103,8 +110,6 @@ MonoBehaviour:
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
-  primaryResetTime: 0
-  secondaryResetTime: 0
 --- !u!114 &8489597769941359790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +129,11 @@ MonoBehaviour:
   lifeTime: 10
   projectilePrefab: {fileID: 6264050335903066499, guid: 42e984405c984d34bb2785ff7b8dcbf8,
     type: 3}
-  throwableWeapon: 0
   useGravity: 1
+  radius: 0
+  flames: {fileID: 198104970619360998, guid: c9d83ac5792b42848acaa473268507fe, type: 3}
+  burnTime: 5
+  damagePerSecond: 15
 --- !u!65 &-2625763184462264676
 BoxCollider:
   m_ObjectHideFlags: 0
