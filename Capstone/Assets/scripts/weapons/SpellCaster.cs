@@ -6,9 +6,11 @@ using UnityEngine;
 public class SpellCaster : Item
 {
     [SerializeField]
+    private bool infiniteAmmo;
+    [SerializeField]
     private int maxActiveAmmo;
     [SerializeField]
-    private int activeAmmo;
+    private int activeAmmo = 1;
     [SerializeField]
     private float primaryReloadTime;
     private GenericTimer primaryReloadTimer;
@@ -39,7 +41,7 @@ public class SpellCaster : Item
     private ParticleSystem secondaryMuzzleFlash;
     
     [SerializeField]
-    private AudioSource primarySound;
+    public AudioSource primarySound;
     [SerializeField]
     private AudioSource secondarySound;
     
@@ -102,7 +104,7 @@ public class SpellCaster : Item
             primarySound.Play();
         playParticleEffect(primaryMuzzleFlash);
         spell.primaryFire(this);
-        activeAmmo--;
+        if(!infiniteAmmo)activeAmmo--;
         if(activeAmmo <= 0)
             primaryReloadTimer = new GenericTimer(primaryReloadTime, false);
     }

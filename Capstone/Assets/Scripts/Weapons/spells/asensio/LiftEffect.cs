@@ -23,85 +23,100 @@ public class LiftEffect : AttachedEffect
             return;
         }
         IItemUser player = item.user;
-        transform.rotation = rot;  
+        rigid.transform.rotation = rot;  
         Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
-        Vector3 heading = flyTo - transform.position;
-        float dist = Vector3.Distance(transform.position, flyTo);
+        Vector3 heading = flyTo - getPosition();
+        //float dist = Vector3.Distance(getPosition(), flyTo);
         Vector3 force = heading / Time.fixedDeltaTime * 0.03f;
         rigid.velocity = Vector3.zero;
         rigid.AddForce(force, ForceMode.VelocityChange);
     }
 
+    public Vector3 getPosition()
+    {
+        return rigid.transform.position;
+    }
+
+    public Rigidbody getRigidbody()
+    {
+        AICharacter c = transform.root.GetComponent<AICharacter>();
+        return c != null ? c.childBody : GetComponent<Rigidbody>();
+    }
+
     public void startEffect(Item item)
     {
-        AICharacter c = GetComponent<AICharacter>();
-        rigid = c != null ? c.childBody : GetComponent<Rigidbody>();
+        this.item = item;
         
+        rigid = getRigidbody();
         if (!isMovableObject())
         {
             Destroy(this);
             return;
         }
 
-        if (GetComponent<AICharacter>() != null)
-        {
-            GetComponent<AICharacter>().ragdoll();
-            GetComponent<Collider>().enabled = true;
-            GetComponent<Rigidbody>().isKinematic = true;
-        }
         
-           
-        
-        this.item = item;
-        lev((transform.position - item.user.getItemAimPosition()).magnitude);     
+        levitate((rigid.transform.position - item.user.getItemAimPosition()).magnitude);     
     }
 
     public override void endEffect()
     {
         if (GetComponent<AICharacter>() != null)
         {
-            GetComponent<AICharacter>().unragdoll();
-            GetComponent<Rigidbody>().isKinematic = false;
+            gameObject.AddComponent<RagdollEffect>().startEffect(1);
+            rigid.isKinematic = false;
         }
-        GetComponent<Rigidbody>().useGravity = true;
+        rigid.useGravity = true;
         
         Destroy(this);
     }
 
     public void shootForward(float force)
     {
-        GetComponent<Rigidbody>().AddForce(item.user.getItemAimDirection() * force);
-        GetComponent<Rigidbody>().isKinematic = false;
-        GetComponent<Rigidbody>().useGravity = true;
+        if (GetComponent<AICharacter>() != null)
+        {
+            force *= 5;
+        }
+
+        rigid.velocity = Vector3.zero;
+        rigid.AddForce(item.user.getItemAimDirection() * force, ForceMode.VelocityChange);
+        rigid.isKinematic = false;
+        rigid.useGravity = true;
         shotForward = true;
     }
 
-    public void lev(float dist)
+    private void levitate(float dist)
     {
-        GetComponent<Rigidbody>().useGravity = false;
-        rot = transform.localRotation;
+        if (GetComponent<AICharacter>() != null)
+        {
+            GetComponent<AICharacter>().ragdoll();
+        }
+        rigid.useGravity = false;
+        rot = rigid.transform.localRotation;
         distance = dist;
     }
 
     public void OnCollisionEnter(Collision other)
     {
         if (!shotForward) return;
-        shotForward = false;
+        if(getLifeTimer() == null)
+            setLifeTimer(new GenericTimer(1, false));
+        if (other.transform.root == transform.root) return;
+
         AICharacter c = other.gameObject.GetComponent<AICharacter>();
         Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
+
+        if (c != null)
+        {
+            r = c.childBody;
+            c.takeDamage(50);
+            c.gameObject.AddComponent<RagdollEffect>().startEffect(1);
+        }
         if (r != null)
         {
             r.AddForce(other.impulse);
         }
             
-        if (c != null)
-        {
-            c.takeDamage(50);
-            c.gameObject.AddComponent<RagdollEffect>().startEffect(1);
-        }
-            
-            
-        endEffect();
+        
 
     }
 }

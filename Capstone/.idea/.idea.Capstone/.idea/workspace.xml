@@ -2,9 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/util/FPS All-In-One/DemoScene/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/Priority Queue.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/02 - Default.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/02 - Default.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_col2.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_col2.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_nrml_normals.TGA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_nrml_normals.TGA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_spec1.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/Materials/humpback_whale_spec1.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/humpback_whale_model23.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/humpback_whale_model23.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/humpback_whale_model_baked_animation.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Humpback whale/humpback_whale_model_baked_animation.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerControls.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerControls.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerControls.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerControls.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/enemy/Bodyguards/BasicEnemy Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/tractio/TractioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/tractio/TractioPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/character/PlayerCharacterInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -292,6 +335,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/StablePriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/SpellAttract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/PlayerControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/paratacio/SpellElectric.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/destructio/SpellDestroy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -326,20 +372,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/InteractControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/PriorityQueue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedObjectEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/enemy/AIBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" />
@@ -377,6 +409,32 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/SpellLift.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ragdoll/RagdollEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/whale/WhaleWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/NewFile1.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ezakio/SpellForce.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" />
       </list>
     </option>
   </component>
@@ -531,8 +589,12 @@
       <workItem from="1568205533356" duration="3976000" />
       <workItem from="1568365000078" duration="13275000" />
       <workItem from="1568457615178" duration="14582000" />
-      <workItem from="1568635841453" duration="7157000" />
-      <workItem from="1568718691619" duration="7227000" />
+      <workItem from="1568635841453" duration="7792000" />
+      <workItem from="1569522371740" duration="7611000" />
+      <workItem from="1569576991033" duration="15938000" />
+      <workItem from="1569684138370" duration="7268000" />
+      <workItem from="1569753273907" duration="21325000" />
+      <workItem from="1569930897114" duration="6011000" />
     </task>
     <servers />
   </component>

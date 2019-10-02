@@ -9,7 +9,9 @@ public class AttachedEffectManager : MonoBehaviour
 {
     public const string STATE_WET = "WET";
     public const string STATE_FIRE = "FIRE";
-    public static readonly string STATE_FUEL = "FUEL";
+    public static readonly string STATE_IGNITION = "IGNITION";
+    public static readonly string STATE_IGNITABLE = "IGNITABLE";
+    public bool stateChanged;
     
     private Dictionary<string, SimplePriorityQueue<AttachedEffect>> attachedEffectStates = new Dictionary<string, SimplePriorityQueue<AttachedEffect>>();
 
@@ -20,6 +22,7 @@ public class AttachedEffectManager : MonoBehaviour
 
     public void addState(string stateKey, AttachedEffect attachedEffect)
     {
+        stateChanged = true;
         if(!attachedEffectStates.ContainsKey(stateKey))
             attachedEffectStates[stateKey] = new SimplePriorityQueue<AttachedEffect>();
         
@@ -35,7 +38,7 @@ public class AttachedEffectManager : MonoBehaviour
     {
         if (!attachedEffectStates.ContainsKey(stateKey) || attachedEffectStates[stateKey].First == null)
             return true;
-        
+        print(stateKey);
         int state2Value = attachedEffectStates[stateKey].First.getAppliedStates()[stateKey];
 
         if (stateValue > state2Value)
@@ -56,5 +59,10 @@ public class AttachedEffectManager : MonoBehaviour
                 continue;
             attachedEffectStates[state.Key].Remove(attachedEffect);
         }
+    }
+
+    private void Update()
+    {
+        stateChanged = false;
     }
 }

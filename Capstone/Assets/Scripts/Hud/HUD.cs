@@ -13,6 +13,8 @@ public class HUD : MonoBehaviour
     [SerializeField]
     private Image star;
 
+    
+
     // Update is called once per frame
     void FixedUpdate()
     {

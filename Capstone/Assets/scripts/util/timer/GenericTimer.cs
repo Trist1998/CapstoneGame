@@ -49,7 +49,6 @@ public class GenericTimer
 
     public float getDisplayResetPercent()
     {
-
         return Mathf.Min( (Time.time - referenceTime)/timeout, 1);
     }
     

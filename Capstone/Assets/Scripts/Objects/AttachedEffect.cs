@@ -11,6 +11,7 @@ public class AttachedEffect : MonoBehaviour
     private GenericTimer lifeTimer;//Determines how long the effect lives
     protected Dictionary<string, int> appliedStates = new Dictionary<string, int>();
     protected Dictionary<string, int> negatingStates = new Dictionary<string, int>();
+    private AttachedEffectManager manager;
 
     protected bool effectEnded;
     /**
@@ -20,85 +21,36 @@ public class AttachedEffect : MonoBehaviour
     public virtual void affectObject()
     {}
 
-    private AttachedEffectManager getManager()
+    protected AttachedEffectManager getManager()
     {
-        AttachedEffectManager manager = transform.root.GetComponent<AttachedEffectManager>();
+        manager = transform.root.GetComponent<AttachedEffectManager>();
         return manager == null ? transform.root.gameObject.AddComponent<AttachedEffectManager>() : manager;
     }
     
     private void applyStates()
     {
-        AttachedEffectManager manager = getManager();
-        var attachedStates = manager.getAttachedStates();
-        bool end = false;
-        foreach (var state in getNegationStates())
-        {
-            if (manager.checkState(state.Key, state.Value)) 
-                continue;
-            end = true;
-            endEffect(state.Key);
-            break;
-        }
-
-        if (!end)
-        {
-            effectEnded = false;
-            foreach (var state in getAppliedStates())
-            {
-                manager.addState(state.Key,this);
-            }
+        foreach (var state in getAppliedStates()) 
+        { 
+            manager.addState(state.Key,this);
         }
     }
-
 
     /**
      * Used to check the state of the object this is affecting and react accordingly.
      * e.g. an attached fire effect will check for wet state on the object and will be destroyed
      */
-    protected virtual void checkState()
+    private void compareState()
     {
-        AttachedEffect[] effects = GetComponents<AttachedEffect>();
-        foreach (var effect in effects)
-        {
-            if (effect.compareStates(this))
-            {
-                break;
-            }
-        }
-        
-    }
-
-    /**
-     * Compares the states of the objects
-     */
-    public bool compareStates(AttachedEffect effect)
-    {
-        foreach (var state in effect.getNegationStates())
+        foreach (var state in getNegationStates())
         {
             
-            if (!appliedStates.ContainsKey(state.Key)) 
-                continue;
-            int stateStrength = appliedStates[state.Key];
-            if (stateStrength >= state.Value)
-            {
-                effect.endEffect(state.Key);
-                break;
-            }
-        }
-        
-        foreach (var state in effect.getAppliedStates())
-        {
-            if (!negatingStates.ContainsKey(state.Key)) 
-                continue;
-            int stateStrength = negatingStates[state.Key];
-            if (stateStrength <= state.Value)
-            {
-                endEffect(state.Key);
-                return false;
-            }
+            if (!manager.hasState(state.Key)) continue;
+            if (manager.checkState(state.Key, state.Value)) continue;
+            
+            endEffect(state.Key);
+            return;
         }
 
-        return true;
     }
     
     
@@ -137,10 +89,12 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void startEffect(float lifeTime)
     {
+        manager = getManager();
         if(lifeTime > -1.0f)
-            lifeTimer = new GenericTimer(lifeTime, true);
-        applyStates();
-        checkState();
+            lifeTimer = new GenericTimer(lifeTime, false);
+        compareState();
+        if(!effectEnded)
+            applyStates();
     }
 
     /**
@@ -179,8 +133,10 @@ public class AttachedEffect : MonoBehaviour
         {
             endEffect(END_EFFECT_TIME_OUT);
         }
-        if(tick())
+        if(!effectEnded && tick())
         {
+            if(manager.stateChanged)
+                compareState();
             affectObject();
         }   
     }
@@ -193,6 +149,11 @@ public class AttachedEffect : MonoBehaviour
     public GenericTimer getLifeTimer()
     {
         return lifeTimer;
+    }
+    
+    protected void setLifeTimer(GenericTimer timer)
+    {
+        lifeTimer = timer;
     }
     
     
