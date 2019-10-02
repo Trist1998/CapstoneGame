@@ -14,6 +14,8 @@ public class AttachedEffect : MonoBehaviour
     private AttachedEffectManager manager;
 
     protected bool effectEnded;
+
+    protected bool started = false;
     /**
      * Affect object is called once per tick of the effect.
      * Unimplemented affectObjects() may be used to maintain a state on the object
@@ -89,13 +91,22 @@ public class AttachedEffect : MonoBehaviour
      */
     public virtual void startEffect(float lifeTime)
     {
-        manager = getManager();
+        
         if(lifeTime > -1.0f)
             lifeTimer = new GenericTimer(lifeTime, false);
-        compareState();
-        if(!effectEnded)
-            applyStates();
+        startEffect();
     }
+
+    public virtual void startEffect()
+    {
+        manager = getManager();
+        print("Manager = " + manager == null);
+        compareState();
+        if (effectEnded) return;
+        started = true;
+        applyStates();
+    }
+    
 
     /**
      * Used to clean up effect to remove lingering effects on the object
@@ -129,6 +140,7 @@ public class AttachedEffect : MonoBehaviour
      */
     void Update()
     {
+        if (!started) return;
         if (lifeTimer != null && lifeTimer.isTimeout())
         {
             endEffect(END_EFFECT_TIME_OUT);
