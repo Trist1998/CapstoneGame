@@ -12,15 +12,12 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        CombustioEffect effect = hit.transform.root.gameObject.AddComponent<CombustioEffect>();
-        effect.startEffect(flames, burnTime, damagePerSecond, lifeTime);
-        Collider[] objects = Physics.OverlapSphere(hitPoint, radius);
+        Collider[] objects = Physics.OverlapSphere(hitPoint, radius, LayerMask.GetMask("Destructable"));
         foreach (var colliderObject in objects)
         {
-            if (colliderObject.gameObject.GetComponent<Rigidbody>() == null) break;
+            if (colliderObject.gameObject.GetComponent<CombustioEffect>() != null) break;
             CombustioEffect c = colliderObject.gameObject.AddComponent<CombustioEffect>();
             c.startEffect(flames, burnTime, damagePerSecond, lifeTime);
-            print("Attached Combustio");
         }
         playPrimaryOnHitEffect(hit, hitPoint);
     }

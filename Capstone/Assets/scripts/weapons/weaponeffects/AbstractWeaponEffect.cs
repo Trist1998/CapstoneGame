@@ -7,7 +7,11 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public const float DEFAULT_RANGE = 50;
 
     public ParticleSystem primaryOnHitEffect;
+    public Sound primaryOnHitSound;
     public ParticleSystem secondaryOnHitEffect;
+    public Sound secondaryOnHitSound;
+    
+    
     
     /**
      * Used to apply the on hit effect and play the particles.
@@ -15,6 +19,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playPrimaryOnHitEffect(hit, hitPoint);
+        playSound(primaryOnHitSound, hit);
     }
 
     /**
@@ -22,7 +27,18 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
      */
     public virtual void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        playPrimaryOnHitEffect(hit, hitPoint);
+        playSecondaryOnHitEffect(hit, hitPoint);
+        playSound(secondaryOnHitSound, hit);
+    }
+
+    private void playSound(Sound sound, GameObject hit)
+    {
+        sound.source = hit.GetComponent<AudioSource>() != null?hit.GetComponent<AudioSource>():hit.AddComponent<AudioSource>();
+        sound.source.clip = sound.clip;
+        sound.source.volume = sound.volume;
+        sound.source.pitch = sound.pitch;
+        sound.source.loop = sound.loop;
+        sound.source.Play();
     }
 
     /**

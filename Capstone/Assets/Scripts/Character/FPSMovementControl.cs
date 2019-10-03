@@ -14,8 +14,7 @@ using System.Collections;
 public class FPSMovementControl : MonoBehaviour 
 {
     private AbstractCharacterInput characterInput;
-    public bool isPlayer2 = false;
-    
+
     #region Script Header and Cosmetics
     [Header("                       First Person", order = 0)]
     [Space(30, order = 1)]
@@ -44,7 +43,6 @@ public class FPSMovementControl : MonoBehaviour
     
 
     [SerializeField] [Tooltip("Automatically Create Crosshair")] private bool autoCrosshair = false;
-    public Texture Crosshair;
 
     [HideInInspector]
     public Vector3 targetAngles;
@@ -244,23 +242,7 @@ public class BETA_SETTINGS{
     private void Start()
     {
         #region Look Settings - Start
-
-        if(autoCrosshair)
-        {
-            GameObject qui = new GameObject("AutoCrosshair");
-            qui.AddComponent<RectTransform>();
-            qui.AddComponent<Canvas>();
-            qui.AddComponent<CanvasScaler>();
-            qui.AddComponent<GraphicRaycaster>();
-            qui.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
-            GameObject quic = new GameObject("Crosshair");
-            //quic.AddComponent<Image>()= Crosshair;
-
-            qui.transform.SetParent(this.transform);
-            qui.transform.position = Vector3.zero;
-            quic.transform.SetParent(qui.transform);
-            quic.transform.position = Vector3.zero;
-        }
+        
         cameraStartingPosition = playerCamera.localPosition;
         if(lockAndHideCursor) { Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
         baseCamFOV = playerCamera.GetComponent<Camera>().fieldOfView;
@@ -285,6 +267,7 @@ public class BETA_SETTINGS{
 
     private void Update()
     {
+        
         #region Look Settings - Update
 
             if(enableCameraMovement)
@@ -499,7 +482,7 @@ public class BETA_SETTINGS{
                         walkSpeedInternal = walkSpeed*_crouchModifiers.crouchWalkSpeedMultiplier;
                         sprintSpeedInternal = sprintSpeed*_crouchModifiers.crouchSprintSpeedMultiplier;
                         jumpPowerInternal = jumpPower* _crouchModifiers.crouchJumpPowerMultiplier;
-                }
+            }
             else
             {
                 capsule.height = Mathf.MoveTowards(capsule.height, _crouchModifiers.colliderHeight, 5*Time.deltaTime);    
@@ -573,9 +556,14 @@ public class BETA_SETTINGS{
         }
 
             if(useHeadbob == true){
-                if(fps_Rigidbody.velocity.magnitude >0.1f){
+                if(fps_Rigidbody.velocity.magnitude >0.1f)
+                {
+                    GetComponent<Animator>().SetInteger("Condition", 1);
                     head.localPosition = Vector3.MoveTowards(head.localPosition, originalLocalPosition + new Vector3(xPos, yPos, 0),0.02f);
-                }else{
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("Condition", 0);
                     head.localPosition = Vector3.SmoothDamp(head.localPosition, originalLocalPosition,ref miscRefVel, 0.15f);
                 }
                 head.localRotation = Quaternion.Euler(xTilt, 0, zTilt);

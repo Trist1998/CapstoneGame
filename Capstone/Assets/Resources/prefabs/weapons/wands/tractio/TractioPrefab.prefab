@@ -157,4 +157,4 @@ MonoBehaviour:
   secondaryOnHitEffect: {fileID: 198993423900235080, guid: a95815f92b95ea946b04f44dd0ca5b55,
     type: 3}
   effectLifeTime: 10
-  force: 100
+  force: 30

@@ -53,9 +53,9 @@ public class LiftEffect : AttachedEffect
             Destroy(this);
             return;
         }
-
         
-        levitate((rigid.transform.position - item.user.getItemAimPosition()).magnitude);     
+        levitate((rigid.transform.position - item.user.getItemAimPosition()).magnitude); 
+        base.startEffect();
     }
 
     public override void endEffect()
@@ -72,6 +72,11 @@ public class LiftEffect : AttachedEffect
 
     public void shootForward(float force)
     {
+        if (GetComponent<AICharacter>() != null)
+        {
+            force *= 5;
+        }
+
         rigid.velocity = Vector3.zero;
         rigid.AddForce(item.user.getItemAimDirection() * force, ForceMode.VelocityChange);
         rigid.isKinematic = false;
@@ -110,8 +115,6 @@ public class LiftEffect : AttachedEffect
         {
             r.AddForce(other.impulse);
         }
-            
         
-
     }
 }
