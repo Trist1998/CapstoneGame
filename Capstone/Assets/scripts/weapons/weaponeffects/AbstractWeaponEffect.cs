@@ -19,6 +19,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playPrimaryOnHitEffect(hit, hitPoint);
+        playSound(primaryOnHitSound, hit);
     }
 
     /**
@@ -27,8 +28,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playSecondaryOnHitEffect(hit, hitPoint);
-        
-        
+        playSound(secondaryOnHitSound, hit);
     }
 
     private void playSound(Sound sound, GameObject hit)
