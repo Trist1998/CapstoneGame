@@ -4810,19 +4810,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &1296082291
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2616094837793434054}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.13049948
-  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!82 &1530591796
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5004,10 +4991,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
+  primaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
-  damage: 0
-  range: 0
-  force: 0
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  damage: 10
+  range: 10
+  force: 5
 --- !u!114 &1530591793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5024,12 +5025,12 @@ MonoBehaviour:
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 0, y: 0, z: 0}
   infiniteAmmo: 0
-  maxActiveAmmo: 0
-  activeAmmo: 1
-  primaryReloadTime: 0
-  maxReserveAmmo: 0
-  reserveAmmo: 0
-  primaryResetTime: 0.1
+  maxActiveAmmo: 30
+  activeAmmo: 30
+  primaryReloadTime: 3
+  maxReserveAmmo: 60
+  reserveAmmo: 60
+  primaryResetTime: 0.15
   secondaryResetTime: 0
   primaryAutomaticFire: 1
   secondaryAutomaticFire: 0
@@ -5038,6 +5039,19 @@ MonoBehaviour:
   primarySound: {fileID: 1530591796}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
+--- !u!135 &1296082291
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616094837793434054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.13049948
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &1274586041177532237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5115,6 +5129,11 @@ PrefabInstance:
       propertyPath: childBody
       value: 
       objectReference: {fileID: 2616094837228584134}
+    - target: {fileID: 3890548386157044778, guid: 7af4e617dc8bae0449d2f696695258de,
+        type: 3}
+      propertyPath: rewardPoints
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3890548386157044948, guid: 7af4e617dc8bae0449d2f696695258de,
         type: 3}
       propertyPath: m_BaseOffset
@@ -5129,6 +5148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890548386157044948, guid: 7af4e617dc8bae0449d2f696695258de,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3890548385133908795, guid: 7af4e617dc8bae0449d2f696695258de,
         type: 3}

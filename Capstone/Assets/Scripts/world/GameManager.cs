@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private int score;
     public Spawner[] spawners;
     public int waveNo;
     public float timeBetweenWaves;
@@ -22,7 +20,8 @@ public class GameManager : MonoBehaviour
     private Camera player2;
     public Texture Crosshair;
     public Text waveText;
-
+    public Text scoreText;
+    
     private int noDeaths;
 
     private void Start()
@@ -67,8 +66,9 @@ public class GameManager : MonoBehaviour
             GUI.DrawTexture(new Rect(xMin + Screen.width/2.0f, yMin, Crosshair.width, Crosshair.height), Crosshair);
     }
 
-    public void recordDeath()
+    public void recordDeath(int addScore)
     {
+        changeScore(addScore);
         noDeaths++;
         if(numberSpawned <= noDeaths)
             endWave();
@@ -77,9 +77,20 @@ public class GameManager : MonoBehaviour
     private void endWave()
     {
         waveNo++;
-        
         timer = new GenericTimer(timeBetweenWaves, false);
     }
+
+    public void changeScore(int amount)
+    {
+        score += amount;
+        scoreText.text = "Score: " + score;
+    }
+
+    public int getScore()
+    {
+        return score;
+    }
+    
     
     
 }

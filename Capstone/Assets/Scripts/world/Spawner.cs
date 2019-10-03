@@ -54,10 +54,10 @@ public class Spawner : MonoBehaviour
 
     }
 
-    public void objectDestroyed()
+    public void objectDestroyed(int score)
     {
         if(manager != null)
-            manager.recordDeath();
+            manager.recordDeath(score);
         if (noToSpawn > 0)
         {
             spawnObject();

@@ -11,19 +11,12 @@ public class Item: MonoBehaviour, IWorldObject
     public Vector3 relativeRotation;
     public IItemUser user;
 
-    private void equip()
-    {
-        if (!equipable || user == null) return;
-        transform.parent = user.getHandBone().transform;
-    }
-
     public void interact(IItemUser user)
     {
         float dist = Vector3.Distance(user.getHandBone().transform.position, transform.position);
 
         if (dist < 5)
         {
-            this.user = user;
             user.addItem(this);
         }
     }
