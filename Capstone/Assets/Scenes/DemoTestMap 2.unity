@@ -10818,6 +10818,16 @@ PrefabInstance:
       propertyPath: relativeRotation.y
       value: 85
       objectReference: {fileID: 0}
+    - target: {fileID: 3639900263272328371, guid: 542dadc483c98a040933367656191eaa,
+        type: 3}
+      propertyPath: activeAmmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639900263272328371, guid: 542dadc483c98a040933367656191eaa,
+        type: 3}
+      propertyPath: infiniteAmmo
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542dadc483c98a040933367656191eaa, type: 3}
 --- !u!1 &1106610860
@@ -11217,6 +11227,104 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137436938}
   m_CullTransparentMesh: 0
+--- !u!1001 &1155989193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_Name
+      value: "\u0421olumn 1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.134815
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 47.61774
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_RootOrder
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 1311801458, guid: fe349d8f118fd284a974e0456ccca7f8,
+        type: 3}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: costOfWeapon
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: costOfAmmo
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: amountOfAmmo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: relativeRot.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
 --- !u!1 &1173470120
 GameObject:
   m_ObjectHideFlags: 0
@@ -12033,7 +12141,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 8a26e8b945b960d40ba70fafca9d29bc, type: 3}
     name: Theme
-    volume: 0.112
+    volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
