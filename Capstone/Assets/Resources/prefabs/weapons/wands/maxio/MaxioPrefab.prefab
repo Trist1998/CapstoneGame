@@ -153,6 +153,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
+  primaryOnHitSound:
+    clip: {fileID: 8300000, guid: 6157507bd6a8bcf46ade7d5d2178c848, type: 3}
+    name: 
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   range: 40
   scalar: 1.1
