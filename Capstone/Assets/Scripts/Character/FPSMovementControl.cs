@@ -558,12 +558,10 @@ public class BETA_SETTINGS{
             if(useHeadbob == true){
                 if(fps_Rigidbody.velocity.magnitude >0.1f)
                 {
-                    GetComponent<Animator>().SetInteger("Condition", 1);
                     head.localPosition = Vector3.MoveTowards(head.localPosition, originalLocalPosition + new Vector3(xPos, yPos, 0),0.02f);
                 }
                 else
                 {
-                    GetComponent<Animator>().SetInteger("Condition", 0);
                     head.localPosition = Vector3.SmoothDamp(head.localPosition, originalLocalPosition,ref miscRefVel, 0.15f);
                 }
                 head.localRotation = Quaternion.Euler(xTilt, 0, zTilt);
