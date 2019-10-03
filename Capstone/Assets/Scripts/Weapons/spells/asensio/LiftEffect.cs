@@ -53,9 +53,9 @@ public class LiftEffect : AttachedEffect
             Destroy(this);
             return;
         }
-
         
-        levitate((rigid.transform.position - item.user.getItemAimPosition()).magnitude);     
+        levitate((rigid.transform.position - item.user.getItemAimPosition()).magnitude); 
+        base.startEffect();
     }
 
     public override void endEffect()
@@ -115,8 +115,6 @@ public class LiftEffect : AttachedEffect
         {
             r.AddForce(other.impulse);
         }
-            
         
-
     }
 }

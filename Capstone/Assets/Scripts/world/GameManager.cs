@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
         {
             player1.rect = new Rect(0,0,0.5f,1);
             player2.rect = new Rect(0.5f,0,0.5f,1);
-            player2.GetComponent<AudioListener>().enabled = false;
+            if(player2.GetComponent<AudioListener>() != null)
+                player2.GetComponent<AudioListener>().enabled = false;
         }
     }
 
