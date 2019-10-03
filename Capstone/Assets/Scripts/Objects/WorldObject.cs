@@ -15,13 +15,14 @@ public class WorldObject : MonoBehaviour, IWorldObject
     public float maxHitPoints;
     public float hitPoints = 1000f;
     public GameObject explosion;
+    public int rewardPoints;
 
-    protected void Start()
+    protected virtual void Start()
     {
         setHealth(maxHitPoints);
     }
 
-    public void interact(IItemUser user)
+    public virtual void interact(IItemUser user)
     {}
 
     public void setSpawner(Spawner spawner)
@@ -42,7 +43,7 @@ public class WorldObject : MonoBehaviour, IWorldObject
     public virtual void destroyObject()
     {
         if (spawner != null)
-            spawner.objectDestroyed();
+            spawner.objectDestroyed(rewardPoints);
         Destroy(gameObject, timeToDestroy);
     }
 
@@ -67,7 +68,7 @@ public class WorldObject : MonoBehaviour, IWorldObject
     
     protected virtual void die()
     {
-        GetComponent<WorldObject>().destroyObject();
+        destroyObject();
         Destroy(this);
     }
 

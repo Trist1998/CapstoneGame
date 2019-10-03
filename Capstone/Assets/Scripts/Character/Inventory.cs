@@ -24,6 +24,7 @@ public class Inventory
      */
     public void addItem(Item item)
     {
+        item.user = user;
         items.Add(item);
         item.GetComponent<Rigidbody>().isKinematic = true;
         item.GetComponent<Rigidbody>().detectCollisions = false;

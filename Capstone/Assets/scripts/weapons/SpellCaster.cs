@@ -137,8 +137,17 @@ public class SpellCaster : Item
         {
             if(primaryReloadTimer.isTimeout())
             {
-                activeAmmo += maxActiveAmmo - activeAmmo;
-                reserveAmmo -= maxActiveAmmo - activeAmmo;
+                int ammoRequired = maxActiveAmmo - activeAmmo;
+                if (reserveAmmo >= ammoRequired)
+                {
+                    activeAmmo += ammoRequired;
+                    reserveAmmo -= ammoRequired;
+                }
+                else
+                {
+                    activeAmmo += reserveAmmo;
+                    reserveAmmo = 0;
+                }
                 primaryReloadTimer = null;
             }
             else
@@ -150,4 +159,11 @@ public class SpellCaster : Item
 
         return activeAmmo/(maxActiveAmmo*1.0f);
     }
+
+    public void addReserveAmmo(int amount)
+    {
+        reserveAmmo += amount;
+        reserveAmmo = Mathf.Clamp(reserveAmmo, 0, maxReserveAmmo);
+    }
+    
 }
