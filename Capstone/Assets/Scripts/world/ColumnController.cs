@@ -14,6 +14,9 @@ public class ColumnController : WorldObject
     public Vector3 relativePos;
     public Vector3 relativeRot;
     public float rotationSpeed;
+
+    private Vector3 activePosition;
+    
     protected override void Start()
     {
         instantiateNewWeapon();
@@ -35,7 +38,6 @@ public class ColumnController : WorldObject
             user.addItem(weapon);
             manager.changeScore(-1*costOfWeapon);
             instantiateNewWeapon();
-            
         }
     }
 
