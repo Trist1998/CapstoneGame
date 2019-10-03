@@ -44,6 +44,12 @@ public class SpellForce : AbstractWeaponEffect
         playPrimaryOnHitEffect(null, hitPoint);
         
     }
+    public override string getName()
+    {
+        return SPELL_NAME;
+    }
+
 }
+
 
 

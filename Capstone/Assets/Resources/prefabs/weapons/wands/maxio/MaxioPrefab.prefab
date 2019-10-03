@@ -125,16 +125,21 @@ MonoBehaviour:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
+  infiniteAmmo: 0
+  maxActiveAmmo: 0
+  activeAmmo: 1
+  primaryReloadTime: 0
+  maxReserveAmmo: 0
+  reserveAmmo: 0
+  primaryResetTime: 0.1
+  secondaryResetTime: 0
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
-  primaryMuzzleFlash: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
-    type: 3}
+  primaryMuzzleFlash: {fileID: 0}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
-  primaryResetTime: 0.1
-  secondaryResetTime: 0
 --- !u!114 &-1600895013623937464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +153,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
+  primaryOnHitSound:
+    clip: {fileID: 8300000, guid: 6157507bd6a8bcf46ade7d5d2178c848, type: 3}
+    name: 
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   range: 40
   scalar: 1.1
