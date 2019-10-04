@@ -122,15 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipable: 0
+  equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 1
-  maxActiveAmmo: 0
-  activeAmmo: 1
-  primaryReloadTime: 0
-  maxReserveAmmo: 0
-  reserveAmmo: 0
+  maxActiveAmmo: 1000
+  activeAmmo: 1000
+  primaryReloadTime: 1
+  maxReserveAmmo: 10000
+  reserveAmmo: 10000
   primaryResetTime: 0
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -168,6 +168,6 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  shootForwardForce: 4000
+  shootForwardForce: 25
   comboPoints: 0
   maxComboPoints: 0

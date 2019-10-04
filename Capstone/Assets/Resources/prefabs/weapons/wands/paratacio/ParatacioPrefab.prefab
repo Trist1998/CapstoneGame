@@ -124,11 +124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
-  relativeRotation: {x: 22, y: 14, z: 18}
-  maxActiveAmmo: 0
-  activeAmmo: 0
-  primaryReloadTime: 0
-  maxReserveAmmo: 0
+  relativeRotation: {x: 9, y: 85, z: 85}
+  infiniteAmmo: 0
+  maxActiveAmmo: 1000
+  activeAmmo: 1000
+  primaryReloadTime: 1
+  maxReserveAmmo: 10000
   reserveAmmo: 0
   primaryResetTime: 0
   secondaryResetTime: 0
@@ -153,5 +154,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198696392922457284, guid: f86ec282e156280469ce206313284e58,
     type: 3}
+  primaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   damagePerSecond: 5
