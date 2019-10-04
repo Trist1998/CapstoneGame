@@ -47,6 +47,11 @@ public class InteractControl : MonoBehaviour, IItemUser
             cast();
         }
 
+        if (characterInput.getNextItem())
+        {
+            inventory.nextItem();
+        }
+
         if (characterInput.getSwapPrimary())
         {
             inventory.swapPrimaryWeapon();

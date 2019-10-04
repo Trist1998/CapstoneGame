@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,7 +11,8 @@ public class Inventory
     private List<Item> items;
     private Dictionary<string, Item> slots;
     private IItemUser user;
-    
+    private int currentPos;
+
     public Inventory(IItemUser user)
     {
         this.user = user;
@@ -58,7 +60,7 @@ public class Inventory
         Item secondary = getSecondaryItem();
         setPrimaryItem(secondary);
         if(items.Count() >= 2)
-                setSecondaryItem(items[0] == getPrimaryItem()?items[1]:items[0]);
+                setSecondaryItem(items[currentPos] == getPrimaryItem()?items[1]:items[0]);
         else
         {
             setSecondaryItem(null);
@@ -95,6 +97,8 @@ public class Inventory
     {
         if (item != null)
         {
+            if(slots.ContainsKey(SLOT_PRIMARY))
+                slots[SLOT_PRIMARY].gameObject.SetActive(false);
             slots[SLOT_PRIMARY] = item;
             item.gameObject.SetActive(true);
         }
@@ -149,5 +153,15 @@ public class Inventory
             return slots[slotId];
         return null;
     }
-    
+
+    public void nextItem()
+    {
+        currentPos++;
+        if (currentPos >= items.Count)
+            currentPos = 0;
+        swapPrimaryWeapon();
+        setPrimaryItem(items[currentPos]);
+        
+
+    }
 }

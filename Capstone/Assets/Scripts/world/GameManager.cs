@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
     private GameObject[] objects;
 
     [SerializeField]
-    private Camera player1;
+    private GameObject player1;
     [SerializeField]
-    private Camera player2;
+    private GameObject player2;
     public Texture Crosshair;
     public Text waveText;
     public Text scoreText;
@@ -27,13 +27,18 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         timer = new GenericTimer(10, false);
-        if (player2 != null)
+        if (isMultiplayer())
         {
-            player1.rect = new Rect(0,0,0.5f,1);
-            player2.rect = new Rect(0.5f,0,0.5f,1);
-            if(player2.GetComponent<AudioListener>() != null)
-                player2.GetComponent<AudioListener>().enabled = false;
+            player1.GetComponentInChildren<Camera>().rect = new Rect(0,0,0.5f,1);
+            player2.GetComponentInChildren<Camera>().rect = new Rect(0.5f,0,0.5f,1);
+            AudioListener listener = player2.GetComponentInChildren<Camera>().GetComponent<AudioListener>();
+            if(listener != null)
+                listener.enabled = false;
+            player2.transform.parent = null;
         }
+
+        player1.transform.parent = null;
+        
     }
 
     private void FixedUpdate()
@@ -58,11 +63,11 @@ public class GameManager : MonoBehaviour
     
     private void OnGUI()
     {
-        float xMin = (Screen.width / (player2 != null?4:2)) - (Crosshair.width / 2);
+        float xMin = (Screen.width / (isMultiplayer()?4:2)) - (Crosshair.width / 2);
         float yMin = (Screen.height / 2) - (Crosshair.height / 2);
         
         GUI.DrawTexture(new Rect(xMin, yMin, Crosshair.width, Crosshair.height), Crosshair);
-        if(player2 != null)
+        if(isMultiplayer())
             GUI.DrawTexture(new Rect(xMin + Screen.width/2.0f, yMin, Crosshair.width, Crosshair.height), Crosshair);
     }
 
@@ -89,6 +94,11 @@ public class GameManager : MonoBehaviour
     public int getScore()
     {
         return score;
+    }
+
+    public bool isMultiplayer()
+    {
+        return player2 != null && player2.activeSelf;
     }
     
     
