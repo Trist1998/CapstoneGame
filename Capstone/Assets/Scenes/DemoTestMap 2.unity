@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 235291343}
   - component: {fileID: 235291342}
   - component: {fileID: 235291341}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boulder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,6 +2282,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdc63e4fff4faa4d9837cd87a82f7f5, type: 3}
+--- !u!1 &360462113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 214245317747439874, guid: 5476d7105633a614994c3781a54dc5cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385402433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &360462121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360462113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &362176678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,7 +3652,7 @@ GameObject:
   - component: {fileID: 642878137}
   - component: {fileID: 642878136}
   - component: {fileID: 642878135}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Plank03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4595,6 +4620,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dadca7525cf1bf48843b5c8bfb23812, type: 3}
+--- !u!1 &852343480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 214245316929455688, guid: 5476d7105633a614994c3781a54dc5cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385402433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &852343488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852343480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &853858168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,7 +4658,7 @@ GameObject:
   - component: {fileID: 853858171}
   - component: {fileID: 853858170}
   - component: {fileID: 853858169}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boulder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5381,6 +5431,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001953807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4012636942963768674, guid: 5476d7105633a614994c3781a54dc5cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1385402433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1004481444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6793,7 +6849,7 @@ GameObject:
   - component: {fileID: 1229088214}
   - component: {fileID: 1229088213}
   - component: {fileID: 1229088212}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Plank03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7991,6 +8047,26 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 1031765480}
+    - target: {fileID: 214245317747439874, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134684898390683997, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 214245316929455688, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134684897607994903, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4012636942772189741, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: m_Name
@@ -8066,6 +8142,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4012636942680599655, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: handBone
+      value: 
+      objectReference: {fileID: 1001953807}
     - target: {fileID: 4008696016458622564, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8185,6 +8266,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000008600764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012636943946561645, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012636943946561645, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: field of view
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012636943946561645, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012636943946561645, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4012636944266704180, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
@@ -8361,6 +8462,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000161957
       objectReference: {fileID: 0}
+    - target: {fileID: 4012636944086878987, guid: 5476d7105633a614994c3781a54dc5cb,
+        type: 3}
+      propertyPath: field of view
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5476d7105633a614994c3781a54dc5cb, type: 3}
 --- !u!1 &1389063116
@@ -8376,7 +8482,7 @@ GameObject:
   - component: {fileID: 1389063119}
   - component: {fileID: 1389063118}
   - component: {fileID: 1389063117}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8536,7 +8642,7 @@ GameObject:
   - component: {fileID: 1415059762}
   - component: {fileID: 1415059761}
   - component: {fileID: 1415059760}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boulder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9239,7 +9345,7 @@ GameObject:
   - component: {fileID: 1570673877}
   - component: {fileID: 1570673876}
   - component: {fileID: 1570673875}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boulder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11055,7 +11161,7 @@ GameObject:
   - component: {fileID: 1176557976}
   - component: {fileID: 1960657285}
   - component: {fileID: 1960657284}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Plank01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11404,7 +11510,7 @@ GameObject:
   - component: {fileID: 1494640502}
   - component: {fileID: 2044447262}
   - component: {fileID: 2044447261}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boulder01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
