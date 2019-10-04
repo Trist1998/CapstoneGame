@@ -94,8 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipable: 0
-  relativePosition: {x: 0.1, y: 0.1, z: 0.1}
+  relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
+  infiniteAmmo: 0
   maxActiveAmmo: 5
   activeAmmo: 5
   primaryReloadTime: 0
@@ -124,13 +125,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198341595340134300, guid: ff6b6bdcc4c35244e81fa7de8d1f4846,
     type: 3}
+  primaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   force: 150
   lifeTime: 10
   projectilePrefab: {fileID: 6264050335903066499, guid: 42e984405c984d34bb2785ff7b8dcbf8,
     type: 3}
   useGravity: 1
-  radius: 0
+  radius: 5
   flames: {fileID: 198104970619360998, guid: c9d83ac5792b42848acaa473268507fe, type: 3}
   burnTime: 5
   damagePerSecond: 15

@@ -154,7 +154,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198696392922457284, guid: b3c86ae2b33025b4d9fc168075c539cb,
     type: 3}
+  primaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 198993423900235080, guid: a95815f92b95ea946b04f44dd0ca5b55,
     type: 3}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   effectLifeTime: 10
-  force: 30
+  force: 5
