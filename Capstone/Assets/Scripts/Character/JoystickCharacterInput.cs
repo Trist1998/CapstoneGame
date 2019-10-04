@@ -120,4 +120,10 @@ public class JoystickCharacterInput : AbstractCharacterInput
         //return Input.GetKey(KeyCode.LeftShift);
         return controls.Gameplay.Sprint.triggered;
     }
+
+    public override bool getNextItem()
+    {
+        return false;
+    }
+
 }

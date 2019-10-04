@@ -19,5 +19,6 @@ public abstract class AbstractCharacterInput : ScriptableObject
     public abstract bool getDropPrimary();
     public abstract bool getSwapPrimary();
     public abstract bool getSprintDown();
+    public abstract bool getNextItem();
 
 }

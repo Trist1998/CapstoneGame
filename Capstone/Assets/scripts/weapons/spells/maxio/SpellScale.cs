@@ -7,7 +7,6 @@ public class SpellScale : AbstractWeaponEffect
     public readonly string SPELL_NAME = "Maxio (The Scaling Charm)";
 
     public float range;
-    public float scalar;
 
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
