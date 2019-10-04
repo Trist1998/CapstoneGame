@@ -2,64 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/world/Audio Manager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/world/Audio Manager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 2.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 2.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/DemoTestMap 1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/DemoTestMap 1.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/DemoTestMap 1.unity.meta~HEAD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/DemoTestMap 1.unity.meta~HEAD.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanicTest.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanicTest.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanics 1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanics 1.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanics.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/GameMechanics.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/LightingTutorialOptimal.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/LightingTutorialOptimal.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/Player Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/Player Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/SampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/SampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/TristanTest.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/TristanTest.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/Zubair.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/OldScenes/Zubair.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/asensio/AsensioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/asensio/AsensioPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Audio Manager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Audio Manager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cube (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cube (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity.meta~HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 1.unity.meta~HEAD.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanicTest.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanics 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanics 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMechanics.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LightingTutorialOptimal.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LightingTutorialOptimal.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TristanTest.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TristanTest.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Zubair.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Zubair.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -321,6 +264,7 @@
       <workItem from="1569930897114" duration="6011000" />
       <workItem from="1570015562238" duration="7238000" />
       <workItem from="1570117729281" duration="17296000" />
+      <workItem from="1570195185853" duration="236000" />
     </task>
     <servers />
   </component>
