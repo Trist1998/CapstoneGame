@@ -61,7 +61,7 @@ public class SpellCaster : Item
         if (!primaryResetTimer.isTimeout()) return false;
         if (!primaryAutomaticFire && fired) return false;
         fired = true;
-        if (activeAmmo <= 0) return false;
+        if (!infiniteAmmo && activeAmmo <= 0) return false;
         
         return true;
     }
@@ -105,7 +105,7 @@ public class SpellCaster : Item
         playParticleEffect(primaryMuzzleFlash);
         spell.primaryFire(this);
         if(!infiniteAmmo)activeAmmo--;
-        if(activeAmmo <= 0)
+        if(activeAmmo <= 0 && reserveAmmo > 0)
             primaryReloadTimer = new GenericTimer(primaryReloadTime, false);
     }
 

@@ -107,4 +107,9 @@ public class PlayerCharacterInput : AbstractCharacterInput
     {
         return Input.GetKey(KeyCode.LeftShift);
     }
+    
+    public override bool getNextItem()
+    {
+        return Input.GetButtonDown("NextItem");
+    }
 }

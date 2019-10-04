@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,7 +265,7 @@
       <workItem from="1569930897114" duration="6011000" />
       <workItem from="1570015562238" duration="7238000" />
       <workItem from="1570117729281" duration="17296000" />
-      <workItem from="1570195185853" duration="236000" />
+      <workItem from="1570195185853" duration="834000" />
     </task>
     <servers />
   </component>
