@@ -7992,7 +7992,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1031765480}
 <<<<<<< HEAD
-=======
     - target: {fileID: 214245317747439874, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: m_IsActive
@@ -8013,7 +8012,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
->>>>>>> parent of 63bbe7e... Fixed OnHitSound
+=======
+>>>>>>> parent of 1357a1a... Merge pull request #49 from Trist1998/Tristan
     - target: {fileID: 4012636942772189741, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: m_Name
@@ -8210,11 +8210,14 @@ PrefabInstance:
       value: -0.0000008600764
       objectReference: {fileID: 0}
     - target: {fileID: 4012636944266704180, guid: 5476d7105633a614994c3781a54dc5cb,
+<<<<<<< HEAD
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4012636944266704180, guid: 5476d7105633a614994c3781a54dc5cb,
+=======
+>>>>>>> parent of 1357a1a... Merge pull request #49 from Trist1998/Tristan
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8390,13 +8393,13 @@ PrefabInstance:
       value: -0.00000161957
       objectReference: {fileID: 0}
 <<<<<<< HEAD
-=======
     - target: {fileID: 4012636944086878987, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: field of view
       value: 55
       objectReference: {fileID: 0}
->>>>>>> parent of 63bbe7e... Fixed OnHitSound
+=======
+>>>>>>> parent of 1357a1a... Merge pull request #49 from Trist1998/Tristan
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5476d7105633a614994c3781a54dc5cb, type: 3}
 --- !u!1 &1389063116
