@@ -19,8 +19,6 @@ public class ColumnController : WorldObject
     
     protected override void Start()
     {
-        if (manager == null) 
-            manager = transform.root.GetComponent<GameManager>();
         instantiateNewWeapon();
         base.Start();
     }

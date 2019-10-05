@@ -155,10 +155,10 @@ MonoBehaviour:
   primaryOnHitEffect: {fileID: 198175801688348628, guid: 9e732d3209fbc3e4291602843fc49bdf,
     type: 3}
   primaryOnHitSound:
-    clip: {fileID: 8300000, guid: 9f6d17d76b8d3d046bde67270b9c20bd, type: 3}
+    clip: {fileID: 0}
     name: 
-    volume: 1
-    pitch: 0.99
+    volume: 0
+    pitch: 0
     loop: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 198714429152696258, guid: 945e605d40627c24a93501626f4826aa,
