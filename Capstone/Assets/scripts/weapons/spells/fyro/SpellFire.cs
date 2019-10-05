@@ -13,7 +13,8 @@ public class SpellFire : AbstractProjectileWeaponEffect
     {
         IgniteEffect ignite = hit.AddComponent<IgniteEffect>();//TODO ignite object(applies continuous damage) if in fuel state and no damage if in wet state
         ignite.startEffect(secondaryOnHitEffect, baseDamage, damagePerSecond, lifeTime);
-        playPrimaryOnHitEffect(hit, hitPoint);
+        //playPrimaryOnHitEffect(hit, hitPoint);
+        base.processPrimaryHit(item, hit, hitPoint, direction);
     }
 
     public override string getName()
