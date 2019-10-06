@@ -6609,7 +6609,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 0}
+=======
+    m_TransformParent: {fileID: 4012636943215480470}
+>>>>>>> Tristan
     m_Modifications:
     - target: {fileID: 100016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_Name
@@ -8123,10 +8127,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1788199289573676, guid: 4fdc63e4fff4faa4d9837cd87a82f7f5, type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4012636944044678871, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
+=======
+      value: SFP_pillar (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745604663456442, guid: 4fdc63e4fff4faa4d9837cd87a82f7f5, type: 3}
+>>>>>>> Tristan
       propertyPath: m_LocalPosition.x
       value: 6.1500044
       objectReference: {fileID: 0}
@@ -8170,6 +8180,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 4012636944044678871, guid: 5476d7105633a614994c3781a54dc5cb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8570,6 +8581,8 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000161957
       objectReference: {fileID: 0}
+=======
+>>>>>>> Tristan
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdc63e4fff4faa4d9837cd87a82f7f5, type: 3}
 --- !u!4 &1405190040
@@ -8596,12 +8609,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1405190040}
   - component: {fileID: 1389063119}
   - component: {fileID: 1389063118}
   - component: {fileID: 1389063117}
   m_Layer: 10
   m_Name: Bucket
+=======
+  - component: {fileID: 533406728}
+  - component: {fileID: 1415059762}
+  - component: {fileID: 1415059761}
+  - component: {fileID: 1415059760}
+  m_Layer: 0
+  m_Name: Boulder02
+>>>>>>> Tristan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8627,6 +8649,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1415059761}
   m_Enabled: 1
+<<<<<<< HEAD
 --- !u!23 &1389063118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8787,6 +8810,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1415059761}
   m_Enabled: 1
+=======
+>>>>>>> Tristan
 --- !u!23 &1415059761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10647,6 +10672,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!1 &1770703954 stripped
+=======
 --- !u!1 &1782275545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1067053214699150, guid: ffa08167d28cfd24dba0151a4c80f384,
@@ -10666,6 +10694,7 @@ Transform:
   m_PrefabInstance: {fileID: 4012636942252323593}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810127416 stripped
+>>>>>>> Tristan
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1602611876286250, guid: ffa08167d28cfd24dba0151a4c80f384,
     type: 3}
