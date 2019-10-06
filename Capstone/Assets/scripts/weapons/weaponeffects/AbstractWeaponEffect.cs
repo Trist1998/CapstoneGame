@@ -33,7 +33,6 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
 
     private void playSound(Sound sound, GameObject hit, Vector3 hitPoint)
     {
-        print("playing sound");
         if (sound.clip == null) return;
         GameObject g = new GameObject();
         g =Instantiate(g, hitPoint, Quaternion.identity);
