@@ -47,6 +47,7 @@ public class FollowBehaviour : AIBehaviour
 
     public override bool update()
     {
+        
         if (isExecutable())
         {
             if(character.beliefs.isTargetVisible())
@@ -60,14 +61,9 @@ public class FollowBehaviour : AIBehaviour
             
             return true;
         }
-        else
-        {
-            character.GetComponent<NavMeshAgent>().SetDestination(character.transform.position);
-            return false;
-        }
         
-        
-
+        character.GetComponent<NavMeshAgent>().SetDestination(character.transform.position);
+        return false;
     }
 
     public FollowBehaviour(AICharacter character, float range) : base(character)

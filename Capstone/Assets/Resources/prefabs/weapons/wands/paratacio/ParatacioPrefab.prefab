@@ -152,8 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287949608a50280428a658153f5de32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryOnHitEffect: {fileID: 198696392922457284, guid: f86ec282e156280469ce206313284e58,
-    type: 3}
+  primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
     name: 
@@ -170,3 +169,4 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   damagePerSecond: 5
+  lightningBolt: {fileID: 11413728, guid: 52a86b40d82b5ff4a9adb1db44174b56, type: 3}

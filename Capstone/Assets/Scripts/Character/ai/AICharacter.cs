@@ -19,7 +19,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
 
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         base.Start();
         behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
@@ -80,7 +80,17 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         if (beliefs == null)
             beliefs = new AIBeliefs(this);
         return beliefs;
-        
     }
-    
+
+    public override void ragdoll()
+    {
+        aiEnabled = false;
+        base.ragdoll();
+    }
+
+    public override void unragdoll()
+    {
+        aiEnabled = true;
+        base.unragdoll();
+    }
 }

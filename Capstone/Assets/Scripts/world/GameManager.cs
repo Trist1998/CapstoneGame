@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
     {
         return player2 != null && player2.activeSelf;
     }
+
+    public bool waveInProgress()
+    {
+        return timer == null;
+    }
+    
     
     
     
