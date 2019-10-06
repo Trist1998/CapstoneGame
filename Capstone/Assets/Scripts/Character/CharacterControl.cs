@@ -21,6 +21,7 @@ public class CharacterControl : AbstractCharacterControl
     private void FixedUpdate()
     {
         animator.transform.position = transform.position;
+        animator.transform.rotation = transform.rotation;
         animator.SetFloat("velocity", GetComponent<Rigidbody>().velocity.magnitude);
         animator.SetFloat("horizontal", characterInput.getHorizontalInput());
     }

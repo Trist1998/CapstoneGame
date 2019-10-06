@@ -122,11 +122,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipable: 0
+  equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
+  infiniteAmmo: 0
   maxActiveAmmo: 30
   activeAmmo: 30
+  primaryReloadTime: 5
   maxReserveAmmo: 60
   reserveAmmo: 60
   primaryResetTime: 0.5
@@ -152,13 +154,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198175801688348628, guid: 9e732d3209fbc3e4291602843fc49bdf,
     type: 3}
+  primaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 198714429152696258, guid: 945e605d40627c24a93501626f4826aa,
     type: 3}
+  secondaryOnHitSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   force: 25
   lifeTime: 2
   projectilePrefab: {fileID: 5237790628494967255, guid: e5917847c37ad7741a05407e864bd3cd,
     type: 3}
-  throwableWeapon: 0
   useGravity: 1
-  damagePerSecond: 0
-  baseDamage: 0
+  damagePerSecond: 5
+  baseDamage: 15
