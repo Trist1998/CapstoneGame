@@ -3956,7 +3956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4264247328878456, guid: cb34197a22266634d97b18e2fdec3ba3, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
+      value: 45
+=======
       value: 47
+>>>>>>> 5b4a717071f04a58ba41a44aeb6fff95d7c320b9
       objectReference: {fileID: 0}
     - target: {fileID: 4264247328878456, guid: cb34197a22266634d97b18e2fdec3ba3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3977,6 +3981,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb34197a22266634d97b18e2fdec3ba3, type: 3}
+<<<<<<< HEAD
+=======
 --- !u!1 &385167197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4134,6 +4140,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385167197}
   m_CullTransparentMesh: 0
+>>>>>>> 5b4a717071f04a58ba41a44aeb6fff95d7c320b9
 --- !u!1001 &396107648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13249,6 +13256,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1383046083}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 --- !u!1 &1288264599
 GameObject:
   m_ObjectHideFlags: 0
@@ -13311,6 +13320,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+>>>>>>> 5b4a717071f04a58ba41a44aeb6fff95d7c320b9
 --- !u!1 &1315714559
 GameObject:
   m_ObjectHideFlags: 0
