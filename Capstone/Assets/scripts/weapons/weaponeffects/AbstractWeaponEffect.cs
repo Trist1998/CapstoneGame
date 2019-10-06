@@ -19,7 +19,7 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playPrimaryOnHitEffect(hit, hitPoint);
-        playSound(primaryOnHitSound, hit);
+        playSound(primaryOnHitSound, hit, hitPoint);
     }
 
     /**
@@ -28,17 +28,26 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playSecondaryOnHitEffect(hit, hitPoint);
-        playSound(secondaryOnHitSound, hit);
+        playSound(secondaryOnHitSound, hit, hitPoint);
     }
 
-    private void playSound(Sound sound, GameObject hit)
+    private void playSound(Sound sound, GameObject hit, Vector3 hitPoint)
     {
-        sound.source = hit.GetComponent<AudioSource>() != null?hit.GetComponent<AudioSource>():hit.AddComponent<AudioSource>();
-        sound.source.clip = sound.clip;
-        sound.source.volume = sound.volume;
-        sound.source.pitch = sound.pitch;
-        sound.source.loop = sound.loop;
-        sound.source.Play();
+        if (sound.clip == null) return;
+        GameObject g = new GameObject();
+        g =Instantiate(g, hitPoint, Quaternion.identity);
+        AudioSource source = g.AddComponent<AudioSource>();
+        source.clip = sound.clip;
+        source.volume = sound.volume;
+        source.pitch = sound.pitch;
+        source.loop = sound.loop;
+        source.Play();
+        source.spatialBlend = 1.0f;
+        source.rolloffMode = AudioRolloffMode.Logarithmic;
+        source.maxDistance = 100.0f;
+        source.minDistance = 1.0f;
+        //source.spread = 180;
+        Destroy(g, sound.clip.length);
     }
 
     /**
