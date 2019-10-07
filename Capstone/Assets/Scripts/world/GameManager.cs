@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     private void endGame()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0.01f;
         endScreen.gameObject.SetActive(true);
     }
 
