@@ -8,6 +8,7 @@ public class InflateEffect : AttachedEffect
     private Vector3 startingScale;
     private Vector3 scaleOnHit;
     private float timeSinceHit;
+    
     public void startEffect()
     {
         startingScale = transform.localScale;
