@@ -18,9 +18,14 @@ public class GameManager : MonoBehaviour
     private GameObject player1;
     [SerializeField]
     private GameObject player2;
+    [SerializeField]
+    private int reviveCost;
     public Texture Crosshair;
     public Text waveText;
     public Text scoreText;
+    public GameObject endScreen;
+
+    private int numDead = 0;
     
     private int noDeaths;
 
@@ -105,8 +110,37 @@ public class GameManager : MonoBehaviour
     {
         return timer == null;
     }
+
+    public void revivePlayer()
+    {
+        numDead--;
+    }
     
-    
-    
-    
+    public void playerDead()
+    {
+        if (isMultiplayer())
+        {
+            numDead++;
+            if (numDead >= 2)
+                endGame();
+        }
+        else
+        {
+            endGame();
+        }
+    }
+
+    private void endGame()
+    {
+        Time.timeScale = 0;
+        endScreen.gameObject.SetActive(true);
+    }
+
+    public bool tryRevive()
+    {
+        if (getScore() < reviveCost) return false;
+        
+        changeScore(-1 * reviveCost);
+        return true;
+    }
 }

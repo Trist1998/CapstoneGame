@@ -86,6 +86,12 @@ public class WorldObject : MonoBehaviour, IWorldObject
         return hitPoints <= 0;
     }
     
+    public void heal(float toAdd)
+    {
+        if(isDead()) return;
+        hitPoints = Mathf.Clamp(hitPoints + toAdd, 0 , maxHitPoints);
+    }
+    
     public void setHealth(float hitPoints)
     {
         this.hitPoints = hitPoints;
