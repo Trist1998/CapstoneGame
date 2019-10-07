@@ -168,6 +168,11 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  shootForwardForce: 25
   comboPoints: 0
   maxComboPoints: 0
+  shootForwardForce: 25
+  whalePrefab: {fileID: 2544207800837672384, guid: debd2150809f4f344abd3b64c9bbb094,
+    type: 3}
+  blastRadius: 15
+  force: 50
+  damage: 500

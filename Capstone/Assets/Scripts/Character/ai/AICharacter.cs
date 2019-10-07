@@ -90,6 +90,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
 
     public override void unragdoll()
     {
+        transform.position = childBody.transform.position;
         aiEnabled = true;
         base.unragdoll();
     }

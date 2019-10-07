@@ -44,4 +44,10 @@ public class CombustioEffect : AttachedEffect
         endEffect();
     }
 
+    public override void endEffect(string reason)
+    {
+        if(reason == AttachedEffectManager.STATE_IGNITION)
+            combust();
+        base.endEffect(reason);
+    }
 }

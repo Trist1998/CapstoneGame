@@ -46,6 +46,7 @@ public class SpellCaster : Item
     private AudioSource secondarySound;
     
     public AbstractWeaponEffect spell;
+    private Recoil recoil;
 
     
 
@@ -54,6 +55,21 @@ public class SpellCaster : Item
         primaryResetTimer = new GenericTimer(primaryResetTime, true);
         secondaryResetTimer = new GenericTimer(secondaryResetTime, true);
         spell = GetComponent<AbstractWeaponEffect>();
+        recoil = GetComponent<Recoil>();
+        if (recoil == null)
+            recoil = gameObject.AddComponent<Recoil>();
+    }
+
+    public override void equipItem(IItemUser user)
+    {
+        recoil.setTransforms(user);
+        base.equipItem(user);
+    }
+    
+    public override void unequipItem()
+    {
+        recoil.resetTransforms();
+        base.unequipItem();
     }
 
     private bool canPrimaryFire()
@@ -102,6 +118,7 @@ public class SpellCaster : Item
     {
         if (primarySound != null)
             primarySound.Play();
+        recoil.fire();
         playParticleEffect(primaryMuzzleFlash);
         spell.primaryFire(this);
         if(!infiniteAmmo)activeAmmo--;
@@ -121,6 +138,7 @@ public class SpellCaster : Item
     {
         if (secondarySound != null)
             secondarySound.Play();
+        recoil.fire();
         playParticleEffect(secondaryMuzzleFlash);
 
         spell.secondaryFire(this);
@@ -165,5 +183,9 @@ public class SpellCaster : Item
         reserveAmmo += amount;
         reserveAmmo = Mathf.Clamp(reserveAmmo, 0, maxReserveAmmo);
     }
-    
+
+    public override float getComboPercentage()
+    {
+        return spell.comboPoints/spell.maxComboPoints;
+    }
 }

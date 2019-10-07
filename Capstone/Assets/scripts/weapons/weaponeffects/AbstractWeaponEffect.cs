@@ -10,7 +10,8 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public Sound primaryOnHitSound;
     public ParticleSystem secondaryOnHitEffect;
     public Sound secondaryOnHitSound;
-    
+    public float comboPoints = 0;
+    public float maxComboPoints = 1;
     
     
     /**
@@ -115,6 +116,11 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
     public virtual string getName()
     {
         return "";
+    }
+
+    public void addComboPoints(float amount)
+    {
+        comboPoints = Mathf.Clamp(comboPoints, 0, maxComboPoints);
     }
 }
 
