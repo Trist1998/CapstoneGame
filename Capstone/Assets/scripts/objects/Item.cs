@@ -26,6 +26,17 @@ public class Item: MonoBehaviour, IWorldObject
         return user != null && user.getEquippedItem() == this;
     }
 
+    public virtual void equipItem(IItemUser user)
+    {
+        this.user = user;
+    }
+    
+    public virtual void unequipItem()
+    {
+        user = null;
+    }
+    
+
     public virtual void usePrimaryActionDown()
     {}
 
@@ -44,6 +55,11 @@ public class Item: MonoBehaviour, IWorldObject
     }
 
     public virtual float getAmmoPercentage()
+    {
+        return 0;
+    }
+
+    public virtual float getComboPercentage()
     {
         return 0;
     }

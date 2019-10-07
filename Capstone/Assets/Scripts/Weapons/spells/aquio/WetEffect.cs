@@ -5,7 +5,7 @@ using UnityEngine;
 public class WetEffect: AttachedEffect
 {
 
-    public void startEffect(float lifeTime)
+    public override void startEffect(float lifeTime)
     {
         appliedStates[AttachedEffectManager.STATE_WET] = 5;
         negatingStates[AttachedEffectManager.STATE_FIRE] = 5;

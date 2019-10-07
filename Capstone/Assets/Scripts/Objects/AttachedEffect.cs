@@ -96,7 +96,7 @@ public class AttachedEffect : MonoBehaviour
         startEffect();
     }
 
-    public virtual void startEffect()
+    public void startEffect()
     {
         manager = getManager();
         compareState();

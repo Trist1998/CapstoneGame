@@ -14,14 +14,22 @@ public class ColumnController : WorldObject
     public Vector3 relativePos;
     public Vector3 relativeRot;
     public float rotationSpeed;
+    public float decentSpeed;
+    public ParticleSystem moveEffect;
+    public bool active;//Controls whether or not the column appears between waves
 
     private Vector3 activePosition;
-    
+    public float height;
+
     protected override void Start()
     {
         if (manager == null) 
             manager = transform.root.GetComponent<GameManager>();
         instantiateNewWeapon();
+        activePosition = transform.position;
+        if(!active)
+            transform.position -= new Vector3(0,height,0);
+        moveEffect.transform.parent = null;
         base.Start();
     }
     
@@ -56,5 +64,22 @@ public class ColumnController : WorldObject
     private void FixedUpdate()
     {
         weapon.transform.Rotate(new Vector3(0, rotationSpeed,0) * Time.deltaTime);
+        float diff = (activePosition - transform.position).y;
+        if (!manager.waveInProgress())
+        {
+            if (diff > 0)
+            {
+                transform.position += new Vector3(0, decentSpeed, 0) * Time.deltaTime;
+            }
+            else
+            {
+                transform.position = activePosition;
+            }
+            return;
+        }
+
+        if (manager.waveInProgress() && diff > height) return;
+        transform.position += new Vector3(0, -1 * decentSpeed, 0) * Time.deltaTime;
+
     }
 }

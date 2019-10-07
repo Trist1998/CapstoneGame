@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4008155813552842}
   - component: {fileID: 1422472371576691548}
-  - component: {fileID: 3840452990743096910}
-  - component: {fileID: 4299397959927325921}
-  - component: {fileID: 2622327623999424466}
+  - component: {fileID: -8385147955423597828}
+  - component: {fileID: 885114452965603993}
   m_Layer: 0
-  m_Name: AquioPrefab
+  m_Name: AquioProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,73 +47,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5982461, y: 1.4539852, z: 1.5923635}
-  m_Center: {x: 0.06477666, y: -0.2269926, z: 0.044575155}
---- !u!114 &3840452990743096910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280056767771472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipable: 1
-  relativePosition: {x: 0, y: 0, z: 0.121}
-  relativeRotation: {x: 0, y: 0, z: 0}
-  infiniteAmmo: 0
-  maxActiveAmmo: 5
-  activeAmmo: 5
-  primaryReloadTime: 0
-  maxReserveAmmo: 0
-  reserveAmmo: 0
-  primaryResetTime: 1
-  secondaryResetTime: 0
-  primaryAutomaticFire: 0
-  secondaryAutomaticFire: 0
-  primaryMuzzleFlash: {fileID: 0}
-  secondaryMuzzleFlash: {fileID: 0}
-  primarySound: {fileID: 0}
-  secondarySound: {fileID: 0}
-  spell: {fileID: 0}
---- !u!114 &4299397959927325921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280056767771472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9a896f8b5703904382c38d201a80b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryOnHitEffect: {fileID: 198341595340134300, guid: d2e4f6ae00b8b344da71f6ac40271664,
-    type: 3}
-  primaryOnHitSound:
-    clip: {fileID: 0}
-    name: 
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  secondaryOnHitEffect: {fileID: 0}
-  secondaryOnHitSound:
-    clip: {fileID: 0}
-    name: 
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  speed: 15
-  lifeTime: 10
-  projectilePrefab: {fileID: 885114452965603993, guid: 0b02456a63e133846855aa49df59a121,
-    type: 3}
-  useGravity: 1
---- !u!54 &2622327623999424466
+  m_Size: {x: 3.1921933, y: 3.1174037, z: 3.8413298}
+  m_Center: {x: -0.13874039, y: -0.2752237, z: 1.0632803}
+--- !u!54 &-8385147955423597828
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +65,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &885114452965603993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280056767771472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73d4957081405348b366bd59027bd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 0}
+  onHitEffect: {fileID: 0}
+  item: {fileID: 0}
 --- !u!1 &1388567134444530
 GameObject:
   m_ObjectHideFlags: 0

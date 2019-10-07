@@ -6,15 +6,14 @@ public class AbstractCharacterControl: WorldObject
     public int[] enemyTypeId;
     public Animator animator;
     private RagdollController ragdollController;
-    protected void Start()
+    
+    protected override void Start()
     {
         base.Start();
         if (animator == null) animator = GetComponent<Animator>();
         ragdollController = gameObject.AddComponent<RagdollController>();
         ragdollController.animator = animator;
         unragdoll();
-        
-
     }
     
     public bool isCharacterEnemy(AbstractCharacterControl character)

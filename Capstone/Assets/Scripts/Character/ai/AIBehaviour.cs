@@ -32,19 +32,19 @@ public class AIBehaviour
      */
     public AIBehaviour getBehaviourToExecute()
     {
-        //MonoBehaviour.print("Finding Behaviour");
         if (isExecutable())
             return this;
-        if (behaviours == null) return null;
+        if (behaviours == null) 
+            return null;
         
-        bool flag = false;
-            foreach (var behaviour in behaviours)
+        foreach (var behaviour in behaviours)
+        {
+            if (behaviour.isExecutable())
             {
-                if (behaviour.isExecutable())
-                {
-                    return behaviour;
-                }
+                return behaviour;
             }
+        }
+        
         foreach (var behaviour in behaviours)
         {
             AIBehaviour b = behaviour.getBehaviourToExecute();

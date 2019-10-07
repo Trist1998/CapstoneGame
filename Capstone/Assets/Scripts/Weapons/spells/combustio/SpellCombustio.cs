@@ -19,7 +19,7 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
             CombustioEffect c = colliderObject.gameObject.AddComponent<CombustioEffect>();
             c.startEffect(flames, burnTime, damagePerSecond, lifeTime);
         }
-        playPrimaryOnHitEffect(hit, hitPoint);
+        base.processPrimaryHit(item, hit, hitPoint, direction);
     }
 
     public override string getName()

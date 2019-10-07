@@ -9,7 +9,7 @@ public class CharacterControl : AbstractCharacterControl
     public InteractControl interactControl;
     public Camera playerCamera;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         movement = GetComponent<FPSMovementControl>();

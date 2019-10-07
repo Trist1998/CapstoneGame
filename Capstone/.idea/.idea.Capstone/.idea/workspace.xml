@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f6b4484-efb4-4a7e-a9be-a7618e88e32f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioProjectile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioProjectile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/BigExplosion 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/BigExplosion 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/GPVFX_POTION C 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/GPVFX_POTION C 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/GPVFX_POTION C.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/boomio/GPVFX_POTION C.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/CombustioPrefab.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/CombustioPrefab.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/CombustioProjectile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/CombustioProjectile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/boomio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/boomio/BoomSpell.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/boomio/BoomSpell.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/AquioPrefab.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/projectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/aquio/projectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/FuelGrenade.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/FuelGrenade.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/projectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/potions/combustio/projectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/SimpleLightningBoltAnimatedPrefab 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/weapons/wands/paratacio/SimpleLightningBoltAnimatedPrefab 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestMap 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/weapons/spells/aquio/SpellWater.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +60,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ai/FollowBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellConjure.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ai/AICharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ai/AIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/RagdollController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,7 +91,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/MovementControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/boomio/BoomSpell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Models/Models/Particles/LightningBolt/Editor/LightningBoltEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/FastPriorityQueueNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/FPSMovementControl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,13 +109,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/InteractControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IPriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Models/Models/Particles/LightningBolt/LightningBoltScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/SimplePriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/priorityqueue/IFixedSizePriorityQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/WeaponEffectBaton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Models/Models/Particles/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Environment/Sci-fi Tower/Scripts/TurretRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Follow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/DemoTestMap.unity" root0="FORCE_HIGHLIGHTING" />
@@ -96,41 +135,25 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellShield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/spells/SpellTrap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/world/ColumnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ai/SideStepBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/ai/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/util/KillTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/SpellScale.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Hud/HUD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LightingSwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/AIBeliefs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/SpellLift.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ragdoll/RagdollEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/whale/WhaleWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/NewFile1.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/ezakio/SpellForce.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/SpellFire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/util/timer/GenericTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerControls.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/fyro/IgniteEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/CombustioEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/tractio/AttractEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/asensio/LiftEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/SideStepBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/destructio/SpellDestroy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/FollowBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/ShootBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/PlayerCharacterInput.cs" />
@@ -138,19 +161,37 @@
         <option value="$PROJECT_DIR$/Assets/RagdollController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ai/AICharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/world/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/SpellCaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WorldObject.cs" />
         <option value="$PROJECT_DIR$/Assets/ColumnController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/world/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/world/ColumnController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/WetEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/AttachedEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/maxio/InflateEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/AbstractCharacterControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/ai/AICharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/ai/FollowBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/ai/AIBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/ai/ShootBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/ai/SideStepBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/paratacio/SpellElectric.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Models/Models/Particles/LightningBolt/LightningBoltScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/weaponeffects/AbstractProjectileWeaponEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/boomio/BoomSpell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/aquio/SpellWater.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/spells/combustio/SpellCombustio.cs" />
       </list>
     </option>
   </component>
@@ -266,6 +307,8 @@
       <workItem from="1570015562238" duration="7238000" />
       <workItem from="1570117729281" duration="17296000" />
       <workItem from="1570195185853" duration="834000" />
+      <workItem from="1570371353579" duration="12261000" />
+      <workItem from="1570444498776" duration="3277000" />
     </task>
     <servers />
   </component>
