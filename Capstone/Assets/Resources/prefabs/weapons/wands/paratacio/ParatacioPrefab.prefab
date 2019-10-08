@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 3639900263272328371}
   - component: {fileID: 616092207075370072}
   - component: {fileID: 5112310336221661050}
-  - component: {fileID: 2394541332571175654}
+  - component: {fileID: 3267944475014215464}
+  - component: {fileID: 6229594181674751369}
   m_Layer: 0
   m_Name: ParatacioPrefab
   m_TagString: Untagged
@@ -122,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -140,7 +141,7 @@ MonoBehaviour:
   primaryMuzzleFlash: {fileID: 19800004, guid: bcf46e46336114145b09deb1db11d480, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5112310336221661050}
-  secondarySound: {fileID: 0}
+  secondarySound: {fileID: 3267944475014215464}
   spell: {fileID: 0}
 --- !u!114 &616092207075370072
 MonoBehaviour:
@@ -152,12 +153,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287949608a50280428a658153f5de32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
     type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -277,7 +278,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2394541332571175654
+--- !u!82 &3267944475014215464
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188152627707902471}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1aaaebda6740c9a498f3be6ccb993970, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6229594181674751369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,18 +384,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
-  PositionDampTime: 10
-  RotationDampTime: 10
-  Recoil1: 15
-  Recoil2: 20
-  Recoil3: 15
-  Recoil4: 30
-  RecoilRotation: {x: -0.15, y: 0, z: -0.2}
-  RecoilKickBack: {x: -0.75, y: 0, z: -1}
+  PositionDampTime: 6
+  RotationDampTime: 9
+  Recoil1: 35
+  Recoil2: 55
+  Recoil3: 35
+  Recoil4: 50
+  RecoilRotation: {x: -10, y: 4, z: 6}
+  RecoilKickBack: {x: -0.015, y: 0.01, z: 0.075}
   CurrentRecoil1: {x: 0, y: 0, z: 0}
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}

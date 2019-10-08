@@ -103,13 +103,13 @@ MonoBehaviour:
   primaryReloadTime: 5
   maxReserveAmmo: 250
   reserveAmmo: 1000
-  primaryResetTime: 0.4
+  primaryResetTime: 0.3
   secondaryResetTime: 0
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
   primaryMuzzleFlash: {fileID: 19800000, guid: 75369bb81385f4904842bf20a51c14a2, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
-  primarySound: {fileID: 24023297318222731}
+  primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &2781263884110752984
@@ -132,6 +132,7 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -140,7 +141,10 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   force: 2500
   range: 50
   blastRadius: 7

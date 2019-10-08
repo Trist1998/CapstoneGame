@@ -134,7 +134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e0ac07ea7be5fc4e9be2c693837fd6b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,11 +345,12 @@ MonoBehaviour:
   primaryOnHitEffect: {fileID: 198341595340134300, guid: d7a302959d50bf041a5d5e97c10329f1,
     type: 3}
   primaryOnHitSound:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: c7a0e887907af6f4cb09502ac8724604, type: 3}
     name: 
-    volume: 0
-    pitch: 0
+    volume: 4.3
+    pitch: 0.72
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -358,6 +359,7 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1

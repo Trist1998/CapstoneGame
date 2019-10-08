@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7630551374814616765}
   - component: {fileID: 7630551374814616762}
   - component: {fileID: 5952529700376387963}
+  - component: {fileID: 5562034592526269561}
   m_Layer: 0
   m_Name: TractioPrefab
   m_TagString: Untagged
@@ -161,6 +162,7 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 198993423900235080, guid: a95815f92b95ea946b04f44dd0ca5b55,
     type: 3}
@@ -170,7 +172,10 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   effectLifeTime: 10
   force: 5
 --- !u!82 &5952529700376387963
@@ -269,3 +274,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5562034592526269561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630551375601943760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecoilPositionTranform: {fileID: 0}
+  RecoilRotationTranform: {fileID: 0}
+  PositionDampTime: 6
+  RotationDampTime: 9
+  Recoil1: 35
+  Recoil2: 50
+  Recoil3: 35
+  Recoil4: 55
+  RecoilRotation: {x: -11, y: 5, z: 6}
+  RecoilKickBack: {x: 0.015, y: 0.01, z: -0.075}
+  CurrentRecoil1: {x: 0, y: 0, z: 0}
+  CurrentRecoil2: {x: 0, y: 0, z: 0}
+  CurrentRecoil3: {x: 0, y: 0, z: 0}
+  CurrentRecoil4: {x: 0, y: 0, z: 0}
+  RotationOutput: {x: 0, y: 0, z: 0}
