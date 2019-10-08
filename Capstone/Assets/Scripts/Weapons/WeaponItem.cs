@@ -86,7 +86,7 @@ public class WeaponItem : Item
     {
         if (!secondaryResetTimer.isTimeout()) return false;
         if (!secondaryAutomaticFire && fired) return false;
-        
+        if (spell.comboPoints < spell.maxComboPoints) return false;
         fired = true;
         return true;
     }
