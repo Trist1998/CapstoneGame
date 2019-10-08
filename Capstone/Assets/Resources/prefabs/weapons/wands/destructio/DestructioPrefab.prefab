@@ -170,7 +170,9 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  force: 500
+  comboPoints: 0
+  maxComboPoints: 1
+  speed: 40
   lifeTime: 10
   projectilePrefab: {fileID: 5237790628494967255, guid: 8f306fffaec787d42a21f12a27b44c8f,
     type: 3}

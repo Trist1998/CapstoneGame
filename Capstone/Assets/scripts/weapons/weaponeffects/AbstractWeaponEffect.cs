@@ -43,9 +43,9 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
         source.pitch = sound.pitch;
         source.loop = sound.loop;
         source.Play();
-        source.spatialBlend = 1.0f;
+        source.spatialBlend = sound.spatialBlend;
         source.rolloffMode = AudioRolloffMode.Logarithmic;
-        source.maxDistance = 100.0f;
+        source.maxDistance = 200.0f;
         source.minDistance = 1.0f;
         //source.spread = 180;
         Destroy(g, sound.clip.length);

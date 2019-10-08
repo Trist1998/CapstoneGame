@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -151,12 +151,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287949608a50280428a658153f5de32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0

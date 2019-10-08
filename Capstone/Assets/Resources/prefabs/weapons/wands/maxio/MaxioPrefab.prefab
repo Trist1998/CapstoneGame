@@ -159,6 +159,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -167,6 +168,8 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   range: 40
-  scalar: 1.1

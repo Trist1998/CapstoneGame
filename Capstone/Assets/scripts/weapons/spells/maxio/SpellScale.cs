@@ -14,11 +14,13 @@ public class SpellScale : AbstractWeaponEffect
         if (hitObject != null)
         {
             hitObject.repeatHit();
+            base.processPrimaryHit(item, hit, hitPoint, direction);
         }
         else if(hit.transform.root.GetComponent<IWorldObject>() != null)
         {
             hitObject = hit.transform.root.gameObject.AddComponent<InflateEffect>();
             hitObject.startEffect();
+            base.processPrimaryHit(item, hit, hitPoint, direction);
         }
     }
 

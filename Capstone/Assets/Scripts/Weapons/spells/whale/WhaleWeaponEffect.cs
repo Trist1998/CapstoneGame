@@ -37,5 +37,6 @@ public class WhaleWeaponEffect : AbstractWeaponEffect
             }
         }
         base.processSecondaryHit(item, hit, hitPoint, direction);
+
     }
 }
