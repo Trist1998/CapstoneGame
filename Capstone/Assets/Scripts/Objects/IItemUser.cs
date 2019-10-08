@@ -7,4 +7,5 @@ public interface IItemUser
     Item getEquippedItem();
     void addItem(Item item);
     GameObject getHandBone();
+    GameObject getGameObject();
 }

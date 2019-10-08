@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public Text waveText;
     public Text scoreText;
     public GameObject endScreen;
+    [SerializeField]
+    private Text endText;
 
     private int numDead = 0;
     
@@ -133,6 +135,7 @@ public class GameManager : MonoBehaviour
     private void endGame()
     {
         Time.timeScale = 0.01f;
+        endText.text = "Wave: " + waveNo + " Score: " + score;
         endScreen.gameObject.SetActive(true);
     }
 

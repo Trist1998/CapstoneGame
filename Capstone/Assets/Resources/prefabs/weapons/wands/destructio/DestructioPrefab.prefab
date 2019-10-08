@@ -131,7 +131,7 @@ MonoBehaviour:
   activeAmmo: 3
   primaryReloadTime: 5
   maxReserveAmmo: 9
-  reserveAmmo: 0
+  reserveAmmo: 9
   primaryResetTime: 0.4
   secondaryResetTime: 0
   primaryAutomaticFire: 1
@@ -161,6 +161,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -169,6 +170,7 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1

@@ -31,4 +31,9 @@ public class BoomSpell : AbstractProjectileWeaponEffect
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
     }
+
+    public override string getName()
+    {
+        return "Boomio (Makes boom!)";
+    }
 }

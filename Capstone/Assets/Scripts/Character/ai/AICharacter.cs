@@ -9,6 +9,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public GameObject head;
     public GameObject handbone;
     public Item weapon;
+    public float aimSpeed;
     public AIBehaviour[] behaviours;
     public AIBeliefs beliefs;
     public float range;
@@ -22,7 +23,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     protected override void Start()
     {
         base.Start();
-        behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
+        behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this, aimSpeed)};
         root = new AIBehaviour(this, behaviours);
         currentBehaviour = root;
         beliefs = new AIBeliefs(this);
@@ -75,6 +76,11 @@ public class AICharacter : AbstractCharacterControl, IItemUser
     public GameObject getHandBone()
     {
         return handbone;
+    }
+
+    public GameObject getGameObject()
+    {
+        return gameObject;
     }
 
     public AIBeliefs getBeliefs()
