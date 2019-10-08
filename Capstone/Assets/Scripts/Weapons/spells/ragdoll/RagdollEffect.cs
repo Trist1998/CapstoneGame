@@ -6,13 +6,15 @@ public class RagdollEffect : AttachedEffect
 {
     public override void startEffect(float lifeTime)
     {
-        GetComponent<AICharacter>()?.ragdoll();
+        GetComponent<RagdollController>()?.ragdoll();
         base.startEffect(lifeTime);
     }
 
     public override void endEffect()
     {
-        GetComponent<AICharacter>()?.unragdoll();
+        WorldObject worldObject = GetComponent<WorldObject>();
+        if(worldObject != null && !worldObject.isDead())
+            GetComponent<AbstractCharacterControl>()?.unragdoll();
         base.endEffect();
     }
 }

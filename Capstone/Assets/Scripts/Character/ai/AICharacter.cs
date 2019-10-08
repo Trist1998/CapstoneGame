@@ -19,7 +19,7 @@ public class AICharacter : AbstractCharacterControl, IItemUser
 
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         base.Start();
         behaviours = new AIBehaviour[]{new FollowBehaviour(this, range), new ShootBehaviour(this)};
@@ -27,6 +27,8 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         currentBehaviour = root;
         beliefs = new AIBeliefs(this);
         unragdoll();
+        if (handbone != null && weapon == null)
+            weapon = handbone.GetComponentInChildren<Item>();
         weapon.user = this;
     }
 
@@ -80,7 +82,18 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         if (beliefs == null)
             beliefs = new AIBeliefs(this);
         return beliefs;
-        
     }
-    
+
+    public override void ragdoll()
+    {
+        aiEnabled = false;
+        base.ragdoll();
+    }
+
+    public override void unragdoll()
+    {
+        base.unragdoll();
+        transform.position = childBody.transform.position;
+        aiEnabled = true;
+    }
 }

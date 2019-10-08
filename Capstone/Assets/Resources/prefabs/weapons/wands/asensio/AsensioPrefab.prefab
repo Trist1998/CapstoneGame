@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2345397514126785454}
   - component: {fileID: -2140913300778093239}
   - component: {fileID: 3154727308967531328}
+  - component: {fileID: 339358013034613627}
   m_Layer: 0
   m_Name: AsensioPrefab
   m_TagString: Untagged
@@ -120,8 +121,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -137,7 +138,7 @@ MonoBehaviour:
   secondaryAutomaticFire: 0
   primaryMuzzleFlash: {fileID: 19800004, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
-  primarySound: {fileID: 0}
+  primarySound: {fileID: 339358013034613627}
   secondarySound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &3154727308967531328
@@ -150,12 +151,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f63b27abcaa23541ab847e86a918b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -163,11 +164,16 @@ MonoBehaviour:
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  shootForwardForce: 25
   comboPoints: 0
   maxComboPoints: 0
+  shootForwardForce: 25
+  whalePrefab: {fileID: 2544207800837672384, guid: debd2150809f4f344abd3b64c9bbb094,
+    type: 3}
+  blastRadius: 15
+  force: 50
+  damage: 500

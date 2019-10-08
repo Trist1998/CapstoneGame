@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AbstractProjectileWeaponEffect : AbstractWeaponEffect
 {
-    public float force;
+    public float speed;
     public float lifeTime;
     public Projectile projectilePrefab;
     public bool useGravity;
@@ -14,7 +14,7 @@ public abstract class AbstractProjectileWeaponEffect : AbstractWeaponEffect
         Projectile projectile = getProjectile();
         if (projectile == null) return;
         projectile.setEffectValues(item, this);
-            projectile.fire(item.user.getItemAimPosition(), item.user.getItemAimDirection(), useGravity, force, lifeTime);
+            projectile.fire(item.user.getItemAimPosition(), item.user.getItemAimDirection(), useGravity, speed, lifeTime);
             
     }
 

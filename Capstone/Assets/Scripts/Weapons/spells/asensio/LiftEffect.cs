@@ -13,6 +13,7 @@ public class LiftEffect : AttachedEffect
     Quaternion rot;
     private bool shotForward = false;
     private Rigidbody rigid;
+    private AbstractCharacterControl character;
 
     public override void affectObject()
     {
@@ -22,11 +23,11 @@ public class LiftEffect : AttachedEffect
             endEffect();
             return;
         }
+        
         IItemUser player = item.user;
         rigid.transform.rotation = rot;  
         Vector3 flyTo = player.getItemAimPosition() + player.getItemAimDirection() * distance;
         Vector3 heading = flyTo - getPosition();
-        //float dist = Vector3.Distance(getPosition(), flyTo);
         Vector3 force = heading / Time.fixedDeltaTime * 0.03f;
         rigid.velocity = Vector3.zero;
         rigid.AddForce(force, ForceMode.VelocityChange);
@@ -39,16 +40,15 @@ public class LiftEffect : AttachedEffect
 
     public Rigidbody getRigidbody()
     {
-        AICharacter c = transform.root.GetComponent<AICharacter>();
-        return c != null ? c.childBody : GetComponent<Rigidbody>();
+        return GetComponent<Rigidbody>();
     }
 
     public void startEffect(Item item)
     {
         this.item = item;
-        
+        character = transform.root.GetComponent<AbstractCharacterControl>();
         rigid = getRigidbody();
-        if (!isMovableObject())
+        if (character == null && !isMovableObject())
         {
             Destroy(this);
             return;
@@ -60,9 +60,9 @@ public class LiftEffect : AttachedEffect
 
     public override void endEffect()
     {
-        if (GetComponent<AICharacter>() != null)
+        if (character != null)
         {
-            gameObject.AddComponent<RagdollEffect>().startEffect(1);
+            character.gameObject.AddComponent<RagdollEffect>().startEffect(1);
             rigid.isKinematic = false;
         }
         rigid.useGravity = true;
@@ -72,7 +72,7 @@ public class LiftEffect : AttachedEffect
 
     public void shootForward(float force)
     {
-        if (GetComponent<AICharacter>() != null)
+        if (character != null)
         {
             force *= 5;
         }
@@ -86,9 +86,9 @@ public class LiftEffect : AttachedEffect
 
     private void levitate(float dist)
     {
-        if (GetComponent<AICharacter>() != null)
+        if (character != null)
         {
-            GetComponent<AICharacter>().ragdoll();
+            character.ragdoll();
         }
         rigid.useGravity = false;
         rot = rigid.transform.localRotation;
@@ -115,6 +115,5 @@ public class LiftEffect : AttachedEffect
         {
             r.AddForce(other.impulse);
         }
-        
     }
 }

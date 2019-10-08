@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
             particles = GetComponent<ParticleSystem>();
     }
     
-    public void fire(Vector3 position, Vector3 direction, bool useGravity, float force, float timeout)
+    public void fire(Vector3 position, Vector3 direction, bool useGravity, float speed, float timeout)
     {
         transform.position = position + direction.normalized;
 
@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
         if (rig != null)
         {
             rig.useGravity = useGravity;
-            rig.AddForce(direction.normalized * force);
+            rig.AddForce(direction.normalized * speed, ForceMode.VelocityChange);
         }
 
         if (particles != null)

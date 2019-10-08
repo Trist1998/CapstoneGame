@@ -35,7 +35,7 @@ public class Inventory
         primaryTransform.localPosition = item.relativePosition;
         primaryTransform.rotation = user.getHandBone().transform.rotation;
         primaryTransform.Rotate(item.relativeRotation);
-        
+        item.equipItem(user);
         item.gameObject.SetActive(false);
         if(getPrimaryItem() != null)
             setSecondaryItem(getPrimaryItem());
@@ -75,6 +75,7 @@ public class Inventory
         if (item == null) return;
         item.gameObject.SetActive(true);
         item.transform.parent = null;
+        item.unequipItem();
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.GetComponent<Rigidbody>().detectCollisions = true;
         items.Remove(item);

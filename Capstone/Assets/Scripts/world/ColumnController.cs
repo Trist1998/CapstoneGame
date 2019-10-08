@@ -8,20 +8,27 @@ public class ColumnController : WorldObject
 {
     public GameManager manager;
     public Item weapon;
+    public Transform itemPos;
     public int costOfWeapon;
     public int costOfAmmo;
     public int amountOfAmmo;
     public Vector3 relativePos;
     public Vector3 relativeRot;
     public float rotationSpeed;
-
-    private Vector3 activePosition;
+    public float decentSpeed;
+    public bool active;//Controls whether or not the column appears between waves
     
+    private Vector3 activePosition;
+    public float height;
+
     protected override void Start()
     {
         if (manager == null) 
             manager = transform.root.GetComponent<GameManager>();
         instantiateNewWeapon();
+        activePosition = transform.position;
+        if(!active)
+            transform.position -= new Vector3(0,height,0);
         base.Start();
     }
     
@@ -48,13 +55,30 @@ public class ColumnController : WorldObject
         weapon = Instantiate(weapon, transform.position, new Quaternion(), null);
         weapon.GetComponent<Collider>().enabled = false;
         weapon.GetComponent<Rigidbody>().isKinematic = true;
-        weapon.transform.parent = transform;
         weapon.transform.Rotate(relativeRot);
-        weapon.transform.localPosition += relativePos;
+        weapon.transform.parent = itemPos;
+        weapon.transform.localPosition = Vector3.zero;//itemPos.transform.position;
         
     }
     private void FixedUpdate()
     {
-        weapon.transform.Rotate(new Vector3(0, rotationSpeed,0) * Time.deltaTime);
+        itemPos.Rotate(new Vector3(0, rotationSpeed,0) * Time.deltaTime);
+        float diff = (activePosition - transform.position).y;
+        if (!manager.waveInProgress())
+        {
+            if (diff > 0)
+            {
+                transform.position += new Vector3(0, decentSpeed, 0) * Time.deltaTime;
+            }
+            else
+            {
+                transform.position = activePosition;
+            }
+            return;
+        }
+
+        if (manager.waveInProgress() && diff > height) return;
+        transform.position += new Vector3(0, -1 * decentSpeed, 0) * Time.deltaTime;
+
     }
 }
