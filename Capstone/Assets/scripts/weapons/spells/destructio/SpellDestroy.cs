@@ -30,7 +30,7 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
             rigid.AddForce(blastForce * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
             obj.takeDamage(0.5f * damage * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1));
         }
-        playPrimaryOnHitEffect(hit, hitPoint);
+        base.processPrimaryHit(item, hit, hitPoint, force);
     }
 
     public override string getName()

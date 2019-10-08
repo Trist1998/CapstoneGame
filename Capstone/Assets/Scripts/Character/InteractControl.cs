@@ -86,6 +86,8 @@ public class InteractControl : MonoBehaviour, IItemUser
 
     public Item getEquippedItem()
     {
+        if (inventory == null)
+            return null;
         return inventory.getPrimaryItem();
     }
 
