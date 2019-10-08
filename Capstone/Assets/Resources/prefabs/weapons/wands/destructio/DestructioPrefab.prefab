@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2025983865}
   - component: {fileID: 6482627552897685186}
   - component: {fileID: 3687642705651576547}
+  - component: {fileID: 487408672956650684}
   m_Layer: 0
   m_Name: DestructioPrefab
   m_TagString: Untagged
@@ -161,6 +162,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -169,6 +171,7 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1
@@ -276,3 +279,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &487408672956650684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025983864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecoilPositionTranform: {fileID: 0}
+  RecoilRotationTranform: {fileID: 0}
+  PositionDampTime: 6
+  RotationDampTime: 9
+  Recoil1: 33
+  Recoil2: 50
+  Recoil3: 30
+  Recoil4: 56
+  RecoilRotation: {x: -10, y: 5, z: 7}
+  RecoilKickBack: {x: 0.015, y: 0.1, z: -0.075}
+  CurrentRecoil1: {x: 0, y: 0, z: 0}
+  CurrentRecoil2: {x: 0, y: 0, z: 0}
+  CurrentRecoil3: {x: 0, y: 0, z: 0}
+  CurrentRecoil4: {x: 0, y: 0, z: 0}
+  RotationOutput: {x: 0, y: 0, z: 0}
