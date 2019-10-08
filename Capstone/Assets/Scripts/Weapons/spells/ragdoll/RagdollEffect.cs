@@ -14,7 +14,7 @@ public class RagdollEffect : AttachedEffect
     {
         WorldObject worldObject = GetComponent<WorldObject>();
         if(worldObject != null && !worldObject.isDead())
-            GetComponent<RagdollController>()?.unragdoll();
+            GetComponent<AbstractCharacterControl>()?.unragdoll();
         base.endEffect();
     }
 }

@@ -169,7 +169,10 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   damagePerSecond: 5
+  lightningBolt: {fileID: 11413728, guid: 52a86b40d82b5ff4a9adb1db44174b56, type: 3}
 --- !u!82 &5112310336221661050
 AudioSource:
   m_ObjectHideFlags: 0
@@ -191,7 +194,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -226,7 +229,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -266,4 +269,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  lightningBolt: {fileID: 11413728, guid: 52a86b40d82b5ff4a9adb1db44174b56, type: 3}

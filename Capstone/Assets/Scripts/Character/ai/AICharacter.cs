@@ -27,6 +27,8 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         currentBehaviour = root;
         beliefs = new AIBeliefs(this);
         unragdoll();
+        if (handbone != null && weapon == null)
+            weapon = handbone.GetComponentInChildren<Item>();
         weapon.user = this;
     }
 
@@ -90,8 +92,8 @@ public class AICharacter : AbstractCharacterControl, IItemUser
 
     public override void unragdoll()
     {
+        base.unragdoll();
         transform.position = childBody.transform.position;
         aiEnabled = true;
-        base.unragdoll();
     }
 }
