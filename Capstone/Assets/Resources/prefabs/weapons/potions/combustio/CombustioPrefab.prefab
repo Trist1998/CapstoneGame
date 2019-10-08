@@ -342,11 +342,12 @@ MonoBehaviour:
   primaryOnHitEffect: {fileID: 198341595340134300, guid: ff6b6bdcc4c35244e81fa7de8d1f4846,
     type: 3}
   primaryOnHitSound:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: c7a0e887907af6f4cb09502ac8724604, type: 3}
     name: 
-    volume: 0
-    pitch: 0
+    volume: 3.5
+    pitch: 0.79
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -355,7 +356,10 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 0
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   speed: 25
   lifeTime: 10
   projectilePrefab: {fileID: 7956118424525028636, guid: aa859682c6b865d438c2e6222508b3a4,
