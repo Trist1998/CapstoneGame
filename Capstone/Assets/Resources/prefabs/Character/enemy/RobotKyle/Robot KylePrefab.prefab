@@ -2635,21 +2635,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8209672250172923657}
     m_Modifications:
-    - target: {fileID: 5617838965259986402, guid: d53d699eaf0060b4ebcba9df4c758e1f,
-        type: 3}
-      propertyPath: m_Name
-      value: Grenade (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617838965259986402, guid: d53d699eaf0060b4ebcba9df4c758e1f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
-        type: 3}
-      propertyPath: timeDelay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 448781221695161066, guid: d53d699eaf0060b4ebcba9df4c758e1f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2705,12 +2690,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 190
       objectReference: {fileID: 0}
-    - target: {fileID: 4041648769123363143, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+    - target: {fileID: 5617838965259986402, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Grenade (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617838965259986402, guid: d53d699eaf0060b4ebcba9df4c758e1f,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: timeDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: explosionSound.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a5f1753e7003b44a913b6109e126903, type: 3}
+    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: explosionSound.volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: explosionSound.pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5970672236163406848, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041648769123363143, guid: d53d699eaf0060b4ebcba9df4c758e1f,
         type: 3}
       propertyPath: m_Layer
       value: 0

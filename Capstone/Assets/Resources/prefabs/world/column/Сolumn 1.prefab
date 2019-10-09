@@ -340,12 +340,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  active: 1
   weapon: {fileID: 0}
   itemPos: {fileID: 2039727539616610516}
   costOfWeapon: 0
   costOfAmmo: 0
   amountOfAmmo: 0
-  relativePos: {x: -3.5, y: 170, z: 0}
   relativeRot: {x: 0, y: 0, z: 10}
   rotationSpeed: 0
   decentSpeed: 0
@@ -358,7 +358,15 @@ MonoBehaviour:
     spatialBlend: 0
     length: 4
     source: {fileID: 0}
-  active: 1
+  buySound:
+    clip: {fileID: 8300000, guid: e4ca3c8359789bb409bf3a88ab2ec610, type: 3}
+    name: 
+    volume: 2.79
+    pitch: 1
+    loop: 0
+    spatialBlend: 1
+    length: 0
+    source: {fileID: 0}
   height: 0
   textMesh: {fileID: 7404339705999413055}
 --- !u!136 &5052212565077070736

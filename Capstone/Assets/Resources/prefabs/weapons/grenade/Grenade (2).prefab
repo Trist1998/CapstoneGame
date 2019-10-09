@@ -154,7 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee231157a105c841bb0d13f7f63b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  description: 
   equipable: 0
+  modelPrefab: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 0, y: 0, z: 0}
   blastRadius: 5
@@ -163,6 +166,15 @@ MonoBehaviour:
   damage: 30
   explosion: {fileID: 198917022394846920, guid: 9bb31302353ca344fbcc201c9c486e97,
     type: 3}
+  explosionSound:
+    clip: {fileID: 8300000, guid: 4a5f1753e7003b44a913b6109e126903, type: 3}
+    name: 
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 1
+    length: 0
+    source: {fileID: 0}
 --- !u!1 &5970672236163406848
 GameObject:
   m_ObjectHideFlags: 0
