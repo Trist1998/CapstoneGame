@@ -159,7 +159,7 @@ MonoBehaviour:
   primaryOnHitSound:
     clip: {fileID: 8300000, guid: 9c79a772d30cd62419c0efa603d1e95b, type: 3}
     name: 
-    volume: 1
+    volume: 2.05
     pitch: 1
     loop: 0
     spatialBlend: 1
@@ -201,7 +201,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 58
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

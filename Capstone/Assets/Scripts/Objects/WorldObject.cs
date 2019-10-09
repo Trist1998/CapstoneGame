@@ -54,6 +54,7 @@ public class WorldObject : MonoBehaviour, IWorldObject
 
         if (isDead())
         {
+            hitPoints = 0;
             explode();
             die();
         }

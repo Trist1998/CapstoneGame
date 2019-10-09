@@ -5,33 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerCharacterInput : AbstractCharacterInput
 {
-    PlayerControls controls;
-    public bool controller;
-    Vector2 move;
-    Vector2 rotate;
-    static int playerCount = 0;
-    float right;
-    float left;
-    float forward;
-    float backward;
-
-    void OnEnable()
-    {
-        controls = new PlayerControls();
-        controls.Enable();
-        move = Vector2.zero;
-        rotate = Vector2.zero;
-
-        right = 0;
-        left = 0;
-        backward = 0;
-        forward = 0;
-        //if (!controls.Gameplay.Join.triggered)
-        {
-            controller = false;
-        }
-
-    }
+   
 
     public override float getHorizontalInput()
     {

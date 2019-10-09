@@ -94,7 +94,7 @@ public class JoystickCharacterInput : AbstractCharacterInput
     public override bool getSecondaryFireUp()
     {
         //  return Input.GetButtonUp("Fire2");
-        return controls.Gameplay.SecondaryFire.triggered;
+        return !controls.Gameplay.SecondaryFire.triggered;
     }
 
     public override bool getInteract()

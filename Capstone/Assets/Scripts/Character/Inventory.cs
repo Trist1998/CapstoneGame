@@ -91,6 +91,8 @@ public class Inventory
      */
     public Item getPrimaryItem()
     {
+        if (slots == null)
+            return null;
         if(slots.ContainsKey(SLOT_PRIMARY))
             return slots[SLOT_PRIMARY];
         return null;
