@@ -40,8 +40,4 @@ public class WhaleWeaponEffect : AbstractWeaponEffect
         base.processSecondaryHit(item, hit, hitPoint, direction);
 
     }
-    public override string getName()
-    {
-        return SPELL_NAME;
-    }
 }
