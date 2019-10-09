@@ -4,34 +4,31 @@ using UnityEngine;
 
 public class SpellAttract : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Tractio (The Attraction Charm)";
-    
     private AttractEffect other;
     public float effectLifeTime;
     public float force;
     
-    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)//This is gross logic
+    /*
+     * WeaponEffect for Tractio
+     * Attaches effect to game object and if the "other" effect is not null starts both AttractEffect(AttachedEffect) and sets the "other" reference to null
+     */
+    public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         if (other != null && other.gameObject == hit.gameObject)
             return;
         
-        AttractEffect @this = hit.AddComponent<AttractEffect>();
+        AttractEffect thisObject = hit.AddComponent<AttractEffect>();
         
-        @this.attachEffect(other, hitPoint, other == null?primaryOnHitEffect:secondaryOnHitEffect, force, effectLifeTime);
+        thisObject.attachEffect(other, hitPoint, other == null?primaryOnHitEffect:secondaryOnHitEffect, force, effectLifeTime);
 
         if (other != null)
         {
-            other.attachEffect(@this, force, effectLifeTime);
+            other.attachEffect(thisObject, force, effectLifeTime);
             other = null;
         }
         else
         {
-            other = @this;
+            other = thisObject;
         }
-    }
-
-    public override string getName()
-    {
-        return SPELL_NAME;
     }
 }

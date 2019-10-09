@@ -110,8 +110,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019833552, y: 0.4235401, z: 0.020896854}
-  m_Center: {x: -0.00031541474, y: 0.1320323, z: 0.002016057}
+  m_Size: {x: 0.07973284, y: 0.4235401, z: 0.06027872}
+  m_Center: {x: 0.0046260282, y: 0.13203248, z: 0.0017264637}
 --- !u!114 &2025983865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Destructio
+  description: With 20% more Boom!
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -133,6 +135,9 @@ MonoBehaviour:
   primaryReloadTime: 5
   maxReserveAmmo: 9
   reserveAmmo: 9
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 0.4
   secondaryResetTime: 0
   primaryAutomaticFire: 1
@@ -163,6 +168,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -172,6 +178,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1

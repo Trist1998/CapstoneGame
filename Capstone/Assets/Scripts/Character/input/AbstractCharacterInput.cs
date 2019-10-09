@@ -20,5 +20,6 @@ public abstract class AbstractCharacterInput : ScriptableObject
     public abstract bool getPrevItem();
     public abstract bool getSprintDown();
     public abstract bool getNextItem();
+    public abstract bool getReload();
 
 }

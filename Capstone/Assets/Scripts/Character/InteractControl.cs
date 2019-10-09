@@ -53,6 +53,10 @@ public class InteractControl : MonoBehaviour, IItemUser
             cast();
         }
 
+        if (characterInput.getReload())
+        {
+            getEquippedItem().reload();
+        }
         if (characterInput.getNextItem())
         {
             inventory.nextItem();

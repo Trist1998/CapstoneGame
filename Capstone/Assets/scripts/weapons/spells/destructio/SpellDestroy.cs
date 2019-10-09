@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class SpellDestroy : AbstractProjectileWeaponEffect
 {
-    public readonly string SPELL_NAME = "Destructio (The Destruction Charm)";
     public float blastRadius;
     public float damage;
     public float blastForce;
-
+    /*
+     * Weapon effect for Destructio
+     * Applies force and damage to objects in blast radius
+     * Damage decreases as distance from blast increases
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 force)
     {
         WorldObject health = hit.GetComponent<WorldObject>();
@@ -16,7 +19,7 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
             health.takeDamage(damage);
         Rigidbody rig = hit.GetComponent<Rigidbody>();
         if (rig != null)
-            rig.AddForce(force);
+            rig.AddForce(force, ForceMode.VelocityChange);
         Collider[] objects = Physics.OverlapSphere(hitPoint, blastRadius);
         foreach (var colliderObject in objects)
         {
@@ -33,8 +36,4 @@ public class SpellDestroy : AbstractProjectileWeaponEffect
         base.processPrimaryHit(item, hit, hitPoint, force);
     }
 
-    public override string getName()
-    {
-        return SPELL_NAME;
-    }
 }

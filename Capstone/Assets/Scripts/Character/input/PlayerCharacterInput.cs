@@ -86,4 +86,8 @@ public class PlayerCharacterInput : AbstractCharacterInput
     {
         return Input.GetButtonDown("NextItem");
     }
+    public override bool getReload()
+    {
+        return Input.GetButtonDown("Reload");
+    }
 }

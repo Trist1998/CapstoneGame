@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class SpellElectric : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Paratacio (The Electric Charm)";
-    public float damage;
+    [SerializeField]
+    private float damage;
     [SerializeField]
     private LightningBoltScript lightningBolt;
     [SerializeField]
@@ -21,12 +21,19 @@ public class SpellElectric : AbstractWeaponEffect
     [SerializeField]
     private float blastForce;
 
+    /*
+     * Weapon Effect for Paratacio
+     */
     private void Start()
     {
         lightning = Instantiate(lightningBolt, transform.position, Quaternion.identity);
         bigLightning = Instantiate(bigLightningBolt, transform.position, Quaternion.identity);
     }
-
+    
+    /*
+     * Damages hit object and checks if it is ignitable by checking in the AttachedEffectManager
+     * and ignites it if possible
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         WorldObject wO = hit.GetComponent<WorldObject>();
@@ -44,16 +51,13 @@ public class SpellElectric : AbstractWeaponEffect
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
     }
-
-    public override void secondaryFire(Item item)
-    {
-        if(comboPoints >= maxComboPoints)
-            base.secondaryFire(item);
-    }
+    
+    /*
+     * Applies damage and force to objects in radius
+     */
 
     public override void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        comboPoints = 0;
         hit.GetComponent<WorldObject>()?.takeDamage(damage);
         bigLightning.StartPosition = hitPoint + new Vector3(0, 50, 0);
         bigLightning.EndPosition = hitPoint;
@@ -75,9 +79,8 @@ public class SpellElectric : AbstractWeaponEffect
         base.processSecondaryHit(item, hit, hitPoint, direction);
     }
 
-    public override string getName()
+    public override bool canComboFire()
     {
-        return SPELL_NAME;
+        return true;
     }
-
 }

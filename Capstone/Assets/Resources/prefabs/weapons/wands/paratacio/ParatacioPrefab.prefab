@@ -123,8 +123,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Paratacio
+  description: Its shocking
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -134,7 +136,10 @@ MonoBehaviour:
   primaryReloadTime: 3
   maxReserveAmmo: 30
   reserveAmmo: 30
-  primaryResetTime: 1
+  hasCombo: 1
+  comboPoints: 0
+  maxComboPoints: 10
+  primaryResetTime: 0.5
   secondaryResetTime: 0
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
@@ -153,26 +158,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287949608a50280428a658153f5de32b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 198856239026640498, guid: aaf754be1b72c774a85ae92a0f519ec1,
     type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 10
@@ -238,7 +245,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -334,7 +341,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -384,8 +391,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6

@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Detonator : Item
 {
+    
     private GenericTimer timer;
     public float blastRadius;
     public float timeDelay;
     public float force;
     public float damage;
     public ParticleSystem explosion;
+    public Sound explosionSound;
+    
+    /*
+     * Starts timer of grenade if timer is null
+     * If timer done grenade explodes which applies damage and force to objects in blastRadius
+     */
     public override void usePrimaryActionDown()
     {
         if (timer == null)
@@ -32,6 +39,7 @@ public class Detonator : Item
         ParticleSystem effect = Instantiate(explosion);
         effect.transform.position = transform.position;
         effect.Play();
+        explosionSound.playSound(transform.position);
     }
 
     public override float getAmmoPercentage()

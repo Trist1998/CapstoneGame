@@ -29,13 +29,21 @@ public class HUD : MonoBehaviour
         IItemUser user = obj.GetComponent<IItemUser>();
         if (user != null && user.getEquippedItem() != null)
         {
-            energy.SetActive(true);
-            star.SetActive(true);
             Item item = user.getEquippedItem();
-            energy.GetComponentInChildren<Text>().text = item.getDisplayAmmo();
-            energyContent.fillAmount = user.getEquippedItem().getAmmoPercentage();
-            starContent.fillAmount = user.getEquippedItem().getComboPercentage();
-            star.GetComponentInChildren<Text>().text = item.getDisplayCombo();
+            if (item.requireAmmoBar())
+            {
+                energy.SetActive(true);
+                energy.GetComponentInChildren<Text>().text = item.getDisplayAmmo();
+                energyContent.fillAmount = user.getEquippedItem().getAmmoPercentage();
+            }
+
+            if (item.requireComboBar())
+            {
+                star.SetActive(true);
+                starContent.fillAmount = user.getEquippedItem().getComboPercentage();
+                star.GetComponentInChildren<Text>().text = item.getDisplayCombo();
+            }
+            
         }
         else
         {

@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Maxio
+  description: Basically me every holiday season
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
@@ -132,6 +134,9 @@ MonoBehaviour:
   primaryReloadTime: 2
   maxReserveAmmo: 50
   reserveAmmo: 50
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 0.1
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -161,6 +166,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -170,6 +176,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 0
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1

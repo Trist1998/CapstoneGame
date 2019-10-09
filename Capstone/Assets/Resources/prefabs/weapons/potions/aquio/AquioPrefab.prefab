@@ -62,6 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Aquio
+  description: Holy Water
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
@@ -71,6 +73,9 @@ MonoBehaviour:
   primaryReloadTime: 0
   maxReserveAmmo: 0
   reserveAmmo: 0
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 1
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -100,6 +105,8 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -108,12 +115,17 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
+    length: 0
     source: {fileID: 0}
+  comboPoints: 0
+  maxComboPoints: 1
   speed: 15
   lifeTime: 10
   projectilePrefab: {fileID: 885114452965603993, guid: 0b02456a63e133846855aa49df59a121,
     type: 3}
   useGravity: 1
+  radius: 0
 --- !u!54 &2622327623999424466
 Rigidbody:
   m_ObjectHideFlags: 0

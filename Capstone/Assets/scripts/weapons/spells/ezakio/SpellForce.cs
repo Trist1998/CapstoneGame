@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class SpellForce : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Ezakio (The Force Charm)";
     public float force;
     public float range;
     public float blastRadius;
 
-    public override float getRange()
-    {
-        return range;
-    }
-
+    /*
+     * Weapon effect for Ezakio
+     * 
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        Rigidbody rig = hit.transform.GetComponent<Rigidbody>();
-        if (hit.GetComponent<Collider>().gameObject.GetComponent<Rigidbody>() != null)
+        Rigidbody rig = hit.GetComponent<Rigidbody>();
+        
+        if (rig != null)
         {
+            AICharacter c = hit.GetComponent<AICharacter>();
+            if (c != null)
+            {
+                c.gameObject.AddComponent<RagdollEffect>().startEffect(1.5f);
+                rig = c.childBody;
+            }
             rig.AddForce((hit.GetComponent<Collider>().transform.position - item.transform.position).normalized * force);
         }
 
@@ -44,11 +49,11 @@ public class SpellForce : AbstractWeaponEffect
         playPrimaryOnHitEffect(null, hitPoint);
         
     }
-    public override string getName()
-    {
-        return SPELL_NAME;
-    }
 
+    public override float getRange()
+    {
+        return range;
+    }
 }
 
 

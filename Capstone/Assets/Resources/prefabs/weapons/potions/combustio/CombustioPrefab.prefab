@@ -309,6 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Combustio
+  description: Fuels the fire
   equipable: 0
   relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
@@ -318,6 +320,9 @@ MonoBehaviour:
   primaryReloadTime: 0
   maxReserveAmmo: 0
   reserveAmmo: 0
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 0
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -348,6 +353,7 @@ MonoBehaviour:
     pitch: 0.79
     loop: 0
     spatialBlend: 0
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -357,6 +363,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 0
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1
