@@ -2185,7 +2185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022498296961300970}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Handbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6054,7 +6054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022498298117230572}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Handbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
