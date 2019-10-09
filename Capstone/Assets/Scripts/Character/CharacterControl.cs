@@ -18,7 +18,7 @@ public class CharacterControl : AbstractCharacterControl
         movement = GetComponent<FPSMovementControl>();
         movement?.setValues(playerCamera, characterInput);
         interactControl = GetComponent<InteractControl>();
-        interactControl?.setValues(playerCamera, characterInput);
+        interactControl?.setValues(this, playerCamera, characterInput);
     }
 
     private void FixedUpdate()

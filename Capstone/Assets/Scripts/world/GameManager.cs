@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     public void recordDeath(int addScore)
     {
-        changeScore(addScore);
+        changePoints(addScore);
         noDeaths++;
         if(numberSpawned <= noDeaths)
             endWave();
@@ -92,10 +92,10 @@ public class GameManager : MonoBehaviour
         timer = new GenericTimer(timeBetweenWaves, false);
     }
 
-    public void changeScore(int amount)
+    public void changePoints(int amount)
     {
         score += amount;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Points " + score;
     }
 
     public int getScore()
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
     private void endGame()
     {
         Time.timeScale = 0.01f;
-        endText.text = "Wave: " + waveNo + " Score: " + score;
+        endText.text = "Wave " + waveNo;
         endScreen.gameObject.SetActive(true);
     }
 
@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
     {
         if (getScore() < reviveCost) return false;
         
-        changeScore(-1 * reviveCost);
+        changePoints(-1 * reviveCost);
         return true;
     }
 }

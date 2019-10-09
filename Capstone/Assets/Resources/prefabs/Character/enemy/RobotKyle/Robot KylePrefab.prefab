@@ -471,7 +471,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2641,6 +2641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grenade (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: timeDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 448781221695161066, guid: d53d699eaf0060b4ebcba9df4c758e1f,
         type: 3}
