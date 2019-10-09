@@ -352,11 +352,11 @@ MonoBehaviour:
   decentSound:
     clip: {fileID: 0}
     name: 
-    volume: 0
-    pitch: 0
+    volume: 2.19
+    pitch: 1
     loop: 0
-    spatialBlend: 1
-    length: 0
+    spatialBlend: 0
+    length: 4
     source: {fileID: 0}
   active: 1
   height: 0
