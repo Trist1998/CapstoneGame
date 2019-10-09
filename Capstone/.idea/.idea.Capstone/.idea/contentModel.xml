@@ -5,7 +5,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="EvilCube.cs" t="Include" />
+        <e p="EndMenu.cs" t="Include" />
         <e p="move.cs" t="Include" />
         <e p="obj.cs" t="Include" />
         <e p="Resources" t="Include">
@@ -331,11 +331,6 @@
                 </e>
               </e>
             </e>
-            <e p="weapons" t="Include">
-              <e p="wands" t="Include">
-                <e p="Read Me.txt" t="Include" />
-              </e>
-            </e>
           </e>
           <e p="Scripts" t="Include">
             <e p="LightingSwitcher.cs" t="Include" />
@@ -424,7 +419,6 @@
           </e>
           <e p="character" t="Include">
             <e p="AbstractCharacterControl.cs" t="Include" />
-            <e p="AbstractCharacterInput.cs" t="Include" />
             <e p="ai" t="Include">
               <e p="AIBehaviour.cs" t="Include" />
               <e p="AIBeliefs.cs" t="Include" />
@@ -433,15 +427,17 @@
               <e p="ShootBehaviour.cs" t="Include" />
               <e p="SideStepBehaviour.cs" t="Include" />
             </e>
-            <e p="CameraController.cs" t="Include" />
             <e p="CharacterControl.cs" t="Include" />
             <e p="FPSMovementControl.cs" t="Include" />
+            <e p="input" t="Include">
+              <e p="AbstractCharacterInput.cs" t="Include" />
+              <e p="JoystickCharacterInput.cs" t="Include" />
+              <e p="PlayerCharacterInput.cs" t="Include" />
+              <e p="PlayerControls.cs" t="Include" />
+            </e>
             <e p="InteractControl.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
-            <e p="JoystickCharacterInput.cs" t="Include" />
             <e p="MovementControl.cs" t="Include" />
-            <e p="PlayerCharacterInput.cs" t="Include" />
-            <e p="PlayerControls.cs" t="Include" />
             <e p="RagdollController.cs" t="Include" />
           </e>
           <e p="Follow.cs" t="Include" />
@@ -456,10 +452,17 @@
           <e p="objects" t="Include">
             <e p="AttachedEffect.cs" t="Include" />
             <e p="AttachedEffectManager.cs" t="Include" />
+            <e p="HitBoxWorldObject.cs" t="Include" />
             <e p="IItemUser.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="IWorldObject.cs" t="Include" />
             <e p="WorldObject.cs" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="Tests" t="Include">
+              <e p="NewTestScript.cs" t="Include" />
+              <e p="Tests.asmdef" t="Include" />
+            </e>
           </e>
           <e p="util" t="Include">
             <e p="FPS All-In-One" t="Include">
@@ -490,9 +493,9 @@
             </e>
           </e>
           <e p="weapons" t="Include">
+            <e p="BasicWeaponEffect.cs" t="Include" />
             <e p="NewFile1.txt" t="Include" />
             <e p="Projectile.cs" t="Include" />
-            <e p="SpellCaster.cs" t="Include" />
             <e p="spells" t="Include">
               <e p="aquio" t="Include">
                 <e p="SpellWater.cs" t="Include" />
@@ -519,6 +522,10 @@
                 <e p="IgniteEffect.cs" t="Include" />
                 <e p="SpellFire.cs" t="Include" />
               </e>
+              <e p="healio" t="Include">
+                <e p="HealthEffect.cs" t="Include" />
+                <e p="HealthSpell.cs" t="Include" />
+              </e>
               <e p="maxio" t="Include">
                 <e p="InflateEffect.cs" t="Include" />
                 <e p="SpellScale.cs" t="Include" />
@@ -529,24 +536,24 @@
               <e p="ragdoll" t="Include">
                 <e p="RagdollEffect.cs" t="Include" />
               </e>
-              <e p="SpellConjure.cs" t="Include" />
-              <e p="SpellShield.cs" t="Include" />
-              <e p="SpellTrap.cs" t="Include" />
               <e p="tractio" t="Include">
                 <e p="AttractEffect.cs" t="Include" />
                 <e p="SpellAttract.cs" t="Include" />
               </e>
-              <e p="WeaponEffectBaton.cs" t="Include" />
               <e p="whale" t="Include">
                 <e p="WhaleProjectile.cs" t="Include" />
                 <e p="WhaleWeaponEffect.cs" t="Include" />
               </e>
             </e>
-            <e p="Weapon.cs" t="Include" />
             <e p="weaponeffects" t="Include">
               <e p="AbstractProjectileWeaponEffect.cs" t="Include" />
               <e p="AbstractWeaponEffect.cs" t="Include" />
               <e p="GunEffect.cs" t="Include" />
+              <e p="Recoil.cs" t="Include" />
+            </e>
+            <e p="WeaponItem.cs" t="Include" />
+            <e p="weapons" t="Include">
+              <e p="Detonator.cs" t="Include" />
             </e>
           </e>
           <e p="world" t="Include">
@@ -588,6 +595,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
     </e>
     <e p="C:\Users\trist\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\trist\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Capstone.1146734679.00" t="ExcludeRecursive" />

@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEditor;
 using UnityEngine;
 
+[Serializable]
 public class AIBeliefs
 {
     public GameObject target;
@@ -50,7 +52,7 @@ public class AIBeliefs
 
     public bool isTargetVisible()
     {
-        return target != null && isVisible(target, 1000);
+        return target != null && isVisible(target, sightRadius);
     }
 
     public GameObject objectAimedAt()

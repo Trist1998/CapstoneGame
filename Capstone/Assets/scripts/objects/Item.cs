@@ -63,4 +63,15 @@ public class Item: MonoBehaviour, IWorldObject
     {
         return 0;
     }
+    
+    public virtual string getDisplayAmmo()
+    {
+        return "";
+    }
+    
+    public virtual string getDisplayCombo()
+    {
+        return "";
+    }
+    
 }

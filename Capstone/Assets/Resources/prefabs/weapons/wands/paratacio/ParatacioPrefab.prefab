@@ -123,20 +123,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 0
-  maxActiveAmmo: 1000
-  activeAmmo: 1000
-  primaryReloadTime: 1
-  maxReserveAmmo: 10000
-  reserveAmmo: 0
-  primaryResetTime: 0
+  maxActiveAmmo: 10
+  activeAmmo: 10
+  primaryReloadTime: 3
+  maxReserveAmmo: 30
+  reserveAmmo: 30
+  primaryResetTime: 1
   secondaryResetTime: 0
-  primaryAutomaticFire: 1
+  primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
   primaryMuzzleFlash: {fileID: 19800004, guid: bcf46e46336114145b09deb1db11d480, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
@@ -153,30 +153,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287949608a50280428a658153f5de32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
     spatialBlend: 1
     source: {fileID: 0}
-  secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitEffect: {fileID: 198856239026640498, guid: aaf754be1b72c774a85ae92a0f519ec1,
+    type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
     spatialBlend: 1
     source: {fileID: 0}
   comboPoints: 0
-  maxComboPoints: 1
-  damagePerSecond: 5
+  maxComboPoints: 10
+  damage: 30
   lightningBolt: {fileID: 11413728, guid: 52a86b40d82b5ff4a9adb1db44174b56, type: 3}
+  bigLightningBolt: {fileID: 11413728, guid: 3c637926285f4ac4ab18bfb2d49bf3d1, type: 3}
+  blastRadius: 7.5
+  blastDamage: 2000
+  blastForce: 100
 --- !u!82 &5112310336221661050
 AudioSource:
   m_ObjectHideFlags: 0
@@ -379,8 +384,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6

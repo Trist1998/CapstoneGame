@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[Serializable]
 public class Inventory
 {
     public static readonly string SLOT_PRIMARY = "primary";
     public static readonly string SLOT_SECONDARY = "secondary";
     
+    [SerializeField]
     private List<Item> items;
     private Dictionary<string, Item> slots;
     private IItemUser user;
@@ -40,6 +42,7 @@ public class Inventory
         if(getPrimaryItem() != null)
             setSecondaryItem(getPrimaryItem());
         setPrimaryItem(item);
+        slots[item.getItemName()] = item;
     }
 
     /**
@@ -78,7 +81,9 @@ public class Inventory
         item.unequipItem();
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.GetComponent<Rigidbody>().detectCollisions = true;
+        item.GetComponent<Rigidbody>().AddForce(user.getItemAimDirection() * 2, ForceMode.VelocityChange);
         items.Remove(item);
+        slots.Remove(item.getItemName());
     }
 
     /**
@@ -146,7 +151,7 @@ public class Inventory
     }
 
     /**
-     * Returns the item of a given event
+     * Returns the item of a given id
      */
     public Item getSlotItem(string slotId)
     { 
@@ -155,14 +160,28 @@ public class Inventory
         return null;
     }
 
+    /**
+     * Sets the primary weapon to the next weapon in the inventory
+     */
     public void nextItem()
     {
         currentPos++;
         if (currentPos >= items.Count)
             currentPos = 0;
-        swapPrimaryWeapon();
-        setPrimaryItem(items[currentPos]);
+        if(items.Count > 0)
+            setPrimaryItem(items[currentPos]);
+    }
+    
+    /**
+     * Sets the primary weapon to the previous weapon in the inventory
+     */
+    public void prevItem()
+    {
+        currentPos--;
+        if (currentPos < 0)
+            currentPos = items.Count - 1;
         
-
+        if(items.Count > 0)
+            setPrimaryItem(items[currentPos]);
     }
 }

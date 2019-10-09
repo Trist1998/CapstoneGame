@@ -120,7 +120,8 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
 
     public void addComboPoints(float amount)
     {
-        comboPoints = Mathf.Clamp(comboPoints, 0, maxComboPoints);
+        print(amount);
+        comboPoints = Mathf.Clamp(comboPoints + amount, 0, maxComboPoints);
     }
 }
 

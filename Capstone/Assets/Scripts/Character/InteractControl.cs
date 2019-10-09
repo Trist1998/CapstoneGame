@@ -9,9 +9,12 @@ public class InteractControl : MonoBehaviour, IItemUser
     public float range = 1000f;
     private Camera playerCamera;
     private AbstractCharacterInput characterInput;
-    [SerializeField] private bool interactEnabled = true;
+    [SerializeField] 
+    private bool interactEnabled = true;
+    [SerializeField]
     private Inventory inventory;
-    [SerializeField] private GameObject handBone;
+    [SerializeField] 
+    private GameObject handBone;
 
 
     private void Start()
@@ -52,9 +55,9 @@ public class InteractControl : MonoBehaviour, IItemUser
             inventory.nextItem();
         }
 
-        if (characterInput.getSwapPrimary())
+        if (characterInput.getPrevItem())
         {
-            inventory.swapPrimaryWeapon();
+            inventory.prevItem();
         }
         else if (characterInput.getDropPrimary())
         {
@@ -125,5 +128,10 @@ public class InteractControl : MonoBehaviour, IItemUser
     public Inventory getInventory()
     {
         return inventory;
+    }
+    
+    public GameObject getGameObject()
+    {
+        return gameObject;
     }
 }

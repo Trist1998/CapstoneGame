@@ -25,13 +25,17 @@ public class HUD : MonoBehaviour
     void FixedUpdate()
     {
         healthContent.fillAmount = obj.hitPoints/obj.maxHitPoints;
+        health.GetComponentInChildren<Text>().text = ((int)obj.hitPoints)+"/"+obj.maxHitPoints;
         IItemUser user = obj.GetComponent<IItemUser>();
         if (user != null && user.getEquippedItem() != null)
         {
             energy.SetActive(true);
             star.SetActive(true);
+            Item item = user.getEquippedItem();
+            energy.GetComponentInChildren<Text>().text = item.getDisplayAmmo();
             energyContent.fillAmount = user.getEquippedItem().getAmmoPercentage();
             starContent.fillAmount = user.getEquippedItem().getComboPercentage();
+            star.GetComponentInChildren<Text>().text = item.getDisplayCombo();
         }
         else
         {

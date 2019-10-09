@@ -8,7 +8,7 @@ public class HealthSpell : AbstractProjectileWeaponEffect
     public float duration;
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
-        Collider[] objects = Physics.OverlapSphere(transform.position, 4.5f, LayerMask.GetMask("Destructable"));
+        Collider[] objects = Physics.OverlapSphere(transform.position, 4.5f);
         foreach (var colliderObject in objects)
         {
             WorldObject wO = hit.GetComponent<WorldObject>();
@@ -20,5 +20,10 @@ public class HealthSpell : AbstractProjectileWeaponEffect
             
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
+    }
+    
+    public override string getName()
+    {
+        return "Healio (Soothes the pain)";
     }
 }

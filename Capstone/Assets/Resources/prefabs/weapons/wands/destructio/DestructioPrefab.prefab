@@ -132,7 +132,7 @@ MonoBehaviour:
   activeAmmo: 3
   primaryReloadTime: 5
   maxReserveAmmo: 9
-  reserveAmmo: 0
+  reserveAmmo: 9
   primaryResetTime: 0.4
   secondaryResetTime: 0
   primaryAutomaticFire: 1

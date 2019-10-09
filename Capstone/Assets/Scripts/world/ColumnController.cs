@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 
-public class ColumnController : WorldObject
+public class ColumnController : MonoBehaviour, IWorldObject
 {
     public GameManager manager;
     public Item weapon;
@@ -21,7 +21,7 @@ public class ColumnController : WorldObject
     private Vector3 activePosition;
     public float height;
 
-    protected override void Start()
+    protected void Start()
     {
         if (manager == null) 
             manager = transform.root.GetComponent<GameManager>();
@@ -29,16 +29,18 @@ public class ColumnController : WorldObject
         activePosition = transform.position;
         if(!active)
             transform.position -= new Vector3(0,height,0);
-        base.Start();
     }
     
-    public override void interact(IItemUser user)
+    public void interact(IItemUser user)
     {
-        if (user.getEquippedItem()?.GetComponent<AbstractWeaponEffect>()?.getName() ==
-            weapon.GetComponent<AbstractWeaponEffect>().getName())
+        InteractControl interact = user.getGameObject().GetComponent<InteractControl>();
+        if (interact == null) return;
+        print("Weapon name " + weapon.getItemName());
+        Item item = interact.getInventory().getSlotItem(weapon.getItemName());
+        if (item != null)
         {
             if (manager.getScore() < costOfAmmo) return;
-            user.getEquippedItem().GetComponent<SpellCaster>().addReserveAmmo(amountOfAmmo);
+            item.GetComponent<WeaponItem>().addReserveAmmo(amountOfAmmo);
             manager.changeScore(-1*costOfAmmo);
         }
         else

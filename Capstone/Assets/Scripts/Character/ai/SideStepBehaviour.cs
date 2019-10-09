@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
+[Serializable]
 public class SideStepBehaviour: AIBehaviour
 {
     private bool right;
