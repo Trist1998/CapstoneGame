@@ -17961,6 +17961,12 @@ PrefabInstance:
       propertyPath: damage
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 182692448033678139, guid: 6d100eae9dc5caf40ad67ccee62c0094,
+        type: 3}
+      propertyPath: primaryOnHitEffect
+      value: 
+      objectReference: {fileID: 198341595340134300, guid: d2e4f6ae00b8b344da71f6ac40271664,
+        type: 3}
     - target: {fileID: 6251240869301885327, guid: 6d100eae9dc5caf40ad67ccee62c0094,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -19147,7 +19153,7 @@ PrefabInstance:
     - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.42
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
         type: 3}
