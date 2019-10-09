@@ -7,12 +7,17 @@ public class WorldObject : MonoBehaviour, IWorldObject
 {
     [SerializeField]
     private Spawner spawner;
-    public bool destructable;
-    public float hitPoints = 1000f;
-    public float maxHitPoints;
-    public float timeToDestroy;//Time after death before gameobject destroyed
+    [SerializeField]
+    private bool destructable;
+    [SerializeField]
+    private float hitPoints = 1000f;
+    [SerializeField]
+    private float maxHitPoints;
+    [SerializeField]
+    private float timeToDestroy;//Time after death before gameobject destroyed
 
-    public GameObject explosion;
+    [SerializeField]
+    private ParticleSystem explosion;
     public int rewardPoints;//Points receive for destroying object
 
     protected virtual void Start()
@@ -61,13 +66,13 @@ public class WorldObject : MonoBehaviour, IWorldObject
         Destroy(this);
     }
 
-    private void explode()
+    public void explode()
     {
         if (explosion == null) return;
         
-        ParticleSystem particles = Instantiate(explosion.GetComponent<ParticleSystem>(), transform.position, transform.rotation);
+        ParticleSystem particles = Instantiate(explosion, transform.position, transform.rotation);
         particles.Play();
-        Destroy(gameObject, particles.main.duration);
+        Destroy(gameObject);
     }
 
     public bool isDead()
@@ -85,4 +90,22 @@ public class WorldObject : MonoBehaviour, IWorldObject
     {
         this.hitPoints = hitPoints;
     }
+
+    public float getHitPoints()
+    {
+        return hitPoints;
+    }
+    
+    public float getMaxHitPoints()
+    {
+        return maxHitPoints;
+    }
+
+    public void setHitPoints(float amount)
+    {
+        hitPoints = amount;
+    }
+    
+    
+    
 }
