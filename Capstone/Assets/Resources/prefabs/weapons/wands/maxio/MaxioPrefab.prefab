@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemName: Maxio
   description: Basically me every holiday season
   equipable: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   secondarySound: {fileID: -6378354348850711328}
   cantFireSound:
     clip: {fileID: 8300000, guid: 15e0da1ab45e8f946a4367138719d234, type: 3}
-    name:
+    name: 
     volume: 0.1
     pitch: 1
     loop: 0
@@ -168,12 +168,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6781e0d23e02d444d8a18825708ce2cd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 8300000, guid: 6157507bd6a8bcf46ade7d5d2178c848, type: 3}
-    name:
+    name: 
     volume: 1
     pitch: 1
     loop: 0
@@ -182,12 +182,12 @@ MonoBehaviour:
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
-    clip: {fileID: 0}
-    name:
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: 490c837b6981d3445abde155c8bc8a8f, type: 3}
+    name: 
+    volume: 1
+    pitch: 1
     loop: 0
-    spatialBlend: 0
+    spatialBlend: 1
     length: 0
     source: {fileID: 0}
   range: 40
@@ -201,18 +201,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
-  PositionDampTime: 6
-  RotationDampTime: 8
+  PositionDampTime: 3
+  RotationDampTime: 4
   Recoil1: 33
   Recoil2: 55
   Recoil3: 35
   Recoil4: 50
   RecoilRotation: {x: -10, y: 5, z: 6}
-  RecoilKickBack: {x: 0.015, y: 0.1, z: -0.075}
+  RecoilKickBack: {x: -1, y: 0, z: -1.5}
   CurrentRecoil1: {x: 0, y: 0, z: 0}
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}

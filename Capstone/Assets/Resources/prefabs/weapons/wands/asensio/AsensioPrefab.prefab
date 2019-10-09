@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemName: Asensio
   description: Lifting Charm
   equipable: 1
@@ -132,11 +132,11 @@ MonoBehaviour:
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 1
-  maxActiveAmmo: 1000
-  activeAmmo: 1000
+  maxActiveAmmo: 500
+  activeAmmo: 500
   primaryReloadTime: 1
-  maxReserveAmmo: 10000
-  reserveAmmo: 10000
+  maxReserveAmmo: 5000
+  reserveAmmo: 5000
   hasCombo: 0
   comboPoints: 0
   maxComboPoints: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   secondarySound: {fileID: 0}
   cantFireSound:
     clip: {fileID: 8300000, guid: 15e0da1ab45e8f946a4367138719d234, type: 3}
-    name:
+    name: 
     volume: 0.1
     pitch: 1
     loop: 0
@@ -168,12 +168,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f63b27abcaa23541ab847e86a918b2d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 0}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
@@ -183,14 +183,14 @@ MonoBehaviour:
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
     spatialBlend: 0
     length: 0
     source: {fileID: 0}
-  shootForwardForce: 25
+  shootForwardForce: 35
 --- !u!82 &2519482174069729295
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6
@@ -308,7 +308,7 @@ MonoBehaviour:
   Recoil3: 35
   Recoil4: 50
   RecoilRotation: {x: -10, y: 4, z: 6}
-  RecoilKickBack: {x: 0.015, y: 0.01, z: 0.015}
+  RecoilKickBack: {x: -1, y: 1, z: -1.5}
   CurrentRecoil1: {x: 0, y: 0, z: 0}
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}

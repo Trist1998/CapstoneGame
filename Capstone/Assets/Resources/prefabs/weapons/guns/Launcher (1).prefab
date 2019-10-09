@@ -61,7 +61,7 @@ MonoBehaviour:
   hasCombo: 0
   comboPoints: 0
   maxComboPoints: 0
-  primaryResetTime: 0.5
+  primaryResetTime: 1
   secondaryResetTime: 0
   primaryAutomaticFire: 0
   secondaryAutomaticFire: 0
@@ -69,7 +69,15 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
-  cantFireSound: {fileID: 0}
+  cantFireSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 1
+    length: 0
+    source: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &8984713577224461823
 MonoBehaviour:
@@ -106,7 +114,7 @@ MonoBehaviour:
     source: {fileID: 0}
   speed: 30
   lifeTime: 10
-  projectilePrefab: {fileID: 5237790628494967255, guid: 8f306fffaec787d42a21f12a27b44c8f,
+  projectilePrefab: {fileID: 5237790628494967255, guid: c1ac26954f9eeee4aa0f92f5162fb3a5,
     type: 3}
   useGravity: 0
   blastRadius: 5

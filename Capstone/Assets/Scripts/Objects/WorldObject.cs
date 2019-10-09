@@ -104,6 +104,11 @@ public class WorldObject : MonoBehaviour, IWorldObject
     {
         hitPoints = amount;
     }
+
+    public bool isDestructable()
+    {
+        return destructable;
+    }
     
     
     

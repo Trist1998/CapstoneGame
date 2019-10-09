@@ -46,7 +46,11 @@ public class ColumnController : MonoBehaviour, IWorldObject
     [SerializeField]
     private TextMesh textMesh;
     private GameObject lookAt;
+    private bool up;
     
+    /*
+     * Used to control the Buy columns
+     */
     protected void Start()
     {
         if (manager == null) 
@@ -56,8 +60,13 @@ public class ColumnController : MonoBehaviour, IWorldObject
         if(!active)
             transform.position -= new Vector3(0,height,0);
         textMesh.text = weapon.getItemName() + ": " + costOfWeapon + "\nAmmo: " + costOfAmmo;
+        up = active;
     }
     
+    /*
+     * When the player interactss with the column it checks if they have enough
+     * and whether they need ammo or the weapon by checking the inventory
+     */
     public void interact(IItemUser user)
     {
         InteractControl interact = user.getGameObject().GetComponent<InteractControl>();
@@ -69,6 +78,7 @@ public class ColumnController : MonoBehaviour, IWorldObject
             if (manager.getScore() < costOfAmmo && weaponItem.getReserveAmmo() != weaponItem.getMaxReserveAmmo()) return;
             weaponItem.addReserveAmmo(amountOfAmmo);
             manager.changePoints(-1*costOfAmmo);
+            buySound.playSound(transform.position);
         }
         else
         {
@@ -76,9 +86,13 @@ public class ColumnController : MonoBehaviour, IWorldObject
             user.addItem(weapon);
             manager.changePoints(-1*costOfWeapon);
             instantiateNewWeapon();
+            buySound.playSound(transform.position);
         }
     }
 
+    /*
+     * Instantiates a new weapon to display
+     */
     private void instantiateNewWeapon()
     {
         weapon = Instantiate(weapon, transform.position, new Quaternion(), null);
@@ -89,6 +103,10 @@ public class ColumnController : MonoBehaviour, IWorldObject
         weapon.transform.localPosition = Vector3.zero;
         
     }
+    
+    /*
+     * Moves the column up and down and make the text face toward the player
+     */
     private void FixedUpdate()
     {
         if (lookAt != null)
@@ -104,29 +122,40 @@ public class ColumnController : MonoBehaviour, IWorldObject
         if(manager == null)
             return;
         float diff = (activePosition - transform.position).y;
-        if (!manager.waveInProgress())
+        if (!manager.waveInProgress() && !up)
         {
+            if (soundObject == null)
+                soundObject = decentSound?.playSound(transform.position);
             textMesh.gameObject.SetActive(lookAt != null);
-            if (diff > 0)
+            transform.position += new Vector3(0, decentSpeed, 0) * Time.deltaTime;
+            if (diff <= 0)
             {
-                if (soundObject == null)
-                    soundObject = decentSound?.playSound(transform.position);
-                transform.position += new Vector3(0, decentSpeed, 0) * Time.deltaTime;
-            }
-            else
-            {
+                Destroy(soundObject);
+                soundObject = null;
                 transform.position = activePosition;
+                up = true;
             }
             return;
         }
 
-        if (manager.waveInProgress() && diff > height) return;
+        if (!manager.waveInProgress() || !up) return;
+
         textMesh.gameObject.SetActive(false);
         if (soundObject == null)
             soundObject = decentSound?.playSound(transform.position);
         transform.position += new Vector3(0, -1 * decentSpeed, 0) * Time.deltaTime;
+        if (diff >= height)
+        {
+            up = false;
+            Destroy(soundObject);
+            soundObject = null;
+        }
     }
 
+    /*
+     * Sets the target of the text to look at when the player gets close
+     * and hides the text
+     */
     private void OnTriggerEnter(Collider other)
     {
         
@@ -139,6 +168,10 @@ public class ColumnController : MonoBehaviour, IWorldObject
         
     }
     
+    /*
+     * Removes the target of the text to look at when the player gets far
+     * and hides the text
+     */
     private void OnTriggerExit(Collider other)
     {
         

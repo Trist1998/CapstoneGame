@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class AICharacter : AbstractCharacterControl, IItemUser
 {
+    [SerializeField]
     private bool aiEnabled;
     public GameObject head;
     public GameObject handbone;
