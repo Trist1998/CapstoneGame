@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +10,11 @@ public class Item: MonoBehaviour, IWorldObject
     [SerializeField] 
     private string description;
     [SerializeField]
-    public bool equipable;
-    
+    public bool equipable = true;
+    [SerializeField]
+    public GameObject modelPrefab;
+
+    private GameObject characterModel;
     public Vector3 relativePosition;
     public Vector3 relativeRotation;
     public IItemUser user;
@@ -19,7 +23,7 @@ public class Item: MonoBehaviour, IWorldObject
     {
         float dist = Vector3.Distance(user.getHandBone().transform.position, transform.position);
 
-        if (user != null && dist < 5)
+        if (user != null && dist < 5 && equipable)
         {
             user.addItem(this);
         }
@@ -33,13 +37,36 @@ public class Item: MonoBehaviour, IWorldObject
     public virtual void equipItem(IItemUser user)
     {
         this.user = user;
+        setLayerRecursively(gameObject, user.getHandBone().layer);
+        InteractControl control = user.getGameObject().GetComponent<InteractControl>();
+        if (control == null) return;
+        GameObject hand = control.getHandBoneCharacter();
+
+        characterModel = Instantiate(modelPrefab, hand.transform.position, hand.transform.rotation);
+
+        characterModel.transform.parent = hand.transform;
+        characterModel.layer = hand.layer;
     }
-    
+
     public virtual void unequipItem()
     {
+        setLayerRecursively(gameObject, LayerMask.NameToLayer("Default"));
         user = null;
+        Destroy(characterModel);
     }
-    
+
+    private void OnDisable()
+    {
+        if(characterModel != null)
+            characterModel.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        if(characterModel != null)
+            characterModel.SetActive(true);
+    }
+
 
     public virtual void usePrimaryActionDown()
     {}
@@ -97,5 +124,15 @@ public class Item: MonoBehaviour, IWorldObject
     {
     }
 
-    
+    private void setLayerRecursively(GameObject obj, int newLayer)
+    {
+        if (null == obj)
+            return;
+        obj.layer = newLayer;
+        foreach (Transform child in obj.transform)
+        {
+            if (null == child) continue;
+            setLayerRecursively(child.gameObject, newLayer);
+        }
+    }
 }

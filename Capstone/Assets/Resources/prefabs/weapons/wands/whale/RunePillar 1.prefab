@@ -51,6 +51,8 @@ MonoBehaviour:
   itemName: The Capstone
   description: The Ancient Relic
   equipable: 1
+  modelPrefab: {fileID: 1742858173413876, guid: 0854152c2a412bc4fb6c35620d536d11,
+    type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 0, y: 0, z: 0}
   infiniteAmmo: 0

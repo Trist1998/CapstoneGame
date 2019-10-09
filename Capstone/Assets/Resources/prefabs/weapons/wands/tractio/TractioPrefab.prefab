@@ -127,6 +127,7 @@ MonoBehaviour:
   itemName: Tractio
   description: Very attractive
   equipable: 1
+  modelPrefab: {fileID: 180010, guid: 3fe982a47bf3d784c996a42df93135e0, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 1
@@ -146,6 +147,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5952529700376387963}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &7630551374814616762
 MonoBehaviour:
@@ -181,8 +183,6 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   effectLifeTime: 10
   force: 5
 --- !u!82 &5952529700376387963

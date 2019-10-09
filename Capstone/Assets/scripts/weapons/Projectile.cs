@@ -11,6 +11,9 @@ public class Projectile : MonoBehaviour
     private bool hitObject = false;
     private bool primaryEffect = true;
     
+    /*
+     * Projectile Component is used to send the hit data back to the weapon effect that fired it
+     */
     void Start()
     {
         

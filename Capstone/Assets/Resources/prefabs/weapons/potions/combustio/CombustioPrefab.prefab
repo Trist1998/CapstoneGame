@@ -311,7 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Combustio
   description: Fuels the fire
-  equipable: 0
+  equipable: 1
+  modelPrefab: {fileID: 1891390126468666, guid: 6cc9c3879eca3f749ad2d3a72b1c2371,
+    type: 3}
   relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
   infiniteAmmo: 0
@@ -331,6 +333,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &189178613068842005
 MonoBehaviour:
@@ -365,8 +368,6 @@ MonoBehaviour:
     spatialBlend: 0
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   speed: 25
   lifeTime: 10
   projectilePrefab: {fileID: 7956118424525028636, guid: aa859682c6b865d438c2e6222508b3a4,

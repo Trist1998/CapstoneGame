@@ -3085,7 +3085,7 @@ GameObject:
   - component: {fileID: 1976831919565909152}
   - component: {fileID: 1976831919565909156}
   - component: {fileID: 1976831919565909159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PowerSuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3172,11 +3172,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   destructable: 1
-  impulseThreshold: 0
-  timeToDestroy: 3
-  projectile: 0
-  maxHitPoints: 100
   hitPoints: 100
+  maxHitPoints: 100
+  timeToDestroy: 3
   explosion: {fileID: 0}
   rewardPoints: 15
   characterTypeId: 0

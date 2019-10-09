@@ -127,6 +127,7 @@ MonoBehaviour:
   itemName: Asensio
   description: Lifting Charm
   equipable: 1
+  modelPrefab: {fileID: 107642, guid: fd68d700817efe54a915750ee70bbe80, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 1
@@ -146,6 +147,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 2519482174069729295}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &3154727308967531328
 MonoBehaviour:
@@ -179,14 +181,7 @@ MonoBehaviour:
     spatialBlend: 0
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 0
   shootForwardForce: 25
-  whalePrefab: {fileID: 2544207800837672384, guid: debd2150809f4f344abd3b64c9bbb094,
-    type: 3}
-  blastRadius: 15
-  force: 50
-  damage: 500
 --- !u!82 &2519482174069729295
 AudioSource:
   m_ObjectHideFlags: 0

@@ -299,8 +299,6 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   speed: 25
   lifeTime: 5
   projectilePrefab: {fileID: -2267747257180926607, guid: 51ab7edf7371cf543afa1f9bee576e97,
@@ -323,6 +321,8 @@ MonoBehaviour:
   itemName: Boomio
   description: Makes Boom!
   equipable: 1
+  modelPrefab: {fileID: 1021588353636906, guid: 0efdea5a66a89bf41ace544de4423f46,
+    type: 3}
   relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
   infiniteAmmo: 0
@@ -342,6 +342,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5028033161731730845}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 222412218284568785}
 --- !u!82 &5028033161731730845
 AudioSource:

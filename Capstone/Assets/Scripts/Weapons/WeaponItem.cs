@@ -96,7 +96,8 @@ public class WeaponItem : Item
         fired = true;
         if (infiniteAmmo || activeAmmo > 0) return true;
         
-        cantFireSound.Play();
+        if(cantFireSound != null)
+            cantFireSound.Play();
         return false;
 
     }
@@ -233,7 +234,7 @@ public class WeaponItem : Item
     
     public override bool requireComboBar()
     {
-        return true;
+        return hasCombo;
     }
 
     public int getReserveAmmo()

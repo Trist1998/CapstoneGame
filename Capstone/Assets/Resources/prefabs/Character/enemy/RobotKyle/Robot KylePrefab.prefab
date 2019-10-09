@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 5134419580095670113}
   - component: {fileID: 6848787977683274297}
   - component: {fileID: 781958699134216961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robot KylePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,11 +410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   destructable: 1
-  impulseThreshold: 0
-  timeToDestroy: 3
-  projectile: 0
-  maxHitPoints: 50
   hitPoints: 50
+  maxHitPoints: 50
+  timeToDestroy: 3
   explosion: {fileID: 0}
   rewardPoints: 10
   characterTypeId: 0
@@ -2642,6 +2640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grenade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5617838965259986402, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6231611870951622742, guid: d53d699eaf0060b4ebcba9df4c758e1f,
         type: 3}
       propertyPath: timeDelay
@@ -2701,6 +2704,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041648769123363143, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970672236163406848, guid: d53d699eaf0060b4ebcba9df4c758e1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d53d699eaf0060b4ebcba9df4c758e1f, type: 3}

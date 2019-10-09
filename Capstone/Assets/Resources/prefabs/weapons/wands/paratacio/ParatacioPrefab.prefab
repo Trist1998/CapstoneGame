@@ -128,6 +128,7 @@ MonoBehaviour:
   itemName: Paratacio
   description: Its shocking
   equipable: 1
+  modelPrefab: {fileID: 121470, guid: 71c5f692565894c4fa9d655010f70804, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5112310336221661050}
   secondarySound: {fileID: 3267944475014215464}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &616092207075370072
 MonoBehaviour:
@@ -181,8 +183,6 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 10
   damage: 30
   lightningBolt: {fileID: 11413728, guid: 52a86b40d82b5ff4a9adb1db44174b56, type: 3}
   bigLightningBolt: {fileID: 11413728, guid: 3c637926285f4ac4ab18bfb2d49bf3d1, type: 3}

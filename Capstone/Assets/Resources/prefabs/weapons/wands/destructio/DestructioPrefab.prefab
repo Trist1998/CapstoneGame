@@ -127,6 +127,7 @@ MonoBehaviour:
   itemName: Destructio
   description: With 20% more Boom!
   equipable: 1
+  modelPrefab: {fileID: 165888, guid: 8714b45f0e308d44992d04e923b64df1, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 0
