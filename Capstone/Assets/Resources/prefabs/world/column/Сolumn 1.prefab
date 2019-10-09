@@ -323,7 +323,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed8287819c7b74241a1e8fd4c7d8be7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   manager: {fileID: 0}
   active: 1
   weapon: {fileID: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
   decentSpeed: 0
   decentSound:
     clip: {fileID: 8300000, guid: 0d28f2768610f4d4c80f678396c2f70e, type: 3}
-    name: 
+    name:
     volume: 1.33
     pitch: 1
     loop: 0
@@ -359,10 +359,10 @@ MonoBehaviour:
     length: 4
     source: {fileID: 0}
   buySound:
-    clip: {fileID: 0}
-    name: 
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: e4ca3c8359789bb409bf3a88ab2ec610, type: 3}
+    name:
+    volume: 2.79
+    pitch: 1
     loop: 0
     spatialBlend: 1
     length: 0
