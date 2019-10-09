@@ -45,7 +45,7 @@ public class Item: MonoBehaviour, IWorldObject
         characterModel = Instantiate(modelPrefab, hand.transform.position, hand.transform.rotation);
 
         characterModel.transform.parent = hand.transform;
-        characterModel.layer = hand.layer;
+        setLayerRecursively(characterModel, hand.layer);
     }
 
     public virtual void unequipItem()

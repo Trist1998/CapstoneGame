@@ -147,7 +147,15 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5952529700376387963}
   secondarySound: {fileID: 0}
-  cantFireSound: {fileID: 0}
+  cantFireSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0.1
+    length: 0
+    source: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &7630551374814616762
 MonoBehaviour:

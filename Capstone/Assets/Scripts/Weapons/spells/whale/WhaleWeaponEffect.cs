@@ -30,8 +30,9 @@ public class WhaleWeaponEffect : AbstractWeaponEffect
                 if (c != null)
                 {
                     c.gameObject.AddComponent<RagdollEffect>().startEffect(1.5f);
-                    
                     c.takeDamage(0.5f * damage * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1));
+                    if(c.isDead())
+                        c.explode();
                 }
                 rigid.AddForce(force * Mathf.Clamp(1 - displacement.magnitude/blastRadius, 0, 1) * displacement.normalized);
 
