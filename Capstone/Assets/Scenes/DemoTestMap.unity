@@ -1271,10 +1271,25 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7019521013618228657, guid: 257cbd1f541e947439927893998df0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.213
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015803863943466244, guid: 257cbd1f541e947439927893998df0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.385
+      objectReference: {fileID: 0}
     - target: {fileID: 7315399821136050539, guid: 257cbd1f541e947439927893998df0c7,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 928523664260983638, guid: 257cbd1f541e947439927893998df0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 257cbd1f541e947439927893998df0c7, type: 3}
