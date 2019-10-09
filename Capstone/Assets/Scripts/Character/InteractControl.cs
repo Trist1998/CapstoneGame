@@ -15,6 +15,8 @@ public class InteractControl : MonoBehaviour, IItemUser
     private Inventory inventory;
     [SerializeField] 
     private GameObject handBone;
+    [SerializeField]
+    private CharacterControl control;
 
 
     private void Start()
@@ -24,6 +26,7 @@ public class InteractControl : MonoBehaviour, IItemUser
 
     private void Update()
     {
+        if(control.isDead()) return;
         Item primary = getEquippedItem();
         if (primary != null)
         {
@@ -109,10 +112,11 @@ public class InteractControl : MonoBehaviour, IItemUser
         this.handBone = handBone;
     }
 
-    public void setValues(Camera playerCamera, AbstractCharacterInput input)
+    public void setValues(CharacterControl control, Camera playerCamera, AbstractCharacterInput input)
     {
+        this.control = control;
         this.playerCamera = playerCamera;
-        this.characterInput = input;
+        characterInput = input;
     }
 
     public Vector3 getItemAimDirection()

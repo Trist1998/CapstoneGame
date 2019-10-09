@@ -14,6 +14,33 @@ public class Sound
     public bool loop; // True if the sound has to loop otherwise false
     [Range(0f,1f)] 
     public float spatialBlend = 1.0f;
+
+    public float length;
     [HideInInspector]
-    public AudioSource source; // Where audio is played from
+    public AudioSource source;// Where audio is played from
+
+    /*
+     * Plays the sound at the given position
+     */
+    public GameObject playSound(Vector3 pos)
+    {
+        if (clip == null) return null;
+        GameObject g = new GameObject();
+        g = MonoBehaviour.Instantiate(g, pos, Quaternion.identity);
+        AudioSource newSource = g.AddComponent<AudioSource>();
+        newSource.clip = clip;
+        newSource.volume = volume;
+        newSource.pitch = pitch;
+        newSource.loop = loop;
+        newSource.Play();
+        newSource.spatialBlend = spatialBlend;
+        newSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        newSource.maxDistance = 200.0f;
+        newSource.minDistance = 1.0f;
+        if(!loop && length <= 0)
+            MonoBehaviour.Destroy(g, clip.length);
+        else if(!loop && length > 0)
+            MonoBehaviour.Destroy(g, length);
+        return g;
+    }
 }
