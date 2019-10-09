@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
     
     private int noDeaths;
 
+    /*
+     * Manages most aspects of the game set up
+     * i.e. Players, spawners, scores, etc
+     */
     private void Start()
     {
         timer = new GenericTimer(10, false);
@@ -48,6 +52,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    /*
+     * Spawns the enemies
+     * Updates the common UI
+     */
     private void FixedUpdate()
     {
         if (timer == null) return;
@@ -68,6 +76,9 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    /*
+     * Creates crosshairs for the players
+     */
     private void OnGUI()
     {
         float xMin = (Screen.width / (isMultiplayer()?4:2)) - (Crosshair.width / 2);
@@ -78,6 +89,9 @@ public class GameManager : MonoBehaviour
             GUI.DrawTexture(new Rect(xMin + Screen.width/2.0f, yMin, Crosshair.width, Crosshair.height), Crosshair);
     }
 
+    /*
+     * Records death of enemy to make sure wave is done
+     */
     public void recordDeath(int addScore)
     {
         changePoints(addScore);
@@ -86,18 +100,27 @@ public class GameManager : MonoBehaviour
             endWave();
     }
 
+    /*
+     * Sets up the new wave
+     */
     private void endWave()
     {
         waveNo++;
         timer = new GenericTimer(timeBetweenWaves, false);
     }
 
+    /*
+     * Adds points to the counter
+     */
     public void changePoints(int amount)
     {
         score += amount;
         scoreText.text = "Points " + score;
     }
 
+    /*
+     * Getter for the 
+     */
     public int getScore()
     {
         return score;

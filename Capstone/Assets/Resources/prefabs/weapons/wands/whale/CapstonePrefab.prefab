@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5459910086001166469}
   - component: {fileID: 6251240869301885327}
   - component: {fileID: 2634480964823689300}
+  - component: {fileID: 1589091637630054954}
   m_Layer: 0
   m_Name: CapstonePrefab
   m_TagString: Untagged
@@ -54,8 +55,8 @@ MonoBehaviour:
   equipable: 1
   modelPrefab: {fileID: 1742858173413876, guid: 0854152c2a412bc4fb6c35620d536d11,
     type: 3}
-  relativePosition: {x: 0, y: 0, z: 0}
-  relativeRotation: {x: 0, y: 0, z: 0}
+  relativePosition: {x: 0.01, y: -0.22, z: 0.04}
+  relativeRotation: {x: -9.7, y: -77, z: -55}
   infiniteAmmo: 0
   maxActiveAmmo: 0
   activeAmmo: 1
@@ -342,6 +343,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1589091637630054954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698534760266793842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecoilPositionTranform: {fileID: 0}
+  RecoilRotationTranform: {fileID: 0}
+  PositionDampTime: 6
+  RotationDampTime: 9
+  Recoil1: 10
+  Recoil2: 14
+  Recoil3: 25
+  Recoil4: 20
+  RecoilRotation: {x: -15, y: -1, z: -9}
+  RecoilKickBack: {x: 2, y: -0.5, z: 1.5}
+  CurrentRecoil1: {x: 0, y: 0, z: 0}
+  CurrentRecoil2: {x: 0, y: 0, z: 0}
+  CurrentRecoil3: {x: 0, y: 0, z: 0}
+  CurrentRecoil4: {x: 0, y: 0, z: 0}
+  RotationOutput: {x: 0, y: 0, z: 0}
 --- !u!1 &2698722282131041738
 GameObject:
   m_ObjectHideFlags: 0

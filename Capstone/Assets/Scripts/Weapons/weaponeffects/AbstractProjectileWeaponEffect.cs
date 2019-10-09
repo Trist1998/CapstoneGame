@@ -9,6 +9,9 @@ public abstract class AbstractProjectileWeaponEffect : AbstractWeaponEffect
     public Projectile projectilePrefab;
     public bool useGravity;
     
+    /*
+     * Overrides primary fire to file projectile instead
+     */
     public override void primaryFire(Item item)
     {
         Projectile projectile = getProjectile();
@@ -18,6 +21,9 @@ public abstract class AbstractProjectileWeaponEffect : AbstractWeaponEffect
             
     }
 
+    /*
+     * Returns the projectile
+     */
     protected virtual Projectile getProjectile()
     {
         return Instantiate(projectilePrefab);

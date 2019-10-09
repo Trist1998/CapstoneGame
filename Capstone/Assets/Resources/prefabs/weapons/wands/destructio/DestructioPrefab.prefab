@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemName: Destructio
   description: With 20% more Boom!
   equipable: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   secondarySound: {fileID: 0}
   cantFireSound:
     clip: {fileID: 8300000, guid: 15e0da1ab45e8f946a4367138719d234, type: 3}
-    name:
+    name: 
     volume: 0.1
     pitch: 1
     loop: 0
@@ -168,13 +168,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6026e86104e3e4e42a6cf3c26727e732, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198656289721292014, guid: 7db7545785ad3ce498e7c66d67421c43,
     type: 3}
   primaryOnHitSound:
     clip: {fileID: 8300000, guid: 9c79a772d30cd62419c0efa603d1e95b, type: 3}
-    name:
+    name: 
     volume: 2.05
     pitch: 1
     loop: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6
@@ -316,7 +316,7 @@ MonoBehaviour:
   Recoil3: 30
   Recoil4: 56
   RecoilRotation: {x: -10, y: 5, z: 7}
-  RecoilKickBack: {x: 0.015, y: 0.1, z: -0.075}
+  RecoilKickBack: {x: -1, y: 0, z: -1.5}
   CurrentRecoil1: {x: 0, y: 0, z: 0}
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}

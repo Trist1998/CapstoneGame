@@ -10244,12 +10244,12 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 20
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
@@ -10747,17 +10747,17 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: amountOfAmmo
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
@@ -10908,12 +10908,12 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
@@ -11917,17 +11917,17 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 25
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: amountOfAmmo
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}

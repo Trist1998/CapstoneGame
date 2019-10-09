@@ -21,6 +21,7 @@ public class SpellScale : AbstractWeaponEffect
         }
         else if(hit.transform.root.GetComponent<WorldObject>() != null)
         {
+            if (!hit.transform.root.GetComponent<WorldObject>().isDestructable()) return;
             hitObject = hit.transform.root.gameObject.AddComponent<InflateEffect>();
             hitObject.startEffect(secondaryOnHitSound);
             base.processPrimaryHit(item, hit, hitPoint, direction);

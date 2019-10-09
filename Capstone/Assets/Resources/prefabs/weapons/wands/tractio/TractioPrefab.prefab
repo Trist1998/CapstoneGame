@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   itemName: Tractio
   description: Very attractive
   equipable: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   secondarySound: {fileID: 0}
   cantFireSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0.1
     pitch: 1
     loop: 0
@@ -168,13 +168,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d709e638f1c2244993d4cf1ccc511a3, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   primaryOnHitEffect: {fileID: 198696392922457284, guid: b3c86ae2b33025b4d9fc168075c539cb,
     type: 3}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
     type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name:
+    name: 
     volume: 0
     pitch: 0
     loop: 0
@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6
@@ -311,7 +311,7 @@ MonoBehaviour:
   Recoil3: 35
   Recoil4: 55
   RecoilRotation: {x: -11, y: 5, z: 6}
-  RecoilKickBack: {x: 0.015, y: 0.01, z: -0.075}
+  RecoilKickBack: {x: 1, y: 0.01, z: 1.5}
   CurrentRecoil1: {x: 0, y: 0, z: 0}
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}
