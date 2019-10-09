@@ -4805,6 +4805,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 182692448033678139, guid: 6d100eae9dc5caf40ad67ccee62c0094,
+        type: 3}
+      propertyPath: secondaryOnHitSound.volume
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 182692448033678139, guid: 6d100eae9dc5caf40ad67ccee62c0094,
+        type: 3}
+      propertyPath: secondaryOnHitSound.spatialBlend
+      value: 0.697
+      objectReference: {fileID: 0}
+    - target: {fileID: 182692448033678139, guid: 6d100eae9dc5caf40ad67ccee62c0094,
+        type: 3}
+      propertyPath: secondaryOnHitSound.pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d100eae9dc5caf40ad67ccee62c0094, type: 3}
 --- !u!1 &853858168

@@ -35,5 +35,16 @@ public class BoomSpell : AbstractProjectileWeaponEffect
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
     }
+    
+    /**
+     * Plays the particle system of the primary fire on hit effect
+     */
+    protected override void playPrimaryOnHitEffect(GameObject hit, Vector3 hitPoint)
+    {
+        if(primaryOnHitEffect == null) return;
+        ParticleSystem effect = Instantiate(primaryOnHitEffect, hitPoint, Quaternion.identity);
+        effect.transform.position = hitPoint;
+        effect.Play();
+    }
 
 }
