@@ -234,7 +234,7 @@ public class WeaponItem : Item
     
     public override bool requireComboBar()
     {
-        return true;
+        return hasCombo;
     }
 
     public int getReserveAmmo()

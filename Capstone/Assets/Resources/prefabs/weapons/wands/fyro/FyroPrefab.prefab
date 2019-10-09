@@ -110,8 +110,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0431457, y: 0.44495374, z: 0.030954752}
-  m_Center: {x: -0.003032925, y: 0.15938576, z: -0.0010238129}
+  m_Size: {x: 0.093056895, y: 0.4449544, z: 0.057858318}
+  m_Center: {x: -0.00072527723, y: 0.15938608, z: 0.00031736927}
 --- !u!114 &1311801458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +136,9 @@ MonoBehaviour:
   primaryReloadTime: 5
   maxReserveAmmo: 60
   reserveAmmo: 60
-  hasCombo: 0
+  hasCombo: 1
   comboPoints: 0
-  maxComboPoints: 0
+  maxComboPoints: 10
   primaryResetTime: 0.5
   secondaryResetTime: 0
   primaryAutomaticFire: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   primaryMuzzleFlash: {fileID: 19800000, guid: e15f5af5b5f07bd469b5f4f98ed23c39, type: 3}
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 6583348121012171880}
-  secondarySound: {fileID: 0}
+  secondarySound: {fileID: 6583348121012171880}
   cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &6715721628352735977
@@ -172,7 +172,7 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  secondaryOnHitEffect: {fileID: 198714429152696258, guid: 945e605d40627c24a93501626f4826aa,
+  secondaryOnHitEffect: {fileID: 198104970619360998, guid: fe45b510989345144986b23ac7409e22,
     type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
@@ -184,12 +184,16 @@ MonoBehaviour:
     length: 0
     source: {fileID: 0}
   speed: 40
-  lifeTime: 2
+  lifeTime: 10
   projectilePrefab: {fileID: 5237790628494967255, guid: e5917847c37ad7741a05407e864bd3cd,
     type: 3}
   useGravity: 1
   damagePerSecond: 5
   baseDamage: 15
+  fireTime: 2
+  blastRadius: 7.5
+  blastDamage: 25
+  blastFireTime: 5
 --- !u!82 &6583348121012171880
 AudioSource:
   m_ObjectHideFlags: 0
