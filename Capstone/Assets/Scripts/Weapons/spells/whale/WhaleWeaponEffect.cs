@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WhaleWeaponEffect : AbstractWeaponEffect
 {
+    public readonly string SPELL_NAME = "Capstone (Special nuke)";
     public Projectile whalePrefab;
     public float blastRadius;
     public float force;
@@ -38,5 +39,9 @@ public class WhaleWeaponEffect : AbstractWeaponEffect
         }
         base.processSecondaryHit(item, hit, hitPoint, direction);
 
+    }
+    public override string getName()
+    {
+        return SPELL_NAME;
     }
 }
