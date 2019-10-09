@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Character/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Character/input/PlayerControls.inputactions'
 
 using System.Collections;
 using System.Collections.Generic;
@@ -101,6 +101,14 @@ public class PlayerControls : IInputActionCollection
                     ""name"": ""Drop"",
                     ""type"": ""Button"",
                     ""id"": ""c79dd0bf-876d-454d-bcbf-1967e0b8853b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc395016-d5bb-4b1f-991c-af6e945d0cc5"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -227,6 +235,17 @@ public class PlayerControls : IInputActionCollection
                     ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9e7cf9f-6f50-4ffd-974d-c40ecdc022bd"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -246,6 +265,7 @@ public class PlayerControls : IInputActionCollection
         m_Gameplay_SecondaryFire = m_Gameplay.FindAction("SecondaryFire", throwIfNotFound: true);
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_Drop = m_Gameplay.FindAction("Drop", throwIfNotFound: true);
+        m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
     }
 
     ~PlayerControls()
@@ -306,6 +326,7 @@ public class PlayerControls : IInputActionCollection
     private readonly InputAction m_Gameplay_SecondaryFire;
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_Drop;
+    private readonly InputAction m_Gameplay_Reload;
     public struct GameplayActions
     {
         private PlayerControls m_Wrapper;
@@ -321,6 +342,7 @@ public class PlayerControls : IInputActionCollection
         public InputAction @SecondaryFire => m_Wrapper.m_Gameplay_SecondaryFire;
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @Drop => m_Wrapper.m_Gameplay_Drop;
+        public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -363,6 +385,9 @@ public class PlayerControls : IInputActionCollection
                 Drop.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
                 Drop.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
                 Drop.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
+                Reload.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
+                Reload.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
+                Reload.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -400,6 +425,9 @@ public class PlayerControls : IInputActionCollection
                 Drop.started += instance.OnDrop;
                 Drop.performed += instance.OnDrop;
                 Drop.canceled += instance.OnDrop;
+                Reload.started += instance.OnReload;
+                Reload.performed += instance.OnReload;
+                Reload.canceled += instance.OnReload;
             }
         }
     }
@@ -417,5 +445,6 @@ public class PlayerControls : IInputActionCollection
         void OnSecondaryFire(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }
