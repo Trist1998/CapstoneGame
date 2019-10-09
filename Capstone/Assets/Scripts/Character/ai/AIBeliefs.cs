@@ -8,7 +8,7 @@ using UnityEngine;
 [Serializable]
 public class AIBeliefs
 {
-    public GameObject target;
+    public WorldObject target;
     public Vector3 targetLastKnownPos;
     public float sightRadius;
     private AICharacter character;
@@ -29,6 +29,8 @@ public class AIBeliefs
         }
         else
         {
+            if(target.isDead())
+                findTarget();
             if (isTargetVisible())
             {
                 targetLastKnownPos = target.transform.position;
@@ -45,14 +47,14 @@ public class AIBeliefs
             var cControl = colliderObject.gameObject.GetComponent<AbstractCharacterControl>();
             if (cControl == null) continue;
             if (!character.isCharacterEnemy(cControl) || !isVisible(cControl.gameObject, sightRadius)) continue;
-            target = cControl.gameObject;
+            target = cControl;
             break;
         }
     }
 
     public bool isTargetVisible()
     {
-        return target != null && isVisible(target, sightRadius);
+        return target != null && isVisible(target.gameObject, sightRadius);
     }
 
     public GameObject objectAimedAt()

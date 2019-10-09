@@ -64,7 +64,7 @@ public class CharacterControl : AbstractCharacterControl
         unragdoll();
         manager.revivePlayer();
         movement.playerCanMove = true;
-        hitPoints = maxHitPoints * 0.4f;
+        setHitPoints(getMaxHitPoints() * 0.4f);
     }
 
     public override void interact(IItemUser user)

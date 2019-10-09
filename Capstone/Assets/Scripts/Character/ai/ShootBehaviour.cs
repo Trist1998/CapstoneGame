@@ -26,8 +26,8 @@ public class ShootBehaviour : AIBehaviour
     public override bool update()
     {
         if (!isExecutable()) return false;
-        aimCharacter(character.beliefs.target);
-        aimGun(character.beliefs.target);
+        aimCharacter(character.beliefs.target.gameObject);
+        aimGun(character.beliefs.target.gameObject);
         character.weapon.usePrimaryActionDown();
         character.weapon.usePrimaryActionUp();
         return true;
