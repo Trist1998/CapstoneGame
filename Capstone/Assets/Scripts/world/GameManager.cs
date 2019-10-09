@@ -134,6 +134,10 @@ public class GameManager : MonoBehaviour
 
     private void endGame()
     {
+        scoreText.gameObject.SetActive(false);
+        waveText.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0.01f;
         endText.text = "Wave " + waveNo;
         endScreen.gameObject.SetActive(true);

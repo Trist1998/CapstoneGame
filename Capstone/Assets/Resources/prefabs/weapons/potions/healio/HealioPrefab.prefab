@@ -134,7 +134,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 7e0ac07ea7be5fc4e9be2c693837fd6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -312,6 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Healio
+  description: Soothes the pain
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0.12}
   relativeRotation: {x: 0, y: 0, z: 0}
@@ -321,6 +323,9 @@ MonoBehaviour:
   primaryReloadTime: 0
   maxReserveAmmo: 5
   reserveAmmo: 5
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 1
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -351,6 +356,7 @@ MonoBehaviour:
     pitch: 0.72
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -360,6 +366,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1

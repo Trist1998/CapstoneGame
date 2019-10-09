@@ -8,14 +8,12 @@ public class WorldObject : MonoBehaviour, IWorldObject
     [SerializeField]
     private Spawner spawner;
     public bool destructable;
-    
-    public float impulseThreshold;
-    public float timeToDestroy;
-    public bool projectile = false;
-    public float maxHitPoints;
     public float hitPoints = 1000f;
+    public float maxHitPoints;
+    public float timeToDestroy;//Time after death before gameobject destroyed
+
     public GameObject explosion;
-    public int rewardPoints;
+    public int rewardPoints;//Points receive for destroying object
 
     protected virtual void Start()
     {
@@ -28,16 +26,6 @@ public class WorldObject : MonoBehaviour, IWorldObject
     public void setSpawner(Spawner spawner)
     {
         this.spawner = spawner;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (projectile && collision.impulse.magnitude > impulseThreshold)
-        {
-            takeDamage(collision.impulse.magnitude);
-            print(collision.impulse.magnitude + " impulse");
-        }
-
     }
 
     public virtual void destroyObject()

@@ -6,6 +6,11 @@ public class HealthSpell : AbstractProjectileWeaponEffect
 {
     public int addHitPoints;
     public float duration;
+    
+    /*
+     * Weapon effect for Healio
+     * Attaches HealthEffect to WorldObject
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         Collider[] objects = Physics.OverlapSphere(transform.position, 4.5f);
@@ -20,10 +25,5 @@ public class HealthSpell : AbstractProjectileWeaponEffect
             
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
-    }
-    
-    public override string getName()
-    {
-        return "Healio (Soothes the pain)";
     }
 }

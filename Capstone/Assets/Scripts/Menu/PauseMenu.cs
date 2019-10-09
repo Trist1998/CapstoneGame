@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
             {
                 pause();
             }
-        }
+        }        
     }
 
     //Sets time to normal speed and continues the game
@@ -37,15 +37,17 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     //Freezes time and displays the pause menu
-    void pause()
+    public void pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     //Loads the main menu 
@@ -53,12 +55,5 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-    }
-
-    //Closes application. Doesn't do anything in unity editor but when game is built it'll exit the game
-    public void quit()
-    {
-        Debug.Log("Quit was clicked");
-        Application.Quit();
     }
 }

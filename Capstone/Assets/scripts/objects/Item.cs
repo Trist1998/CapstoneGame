@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Item: MonoBehaviour, IWorldObject
 {
+    [SerializeField] 
+    private string itemName;
+    [SerializeField] 
+    private string description;
     [SerializeField]
     public bool equipable;
     
@@ -15,7 +19,7 @@ public class Item: MonoBehaviour, IWorldObject
     {
         float dist = Vector3.Distance(user.getHandBone().transform.position, transform.position);
 
-        if (dist < 5)
+        if (user != null && dist < 5)
         {
             user.addItem(this);
         }
@@ -51,9 +55,24 @@ public class Item: MonoBehaviour, IWorldObject
 
     public virtual string getItemName()
     {
-        return "";
+        return itemName;
+    }
+    
+    protected string getItemDescription()
+    {
+        return description;
     }
 
+    public virtual bool requireAmmoBar()
+    {
+        return false;
+    }
+    
+    public virtual bool requireComboBar()
+    {
+        return false;
+    }
+    
     public virtual float getAmmoPercentage()
     {
         return 0;
@@ -73,5 +92,10 @@ public class Item: MonoBehaviour, IWorldObject
     {
         return "";
     }
+
+    public virtual void reload()
+    {
+    }
+
     
 }

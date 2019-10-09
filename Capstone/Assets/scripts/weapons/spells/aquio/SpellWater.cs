@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class SpellWater : AbstractProjectileWeaponEffect
 {
-    public readonly string SPELL_NAME = "Aquio (The Holy Water Potion)";
     public float radius;
+    
+    /*
+     * Weapon Effect for Aquio
+     * Attached WetEffect to objects in radius of hit point
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         
@@ -18,10 +22,5 @@ public class SpellWater : AbstractProjectileWeaponEffect
             effect.startEffect(lifeTime);
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
-    }
-
-    public override string getName()
-    {
-        return SPELL_NAME;
     }
 }

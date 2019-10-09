@@ -7,6 +7,10 @@ public class BoomSpell : AbstractProjectileWeaponEffect
     public float damage;
     public float blastRadius;
 
+    /*
+     * Weapon Effect for Boomio
+     * Applies damage and force to objects in radius.
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         WorldObject health = hit.GetComponent<WorldObject>();
@@ -32,8 +36,4 @@ public class BoomSpell : AbstractProjectileWeaponEffect
         base.processPrimaryHit(item, hit, hitPoint, direction);
     }
 
-    public override string getName()
-    {
-        return "Boomio (Makes boom!)";
-    }
 }

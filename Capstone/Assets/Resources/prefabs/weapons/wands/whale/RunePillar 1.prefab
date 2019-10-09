@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2698534760266793842}
-  m_LocalRotation: {x: -0, y: -0.26197308, z: -0, w: 0.9650752}
-  m_LocalPosition: {x: 0.68783987, y: 1.4236684, z: -0.1526196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2694696668348388458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -30.374, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6604006506402102304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: The Capstone
+  description: The Ancient Relic
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 0, y: 0, z: 0}
@@ -57,6 +59,9 @@ MonoBehaviour:
   primaryReloadTime: 0
   maxReserveAmmo: 0
   reserveAmmo: 0
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 1
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -65,6 +70,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 6251240869301885327}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &182692448033678139
 MonoBehaviour:
@@ -86,6 +92,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -94,6 +102,8 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     loop: 0
+    spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   whalePrefab: {fileID: 2544207800837672384, guid: debd2150809f4f344abd3b64c9bbb094,
     type: 3}

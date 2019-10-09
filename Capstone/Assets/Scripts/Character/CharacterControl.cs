@@ -1,14 +1,31 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterControl : AbstractCharacterControl
 {
-    public GameManager manager;
-    public AbstractCharacterInput characterInput;
-    public FPSMovementControl movement;
-    public InteractControl interactControl;
-    public Camera playerCamera;
+    [SerializeField]
+    private GameManager manager;
+    
+    [SerializeField]
+    private AbstractCharacterInput characterInput;
+    
+    [SerializeField]
+    private FPSMovementControl movement;
+    
+    [SerializeField]
+    private InteractControl interactControl;
+    
+    [SerializeField]
+    private Camera playerCamera;
+
+    [SerializeField] 
+    private Text deathText;
+
+    [SerializeField] 
+    private GameObject ui;
+    
 
     protected override void Start()
     {
@@ -32,6 +49,8 @@ public class CharacterControl : AbstractCharacterControl
 
     protected override void die()
     {
+        deathText.gameObject.SetActive(true);
+        ui.SetActive(false);
         ragdoll();
         manager.playerDead();
         movement.playerCanMove = false;
@@ -39,6 +58,8 @@ public class CharacterControl : AbstractCharacterControl
 
     public void revive()
     {
+        deathText.gameObject.SetActive(false);
+        ui.SetActive(true);
         unragdoll();
         manager.revivePlayer();
         movement.playerCanMove = true;

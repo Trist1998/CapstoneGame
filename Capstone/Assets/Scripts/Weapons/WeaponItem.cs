@@ -19,6 +19,12 @@ public class WeaponItem : Item
     private int maxReserveAmmo;
     [SerializeField]
     private int reserveAmmo;
+    [SerializeField]
+    private bool hasCombo = false;
+    [SerializeField]
+    private float comboPoints;
+    [SerializeField]
+    public int maxComboPoints;
     
     [SerializeField]
     private float primaryResetTime;
@@ -44,9 +50,13 @@ public class WeaponItem : Item
     public AudioSource primarySound;
     [SerializeField]
     private AudioSource secondarySound;
+    [SerializeField] 
+    private AudioSource cantFireSound;
     
     public AbstractWeaponEffect spell;
     private Recoil recoil;
+
+    
 
     
 
@@ -72,50 +82,28 @@ public class WeaponItem : Item
         base.unequipItem();
     }
 
+    public override void usePrimaryActionDown()
+    {
+        if (canPrimaryFire())
+            primaryFire();
+ 
+    }
+    
     private bool canPrimaryFire()
     {
         if (!primaryResetTimer.isTimeout()) return false;
         if (!primaryAutomaticFire && fired) return false;
         fired = true;
-        if (!infiniteAmmo && activeAmmo <= 0) return false;
+        if (infiniteAmmo || activeAmmo > 0) return true;
         
-        return true;
+        cantFireSound.Play();
+        return false;
+
     }
     
-    private bool canSecondaryFire()
-    {
-        if (!secondaryResetTimer.isTimeout()) return false;
-        if (!secondaryAutomaticFire && fired) return false;
-        if (spell.comboPoints < spell.maxComboPoints) return false;
-        fired = true;
-        return true;
-    }
-    
-    public override void usePrimaryActionDown()
-    {
-        if (!canPrimaryFire()) return;
-            primaryFire();
-            
-    }
-
-    public override void usePrimaryActionUp()
-    {
-        fired = false;
-    }
-
-    public override void useSecondaryActionDown()
-    {
-        if (!canSecondaryFire()) return;
-            secondaryFire();
-    }
-    
-    public override void useSecondaryActionUp()
-    {
-        fired = false;
-    }
-
     public void primaryFire()
     {
+        primaryReloadTimer = null;
         if (primarySound != null)
             primarySound.Play();
         recoil.fire();
@@ -124,6 +112,42 @@ public class WeaponItem : Item
         if(!infiniteAmmo)activeAmmo--;
         if(activeAmmo <= 0 && reserveAmmo > 0)
             reload();
+    }
+    
+    public override void usePrimaryActionUp()
+    {
+        fired = false;
+    }
+
+    public override void useSecondaryActionDown()
+    {
+        if (canSecondaryFire())
+            secondaryFire();
+
+    }
+    
+    private bool canSecondaryFire()
+    {
+        if (!secondaryResetTimer.isTimeout()) return false;
+        if (!secondaryAutomaticFire && fired) return false;
+        if(!spell.canComboFire() && comboPoints < maxComboPoints) return false;
+        fired = true;
+        return true;
+    }
+    
+    public void secondaryFire()
+    {
+        if (secondarySound != null)
+            secondarySound.Play();
+        recoil.fire();
+        playParticleEffect(secondaryMuzzleFlash);
+
+        spell.secondaryFire(this);
+    }
+    
+    public override void useSecondaryActionUp()
+    {
+        fired = false;
     }
 
     private void playParticleEffect(ParticleSystem particles)
@@ -134,19 +158,9 @@ public class WeaponItem : Item
     }
     
 
-    public void secondaryFire()
-    {
-        if (secondarySound != null)
-            secondarySound.Play();
-        recoil.fire();
-        playParticleEffect(secondaryMuzzleFlash);
-
-        spell.secondaryFire(this);
-    }
-
     public override string getItemName()
     {
-        return spell != null ? spell.getName() : "No Name";
+        return base.getItemName() + ": " + getItemDescription();
     }
     
     public override float getAmmoPercentage()
@@ -180,21 +194,26 @@ public class WeaponItem : Item
 
     public void addReserveAmmo(int amount)
     {
-        bool reloadWeapon = reserveAmmo == 0;
+        bool reloadWeapon = activeAmmo == 0;
         reserveAmmo += amount;
         reserveAmmo = Mathf.Clamp(reserveAmmo, 0, maxReserveAmmo);
         if (reloadWeapon)
             reload();
     }
 
-    public void reload()
+    public override void reload()
     {
         primaryReloadTimer = new GenericTimer(primaryReloadTime, false);
     }
     
+    public void addComboPoints(float amount)
+    {
+        comboPoints = Mathf.Clamp(comboPoints + amount, 0, maxComboPoints);
+    }
+    
     public override float getComboPercentage()
     {
-        return spell.comboPoints/spell.maxComboPoints;
+        return comboPoints/(maxComboPoints*1.0f);
     }
 
     public override string getDisplayAmmo()
@@ -204,7 +223,26 @@ public class WeaponItem : Item
 
     public override string getDisplayCombo()
     {
-        return spell.comboPoints + "/" + spell.maxComboPoints;
+        return comboPoints + "/" + maxComboPoints;
     }
 
+    public override bool requireAmmoBar()
+    {
+        return true;
+    }
+    
+    public override bool requireComboBar()
+    {
+        return true;
+    }
+
+    public int getReserveAmmo()
+    {
+        return reserveAmmo;
+    }
+    
+    public int getMaxReserveAmmo()
+    {
+        return reserveAmmo;
+    }
 }

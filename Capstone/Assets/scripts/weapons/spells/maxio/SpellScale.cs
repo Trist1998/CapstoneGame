@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class SpellScale : AbstractWeaponEffect
 {
-    public readonly string SPELL_NAME = "Maxio (The Scaling Charm)";
-
     public float range;
 
+    /*
+     * The weapon effect for maxio
+     * Attaches and starts InflateEffect to hit WorldObject if not already attached.
+     * If already attached repeat hit is called on attached effect.
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         InflateEffect hitObject = hit.transform.root.GetComponent<InflateEffect>();
@@ -16,7 +19,7 @@ public class SpellScale : AbstractWeaponEffect
             hitObject.repeatHit();
             base.processPrimaryHit(item, hit, hitPoint, direction);
         }
-        else if(hit.transform.root.GetComponent<IWorldObject>() != null)
+        else if(hit.transform.root.GetComponent<WorldObject>() != null)
         {
             hitObject = hit.transform.root.gameObject.AddComponent<InflateEffect>();
             hitObject.startEffect();
@@ -28,10 +31,5 @@ public class SpellScale : AbstractWeaponEffect
     {
         return range;
     }
-
-    public override string getName()
-    {
-        return SPELL_NAME;
-    }
-
+    
 }

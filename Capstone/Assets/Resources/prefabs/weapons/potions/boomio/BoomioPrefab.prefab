@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 222412218284568786}
   - component: {fileID: 5028033161731730845}
   m_Layer: 0
-  m_Name: GPVFX_POTION C
+  m_Name: BoomioPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -296,6 +297,7 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   comboPoints: 0
   maxComboPoints: 1
@@ -318,6 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Boomio
+  description: Makes Boom!
   equipable: 1
   relativePosition: {x: 0, y: 0, z: 0.121}
   relativeRotation: {x: 0, y: 0, z: 0}
@@ -327,6 +331,9 @@ MonoBehaviour:
   primaryReloadTime: 5
   maxReserveAmmo: 5
   reserveAmmo: 5
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 0.5
   secondaryResetTime: 0
   primaryAutomaticFire: 0

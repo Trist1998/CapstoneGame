@@ -3190,7 +3190,7 @@ MonoBehaviour:
     target: {fileID: 0}
     targetLastKnownPos: {x: 0, y: 0, z: 0}
     sightRadius: 0
-  range: 25
+  range: 10
   sightRange: 50
   childBody: {fileID: 1976831919952668141}
 --- !u!195 &1976831919565909159

@@ -6,50 +6,33 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
 {
     public const float DEFAULT_RANGE = 50;
 
-    public ParticleSystem primaryOnHitEffect;
-    public Sound primaryOnHitSound;
-    public ParticleSystem secondaryOnHitEffect;
-    public Sound secondaryOnHitSound;
-    public float comboPoints = 0;
-    public float maxComboPoints = 1;
-    
-    
+    [SerializeField]
+    protected ParticleSystem primaryOnHitEffect;
+    [SerializeField]
+    protected Sound primaryOnHitSound;
+    [SerializeField]
+    protected ParticleSystem secondaryOnHitEffect;
+    [SerializeField]
+    protected Sound secondaryOnHitSound;
+
     /**
-     * Used to apply the on hit effect and play the particles.
+     * Used to apply the on hit effect and play the particles and sound.
      */
     public virtual void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playPrimaryOnHitEffect(hit, hitPoint);
-        playSound(primaryOnHitSound, hit, hitPoint);
+        primaryOnHitSound.playSound(hitPoint);
     }
 
     /**
-     * Used to apply the on hit effect and play the particles.
+     * Used to apply the on hit effect and play the particles and sound.
      */
     public virtual void processSecondaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         playSecondaryOnHitEffect(hit, hitPoint);
-        playSound(secondaryOnHitSound, hit, hitPoint);
+        secondaryOnHitSound.playSound(hitPoint);
     }
-
-    private void playSound(Sound sound, GameObject hit, Vector3 hitPoint)
-    {
-        if (sound.clip == null) return;
-        GameObject g = new GameObject();
-        g =Instantiate(g, hitPoint, Quaternion.identity);
-        AudioSource source = g.AddComponent<AudioSource>();
-        source.clip = sound.clip;
-        source.volume = sound.volume;
-        source.pitch = sound.pitch;
-        source.loop = sound.loop;
-        source.Play();
-        source.spatialBlend = sound.spatialBlend;
-        source.rolloffMode = AudioRolloffMode.Logarithmic;
-        source.maxDistance = 200.0f;
-        source.minDistance = 1.0f;
-        //source.spread = 180;
-        Destroy(g, sound.clip.length);
-    }
+    
 
     /**
      * Primary fire of the item
@@ -113,15 +96,20 @@ public abstract class AbstractWeaponEffect: MonoBehaviour
         return DEFAULT_RANGE;
     }
 
-    public virtual string getName()
-    {
-        return "";
-    }
-
+    /*
+     * Adds comboPoints to the weapon
+     */
     public void addComboPoints(float amount)
     {
-        print(amount);
-        comboPoints = Mathf.Clamp(comboPoints + amount, 0, maxComboPoints);
+        GetComponent<WeaponItem>().addComboPoints(1);
+    }
+    
+    /*
+     * Used by the method canSecondaryFire() in WeaponItem
+     */
+    public virtual bool canComboFire()
+    {
+        return false;
     }
 }
 

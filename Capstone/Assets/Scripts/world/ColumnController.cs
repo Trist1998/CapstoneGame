@@ -7,27 +7,46 @@ using UnityEngine.UI;
 
 public class ColumnController : MonoBehaviour, IWorldObject
 {
-    public GameManager manager;
-    public Item weapon;
-    public Transform itemPos;
-    public int costOfWeapon;
-    public int costOfAmmo;
-    public int amountOfAmmo;
-    public Vector3 relativePos;
-    public Vector3 relativeRot;
-    public float rotationSpeed;
-    public float decentSpeed;
-    public Sound decentSound;
-    private GameObject soundObject;
+    [SerializeField]
+    private GameManager manager;
     public bool active;//Controls whether or not the column appears between waves
     
+    [SerializeField]
+    private Item weapon;
     
+    [SerializeField]
+    private Transform itemPos;
+    [SerializeField]
+    private int costOfWeapon;
+    
+    [SerializeField]
+    private int costOfAmmo;
+    [SerializeField]
+    private int amountOfAmmo;
+    
+    [SerializeField]
+    private Vector3 relativeRot;
+    [SerializeField]
+    private float rotationSpeed;
+    
+    [SerializeField]
+    private float decentSpeed;
+    [SerializeField]
+    private Sound decentSound;
+    
+    private GameObject soundObject;
+    [SerializeField]
+    private Sound buySound;
+    
+    
+    [SerializeField]
+    private float height;
     private Vector3 activePosition;
-    public float height;
-
+    
+    [SerializeField]
+    private TextMesh textMesh;
     private GameObject lookAt;
-    public TextMesh textMesh;
-
+    
     protected void Start()
     {
         if (manager == null) 
@@ -46,8 +65,9 @@ public class ColumnController : MonoBehaviour, IWorldObject
         Item item = interact.getInventory().getSlotItem(weapon.getItemName());
         if (item != null)
         {
-            if (manager.getScore() < costOfAmmo) return;
-            item.GetComponent<WeaponItem>().addReserveAmmo(amountOfAmmo);
+            WeaponItem weaponItem = item.GetComponent<WeaponItem>();
+            if (manager.getScore() < costOfAmmo && weaponItem.getReserveAmmo() != weaponItem.getMaxReserveAmmo()) return;
+            weaponItem.addReserveAmmo(amountOfAmmo);
             manager.changePoints(-1*costOfAmmo);
         }
         else
@@ -66,7 +86,7 @@ public class ColumnController : MonoBehaviour, IWorldObject
         weapon.GetComponent<Rigidbody>().isKinematic = true;
         weapon.transform.Rotate(relativeRot);
         weapon.transform.parent = itemPos;
-        weapon.transform.localPosition = Vector3.zero;//itemPos.transform.position;
+        weapon.transform.localPosition = Vector3.zero;
         
     }
     private void FixedUpdate()
@@ -81,6 +101,8 @@ public class ColumnController : MonoBehaviour, IWorldObject
         }
         
         itemPos.Rotate(new Vector3(0, rotationSpeed,0) * Time.deltaTime);
+        if(manager == null)
+            return;
         float diff = (activePosition - transform.position).y;
         if (!manager.waveInProgress())
         {
@@ -111,7 +133,8 @@ public class ColumnController : MonoBehaviour, IWorldObject
         if (other.GetComponent<CharacterControl>() != null)
         {
             lookAt = other.gameObject;
-            textMesh.gameObject.SetActive(true);
+            if(!manager.waveInProgress())
+                textMesh.gameObject.SetActive(true);
         }
         
     }

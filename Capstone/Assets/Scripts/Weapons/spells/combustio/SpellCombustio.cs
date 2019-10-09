@@ -10,6 +10,10 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
     public float burnTime;
     public float damagePerSecond;
 
+    /*
+     * Weapon effect for Combustio
+     * Attaches CombustioEffect to objects in radius of hitPoint
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         Collider[] objects = Physics.OverlapSphere(hitPoint, radius, LayerMask.GetMask("Destructable"));
@@ -20,10 +24,5 @@ public class SpellCombustio : AbstractProjectileWeaponEffect
             c.startEffect(flames, burnTime, damagePerSecond, lifeTime);
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);
-    }
-
-    public override string getName()
-    {
-        return SPELL_NAME;
     }
 }
