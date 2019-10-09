@@ -51,7 +51,7 @@ public class WeaponItem : Item
     [SerializeField]
     private AudioSource secondarySound;
     [SerializeField] 
-    private AudioSource cantFireSound;
+    private Sound cantFireSound;
     
     public AbstractWeaponEffect spell;
     private Recoil recoil;
@@ -97,7 +97,7 @@ public class WeaponItem : Item
         if (infiniteAmmo || activeAmmo > 0) return true;
         
         if(cantFireSound != null)
-            cantFireSound.Play();
+            cantFireSound.playSound(transform.position);
         return false;
 
     }

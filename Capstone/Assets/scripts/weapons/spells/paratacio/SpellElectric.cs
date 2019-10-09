@@ -47,6 +47,8 @@ public class SpellElectric : AbstractWeaponEffect
             lightning.StartPosition = item.transform.position;
             lightning.EndPosition = hitPoint;
             lightning.Trigger();
+            if(manager.hasState(AttachedEffectManager.STATE_WET))
+                wO.takeDamage(25);
             addComboPoints(1);
         }
         base.processPrimaryHit(item, hit, hitPoint, direction);

@@ -226,7 +226,8 @@ MonoBehaviour:
   hitPoints: 100
   maxHitPoints: 100
   timeToDestroy: 3
-  explosion: {fileID: 0}
+  explosion: {fileID: 198341595340134300, guid: 87ecdfdd14ae0f643b3a85cf22148d06,
+    type: 3}
   rewardPoints: 10
   characterTypeId: 0
   enemyTypeId: 01000000

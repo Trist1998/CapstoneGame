@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   itemName: Tractio
   description: Very attractive
   equipable: 1
@@ -148,7 +148,15 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 5952529700376387963}
   secondarySound: {fileID: 0}
-  cantFireSound: {fileID: 8195531241950902276}
+  cantFireSound:
+    clip: {fileID: 0}
+    name:
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0.1
+    length: 0
+    source: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &7630551374814616762
 MonoBehaviour:
@@ -160,13 +168,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d709e638f1c2244993d4cf1ccc511a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   primaryOnHitEffect: {fileID: 198696392922457284, guid: b3c86ae2b33025b4d9fc168075c539cb,
     type: 3}
   primaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -177,7 +185,7 @@ MonoBehaviour:
     type: 3}
   secondaryOnHitSound:
     clip: {fileID: 0}
-    name: 
+    name:
     volume: 0
     pitch: 0
     loop: 0
@@ -292,8 +300,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9643427a3eb45e74690facecef4ed419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   RecoilPositionTranform: {fileID: 0}
   RecoilRotationTranform: {fileID: 0}
   PositionDampTime: 6
