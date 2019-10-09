@@ -26,6 +26,7 @@ public class CharacterControl : AbstractCharacterControl
     [SerializeField] 
     private GameObject ui;
     
+    
 
     protected override void Start()
     {

@@ -15,6 +15,8 @@ public class InteractControl : MonoBehaviour, IItemUser
     private Inventory inventory;
     [SerializeField] 
     private GameObject handBone;
+    [SerializeField] 
+    private GameObject handBoneCharacter;
     [SerializeField]
     private CharacterControl control;
 
@@ -96,9 +98,7 @@ public class InteractControl : MonoBehaviour, IItemUser
 
     public Item getEquippedItem()
     {
-        if (inventory == null)
-            return null;
-        return inventory.getPrimaryItem();
+        return inventory?.getPrimaryItem();
     }
 
     public void addItem(Item item)
@@ -111,6 +111,11 @@ public class InteractControl : MonoBehaviour, IItemUser
         return handBone;
     }
 
+    public GameObject getHandBoneCharacter()
+    {
+        return handBoneCharacter;
+    }
+    
     public void setHandBone(GameObject handBone)
     {
         this.handBone = handBone;

@@ -96,7 +96,8 @@ public class WeaponItem : Item
         fired = true;
         if (infiniteAmmo || activeAmmo > 0) return true;
         
-        cantFireSound.Play();
+        if(cantFireSound != null)
+            cantFireSound.Play();
         return false;
 
     }

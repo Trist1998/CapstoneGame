@@ -127,6 +127,7 @@ MonoBehaviour:
   itemName: Fyro
   description: Flaming balls of fire
   equipable: 1
+  modelPrefab: {fileID: 160236, guid: f6109c328e08b574bac79c2ecd3f4af3, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 0
@@ -146,6 +147,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 6583348121012171880}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &6715721628352735977
 MonoBehaviour:
@@ -181,8 +183,6 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   speed: 40
   lifeTime: 2
   projectilePrefab: {fileID: 5237790628494967255, guid: e5917847c37ad7741a05407e864bd3cd,

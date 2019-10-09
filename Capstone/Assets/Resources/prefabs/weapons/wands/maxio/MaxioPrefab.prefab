@@ -126,6 +126,7 @@ MonoBehaviour:
   itemName: Maxio
   description: Basically me every holiday season
   equipable: 1
+  modelPrefab: {fileID: 152116, guid: c60deedf39a71ca408ea5227cf28c186, type: 3}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 9, y: 85, z: 85}
   infiniteAmmo: 0
@@ -145,6 +146,7 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 0}
   secondarySound: {fileID: 0}
+  cantFireSound: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &-1600895013623937464
 MonoBehaviour:
@@ -178,8 +180,6 @@ MonoBehaviour:
     spatialBlend: 0
     length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   range: 40
 --- !u!114 &1195120051291574402
 MonoBehaviour:
