@@ -8,9 +8,11 @@ public class InflateEffect : AttachedEffect
     private Vector3 startingScale;
     private Vector3 scaleOnHit;
     private float timeSinceHit;
+    private Sound pop;
     
-    public void startEffect()
+    public void startEffect(Sound pop)
     {
+        this.pop = pop;
         startingScale = transform.localScale;
         timeSinceHit = 0;
         scaleOnHit = transform.localScale;
@@ -24,8 +26,16 @@ public class InflateEffect : AttachedEffect
             endEffect();
         else if (transform.localScale.x >= 3 * startingScale.x)
         {
-            if(GetComponent<WorldObject>() != null)
-                GetComponent<WorldObject>().takeDamage(float.MaxValue);
+            pop.playSound(transform.position);
+            WorldObject wO = GetComponent<WorldObject>();
+            if (wO != null)
+            {
+                wO.takeDamage(float.MaxValue);
+                wO.explode();
+
+            }
+            
+                
             endEffect("Explosion");
         }
         else

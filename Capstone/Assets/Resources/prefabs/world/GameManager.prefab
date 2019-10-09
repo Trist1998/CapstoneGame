@@ -343,6 +343,7 @@ MonoBehaviour:
   - {fileID: 1975677193617980244, guid: 17670bb13394f0348b45cee1881d0fdc, type: 3}
   - {fileID: 2531883968574919081, guid: fb93be0445c6057459a78afe735359c6, type: 3}
   - {fileID: 781958699134216962, guid: d4ef6aca2d2b6f84e99f8e9cb8e6299c, type: 3}
+  - {fileID: 1975677193617980244, guid: 39b22bf1479dcf14d88ff1226fd9c0c0, type: 3}
   player1: {fileID: 4022498297103779986}
   player2: {fileID: 4022498298614782070}
   reviveCost: 10

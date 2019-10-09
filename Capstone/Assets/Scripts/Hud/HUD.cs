@@ -24,8 +24,8 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        healthContent.fillAmount = obj.hitPoints/obj.maxHitPoints;
-        health.GetComponentInChildren<Text>().text = ((int)obj.hitPoints)+"/"+obj.maxHitPoints;
+        healthContent.fillAmount = obj.getHitPoints()/obj.getMaxHitPoints();
+        health.GetComponentInChildren<Text>().text = ((int)obj.getHitPoints())+"/"+obj.getMaxHitPoints();
         IItemUser user = obj.GetComponent<IItemUser>();
         if (user != null && user.getEquippedItem() != null)
         {
