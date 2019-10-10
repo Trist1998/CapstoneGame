@@ -60,8 +60,8 @@ MonoBehaviour:
   infiniteAmmo: 0
   maxActiveAmmo: 0
   activeAmmo: 1
-  primaryReloadTime: 0
-  maxReserveAmmo: 0
+  primaryReloadTime: 10
+  maxReserveAmmo: 1
   reserveAmmo: 0
   hasCombo: 0
   comboPoints: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fc69852bf9ff349bbe0818f99915a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryOnHitEffect: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
+  primaryOnHitEffect: {fileID: 198341595340134300, guid: cc2214e0325c478499a2f2e0678d2ee2,
     type: 3}
   primaryOnHitSound:
     clip: {fileID: 8300000, guid: c050657085dcc5a43acf2d9045a34efe, type: 3}
@@ -107,7 +107,8 @@ MonoBehaviour:
     spatialBlend: 1
     length: 0
     source: {fileID: 0}
-  secondaryOnHitEffect: {fileID: 0}
+  secondaryOnHitEffect: {fileID: 198341595340134300, guid: cc2214e0325c478499a2f2e0678d2ee2,
+    type: 3}
   secondaryOnHitSound:
     clip: {fileID: 8300000, guid: c050657085dcc5a43acf2d9045a34efe, type: 3}
     name: 

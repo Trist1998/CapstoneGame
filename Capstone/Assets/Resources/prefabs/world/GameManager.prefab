@@ -338,7 +338,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   waveNo: 1
-  timeBetweenWaves: 10
+  timeBetweenWaves: 35
   numberSpawned: 3
   objects:
   - {fileID: 1975677193617980244, guid: 17670bb13394f0348b45cee1881d0fdc, type: 3}
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   characterTypeId: 1
   enemyTypeId: 00000000
   animator: {fileID: 3927443965447950447}
-  manager: {fileID: 0}
+  manager: {fileID: 35194172149251864}
   characterInput: {fileID: 11400000, guid: 52dab98cc20b65848b35e8aa4d600f19, type: 2}
   movement: {fileID: 4022498296945053403}
   interactControl: {fileID: 4022498296945053402}
@@ -2472,7 +2472,7 @@ MonoBehaviour:
   characterTypeId: 1
   enemyTypeId: 00000000
   animator: {fileID: 3927443963845227314}
-  manager: {fileID: 0}
+  manager: {fileID: 35194172149251864}
   characterInput: {fileID: 11400000, guid: 3037619c237cd7443a64b92fd2d2fa0e, type: 2}
   movement: {fileID: 4022498297030602768}
   interactControl: {fileID: 4022498297030602771}
@@ -10405,12 +10405,12 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 50
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
@@ -10513,7 +10513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.831518
+      value: 24.68
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10525,19 +10525,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_RootOrder
@@ -12009,7 +12009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.027
+      value: 2.598
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12017,19 +12017,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_RootOrder
@@ -12409,17 +12409,17 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: amountOfAmmo
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
@@ -12501,7 +12501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.012999999
+      value: -0.402
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12509,19 +12509,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_RootOrder
@@ -12878,7 +12878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.008999999
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12886,19 +12886,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 458d8ce0b60a9a945b7619781815a93c, type: 3}
       propertyPath: m_RootOrder
@@ -12947,17 +12947,17 @@ PrefabInstance:
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfWeapon
-      value: 10
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: costOfAmmo
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}
       propertyPath: amountOfAmmo
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3006081284962401872, guid: 458d8ce0b60a9a945b7619781815a93c,
         type: 3}

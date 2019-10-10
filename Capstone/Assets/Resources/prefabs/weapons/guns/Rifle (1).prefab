@@ -107,7 +107,15 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: -208280191802047897}
   secondarySound: {fileID: 0}
-  cantFireSound: {fileID: 0}
+  cantFireSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 1
+    length: 0
+    source: {fileID: 0}
   spell: {fileID: 0}
 --- !u!82 &-208280191802047897
 AudioSource:
@@ -119,7 +127,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 459cbf8455582674082dfe10ee3e17f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f433dd47bae4e4db5a0518044da14a8d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.007
   m_Pitch: 1.55

@@ -92,7 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ad99f37fca3484c821a13e23cc4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  description: 
   equipable: 0
+  modelPrefab: {fileID: 0}
   relativePosition: {x: 0, y: 0, z: 0}
   relativeRotation: {x: 0, y: 0, z: 0}
   infiniteAmmo: 0
@@ -101,6 +104,9 @@ MonoBehaviour:
   primaryReloadTime: 3
   maxReserveAmmo: 60
   reserveAmmo: 60
+  hasCombo: 0
+  comboPoints: 0
+  maxComboPoints: 0
   primaryResetTime: 0.3
   secondaryResetTime: 0
   primaryAutomaticFire: 0
@@ -109,6 +115,15 @@ MonoBehaviour:
   secondaryMuzzleFlash: {fileID: 0}
   primarySound: {fileID: 8434373839165512863}
   secondarySound: {fileID: 0}
+  cantFireSound:
+    clip: {fileID: 0}
+    name: 
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 1
+    length: 0
+    source: {fileID: 0}
   spell: {fileID: 0}
 --- !u!114 &711795165056995480
 MonoBehaviour:
@@ -130,6 +145,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
   secondaryOnHitEffect: {fileID: 0}
   secondaryOnHitSound:
@@ -139,9 +155,8 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     spatialBlend: 1
+    length: 0
     source: {fileID: 0}
-  comboPoints: 0
-  maxComboPoints: 1
   damage: 1
   force: 5
   range: 7
@@ -156,7 +171,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 459cbf8455582674082dfe10ee3e17f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9afd6cc7134a3428cb7606e918101f8f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.623
   m_Pitch: 1

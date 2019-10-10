@@ -3181,6 +3181,7 @@ MonoBehaviour:
   characterTypeId: 0
   enemyTypeId: 01000000
   animator: {fileID: 1891157055137651056}
+  aiEnabled: 0
   head: {fileID: 4688773072743569837}
   handbone: {fileID: 1976218589019570542}
   weapon: {fileID: 5148662169232183189}
@@ -4311,7 +4312,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 363b4d1420d444b8c8d6955f7bd1fbde, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 28d9913a499679848b41d8f14d755854, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.397
   m_Pitch: 1

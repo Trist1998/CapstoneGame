@@ -35,6 +35,9 @@ public class Recoil : MonoBehaviour
         RecoilRotationTranform = user.getHandBone().transform.parent;
     }
     
+    /*
+     * Slowly return the object back to its original position
+     */
     void FixedUpdate()
     {
         if(RecoilPositionTranform == null) return;
@@ -48,12 +51,19 @@ public class Recoil : MonoBehaviour
         RecoilRotationTranform.localRotation = Quaternion.Euler(RotationOutput);
     }
     
+    /*
+     * Applies the recoil
+     */
+
     public void fire()
     {
         CurrentRecoil1 += new Vector3(RecoilRotation.x, Random.Range(-RecoilRotation.y, RecoilRotation.y), Random.Range(-RecoilRotation.z, RecoilRotation.z));
         CurrentRecoil3 += new Vector3(Random.Range(-RecoilKickBack.x, RecoilKickBack.x), Random.Range(-RecoilKickBack.y, RecoilKickBack.y), RecoilKickBack.z);
     }
 
+    /*
+     * Used to change transforms of the item user
+     */
     public void resetTransforms()
     {
         RecoilPositionTranform = null;
