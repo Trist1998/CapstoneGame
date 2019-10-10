@@ -7,6 +7,9 @@ public class WeaponEffectBaton : AbstractWeaponEffect
     public float damage;
     public float range;
     public float force;
+    /*
+     * Basic weapon effect applies damage at hit
+     */
     public override void processPrimaryHit(Item item, GameObject hit, Vector3 hitPoint, Vector3 direction)
     {
         WorldObject health = hit.transform.GetComponent<WorldObject>();

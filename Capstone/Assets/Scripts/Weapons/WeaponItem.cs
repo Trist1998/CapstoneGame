@@ -57,7 +57,9 @@ public class WeaponItem : Item
     private Recoil recoil;
 
     
-
+    /*
+     * This is the basic weapon object.
+     */
     
 
     void Start()
@@ -70,6 +72,10 @@ public class WeaponItem : Item
             recoil = gameObject.AddComponent<Recoil>();
     }
 
+    /*
+     * Called when an IItemUser tries to equip the item
+     * Sets the recoil transforms and calls the base equip
+     */
     public override void equipItem(IItemUser user)
     {
         recoil.setTransforms(user);
@@ -142,8 +148,8 @@ public class WeaponItem : Item
             secondarySound.Play();
         recoil.fire();
         playParticleEffect(secondaryMuzzleFlash);
-
         spell.secondaryFire(this);
+        comboPoints = 0;
     }
     
     public override void useSecondaryActionUp()
