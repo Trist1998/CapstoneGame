@@ -15,11 +15,21 @@ public class AttachedEffectManager : MonoBehaviour
     
     private Dictionary<string, SimplePriorityQueue<AttachedEffect>> attachedEffectStates = new Dictionary<string, SimplePriorityQueue<AttachedEffect>>();
 
+    /*
+     * Manages the states of an object.
+     */
+    
+    /*
+     * Returns the attachedStates Dictionary
+     */
     public Dictionary<string, SimplePriorityQueue<AttachedEffect>> getAttachedStates()
     {
         return attachedEffectStates;
     }
 
+    /*
+     * Adds a state to the manager
+     */
     public void addState(string stateKey, AttachedEffect attachedEffect)
     {
         stateChanged = true;
@@ -29,6 +39,9 @@ public class AttachedEffectManager : MonoBehaviour
         attachedEffectStates[stateKey].Enqueue(attachedEffect, attachedEffect.getAppliedStates()[stateKey]);
     }
 
+    /*
+     * Returns true if manager contains the state
+     */
     public bool hasState(string stateKey)
     {
         return attachedEffectStates.ContainsKey(stateKey) && attachedEffectStates[stateKey].Any() && attachedEffectStates[stateKey].First != null;

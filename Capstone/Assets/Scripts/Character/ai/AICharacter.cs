@@ -48,12 +48,46 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         
     }
 
+    /*
+     * On character death. Ragdolls for a few seconds
+     */
     public override void destroyObject()
     {
         ragdoll();
         base.destroyObject();
     }
+    /*
+     * Returns the AI's beliefs
+     */
+    public AIBeliefs getBeliefs()
+    {
+        if (beliefs == null)
+            beliefs = new AIBeliefs(this);
+        return beliefs;
+    }
 
+    /*
+     * Ragdolls the model and disables the AI
+     */
+    public override void ragdoll()
+    {
+        aiEnabled = false;
+        base.ragdoll();
+    }
+
+    /*
+     * UnRagdolls the model and enables the AI
+     */
+    public override void unragdoll()
+    {
+        base.unragdoll();
+        transform.position = childBody.transform.position;
+        aiEnabled = true;
+    }
+
+    /*
+     * IItemUser Implementation
+     */
     public Vector3 getItemAimDirection()
     {
         return head.transform.forward;
@@ -84,23 +118,5 @@ public class AICharacter : AbstractCharacterControl, IItemUser
         return gameObject;
     }
 
-    public AIBeliefs getBeliefs()
-    {
-        if (beliefs == null)
-            beliefs = new AIBeliefs(this);
-        return beliefs;
-    }
-
-    public override void ragdoll()
-    {
-        aiEnabled = false;
-        base.ragdoll();
-    }
-
-    public override void unragdoll()
-    {
-        base.unragdoll();
-        transform.position = childBody.transform.position;
-        aiEnabled = true;
-    }
+    
 }

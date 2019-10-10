@@ -7,6 +7,17 @@ using Random = UnityEngine.Random;
 public class SideStepBehaviour: AIBehaviour
 {
     private bool right;
+    
+    /*
+     * Constructor
+     */
+    public SideStepBehaviour(AICharacter character) : base(character)
+    {
+        right = Random.Range(0, 1) == 1;
+    }
+    /*
+     * Determines if the behaviour is executable
+     */
     protected override bool isExecutable()
     {
         if (character.beliefs.target == null) return false;
@@ -16,6 +27,9 @@ public class SideStepBehaviour: AIBehaviour
         return false;
     }
 
+    /*
+     * Updates the AI behaviour
+     */
     public override bool update()
     {
         if (!isExecutable()) return false;
@@ -25,9 +39,4 @@ public class SideStepBehaviour: AIBehaviour
         return true;
     }
 
-    public SideStepBehaviour(AICharacter character) : base(character)
-    {
-        right = Random.Range(0, 1) == 1;
-    }
-    
 }

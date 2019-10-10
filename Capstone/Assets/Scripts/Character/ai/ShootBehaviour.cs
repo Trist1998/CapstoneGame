@@ -8,6 +8,18 @@ public class ShootBehaviour : AIBehaviour
 {
     private float aimSpeed;
 
+    /*
+     * Constructor
+     */
+    public ShootBehaviour(AICharacter character, float aimSpeed) : base(character)
+    {
+        behaviours = new AIBehaviour[]{new SideStepBehaviour(character)};
+        this.aimSpeed = aimSpeed;
+    }
+    
+    /*
+     * Determines if the behaviour is executable
+     */
     protected override bool isExecutable()
     {
         if (base.isExecutable())
@@ -32,6 +44,10 @@ public class ShootBehaviour : AIBehaviour
         character.weapon.usePrimaryActionUp();
         return true;
     }
+    
+    /*
+     * Moves the character in the direction of target. Lag added to simulate real player
+     */
     private void aimCharacter(GameObject target)
     {
         GameObject obj = character.gameObject;
@@ -41,6 +57,9 @@ public class ShootBehaviour : AIBehaviour
         character.transform.rotation = Quaternion.Lerp (character.transform.rotation,newRotation,Time.deltaTime * aimSpeed);
     }
 
+    /*
+     * Aims the character in the direction of target/ Lag added to simulate real player
+     */
     private void aimGun(GameObject target)
     {
         GameObject obj = character.head;
@@ -49,9 +68,4 @@ public class ShootBehaviour : AIBehaviour
         character.head.transform.rotation = newRotation;
     }
     
-    public ShootBehaviour(AICharacter character, float aimSpeed) : base(character)
-    {
-        behaviours = new AIBehaviour[]{new SideStepBehaviour(character)};
-        this.aimSpeed = aimSpeed;
-    }
 }

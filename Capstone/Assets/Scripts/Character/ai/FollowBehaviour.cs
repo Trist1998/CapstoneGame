@@ -7,7 +7,17 @@ public class FollowBehaviour : AIBehaviour
 {
     private bool follow = false;
     private float range;
-
+    
+    /*
+     * Constructor
+     */
+    public FollowBehaviour(AICharacter character, float range) : base(character)
+    {
+        this.range = range;
+    }
+    /*
+     * Follows the target. Implements a dead zone so the character doesn't dither
+     */
     protected override bool isExecutable()
     {
         if (character.beliefs.target == null) return false;
@@ -46,6 +56,9 @@ public class FollowBehaviour : AIBehaviour
         return follow;
     }
 
+    /*
+     * Called from parent behaviour
+     */
     public override bool update()
     {
         
@@ -65,10 +78,5 @@ public class FollowBehaviour : AIBehaviour
         
         character.GetComponent<NavMeshAgent>().SetDestination(character.transform.position);
         return false;
-    }
-
-    public FollowBehaviour(AICharacter character, float range) : base(character)
-    {
-        this.range = range;
     }
 }

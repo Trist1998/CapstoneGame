@@ -4,6 +4,9 @@ using UnityEngine;
 
 public abstract class AbstractCharacterInput : ScriptableObject
 {
+    /*
+     * Input class for characters
+     */
     public abstract float getHorizontalInput();
     public abstract float getVerticalInput();
     public abstract bool getJump();

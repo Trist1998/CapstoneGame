@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestMainMenu.unity
     guid: d85cf85332f451d46845e6c44b04470b
   - enabled: 1
-    path: Assets/Scenes/FinalSingle.unity
-    guid: 719d779b8a049f74080392ea9828bd65
-  - enabled: 1
     path: Assets/Scenes/FinalMultiplayer.unity
     guid: ec6ccac3c40f2cd4cad109377f8165c3
+  - enabled: 1
+    path: Assets/Scenes/FinalSingle.unity
+    guid: 1af52732d47ced04fb08341d833d6c09
   m_configObjects: {}
