@@ -13,12 +13,18 @@ public class AIBeliefs
     public float sightRadius;
     private AICharacter character;
 
+    /*
+     *Used to manage the Ai's beliefs
+     */
     public AIBeliefs(AICharacter character)
     {
         this.character = character;
         sightRadius = character.sightRange;
     }
     
+    /*
+     * Observes the current environment and updates beliefs
+     */
     public void updateBeliefs()
     {
         if (target == null)
@@ -39,6 +45,9 @@ public class AIBeliefs
 
     }
     
+    /*
+     * Picks a target in its sight range
+     */
     public void findTarget()
     {
         var objects = Physics.OverlapSphere(character.transform.position, character.beliefs.sightRadius);
@@ -52,11 +61,17 @@ public class AIBeliefs
         }
     }
 
+    /*
+     * Chack to see if the target is visible
+     */
     public bool isTargetVisible()
     {
         return target != null && isVisible(target.gameObject, sightRadius);
     }
 
+    /*
+     * Returns the object the ai is currently aiming at
+     */
     public GameObject objectAimedAt()
     {
         RaycastHit hit;
@@ -70,6 +85,9 @@ public class AIBeliefs
         return null;
     }
     
+    /*
+     * Checks if the game object is visible
+     */
     public bool isVisible(GameObject obj, float radius)
     {
         RaycastHit hit;
@@ -83,12 +101,18 @@ public class AIBeliefs
         return false;
     }
 
+    /*
+     * Returns the distance to the target
+     */
     public float getTargetDistance()
     {
         if (target == null) return -1;
         return (character.transform.position - target.transform.position).magnitude;
     }
 
+    /*
+     * Talk to other AI's to exchange information
+     */
     public void interCommunicate()
     {
         var objects = Physics.OverlapSphere(character.transform.position, character.beliefs.sightRadius);

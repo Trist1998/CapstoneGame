@@ -20,6 +20,10 @@ public class InteractControl : MonoBehaviour, IItemUser
     [SerializeField]
     private CharacterControl control;
 
+    /*
+     * Interact Control Controls the interaction between the player and the outside world
+     * Implements IItemUser
+     */
 
     private void Start()
     {

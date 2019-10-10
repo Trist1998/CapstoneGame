@@ -7373,6 +7373,21 @@ PrefabInstance:
     - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
+        type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
+        type: 3}
+      propertyPath: sounds.Array.data[0].spatialBlend
+      value: 0.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549665649375431374, guid: ed48d896e6f916b40b71e622dfeaca50,
+        type: 3}
+      propertyPath: sounds.Array.data[0].loop
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
