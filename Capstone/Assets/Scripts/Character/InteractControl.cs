@@ -30,6 +30,9 @@ public class InteractControl : MonoBehaviour, IItemUser
         inventory = new Inventory(this);
     }
 
+    /*
+     * Update used to check for character inputs
+     */
     private void Update()
     {
         if(control.isDead()) return;
@@ -79,6 +82,10 @@ public class InteractControl : MonoBehaviour, IItemUser
 
     }
 
+    /*
+     * Interaction
+     * Casts a ray, checks for a worldobject and interacts with it
+     */
     private void cast()
     {
         RaycastHit hit;
@@ -90,48 +97,66 @@ public class InteractControl : MonoBehaviour, IItemUser
             }
     }
 
+    /*
+     * Disables the character's ability to interact
+     */
     public void disableInteract()
     {
         interactEnabled = false;
     }
 
+    /*
+     * Enables the character's ability to interact
+     */
     public void enableInteract()
     {
         interactEnabled = true;
     }
-
-    public Item getEquippedItem()
-    {
-        return inventory?.getPrimaryItem();
-    }
-
+    
+    /*
+     * Adds the item to the player's inventory
+     */
     public void addItem(Item item)
     {
         inventory.addItem(item);
     }
-
-    public GameObject getHandBone()
-    {
-        return handBone;
-    }
-
-    public GameObject getHandBoneCharacter()
+    
+   /*
+    * Returns the handbone required for the 3rd person model render
+    */
+   public GameObject getHandBoneCharacter()
     {
         return handBoneCharacter;
     }
-    
-    public void setHandBone(GameObject handBone)
-    {
-        this.handBone = handBone;
-    }
 
+    /*
+     * Sets up the initial values
+     */
     public void setValues(CharacterControl control, Camera playerCamera, AbstractCharacterInput input)
     {
         this.control = control;
         this.playerCamera = playerCamera;
         characterInput = input;
     }
-
+    
+    /*
+     * IItemUser Implementation
+     */
+    public Item getEquippedItem()
+    {
+        return inventory?.getPrimaryItem();
+    }
+    
+    public GameObject getHandBone()
+    {
+        return handBone;
+    }
+    
+    public void setHandBone(GameObject handBone)
+    {
+        this.handBone = handBone;
+    }
+    
     public Vector3 getItemAimDirection()
     {
         return playerCamera.transform.forward;
@@ -151,4 +176,6 @@ public class InteractControl : MonoBehaviour, IItemUser
     {
         return gameObject;
     }
+
+    
 }
